@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure--9xgg76o49j!rc!^-%emt9l7m#5w5xq@*=_(pd+m$#3c1%ur^_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 ALLOWED_HOSTS = ['markeldamian.pythonanywhere.com', 'www.markeldamian.pythonanywhere.com', 'localhost']
@@ -47,6 +47,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
