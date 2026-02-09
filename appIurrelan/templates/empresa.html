@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+    {% trans "Nuestra<br>Identidad" as titulo_banner %}
+    {% trans "Ingeniería, compromiso y precisión desde hace más de 20 años" as subtitulo_banner %}
+
+    {% include 'banner.html' with titulo=titulo_banner subtitulo=subtitulo_banner clase_extra="hero-small" %}
+    
+    <section class="company-page-container">
+        
+        <div class="container reveal-on-scroll" style="margin-top: 80px; margin-bottom: 80px;">
+            <div class="company-intro">
+                <div class="intro-text">
+                    <h2 class="section-title">{% trans "La Excelencia" %} <span class="highlight">{% trans "Industrial" %}</span></h2>
+                    
+                    <p class="lead-text">
+                        {% trans "En <strong>Iurrelan</strong>, entendemos la metalurgia como un arte preciso. Somos una empresa líder en transformación metálica en Guipúzcoa, fusionando la tradición industrial vasca con la tecnología más vanguardista." %}
+                    </p>
+                    
+                    <p>
+                        {% trans "Desde nuestros inicios, nos hemos especializado en ofrecer soluciones integrales que van desde la ingeniería y diseño hasta la fabricación y montaje. Nuestro equipo humano altamente cualificado es el motor que nos permite abordar proyectos de alta complejidad técnica con total garantía." %}
+                    </p>
+                </div>
+                
+                <div class="intro-image">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Instalaciones Iurrelan">
+                    <div class="exp-badge">
+                        <span class="years">+20</span>
+                        <span class="text">{% trans "Años de" %}<br>{% trans "Trayectoria" %}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mvv-section-dark reveal-on-scroll">
+            <div class="container">
+                <h2 class="section-title center-title">{% trans "Nuestros" %} <span class="highlight">{% trans "Pilares" %}</span></h2>
+                
+                <div class="mvv-grid">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-bullseye icon-large"></i>
+                                <h3>{% trans "Misión" %}</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>{% trans "Nuestro Objetivo" %}</h3>
+                                <p>{% trans "Fabricar soluciones metálicas de alto valor añadido, superando las expectativas de calidad de nuestros clientes y asegurando procesos sostenibles y eficientes." %}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-eye icon-large"></i>
+                                <h3>{% trans "Visión" %}</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>{% trans "El Futuro" %}</h3>
+                                <p>{% trans "Consolidarnos como el socio estratégico de referencia en el sector industrial del norte de España, impulsando la innovación en cada soldadura y mecanizado." %}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-gem icon-large"></i>
+                                <h3>{% trans "Valores" %}</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>{% trans "Nuestro ADN" %}</h3>
+                                <ul class="values-list">
+                                    <li><i class="fas fa-check"></i> {% trans "Calidad Total" %}</li>
+                                    <li><i class="fas fa-check"></i> {% trans "Seguridad Laboral" %}</li>
+                                    <li><i class="fas fa-check"></i> {% trans "Compromiso" %}</li>
+                                    <li><i class="fas fa-check"></i> {% trans "Innovación" %}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="plant-parallax reveal-on-scroll">
+            <div class="overlay-dark"></div>
+            <div class="container relative-z">
+                <h2 class="section-title white">{% trans "Planta" %} <span class="highlight">{% trans "Operativa" %}</span></h2>
+                <p class="plant-subtitle">{% trans "Capacidad productiva y tecnología al servicio del cliente" %}</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <i class="fas fa-ruler-combined"></i>
+                        <span class="number" data-target="2000">0</span>
+                        <span class="label">m² {% trans "Superficie" %}</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-weight-hanging"></i>
+                        <span class="number" data-target="20">0</span>
+                        <span class="label">Ton. {% trans "Elevación" %}</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-industry"></i>
+                        <span class="number" data-target="5">0</span>
+                        <span class="label">{% trans "Puentes Grúa" %}</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <span class="number" data-target="35">0</span>
+                        <span class="label">{% trans "Expertos" %}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container reveal-on-scroll" style="margin-top: 80px; margin-bottom: 80px; text-align: center;">
+            <h2 class="section-title">{% trans "Calidad" %} <span class="highlight">{% trans "Certificada" %}</span></h2>
+            <div class="certs-container">
+                <div class="cert-box">
+                    <i class="fas fa-certificate cert-icon"></i>
+                    <h4>ISO 9001:2015</h4>
+                    <p>{% trans "Gestión de la Calidad" %}</p>
+                </div>
+                <div class="cert-box">
+                    <i class="fas fa-shield-alt cert-icon"></i>
+                    <h4>ISO 3834-2</h4>
+                    <p>{% trans "Soldadura Certificada" %}</p>
+                </div>
+                <div class="cert-box">
+                    <i class="fas fa-leaf cert-icon"></i>
+                    <h4>ISO 14001</h4>
+                    <p>{% trans "Gestión Ambiental" %}</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        if (entry.target.classList.contains('plant-parallax')) {
+                            startCounters();
+                        }
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+            let countersStarted = false;
+            function startCounters() {
+                if(countersStarted) return;
+                countersStarted = true;
+                const counters = document.querySelectorAll('.number');
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    const duration = 2000; 
+                    const increment = target / (duration / 16);
+                    let current = 0;
+                    const update = () => {
+                        current += increment;
+                        if (current < target) {
+                            counter.innerText = Math.ceil(current);
+                            requestAnimationFrame(update);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    update();
+                });
+            }
+        });
+    </script>
+{% endblock %}

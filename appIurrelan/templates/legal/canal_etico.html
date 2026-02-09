@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Canal Ético" %} | Iurrelan{% endblock %}
+
+{% block content %}
+    <section class="page-header" style="background: #222; color: white; padding: 60px 0; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 2.5rem; font-weight: 700;">{% trans "Canal Ético" %}</h1>
+            <p style="color: #bbb; max-width: 600px; margin: 10px auto;">{% trans "Compromiso con la transparencia, la integridad y el cumplimiento normativo." %}</p>
+        </div>
+    </section>
+
+    <section class="legal-content-section" style="padding: 60px 0; background: white;">
+        <div class="container" style="max-width: 800px; margin: 0 auto; line-height: 1.8; color: #444;">
+            
+            <h2 style="color: #222; margin-top: 40px;">1. {% trans "Introducción" %}</h2>
+            <p>
+                En <strong>SERVICIOS METALÚRGICOS IURRELAN</strong>, la integridad y la ética son pilares fundamentales de nuestra actividad. En cumplimiento con la normativa vigente y nuestro Plan de Prevención Penal (Compliance), ponemos a disposición de todos nuestros empleados, clientes, proveedores y colaboradores este <strong>Canal Ético</strong>.
+            </p>
+            <p>
+                Este canal es una herramienta segura para comunicar cualquier conducta que pueda implicar la comisión de irregularidades o actos contrarios a la legalidad y a las normas internas de la empresa.
+            </p>
+
+            <h2 style="color: #222; margin-top: 40px;">2. {% trans "Gestión Externa y Confidencialidad" %}</h2>
+            <p>
+                Para garantizar la máxima <strong>independencia, confidencialidad y objetividad</strong> en el tratamiento de las comunicaciones, la gestión de este Canal Ético ha sido encomendada a un experto externo:
+            </p>
+            <div style="background: #f9f9f9; border-left: 4px solid #ff8c00; padding: 20px; margin: 20px 0;">
+                <p style="margin: 0;"><strong>Entidad Gestora:</strong> ait abogados</p>
+                <p style="margin: 0;"><strong>Director de Compliance:</strong> D. Alfonso García Ruiz</p>
+            </div>
+            <p>
+                Este sistema garantiza que las denuncias sean recibidas y analizadas por profesionales independientes, asegurando que no existan conflictos de interés y protegiendo la identidad del informante.
+            </p>
+
+            <h2 style="color: #222; margin-top: 40px;">3. {% trans "Cómo realizar una comunicación" %}</h2>
+            <p>
+                Si tiene conocimiento de alguna conducta irregular, puede comunicarlo a través de la siguiente dirección de correo electrónico habilitada exclusivamente para este fin:
+            </p>
+            
+            <div style="text-align: center; margin: 40px 0;">
+                <a href="mailto:canaldenuncias@aitabogados.com" style="background-color: #ff8c00; color: white; padding: 15px 30px; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 1.1rem; display: inline-block;">
+                    <i class="fas fa-envelope"></i> canaldenuncias@aitabogados.com
+                </a>
+            </div>
+
+            <p>
+                Al realizar la comunicación, se garantiza:
+            </p>
+            <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 20px;">
+                <li><strong>Confidencialidad:</strong> La identidad del informante será preservada en todo momento.</li>
+                <li><strong>Anonimato:</strong> Se aceptan comunicaciones anónimas si el informante prefiere no identificarse, salvo que la normativa vigente exija lo contrario en casos específicos.</li>
+                <li><strong>Ausencia de represalias:</strong> SERVICIOS METALÚRGICOS IURRELAN garantiza que no se adoptará ninguna represalia contra quien informe de buena fe sobre una posible infracción.</li>
+            </ul>
+
+            <h2 style="color: #222; margin-top: 40px;">4. {% trans "Tramitación" %}</h2>
+            <p>
+                Una vez recibida la comunicación, <strong>ait abogados</strong> procederá siguiendo este orden:
+            </p>
+            <ol style="padding-left: 20px;">
+                <li>Recepción y registro de la denuncia.</li>
+                <li>Análisis de admisibilidad de los hechos denunciados.</li>
+                <li>Investigación independiente de los hechos.</li>
+                <li>Emisión de un informe sobre la investigación.</li>
+                <li>Propuesta de resolución y medidas correctivas a la dirección de la empresa.</li>
+            </ol>
+
+            <p style="margin-top: 40px; font-size: 0.9rem; color: #888; border-top: 1px solid #eee; padding-top: 20px;">
+                <em>Última actualización: Junio 2023 | Documento revisado conforme al Plan de Prevención Penal de Servicios Metalúrgicos Iurrelan.</em>
+            </p>
+        </div>
+    </section>
+{% endblock %}

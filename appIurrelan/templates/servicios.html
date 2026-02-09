@@ -1,0 +1,281 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Servicios Industriales" %} | Iurrelan{% endblock %}
+
+{% block content %}
+    {% trans "Catálogo de" as titulo_s %}
+    {% trans "Servicios" as sub_s %}
+    {% trans "Soluciones integrales de transformación metálica con certificación de calidad en cada etapa del proceso." as desc_s %}
+    
+    {% include 'banner.html' with titulo=titulo_s|add:" <span class='highlight'>"|add:sub_s|add:"</span>" subtitulo=desc_s clase_extra="hero-dark" %}
+
+    <style>
+        /* --- ESTILOS GENERALES --- */
+        .services-container {
+            padding: 80px 0;
+            background-color: #f4f4f4;
+            overflow: hidden;
+        }
+
+        .services-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px; /* Espacio entre tarjetas */
+        }
+
+        /* --- TARJETA DE SERVICIO (Horizontal) --- */
+        .service-row {
+            display: flex;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            min-height: 350px;
+            
+            /* ESTADO INICIAL (OCULTO) PARA LA ANIMACIÓN */
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        }
+
+        /* CLASE QUE ACTIVA LA APARICIÓN */
+        .service-row.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- IMAGEN DE LA TARJETA --- */
+        .service-img-col {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            min-width: 40%;
+        }
+
+        .service-img-col img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .service-row:hover .service-img-col img {
+            transform: scale(1.05);
+        }
+
+        /* Etiqueta numérica sobre la imagen */
+        .service-number {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #ff8c00;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 800;
+            padding: 15px 25px;
+            z-index: 2;
+        }
+
+        /* --- CONTENIDO DE TEXTO --- */
+        .service-text-col {
+            flex: 1.2;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .service-title {
+            font-size: 2rem;
+            color: #222;
+            margin-bottom: 20px;
+            font-weight: 800;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .service-desc {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .service-features {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .feature-tag {
+            background: #eee;
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: #555;
+            font-weight: 600;
+            border-left: 3px solid #ccc;
+        }
+
+        .btn-service {
+            align-self: flex-start;
+            padding: 12px 30px;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: background 0.3s;
+        }
+
+        .btn-service:hover {
+            background: #ff8c00;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 900px) {
+            .service-row { flex-direction: column; }
+            .service-img-col { height: 250px; }
+            .service-text-col { padding: 30px; }
+            .service-title { font-size: 1.5rem; }
+        }
+    </style>
+
+    <section class="services-container">
+        <div class="services-wrapper">
+
+            <div class="service-row js-animate">
+                <div class="service-img-col">
+                    <span class="service-number">01</span>
+                    <img src="{% static 'img/cortesoplete.png' %}" alt="Corte">
+                </div>
+                <div class="service-text-col">
+                    <h3 class="service-title">{% trans "Corte" %}</h3>
+                    <p class="service-desc">
+                        {% trans "Tecnología de corte avanzada para cualquier espesor. Combinamos la precisión del láser de fibra con la potencia del oxicorte y plasma para entregar piezas listas para el siguiente proceso." %}
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag">Láser Fibra</span>
+                        <span class="feature-tag">Arco Aire</span>
+                        <span class="feature-tag">Soplete</span>
+                    </div>
+                    <a href="{% url 'corte' %}" class="btn-service">{% trans "Más detalles" %}</a>
+                </div>
+            </div>
+
+            <div class="service-row js-animate">
+                <div class="service-img-col">
+                    <span class="service-number">02</span>
+                    <img src="{% static 'img/rebarbasuspendida.jpg' %}" alt="Rebabado">
+                </div>
+                <div class="service-text-col">
+                    <h3 class="service-title">{% trans "Rebabado" %}</h3>
+                    <p class="service-desc">
+                        {% trans "Eliminación manual y mecánica de aristas cortantes y excesos de material. Garantizamos la seguridad de manipulación y preparamos la pieza para un ajuste perfecto." %}
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag">Amoladoras</span>
+                        <span class="feature-tag">Máquinas Suspendidas</span>
+                        <span class="feature-tag">Pulido</span>
+                    </div>
+                    <a href="{% url 'rebarbado' %}" class="btn-service">{% trans "Más Detalles" %}</a>
+                </div>
+            </div>
+
+            <div class="service-row js-animate">
+                <div class="service-img-col">
+                    <span class="service-number">03</span>
+                    <img src="{% static 'img/soldaduratig.png' %}" alt="Soldadura">
+                </div>
+                <div class="service-text-col">
+                    <h3 class="service-title">{% trans "Soldadura" %}</h3>
+                    <p class="service-desc">
+                        {% trans "Uniones metálicas de alta integridad realizadas por soldadores homologados. Especialistas en estructuras complejas y materiales diversos." %}
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag">MIG-MAG</span>
+                        <span class="feature-tag">TIG</span>
+                        <span class="feature-tag">Saneado y Recargues</span>
+                    </div>
+                    <a href="{% url 'soldadura' %}" class="btn-service">{% trans "Más detalles" %}</a>
+                </div>
+            </div>
+
+            <div class="service-row js-animate">
+                <div class="service-img-col">
+                    <span class="service-number">04</span>
+                    <img src="{% static 'img/pieza5.jpg' %}" alt="Granallado">
+                </div>
+                <div class="service-text-col">
+                    <h3 class="service-title">{% trans "Granallado" %}</h3>
+                    <p class="service-desc">
+                        {% trans "Preparación superficial mediante proyección de abrasivos. Limpieza profunda para eliminar óxido y calamina, asegurando la máxima adherencia de la pintura posterior." %}
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag">Inoxidable (2.000kg)</span>
+                        <span class="feature-tag">Carbono (1.000kg)</span>
+                    </div>
+                    <a href="{% url 'granallado' %}" class="btn-service">{% trans "Más detalles" %}</a>
+                </div>
+            </div>
+
+            <div class="service-row js-animate">
+                <div class="service-img-col">
+                    <span class="service-number">05</span>
+                    <img src="{% static 'img/pieza2.jpg' %}" alt="Acabado END">
+                </div>
+                <div class="service-text-col">
+                    <h3 class="service-title">{% trans "Acabado" %}</h3>
+                    <p class="service-desc">
+                        {% trans "Verificación final de calidad. Realizamos Ensayos No Destructivos y tratamientos químicos para entregar piezas con garantía total de integridad." %}
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag">Decapado Ácido</span>
+                        <span class="feature-tag">Líquidos Penetrantes</span>
+                        <span class="feature-tag">Partículas Magnéticas</span>
+                    </div>
+                    <a href="{% url 'acabado' %}" class="btn-service">{% trans "Más detalles" %}</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Seleccionamos todas las tarjetas
+            const cards = document.querySelectorAll('.js-animate');
+
+            const observerOptions = {
+                threshold: 0.15, // Se activa cuando se ve el 15% de la tarjeta
+                rootMargin: "0px"
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        
+                        // 1. Añadimos la clase
+                        entry.target.classList.add('is-visible');
+                        
+                        // 2. Dejamos de observar
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            cards.forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.15}s`; 
+                
+                observer.observe(card);
+            });
+        });
+    </script>
+{% endblock %}

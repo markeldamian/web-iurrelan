@@ -1,0 +1,96 @@
+{% load static %}
+{% load i18n %}
+{% load nav_extras %} <!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{% block title %}Iurrelan Metalurgia | Precisión Industrial{% endblock %}</title>
+    <meta name="description" content="{% block description %}Expertos en corte láser, soldadura y mecanizado en Guipúzcoa.{% endblock %}">
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/logoPequeIurrelan.png' %}"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body class="{% block body_class %}{% endblock %}"> <nav class="navbar" id="navbar">
+        <a href="{% url 'home' %}" class="logo">
+            <img src="{% static 'img/logoIurrelan.png' %}" alt="Iurrelan Logo" class="logo-img">
+        </a>
+
+        <div class="nav-links">
+            
+            <a href="{% url 'home' %}" class="nav-link {% is_active 'home' %}">
+                {% trans "Inicio" %}
+            </a>
+
+            <a href="{% url 'empresa' %}" class="nav-link {% is_active 'empresa' %}">
+                {% trans "Empresa" %}
+            </a>
+            <a href="{% url 'maquinaria' %}" class="nav-link {% is_active 'maquinaria' %}">
+                {% trans "Maquinaria" %}
+            </a>
+            
+            <div class="dropdown">
+                <a href="{% url 'servicios' %}#servicios" 
+                   class="nav-link dropdown-toggle {% is_active 'corte soldadura mecanizado' %}">
+                    {% trans "Servicios" %} <i class="fas fa-chevron-down" style="font-size: 0.7em; margin-left: 5px;"></i>
+                </a>
+                
+                <ul class="dropdown-menu">
+                    <li><a href="{% url 'corte' %}" class="dropdown-item">{% trans "Corte" %}</a></li>
+                    <li><a href="{% url 'soldadura' %}" class="dropdown-item">{% trans "Soldadura" %}</a></li>
+                    <li><a href="{% url 'granallado' %}" class="dropdown-item">{% trans "Granallado" %}</a></li>
+                    <li><a href="{% url 'rebarbado' %}" class="dropdown-item">{% trans "Rebarbado" %}</a></li>
+                    <li><a href="{% url 'acabado' %}" class="dropdown-item">{% trans "Acabado" %}</a></li>
+                    
+                    
+                </ul>
+            </div>
+
+            <a href="{% url 'contacto' %}" class="nav-link {% is_active 'contacto' %}">
+                {% trans "Contacto" %}
+            </a>
+
+            <div class="language-selector">
+                {% get_current_language as LANGUAGE_CODE %}
+                <form action="{% url 'set_language' %}" method="post" id="lang-form">
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ request.path }}">
+                    <select name="language" onchange="document.getElementById('lang-form').submit();" class="lang-select">
+                        {% get_available_languages as LANGUAGES %}
+                        {% for lang in LANGUAGES %}
+                            <option value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %}selected{% endif %}>
+                                {{ lang.0|upper }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    {% include 'footer.html' %}
+
+    <script>
+        // Efecto Navbar Sticky
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>

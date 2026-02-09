@@ -1,0 +1,338 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+    {% trans "Granallado <br>Industrial" as titulo_m %}
+    {% trans "Preparación y acabado de superficies mediante proyección de abrasivos de alta calidad." as sub_m %}
+    {% include 'banner.html' with titulo=titulo_m subtitulo=sub_m clase_extra="hero-dark" %}
+
+    <style>
+        :root {
+            --color-fondo: #000000;
+            --color-titulo: #ffffff;
+            --color-resplandor: rgba(255, 255, 255, 0.6);
+        }
+
+        body { 
+            background-color: var(--color-fondo); 
+            color: #ffffff; 
+            overflow-x: hidden; 
+        }
+
+        /* --- TRANSICIÓN TIPO PORTAL --- */
+        .portal-reveal {
+            opacity: 0;
+            transform: perspective(1000px) translateZ(-50px) translateY(30px);
+            filter: brightness(0) blur(15px);
+            transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .portal-reveal.active {
+            opacity: 1;
+            transform: perspective(1000px) translateZ(0) translateY(0);
+            filter: brightness(1) blur(0);
+        }
+
+        .transformation-section { 
+            padding: 60px 0; 
+            text-align: center; 
+            background: var(--color-fondo); 
+        }
+        
+        .section-title {
+            color: var(--color-titulo) !important;
+            font-size: 2rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .service-description {
+            max-width: 700px;
+            margin: 0 auto 20px;
+            color: #888;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* --- DISTINTIVO DE KG (ARRIBA) --- */
+        .weight-badge {
+            display: inline-block;
+            color: #ffffff;
+            padding: 8px 30px;
+            border: 1px solid rgba(255,255,255,0.2);
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        /* --- CONTENEDOR DE IMAGEN --- */
+        .comparison-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            margin: 0 auto;
+            border: 1px solid #1a1a1a;
+            overflow: hidden;
+            border-radius: 4px;
+            cursor: ew-resize; /* CAMBIO: Indica que se puede mover horizontalmente */
+            touch-action: none; /* CAMBIO: Mejora el arrastre en móviles */
+        }
+
+        .img-after {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img-before {
+            position: absolute;
+            top: 0; left: 0;
+            width: 50%;
+            height: 100%;
+            border-right: 2px solid #fff;
+            z-index: 2;
+            overflow: hidden;
+            /* Quitamos la transición en width para que el arrastre sea instantáneo */
+            /* transition: width 0.8s ...  <- ELIMINADO/COMENTADO PARA ARRASTRE FLUIDO */
+        }
+
+        /* Mantenemos una clase específica para cuando usamos los botones */
+        .img-before.animating {
+            transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .img-before-inner {
+            position: absolute;
+            top: 0; left: 0;
+            width: 800px;
+            height: 450px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slider-handle {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px; height: 40px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            /* transition: left 0.8s ... <- ELIMINADO PARA ARRASTRE FLUIDO */
+            pointer-events: none; /* El evento lo captura el contenedor */
+            box-shadow: 0 0 15px rgba(255,255,255,0.4);
+        }
+
+        .slider-handle.animating {
+             transition: left 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* --- BOTONES (ABAJO) --- */
+        .comparison-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .btn-toggle {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.15);
+            color: rgba(255,255,255,0.5);
+            padding: 8px 25px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.7rem;
+            transition: all 0.4s ease;
+        }
+
+        .btn-toggle:hover, .btn-toggle.active {
+            background: #fff;
+            color: #000;
+            border-color: #fff;
+            box-shadow: 0 0 15px var(--color-resplandor);
+        }
+
+        /* --- SEPARADOR --- */
+        .galactic-separator {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .galactic-line {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        }
+
+        @media (max-width: 800px) {
+            .comparison-container { height: 300px; }
+            .img-before-inner { width: 100vw; height: 300px; }
+            .section-title { font-size: 1.4rem; }
+        }
+    </style>
+
+    <section class="transformation-section">
+        <div class="container portal-reveal">
+            <h2 class="section-title">{% trans "Granallado de Piezas de Acero Inoxidable" %}</h2>
+            
+            <div class="service-description">
+                <p>{% trans "Acabado de alta pureza mediante impacto controlado con microesferas." %}</p>
+            </div>
+
+            <div class="weight-badge">{% trans "PESO MÁXIMO: 2.000 KG" %}</div>
+
+            <div class="comparison-container js-slider">
+                <div class="img-after" style="background-image: url('{% static 'img/piezaaid.png' %}');"></div>
+                
+                <div class="img-before">
+                    <div class="img-before-inner" style="background-image: url('{% static 'img/piezaaia.png' %}');"></div>
+                </div>
+                
+                <div class="slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+            </div>
+
+            <div class="comparison-controls">
+                <button class="btn-toggle" onclick="setComparison(this, 100)">{% trans "Antes" %}</button>
+                <button class="btn-toggle" onclick="setComparison(this, 0)">{% trans "Después" %}</button>
+                <button class="btn-toggle active" onclick="setComparison(this, 50)">{% trans "Split" %}</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="galactic-separator"><div class="galactic-line"></div></div>
+
+    <section class="transformation-section">
+        <div class="container portal-reveal">
+            <h2 class="section-title">{% trans "Granallado de Piezas de Acero Carbono" %}</h2>
+            
+            <div class="service-description">
+                <p>{% trans "Preparación técnica superficial para la remoción de óxidos y cascarilla." %}</p>
+            </div>
+
+            <div class="weight-badge">{% trans "PESO MÁXIMO: 1.000 KG" %}</div>
+
+            <div class="comparison-container js-slider">
+                <div class="img-after" style="background-image: url('{% static 'img/piezaacd.png' %}');"></div>
+                <div class="img-before">
+                    <div class="img-before-inner" style="background-image: url('{% static 'img/piezaaca.png' %}');"></div>
+                </div>
+                <div class="slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+            </div>
+
+            <div class="comparison-controls">
+                <button class="btn-toggle" onclick="setComparison(this, 100)">{% trans "Antes" %}</button>
+                <button class="btn-toggle" onclick="setComparison(this, 0)">{% trans "Después" %}</button>
+                <button class="btn-toggle active" onclick="setComparison(this, 50)">{% trans "Split" %}</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Función para los botones (mantiene la animación suave)
+        function setComparison(btn, value) {
+            const parent = btn.closest('.portal-reveal');
+            const container = parent.querySelector('.js-slider');
+            const imgBefore = container.querySelector('.img-before');
+            const handle = container.querySelector('.slider-handle');
+            
+            // Añadir clase de animación para movimiento suave al usar botones
+            imgBefore.classList.add('animating');
+            handle.classList.add('animating');
+            
+            parent.querySelectorAll('.btn-toggle').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            imgBefore.style.width = value + "%";
+            handle.style.left = value + "%";
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Observer para la animación de entrada
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.portal-reveal').forEach(el => observer.observe(el));
+
+            // Lógica para todos los sliders
+            const sliders = document.querySelectorAll('.js-slider');
+
+            const syncSize = () => {
+                sliders.forEach(s => {
+                    const inner = s.querySelector('.img-before-inner');
+                    inner.style.width = s.offsetWidth + 'px';
+                });
+            };
+            syncSize();
+            window.addEventListener('resize', syncSize);
+
+            // Lógica de arrastre (Drag)
+            sliders.forEach(slider => {
+                let isDragging = false;
+
+                const imgBefore = slider.querySelector('.img-before');
+                const handle = slider.querySelector('.slider-handle');
+
+                const updateSlider = (x) => {
+                    const rect = slider.getBoundingClientRect();
+                    // Calcular porcentaje (0 a 100)
+                    let percentage = ((x - rect.left) / rect.width) * 100;
+                    
+                    // Limitar entre 0 y 100
+                    percentage = Math.max(0, Math.min(100, percentage));
+
+                    imgBefore.style.width = percentage + "%";
+                    handle.style.left = percentage + "%";
+                };
+
+                const startDrag = (e) => {
+                    isDragging = true;
+                    // Quitar clase de animación para que el arrastre sea instantáneo
+                    imgBefore.classList.remove('animating');
+                    handle.classList.remove('animating');
+                    
+                    // Actualizar posición al hacer clic
+                    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                    updateSlider(clientX);
+                };
+
+                const stopDrag = () => {
+                    isDragging = false;
+                };
+
+                const moveDrag = (e) => {
+                    if (!isDragging) return;
+                    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                    updateSlider(clientX);
+                };
+
+                // Eventos Ratón
+                slider.addEventListener('mousedown', startDrag);
+                window.addEventListener('mouseup', stopDrag);
+                window.addEventListener('mousemove', moveDrag);
+
+                // Eventos Táctiles (Móvil)
+                slider.addEventListener('touchstart', startDrag);
+                window.addEventListener('touchend', stopDrag);
+                window.addEventListener('touchmove', moveDrag);
+            });
+        });
+    </script>
+{% endblock %}

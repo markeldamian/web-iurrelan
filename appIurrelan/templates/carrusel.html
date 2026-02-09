@@ -1,0 +1,46 @@
+{% load static %}
+{% load i18n %} <div class="hero-carousel">
+    <div class="carousel-track">
+        <div class="carousel-slide active" style="background-image: url('{% static 'img/pieza4.jpg' %}');"></div>
+        <div class="carousel-slide" style="background-image: url('{% static 'img/pieza5.jpg' %}');"></div>
+        <div class="carousel-slide" style="background-image: url('{% static 'img/pieza6.jpg' %}');"></div>
+    </div>
+
+    <div class="carousel-overlay"></div>
+
+    <div class="hero-content">
+        <h1 class="main-title">{% trans "Innovación en" %}<br><span class="highlight-text">{% trans "Metal" %}</span></h1>
+        <p class="subtitle">{% trans "Soluciones de metalurgia integral y transformación metálica" %}</p>
+        <div class="hero-buttons">
+            <a href="{% url 'contacto' %}" class="btn-hero primary">{% trans "Contactar" %}</a>
+            <a href="{% url 'empresa' %}" class="btn-hero outline">{% trans "Empresa" %}</a>
+            <a href="{% url 'servicios' %}" class="btn-hero outline">{% trans "Servicios" %}</a>
+        </div>
+    </div>
+    
+    <div class="scroll-indicator" onclick="window.scrollBy({top: window.innerHeight, behavior: 'smooth'});">
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="carousel-dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+    </div>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = slides.length;
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        currentSlide = (index + totalSlides) % totalSlides;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+    function goToSlide(index) { showSlide(index); resetTimer(); }
+    let slideInterval = setInterval(() => { showSlide(currentSlide + 1); }, 5000);
+    function resetTimer() { clearInterval(slideInterval); slideInterval = setInterval(() => { showSlide(currentSlide + 1); }, 5000); }
+</script>

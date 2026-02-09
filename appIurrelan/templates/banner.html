@@ -1,0 +1,13 @@
+<header class="hero {{ clase_extra }}">
+    <div class="hero-content">
+        
+        <h1 class="main-title">{{ titulo|default:"Iurrelan" }}</h1> 
+        <p class="subtitle">{{ subtitulo|default:"Metalurgia Industrial" }}</p>
+    </div>
+    
+    {% if not clase_extra %}
+    <div class="scroll-indicator" onclick="window.scrollBy({top: window.innerHeight, behavior: 'smooth'});">
+        <i class="fas fa-chevron-down"></i> &#x2193; 
+    </div>
+    {% endif %}
+</header>

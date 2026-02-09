@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+    {% include 'carrusel.html' %}
+
+    <section id="resumen" class="summary-section">
+        <div class="card">
+            <div class="card-image" style="background-image: url('{% static 'img/logoIurrelan.png' %}'); background-size: contain; background-repeat: no-repeat;"></div>
+            <h3>{% trans "Empresa" %}</h3>
+            <p>
+                {% trans "Más de 20 años de experiencia en el sector metalúrgico en Guipúzcoa. Un equipo experto comprometido." %}
+            </p>
+            <a href="{% url 'empresa' %}" class="card-link">{% trans "Saber más" %}</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+            <h3>{% trans "Servicios" %}</h3>
+            <p>
+                {% trans "Transformación de metales, soldadura y acabados de alta precisión. Ofrecemos soluciones integrales para la industria." %}
+            </p>
+            <a href="#servicios" class="card-link">{% trans "Ver catálogo" %}</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1531297461136-82lw9z1.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+            <h3>{% trans "Contacto" %}</h3>
+            <p>
+                {% trans "¿Tienes un proyecto en mente? Solicita presupuesto sin compromiso o visítanos en nuestras instalaciones." %}
+            </p>
+            <a href="{% url 'contacto' %}" class="card-link">{% trans "Contactar" %}</a>
+        </div>
+    </section>
+
+    <section class="why-us-section reveal-on-scroll">
+        <div class="container">
+            <h2 class="section-title center-title">{% trans "¿Por qué" %} <span class="highlight">Iurrelan</span>?</h2>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-microchip"></i></div>
+                    <h4>{% trans "Tecnología Punta" %}</h4>
+                    <p>{% trans "Maquinaria CNC de última generación para acabados de precisión milimétrica." %}</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-stopwatch"></i></div>
+                    <h4>{% trans "Cumplimiento de Plazos" %}</h4>
+                    <p>{% trans "Compromiso absoluto con las fechas de entrega. Tu producción no puede parar." %}</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+                    <h4>{% trans "Calidad Certificada" %}</h4>
+                    <p>{% trans "Procesos bajo normativa ISO 9001 y controles de calidad exhaustivos." %}</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-user-shield"></i></div>
+                    <h4>{% trans "Seguridad Total" %}</h4>
+                    <p>{% trans "Protocolos de prevención de riesgos y seguridad laboral integrados." %}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sectors-section reveal-on-scroll">
+        <div class="container">
+            <div class="sectors-header">
+                <h2 class="section-title">{% trans "Sectores de" %} <span class="highlight">{% trans "Actividad" %}</span></h2>
+                <p>{% trans "Nuestra versatilidad nos permite adaptarnos a las exigencias de múltiples industrias." %}</p>
+            </div>
+
+            <div class="sectors-gallery">
+                <div class="sector-card" style="background-image: url('https://images.unsplash.com/photo-1532187643603-ba119ca4109e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                    <div class="sector-overlay"><i class="fas fa-car"></i><h3>{% trans "Automoción" %}</h3></div>
+                </div>
+                <div class="sector-card" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                    <div class="sector-overlay"><i class="fas fa-city"></i><h3>{% trans "Construcción" %}</h3></div>
+                </div>
+                <div class="sector-card" style="background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                    <div class="sector-overlay"><i class="fas fa-bolt"></i><h3>{% trans "Energía" %}</h3></div>
+                </div>
+                <div class="sector-card" style="background-image: url('https://images.unsplash.com/photo-1581093588402-40e1b12d53c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                    <div class="sector-overlay"><i class="fas fa-tools"></i><h3>{% trans "Mantenimiento" %}</h3></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.15 });
+            document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+        });
+    </script>
+{% endblock %}

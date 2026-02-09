@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+    {% trans "Contacta<br>con nosotros" as titulo_banner %}
+    {% trans "Estamos listos para hacer realidad tu proyecto" as subtitulo_banner %}
+    
+    {% include 'banner.html' with titulo=titulo_banner subtitulo=subtitulo_banner clase_extra="hero-small" %}
+
+    <section class="contact-page-container">
+        
+        <div class="container reveal-on-scroll" style="margin-top: -50px; position: relative; z-index: 10;">
+            <div class="contact-info-grid">
+                <div class="info-card">
+                    <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>{% trans "Sede Central" %}</h3>
+                    <p>Lugar Barrio Elbarrena, 25<br>20247 Zaldibia, Gipuzkoa</p>
+                </div>
+                <div class="info-card">
+                    <div class="icon-circle"><i class="fas fa-phone-alt"></i></div>
+                    <h3>{% trans "Llámanos" %}</h3>
+                    <p>{% trans "Atención al cliente L-V" %}<br><strong>+34 943 00 00 00</strong></p>
+                </div>
+                <div class="info-card">
+                    <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                    <h3>{% trans "Escríbenos" %}</h3>
+                    <p>{% trans "Respuesta en 24h" %}<br><strong>info@iurrelan.com</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container reveal-on-scroll" style="margin-top: 60px; margin-bottom: 80px;">
+            
+            <div class="map-wrapper" style="width: 100%; height: 450px; margin-bottom: 60px;">
+                <div class="map-frame">
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        marginheight="0" 
+                        marginwidth="0" 
+                        src="https://maps.google.com/maps?q=Iurrelan%2C%20Lugar%20Barrio%20Elbarrena%2C%2025%2C%2020247%20Zaldibia%2C%20Gipuzkoa&t=&z=15&ie=UTF8&iwloc=&output=embed">
+                    </iframe>
+                </div>
+                <div class="map-overlay-card">
+                    <h4>{% trans "Horario de Carga/Descarga" %}</h4>
+                    <p>{% trans "Lunes - Jueves: 08:00 - 17:00" %}</p>
+                    <p>{% trans "Viernes: 08:00 - 14:00" %}</p>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper" style="max-width: 900px; margin: 0 auto;">
+                <h2 class="section-title" style="text-align: center; display: block;">{% trans "Envíanos un" %} <span class="highlight">{% trans "Mensaje" %}</span></h2>
+                <p class="form-subtitle" style="text-align: center;">{% trans "Rellena el formulario y nuestro equipo técnico te responderá a la mayor brevedad." %}</p>
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <div style="padding: 15px; margin-bottom: 20px; background: {% if message.tags == 'success' %}#28a745{% else %}#dc3545{% endif %}; color: white; border-radius: 4px; font-weight: 500;">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+                {{ form.media }}
+
+                <form method="post" class="industrial-form">
+                    {% csrf_token %}
+                    
+                    {% if form.non_field_errors %}
+                        <div style="background: #dc3545; color: white; padding: 10px; border-radius: 4px; margin-bottom: 20px;">
+                            {{ form.non_field_errors }}
+                        </div>
+                    {% endif %}
+
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label>{{ form.nombre.label }}</label>
+                            {{ form.nombre }}
+                            {% if form.nombre.errors %} <div style="color: #ff4444; font-size: 0.85rem; margin-top: 5px;">{{ form.nombre.errors.0 }}</div> {% endif %}
+                        </div>
+                        <div class="form-group half">
+                            <label>{{ form.telefono.label }}</label>
+                            {{ form.telefono }}
+                            {% if form.telefono.errors %} <div style="color: #ff4444; font-size: 0.85rem; margin-top: 5px;">{{ form.telefono.errors.0 }}</div> {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>{{ form.email.label }}</label>
+                        {{ form.email }}
+                        {% if form.email.errors %} <div style="color: #ff4444; font-size: 0.85rem; margin-top: 5px;">{{ form.email.errors.0 }}</div> {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        <label>{{ form.mensaje.label }}</label>
+                        {{ form.mensaje }}
+                        {% if form.mensaje.errors %} <div style="color: #ff4444; font-size: 0.85rem; margin-top: 5px;">{{ form.mensaje.errors.0 }}</div> {% endif %}
+                    </div>
+
+                    <div class="form-group" style="margin-top: 20px;">
+                        <label style="margin-bottom: 10px; display:block;">{% trans "Seguridad" %}</label>
+                        {{ form.captcha }}
+                        {% if form.captcha.errors %} 
+                            <div style="color: #ff4444; font-size: 0.85rem; margin-top: 5px;">{% trans "Completa la verificación de seguridad." %}</div> 
+                        {% endif %}
+                    </div>
+
+                    <div class="checkbox-group">
+                        {{ form.privacidad }}
+                        <label for="{{ form.privacidad.id_for_label }}">
+                            {% trans "He leído y acepto la" %} <a href="{% url 'privacidad' %}">{% trans "Política de Privacidad" %}</a>.
+                        </label>
+                        {% if form.privacidad.errors %} <div style="color: #ff4444; font-size: 0.85rem; display: block; width: 100%;">{{ form.privacidad.errors.0 }}</div> {% endif %}
+                    </div>
+
+                    <button type="submit" class="btn-submit-industrial" style="width: 100%;">
+                        {% trans "Enviar Mensaje" %} <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15 });
+            document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+        });
+    </script>
+{% endblock %}

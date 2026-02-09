@@ -1,0 +1,241 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+
+{% block content %}
+    {% trans "Soldadura<br>Industrial" as titulo_w %}
+    {% trans "Soluciones de unión y reparación. Expertos en MIG-MAG, TIG y recuperación de componentes." as sub_w %}
+    {% include 'banner.html' with titulo=titulo_w subtitulo=sub_w clase_extra="hero-small" %}
+
+    <style>
+        .welding-page {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            overflow-x: hidden;
+            padding-bottom: 100px;
+        }
+
+        .section-header {
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* --- CONTENEDOR ZIG-ZAG --- */
+        .weld-step-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 120px;
+            padding: 0 5%;
+            gap: 60px;
+            opacity: 0;
+            transition: all 1s ease-out;
+        }
+
+        .weld-text {
+            flex: 1;
+            max-width: 500px;
+        }
+        
+        .weld-text h3 {
+            color: #ff8c00;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            text-transform: uppercase; /* Para que los títulos resalten más */
+        }
+
+        .weld-text h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #ff8c00;
+        }
+
+        .weld-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-top: 25px;
+            color: #ccc;
+        }
+
+        .weld-image {
+            flex: 1;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .weld-image img {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            border-bottom: 4px solid #ff8c00;
+            transition: transform 0.4s ease;
+        }
+
+        .weld-image:hover img {
+            transform: scale(1.02);
+        }
+
+        /* --- ANIMACIONES --- */
+        .slide-from-left { transform: translateX(-100px); }
+        .slide-from-right { transform: translateX(100px); }
+
+        .visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        @media (max-width: 900px) {
+            .weld-step-container {
+                flex-direction: column !important;
+                text-align: center;
+                gap: 40px;
+                margin-bottom: 80px;
+            }
+            .weld-text h3::after { left: 50%; transform: translateX(-50%); }
+            .slide-from-left, .slide-from-right { transform: translateY(50px); }
+        }
+        
+        .cert-table-section {
+            background: rgba(255,255,255,0.03);
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+        .tech-card {
+            padding: 20px;
+            background: #222;
+            border-radius: 6px;
+        }
+        .tech-card i { font-size: 2rem; color: #ff8c00; margin-bottom: 10px; }
+        .tech-card h4 { color: white; margin-bottom: 5px; }
+        .tech-card span { color: #888; font-size: 0.9rem; }
+
+    </style>
+    <div class="welding-page">
+        
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title white" style="position: relative; z-index: 10;">
+                    {% trans "Nuestros Servicios de" %} <span class="highlight">{% trans "Soldadura" %}</span>
+                </h2>
+                <p style="max-width: 700px; margin: 20px auto; color: #aaa;">
+                    {% trans "Ofrecemos procesos de soldadura adaptados a cada necesidad, desde la alta productividad industrial hasta la precisión artesanal y la recuperación de piezas críticas." %}
+                </p>
+            </div>
+
+            <div class="weld-step-container slide-from-left scroll-trigger">
+                <div class="weld-image">
+                    <img src="{% static 'img/soldadurasemiauto.jpg' %}" alt="Soldadura MIG MAG Semiautomática">
+                </div>
+                <div class="weld-text">
+                    <h3>{% trans "Soldadura MIG-MAG Semiautomática" %}</h3>
+                    <p>{% trans "Proceso de alta productividad ideal para aceros al carbono y estructuras pesadas. Utilizamos equipos de última generación que garantizan una deposición de material constante, penetración profunda y uniones robustas, optimizando los tiempos de fabricación sin sacrificar la resistencia mecánica." %}</p>
+                </div>
+            </div>
+
+            <div class="weld-step-container slide-from-right scroll-trigger" style="flex-direction: row-reverse;">
+                <div class="weld-image">
+                    <img src="{% static 'img/soldaduratig.png' %}" alt="Soldadura TIG Precisión">
+                </div>
+                <div class="weld-text">
+                    <h3>{% trans "Soldadura TIG" %}</h3>
+                    <p>{% trans "La elección definitiva para acabados estéticos y materiales exigentes como acero inoxidable o aluminio. Este proceso nos permite un control absoluto sobre el arco, logrando cordones limpios, sin proyecciones y de altísima calidad visual y estructural, perfectos para piezas visibles o de precisión." %}</p>
+                </div>
+            </div>
+
+            <div class="weld-step-container slide-from-left scroll-trigger">
+                <div class="weld-image">
+                    <img src="{% static 'img/pieza5.jpg' %}" alt="Sanear Piezas y Recargues">
+                </div>
+                <div class="weld-text">
+                    <h3>{% trans "Sanear Piezas y Recargues" %}</h3>
+                    <p>{% trans "Prolongamos la vida útil de sus componentes industriales. Realizamos saneado de grietas, recuperación de geometrías desgastadas y recargues duros anti-desgaste. Un servicio esencial para mantenimiento correctivo que devuelve a la pieza sus propiedades originales o mejoradas." %}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container reveal-on-scroll">
+            <h3 class="section-title center-title white" style="font-size: 1.8rem; margin-bottom: 40px;">{% trans "Garantía de" %} <span class="highlight">{% trans "Ejecución" %}</span></h3>
+            <div class="cert-table-section">
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <i class="fas fa-check-double"></i>
+                        <h4>{% trans "Versatilidad" %}</h4>
+                        <span>{% trans "Aceros, Inox y Aluminio" %}</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-user-shield"></i>
+                        <h4>{% trans "Cualificación" %}</h4>
+                        <span>{% trans "Personal Homologado" %}</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-tools"></i>
+                        <h4>{% trans "Reparación" %}</h4>
+                        <span>{% trans "Recuperación de piezas" %}</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-microscope"></i>
+                        <h4>{% trans "Calidad" %}</h4>
+                        <span>{% trans "Inspección de acabado" %}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="{% url 'contacto' %}" class="btn-submit-industrial">
+                    {% trans "Solicitar Presupuesto de Soldadura" %}
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            const triggers = document.querySelectorAll('.scroll-trigger');
+            const simpleReveals = document.querySelectorAll('.reveal-on-scroll');
+
+            const observerOptions = {
+                threshold: 0.25,
+                rootMargin: "0px"
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('visible');
+                        appearOnScroll.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            triggers.forEach(trigger => {
+                appearOnScroll.observe(trigger);
+            });
+            
+            simpleReveals.forEach(el => {
+                appearOnScroll.observe(el);
+            });
+        });
+    </script>
+{% endblock %}

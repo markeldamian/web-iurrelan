@@ -1,0 +1,320 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+    {% trans "Corte <br>de Precisión" as titulo_b %}
+    {% trans "Tecnología de fibra óptica para acabados perfectos y rapidez inigualable." as sub_b %}
+    {% include 'banner.html' with titulo=titulo_b subtitulo=sub_b clase_extra="hero-corte" %}
+
+    <style>
+        /* Fondo y ambiente general */
+        .process-section, .tech-specs {
+            background-color: #1a1a1a; /* Fondo oscuro continuo */
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Separador sutil entre secciones */
+        .tech-specs {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 120px;
+        }
+
+        /* --- ESTILOS DE LA LÍNEA LÁSER --- */
+        .laser-container {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #333;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .laser-beam {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0%; /* Se llenará con JS */
+            background: linear-gradient(to bottom, #ff4444, #ff8c00);
+            box-shadow: 0 0 15px #ff4444;
+            transition: height 0.1s linear;
+        }
+
+        /* --- ESTILOS DE LOS PASOS (SCROLL) --- */
+        .step-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 150px;
+            position: relative;
+            z-index: 2;
+            opacity: 0;
+            transition: all 0.8s ease-out;
+        }
+
+        .step-row:nth-child(odd) { transform: translateX(-50px); }
+        .step-row:nth-child(even) { transform: translateX(50px); flex-direction: row-reverse; }
+        
+        .step-row.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .step-content {
+            width: 40%;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .step-image {
+            width: 40%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid #ff8c00;
+        }
+
+        .step-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.1);
+            position: absolute;
+            top: -40px;
+            right: 20px;
+        }
+
+        .step-title {
+            color: #ff8c00;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .step-dot {
+            width: 20px;
+            height: 20px;
+            background: #333;
+            border: 2px solid #ff8c00;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            transition: background 0.3s;
+        }
+        
+        .step-dot.active {
+            background: #ff4444;
+            box-shadow: 0 0 15px #ff4444;
+        }
+
+        /* CORRECCIÓN: Título por encima de la línea láser */
+        .section-title {
+            position: relative;
+            z-index: 10;
+            color: white !important; /* Forzar blanco en fondo oscuro */
+        }
+
+        /* --- NUEVOS ESTILOS CAPACIDADES (DARK MODE) --- */
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .spec-item {
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.03); /* Fondo semitransparente oscuro */
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .spec-item:hover { 
+            transform: translateY(-10px); 
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #ff8c00; /* Borde naranja al pasar el ratón */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+
+        .spec-icon { 
+            font-size: 2.5rem; 
+            color: #ff8c00; 
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .spec-item:hover .spec-icon {
+            transform: scale(1.1);
+        }
+
+        .spec-item h4 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .spec-item p {
+            color: #aaa; /* Gris claro para el texto secundario */
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .step-row { flex-direction: column !important; margin-bottom: 80px; text-align: center; }
+            .step-content, .step-image { width: 90%; margin: 10px 0; }
+            .laser-container { left: 20px; }
+            .step-dot { left: 20px; }
+            .step-row:nth-child(odd), .step-row:nth-child(even) { transform: translateY(30px); }
+        }
+    </style>
+    <section class="process-section" id="process-wrapper">
+        <div class="laser-container">
+            <div class="laser-beam" id="laserBeam"></div>
+        </div>
+
+        <div class="container">
+            <h2 class="section-title center-title white" style="margin-bottom: 80px;">
+                {% trans "Proceso de" %} <span class="highlight">{% trans "Producción" %}</span>
+            </h2>
+
+            <div class="step-row reveal-step">
+                <img src="https://images.unsplash.com/photo-1581094794329-cd56b500618e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="step-image" alt="Diseño CAD">
+                <div class="step-dot"></div>
+                <div class="step-content">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">{% trans "Ingeniería y Nesting" %}</h3>
+                    <p>{% trans "Optimizamos el diseño CAD para aprovechar al máximo el material. Nuestro software de nesting inteligente reduce el desperdicio y calcula la ruta de corte más eficiente." %}</p>
+                </div>
+            </div>
+
+            <div class="step-row reveal-step">
+                <div class="step-content">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">{% trans "Corte Fibra 6kW" %}</h3>
+                    <p>{% trans "Nuestra maquinaria de fibra óptica corta acero, aluminio y cobre con una precisión de 0.05mm. Velocidad extrema sin rebabas ni deformaciones térmicas." %}</p>
+                </div>
+                <div class="step-dot"></div>
+                <img src="https://images.unsplash.com/photo-1624623253509-00994d509825?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="step-image" alt="Corte Láser">
+            </div>
+
+            <div class="step-row reveal-step">
+                <img src="https://images.unsplash.com/photo-1565439736636-f082e6d5e75d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="step-image" alt="Plegado CNC">
+                <div class="step-dot"></div>
+                <div class="step-content">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">{% trans "Transformación" %}</h3>
+                    <p>{% trans "Las piezas cortadas pasan inmediatamente a nuestra sección de plegado CNC si el proyecto lo requiere, garantizando ángulos perfectos." %}</p>
+                </div>
+            </div>
+
+            <div class="step-row reveal-step">
+                <div class="step-content">
+                    <div class="step-number">04</div>
+                    <h3 class="step-title">{% trans "Control de Calidad" %}</h3>
+                    <p>{% trans "Verificación dimensional pieza a pieza antes del embalaje. Aseguramos que recibas exactamente lo que diseñaste." %}</p>
+                </div>
+                <div class="step-dot"></div>
+                <img src="https://images.unsplash.com/photo-1581093588402-40e1b12d53c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="step-image" alt="Control Calidad">
+            </div>
+        </div>
+    </section>
+
+    <section class="tech-specs">
+        <div class="container">
+            <h2 class="section-title center-title">{% trans "Capacidades" %} <span class="highlight">{% trans "Técnicas" %}</span></h2>
+            
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <i class="fas fa-layer-group spec-icon"></i>
+                    <h4>{% trans "Espesores" %}</h4>
+                    <p>Acero: 25mm<br>Inox: 20mm<br>Aluminio: 15mm</p>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-expand-arrows-alt spec-icon"></i>
+                    <h4>{% trans "Formato Máximo" %}</h4>
+                    <p>3000 x 1500 mm<br>Doble mesa intercambiable</p>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-tachometer-alt spec-icon"></i>
+                    <h4>{% trans "Precisión" %}</h4>
+                    <p>Posicionamiento: ±0.03mm<br>Repetibilidad: ±0.02mm</p>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-bolt spec-icon"></i>
+                    <h4>{% trans "Potencia" %}</h4>
+                    <p>6.000W Fibra<br>Alta densidad de energía</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 80px; text-align: center;">
+                <a href="{% url 'contacto' %}" class="btn-submit-industrial">
+                    {% trans "Solicitar Cotización de Corte" %} <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // ANIMACIÓN 1: Scroll Reveal
+            const steps = document.querySelectorAll('.reveal-step');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.3 });
+            steps.forEach(step => observer.observe(step));
+
+            // ANIMACIÓN 2: Efecto Rayo Láser
+            const processSection = document.getElementById('process-wrapper');
+            const laserBeam = document.getElementById('laserBeam');
+            const dots = document.querySelectorAll('.step-dot');
+
+            window.addEventListener('scroll', () => {
+                const rect = processSection.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                
+                let percentage = 0;
+                
+                if (rect.top < windowHeight / 2) {
+                    const scrolled = (windowHeight / 2) - rect.top;
+                    const totalHeight = rect.height;
+                    percentage = (scrolled / totalHeight) * 100;
+                }
+
+                percentage = Math.max(0, Math.min(100, percentage));
+                laserBeam.style.height = percentage + '%';
+
+                dots.forEach(dot => {
+                    const dotPos = dot.getBoundingClientRect().top - rect.top;
+                    const beamPos = (percentage / 100) * rect.height;
+                    
+                    if (beamPos > dotPos) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}

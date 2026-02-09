@@ -1,0 +1,52 @@
+{% load static %}
+{% load i18n %}
+
+<footer class="site-footer">
+    
+    <div class="footer-content">
+        
+        <div class="footer-section">
+<img src="{% static 'img/logoIurrelan.png' %}" 
+     alt="Iurrelan Logo" 
+     class="footer-logo" 
+     style="background: rgb(255, 255, 255); padding: 5px; border-radius: 4px; ">            
+     
+     <p style="color: #bbb; line-height: 1.6;">
+                {% trans "Expertos en transformación metálica y soluciones industriales en Guipúzcoa." %}
+            </p>
+            <div class="social-links" style="margin-top: 20px;">
+                <a href="#" style="color: white; margin-right: 15px; font-size: 1.2rem;"><i class="fab fa-linkedin"></i></a>
+                <a href="#" style="color: white; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section contact-info">
+            <h3>{% trans "Contacto" %}</h3>
+            <p><i class="fas fa-map-marker-alt"></i> EL BARRENA AUZOA 25 ZALDIBIA 20247 GIPUZKOA</p>
+            <p><i class="fas fa-phone"></i> +34 943 161596</p>
+            <p><i class="fas fa-envelope"></i> administracion@iurrelan.com</p>
+        </div>
+
+        <div class="footer-section links">
+            <h3>{% trans "Enlaces" %}</h3>
+            <ul>
+                <li><a href="{% url 'home' %}">{% trans "Inicio" %}</a></li>
+                <li><a href="{% url 'empresa' %}">{% trans "Empresa" %}</a></li>
+                <li><a href="{% url 'home' %}#servicios">{% trans "Servicios" %}</a></li>
+                <li><a href="{% url 'maquinaria' %}">{% trans "Maquinaria" %}</a></li>
+                <li><a href="{% url 'contacto' %}">{% trans "Contacto" %}</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; {% now "Y" %} Iurrelan. {% trans "Todos los derechos reservados." %}</p>
+        <div class="legal-links">
+            <a href="{% url 'aviso_legal' %}">{% trans "Aviso Legal" %}</a>
+            <a href="{% url 'privacidad' %}">{% trans "Política de Privacidad" %}</a>
+            <a href="{% url 'cookies' %}">{% trans "Política de Cookies" %}</a>
+            <a href="{% url 'canal_etico' %}">{% trans "Canal Ético" %}</a>
+        </div>
+    </div>
+</footer>

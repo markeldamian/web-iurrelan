@@ -1,0 +1,1327 @@
+/* --- ESTILOS GENERALES Y VARIABLES --- */
+:root {
+--primary-color: #d32e12; /* Naranja industrial */
+--dark-bg: #1a1a1a;
+--light-bg: #ffffff;
+--text-light: #f0f0f0;
+--text-dark: #333333;
+--overlay-color: rgba(0, 0, 0, 0.7);
+--nav-transition: all 0.4s ease-in-out;
+}
+
+body, html {
+margin: 0;
+padding: 0;
+font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+background-color: var(--dark-bg);
+color: var(--text-light);
+scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en enlaces */
+}
+
+.container {
+    max-width: 1200px;  /* Ancho máximo del contenido */
+    margin: 0 auto;     /* Centrar horizontalmente */
+    padding: 0 20px;    /* Espacio a los lados para que no toque el borde en móviles */
+    width: 100%;        /* Asegura que ocupe el espacio disponible */
+    box-sizing: border-box;
+}
+
+.company-page-container {
+    padding-bottom: 50px; /* Espacio al final antes del footer */
+    background-color: var(--dark-bg); /* Asegura fondo oscuro */
+    min-height: 100vh;
+}
+
+/* --- BARRA DE NAVEGACIÓN (STICKY HEADER) --- */
+.navbar {
+position: fixed;
+top: 0;
+width: 100%;
+padding: 25px 50px; /* Padding inicial grande */
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 1000;
+transition: var(--nav-transition); /* La transición dinámica */
+box-sizing: border-box;
+background-color: transparent; /* Transparente al principio */
+}
+
+/* Clase que se añade con JS al bajar el scroll */
+.navbar.scrolled {
+background-color: rgba(211, 33, 33, 0.74); /* Fondo oscuro casi sólido */
+padding: 15px 50px; /* Se hace más compacta */
+box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* En projIurrelan/appIurrelan/static/css/home.css */
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 0; /* Asegura que no tenga relleno extra */
+}
+
+.logo-img {
+    height: 100px; /* Reducido de 40px a 28px para igualar el texto anterior */
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.05);
+}
+
+/* Ajuste opcional para cuando haces scroll */
+.navbar.scrolled .logo-img {
+    height: 75px; /* Un pelín más pequeño al bajar */
+}
+
+.nav-links {
+display: flex;
+padding-top: 40px;
+gap: 30px;
+}
+
+.nav-link {
+text-decoration: none;
+color: white;
+font-weight: 500;
+text-transform: uppercase;
+font-size: 0.9rem;
+position: relative;
+transition: color 0.3s;
+}
+
+.nav-link:hover { color: var(--primary-color); }
+
+/* --- BANNER PRINCIPAL (HERO SECTION) --- */
+.hero {
+height: 100vh;
+width: 100%;
+/* Imagen de fondo (puedes cambiar la URL por una tuya local en static) */
+background-image: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); 
+background-size: cover;
+background-position: center;
+background-attachment: fixed; /* Efecto Parallax ligero */
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+/* --- ESTILO PARA BANNER PEQUEÑO (Páginas Interiores) --- */
+/* --- ESTILOS MENÚ DESPLEGABLE (DROPDOWN) --- */
+
+/* Contenedor principal del botón Servicios */
+.dropdown {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* El menú desplegable (Nivel 1) */
+.dropdown-menu {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 100%; /* Justo debajo del navbar */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.95); /* Fondo oscuro sólido */
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 4px;
+    margin: 0;
+}
+
+/* Mostrar menú al pasar el ratón sobre el padre */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Estilo de los enlaces dentro del menú */
+.dropdown-item {
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* Para alinear texto y flechita */
+    justify-content: space-between;
+    transition: background 0.2s, color 0.2s;
+    font-size: 0.9rem;
+    white-space: nowrap; /* Evita que el texto se rompa */
+}
+
+.dropdown-item:hover {
+    background-color: var(--primary-color); /* Naranja al pasar el ratón */
+    color: white;
+}
+
+/* --- NIVEL 2: OTROS SERVICIOS --- */
+
+.dropdown-submenu {
+    position: relative; /* Necesario para posicionar el hijo */
+}
+
+/* El menú anidado (Nivel 2) */
+.dropdown-menu-nested {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Se despliega a la derecha */
+    background-color: rgba(0, 0, 0, 0.95);
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 4px;
+    margin-left: 2px; /* Un pequeño margen para separar */
+}
+
+/* Mostrar el nivel 2 al pasar el ratón sobre "Otros Servicios" */
+.dropdown-submenu:hover .dropdown-menu-nested {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Pequeña animación de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- ESTILO PARA EL ENLACE ACTIVO (SUBRAYADO) --- */
+.nav-link.active {
+    color: var(--primary-color) !important; /* Cambia el color del texto a naranja */
+    position: relative;
+}
+
+/* Crea la línea inferior */
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Grosor de la línea */
+    bottom: -5px; /* Separación respecto al texto */
+    left: 0;
+    background-color: var(--primary-color); /* Color de la línea */
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+}
+
+/* Opcional: Si quieres que la línea aparezca animada al pasar el ratón en los no activos */
+.nav-link:not(.active)::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transform: scaleX(0); /* Oculto por defecto */
+    transition: transform 0.3s ease;
+}
+
+.nav-link:not(.active):hover::after {
+    transform: scaleX(1); /* Aparece al hacer hover */
+}
+.hero.hero-small {
+    height: 50vh; /* Ocupa solo la mitad de la pantalla (antes era 100vh) */
+    min-height: 350px; /* Altura mínima para que no quede muy aplastado */
+    background-position: center; /* Centramos la imagen */
+}
+
+/* Opcional: Si quieres cambiar la foto de fondo solo en empresa, descomenta esto: */
+/*
+.hero.hero-small {
+    background-image: url('URL_DE_OTRA_FOTO.jpg');
+}
+*/
+
+.hero.hero-small h1.main-title {
+    font-size: 3.5rem; /* Título un poco más pequeño que en la portada */
+}
+
+/* Ajuste móvil */
+@media (max-width: 768px) {
+    .hero.hero-small {
+        height: 40vh;
+    }
+    .hero.hero-small h1.main-title {
+        font-size: 2.5rem;
+    }
+}
+
+.hero::before {
+content: '';
+position: absolute;
+top: 0; left: 0; width: 100%; height: 100%;
+background: var(--overlay-color);
+z-index: 1;
+}
+
+.hero-content {
+z-index: 2;
+animation: fadeInUp 1.2s ease-out forwards;
+}
+
+h1.main-title {
+font-size: 5rem;
+margin: 0;
+text-transform: uppercase;
+letter-spacing: 5px;
+line-height: 1.1;
+}
+
+p.subtitle {
+font-size: 1.5rem;
+margin-top: 10px;
+color: #ddd;
+font-weight: 300;
+}
+
+/* Flecha animada para invitar a bajar */
+.scroll-indicator {
+position: absolute;
+bottom: 30px;
+z-index: 2;
+animation: bounce 2s infinite;
+color: white;
+font-size: 2rem;
+cursor: pointer;
+}
+
+/* --- SECCIÓN RESUMEN (FONDO BLANCO) --- */
+.summary-section {
+background-color: var(--light-bg);
+color: var(--text-dark);
+padding: 80px 20px;
+display: flex;
+justify-content: center;
+gap: 40px;
+flex-wrap: wrap;
+}
+
+.card {
+background: #fff;
+width: 300px;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+text-align: center;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+cursor: pointer;
+border-top: 5px solid transparent;
+}
+
+.card:hover {
+transform: translateY(-10px); /* Se levanta al pasar el ratón */
+box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+border-top: 5px solid var(--primary-color);
+}
+
+.card-icon {
+font-size: 3rem;
+color: var(--primary-color);
+margin-bottom: 20px;
+}
+
+.card h3 {
+margin: 10px 0;
+font-size: 1.5rem;
+text-transform: uppercase;
+}
+
+.card p {
+color: #666;
+line-height: 1.6;
+}
+
+.card-link {
+display: inline-block;
+margin-top: 20px;
+padding: 10px 20px;
+background-color: var(--dark-bg);
+color: white;
+text-decoration: none;
+border-radius: 4px;
+transition: background 0.3s;
+}
+
+.card-link:hover {
+background-color: var(--primary-color);
+}
+/* --- FOOTER --- */
+.site-footer {
+background-color: #111; /* Un poco más oscuro que el fondo normal */
+color: #bbb;
+padding: 60px 0 20px 0;
+border-top: 3px solid var(--primary-color); /* Línea naranja superior */
+margin-top: auto; /* Empuja el footer al final si hay poco contenido */
+}
+
+.footer-content {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+gap: 40px;
+}
+
+.footer-section {
+flex: 1;
+min-width: 250px;
+}
+
+.footer-section h3 {
+color: white;
+font-size: 1.5rem;
+margin-bottom: 20px;
+text-transform: uppercase;
+}
+
+.footer-section.brand h3 span {
+color: var(--primary-color);
+}
+
+.footer-section.contact-info p {
+display: flex;
+align-items: center; /* Alinea icono con texto */
+gap: 10px;
+margin-bottom: 15px;
+line-height: 1.5;
+}
+
+.footer-section.contact-info i {
+color: var(--primary-color);
+font-size: 1.2rem;
+width: 20px; /* Ancho fijo para alinear textos */
+}
+
+.footer-section.links ul {
+list-style: none;
+padding: 0;
+}
+
+.footer-section.links li {
+margin-bottom: 10px;
+}
+
+.footer-section.links a {
+color: #bbb;
+text-decoration: none;
+transition: color 0.3s;
+}
+
+.footer-section.links a:hover {
+color: var(--primary-color);
+padding-left: 5px; /* Pequeño movimiento al pasar el ratón */
+}
+
+.footer-bottom {
+text-align: center;
+margin-top: 50px;
+padding-top: 20px;
+border-top: 1px solid #333;
+font-size: 0.9rem;
+color: #666;
+}
+
+.footer-logo {
+    max-width: 180px; /* Ajusta este número si lo quieres más grande o pequeño */
+    height: auto;
+    margin-bottom: 15px;
+    display: block;
+}
+.legal-links {
+    margin-bottom: 10px;
+}
+
+
+.legal-links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.legal-links a:hover {
+    color: var(--primary-color);
+}
+/* --- ANIMACIONES --- */
+@keyframes fadeInUp {
+from { opacity: 0; transform: translateY(40px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+40% {transform: translateY(-10px);}
+60% {transform: translateY(-5px);}
+}
+/* --- NOTIFICACIONES FLOTANTES --- */
+.notification-container {
+    position: fixed;
+    top: 100px; /* Un poco por debajo del navbar */
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notification-toast {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 300px;
+    max-width: 400px;
+    animation: slideInRight 0.5s ease-out forwards;
+    transition: opacity 0.3s ease;
+    border-left: 5px solid #ccc;
+}
+
+/* Colores según el tipo de mensaje */
+.notification-toast.success {
+    border-left-color: #28a745; /* Verde para éxito */
+}
+
+.notification-toast.success .icon {
+    color: #28a745;
+}
+
+.notification-toast.error {
+    border-left-color: #dc3545; /* Rojo para errores */
+}
+
+.notification-toast.error .icon {
+    color: #dc3545;
+}
+
+.notification-toast .close-btn {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: auto; /* Empuja la X a la derecha */
+    padding: 0 5px;
+}
+
+.notification-toast .close-btn:hover {
+    color: white;
+}
+
+/* Animación de entrada */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/* --- BANNER DE COOKIES --- */
+.cookie-banner {
+    position: fixed;
+    bottom: -200px; /* Oculto inicialmente por debajo de la pantalla */
+    left: 0;
+    width: 100%;
+    background-color: #222; /* Fondo oscuro */
+    border-top: 3px solid var(--primary-color);
+    color: #f0f0f0;
+    padding: 20px;
+    z-index: 10000; /* Por encima de casi todo */
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.5);
+    transition: bottom 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+}
+
+.cookie-banner.show {
+    bottom: 0; /* Sube y se muestra */
+}
+
+.cookie-content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cookie-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.cookie-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cookie-content a:hover {
+    text-decoration: underline;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-accept {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.btn-accept:hover {
+    background-color: #e55c00;
+}
+
+/* --- BOTONES DEL BANNER DE COOKIES --- */
+.cookie-buttons {
+    display: flex;
+    gap: 15px; /* Separación entre botones */
+}
+
+/* Botón Aceptar (Naranja llamativo) */
+.btn-accept {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-accept:hover {
+    background-color: #e55c00;
+}
+
+/* Botón Solo Necesarias (Borde blanco/Gris, estilo "fantasma") */
+.btn-reject {
+    background-color: transparent;
+    color: #ccc;
+    border: 2px solid #555;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-reject:hover {
+    border-color: #fff;
+    color: #fff;
+}
+/* --- ESTILOS PÁGINA EMPRESA --- */
+
+.section-title {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+}
+
+.section-title .highlight { color: var(--primary-color); }
+.section-title::after {
+    content: ''; display: block; width: 50px; height: 3px;
+    background: var(--primary-color); margin-top: 5px;
+}
+
+.center-title { text-align: center; display: block; margin: 0 auto 40px; }
+.center-title::after { margin: 10px auto 0; }
+
+/* Introducción */
+.company-intro { display: flex; gap: 50px; align-items: center; }
+.intro-text { flex: 1; color: #ccc; line-height: 1.8; font-size: 1.1rem; }
+.intro-image { flex: 1; position: relative; }
+.intro-image img { width: 100%; border-radius: 4px; box-shadow: 15px 15px 0 rgba(211, 46, 18, 0.15); filter: brightness(0.9); }
+.exp-badge {
+    position: absolute; bottom: -20px; left: -20px;
+    background: var(--primary-color); color: white;
+    padding: 15px 25px; text-align: center; font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+.exp-badge .years { display: block; font-size: 2rem; line-height: 1; }
+
+/* Tarjetas 3D (Misión/Visión/Valores) */
+.mvv-section-dark { background-color: #111; padding: 80px 0; border-top: 1px solid #333; border-bottom: 1px solid #333; }
+.mvv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.flip-card { background: transparent; height: 320px; perspective: 1000px; cursor: pointer; }
+.flip-card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.8s; transform-style: preserve-3d; }
+.flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back {
+    position: absolute; width: 100%; height: 100%;
+    backface-visibility: hidden; border-radius: 8px;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    padding: 20px; box-sizing: border-box; border: 1px solid #333;
+}
+.flip-card-front { background: #222; border-bottom: 4px solid var(--primary-color); }
+.flip-card-back { background: var(--primary-color); color: white; transform: rotateY(180deg); }
+.icon-large { font-size: 3.5rem; color: var(--primary-color); margin-bottom: 20px; }
+.values-list { list-style: none; padding: 0; text-align: left; }
+.values-list li { margin-bottom: 8px; }
+
+/* Planta Operativa (Parallax) */
+.plant-parallax {
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-attachment: fixed; background-size: cover; background-position: center;
+    padding: 100px 0; color: white; text-align: center;
+}
+.overlay-dark { position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); z-index: 1; }
+.relative-z { position: relative; z-index: 2; }
+.stats-grid { display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 50px; gap: 30px; }
+.stat-item i { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 10px; }
+.stat-item .number { display: block; font-size: 3rem; font-weight: bold; font-family: monospace; }
+
+/* Certificados */
+.certs-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 40px; }
+.cert-box {
+    background: #222; padding: 30px; width: 220px; border-radius: 8px; border: 1px solid #333;
+    transition: transform 0.3s;
+}
+.cert-box:hover { transform: translateY(-10px); border-color: var(--primary-color); }
+.cert-icon { font-size: 2.5rem; color: #888; margin-bottom: 15px; display: block;}
+.cert-box:hover .cert-icon { color: var(--primary-color); }
+
+/* Animación Scroll */
+.reveal-on-scroll { opacity: 0; transform: translateY(30px); transition: 1s; }
+.reveal-on-scroll.visible { opacity: 1; transform: translateY(0); }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .company-intro { flex-direction: column; }
+    .exp-badge { right: 0; left: auto; }
+}
+
+/* Ajuste Responsive para móviles */
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.navbar { padding: 20px; flex-direction: column; }
+.nav-links { margin-top: 15px; }
+h1.main-title { font-size: 3rem; }
+}
+/* --- ESTILOS PÁGINA CONTACTO --- */
+
+.contact-page-container {
+    background-color: var(--dark-bg);
+    padding-bottom: 50px;
+    min-height: 100vh;
+}
+
+/* 1. GRID DE TARJETAS DE INFO */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.info-card {
+    background-color: #222;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-bottom: 4px solid transparent;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    border-bottom-color: var(--primary-color);
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(211, 46, 18, 0.1); /* Naranja transparente */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+.info-card:hover .icon-circle {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.info-card h3 {
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.info-card p {
+    color: #bbb;
+    line-height: 1.6;
+}
+
+/* 2. LAYOUT DIVIDIDO (FORM + MAPA) */
+.contact-split-layout {
+    display: flex;
+    gap: 50px;
+    align-items: stretch; /* Misma altura */
+}
+
+/* Formulario */
+.contact-form-wrapper {
+    flex: 1;
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.form-subtitle {
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.industrial-form .form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.industrial-form .half {
+    flex: 1;
+}
+
+.industrial-form label {
+    display: block;
+    color: #ddd;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.btn-submit-industrial {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 4px;
+    transition: background 0.3s, transform 0.2s;
+    text-decoration: none !important;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-submit-industrial:hover {
+    background-color: #e55c00;
+    transform: translateY(-2px);
+    text-decoration: none !important; /* <--- AÑADE ESTO */
+}
+
+/* Mapa */
+.map-wrapper {
+    flex: 1;
+    position: relative;
+    min-height: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.map-frame {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(20%) contrast(1.1); /* Toque industrial al mapa */
+}
+
+.map-overlay-card {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(34, 34, 34, 0.95);
+    padding: 20px;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 4px;
+    max-width: 250px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.map-overlay-card h4 {
+    margin: 0 0 10px 0;
+    color: var(--primary-color);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+}
+
+.map-overlay-card p {
+    margin: 5px 0;
+    color: #ccc;
+    font-size: 0.85rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .contact-split-layout {
+        flex-direction: column;
+    }
+    .map-wrapper {
+        min-height: 400px;
+    }
+    .industrial-form .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* --- MEJORAS ESTÉTICAS FORMULARIO CONTACTO --- */
+
+/* 1. Estilo Dark para los campos (Adiós a las cajas blancas) */
+.industrial-form .form-group {
+    margin-bottom: 20px;
+}
+
+.industrial-form label {
+    color: #aaa; /* Gris claro para las etiquetas */
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 500;
+}
+
+/* Campos de texto y textareas */
+.industrial-form input[type="text"],
+.industrial-form input[type="email"],
+.industrial-form textarea {
+    width: 100%;
+    background-color: #2a2a2a; /* Fondo gris oscuro */
+    border: 1px solid #444;    /* Borde sutil */
+    color: #ffffff;            /* Texto blanco */
+    padding: 12px 15px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Evita que se salgan del ancho */
+}
+
+/* Efecto al escribir (Focus) */
+.industrial-form input:focus,
+.industrial-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color); /* Naranja Iurrelan */
+    background-color: #333; /* Un poco más claro */
+    box-shadow: 0 0 0 3px rgba(211, 46, 18, 0.15); /* Resplandor suave */
+}
+
+/* 2. Checkbox Alineado y Estilizado */
+.checkbox-group {
+    display: flex;
+    align-items: center; /* CLAVE: Centra verticalmente items */
+    gap: 12px;           /* Espacio entre cajita y texto */
+    margin: 25px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.03); /* Fondo muy sutil para destacar el área */
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    appearance: none; /* Quitamos estilo por defecto */
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    background-color: #2a2a2a;
+    border: 2px solid #555;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Evita que se aplaste si hay mucho texto */
+    transition: all 0.2s;
+}
+
+/* Estado Marcado (Checked) */
+.checkbox-group input[type="checkbox"]:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* El 'tick' o palomita (dibujado con CSS) */
+.checkbox-group input[type="checkbox"]:checked::after {
+    content: '\2714'; /* Símbolo check */
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+
+.checkbox-group label {
+    margin: 0; /* Quitamos márgenes heredados */
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.checkbox-group a {
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--primary-color);
+}
+
+.checkbox-group:hover input[type="checkbox"] {
+    border-color: #888;
+}
+
+/* --- ESTILOS DEL CARRUSEL HERO --- */
+
+.hero-carousel {
+    position: relative;
+    height: 100vh; /* Pantalla completa */
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Las imágenes de fondo */
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0; /* Ocultas por defecto */
+    transition: opacity 1.5s ease-in-out, transform 6s linear; /* Transición suave + efecto zoom lento */
+    z-index: 1;
+    transform: scale(1);
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    transform: scale(1.05); /* Efecto sutil de movimiento ("Ken Burns") */
+}
+
+/* Capa oscura para leer el texto */
+.carousel-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Oscurece las fotos un 60% */
+    z-index: 2;
+}
+
+/* El contenido (Texto) encima de todo */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.highlight-text {
+    color: var(--primary-color); /* Naranja */
+}
+
+/* Botones del Hero (Nuevos) */
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-hero {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.btn-hero.primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+}
+
+.btn-hero.primary:hover {
+    background-color: #e55c00;
+}
+
+.btn-hero.outline {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-hero.outline:hover {
+    background-color: white;
+    color: #111;
+}
+
+/* Puntos indicadores */
+.carousel-dots {
+    position: absolute;
+    bottom: 80px; /* Encima de la flecha */
+    z-index: 3;
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* Ajustes Responsive */
+@media (max-width: 768px) {
+    .hero-carousel h1.main-title {
+        font-size: 3rem;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+/* --- SECCIÓN: POR QUÉ ELEGIRNOS --- */
+.why-us-section {
+    background-color: #111; /* Fondo muy oscuro */
+    color: white;
+    padding: 100px 0;
+    position: relative;
+    border-top: 1px solid #333;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.03); /* Fondo sutil */
+    border-radius: 8px;
+    transition: transform 0.3s, background 0.3s;
+    border: 1px solid transparent;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary-color);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.feature-item:hover .feature-icon {
+    transform: rotateY(360deg); /* El icono gira al pasar el ratón */
+}
+
+.feature-item h4 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.feature-item p {
+    color: #bbb;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+
+/* --- SECCIÓN: SECTORES (Galería) --- */
+.sectors-section {
+    padding: 100px 0;
+    background-color: var(--dark-bg);
+}
+
+.sectors-header {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sectors-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.sector-card {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* Capa superpuesta que aparece al hover */
+.sector-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Oscuro transparente inicial */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+.sector-overlay i {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 10px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.sector-overlay h3 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+/* Efectos Hover */
+.sector-card:hover .sector-overlay {
+    background: rgba(211, 46, 18, 0.85); /* Se vuelve naranja al pasar el ratón */
+}
+
+.sector-card:hover i,
+.sector-card:hover h3 {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Asegurar que el efecto reveal-on-scroll funciona */
+.reveal-on-scroll { 
+    opacity: 0; 
+    transform: translateY(30px); 
+    transition: all 1s ease-out; 
+}
+.reveal-on-scroll.visible { 
+    opacity: 1; 
+    transform: translateY(0); 
+}
+/* SELECTOR DE IDIOMA NAV */
+.lang-form {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.lang-select {
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s;
+    text-transform: uppercase;
+}
+
+.lang-select:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.lang-select option {
+    background-color: #1a1a1a; /* Fondo oscuro para las opciones */
+    color: white;
+}
+/* projIurrelan/appIurrelan/static/css/home.css */
+
+.footer-logo {
+    width: 150px; /* Ajusta este valor según necesites */
+    height: auto;
+    margin-bottom: 20px;
+    /* filter: brightness(0) invert(1);  <-- También puedes poner el filtro aquí en vez de en el HTML */
+}   

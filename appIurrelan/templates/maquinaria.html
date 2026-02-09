@@ -1,0 +1,297 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+    {% trans "Parque de<br>Maquinaria" as titulo_mq %}
+    {% trans "Tecnología de vanguardia para afrontar los retos más exigentes de la industria." as sub_mq %}
+    
+    <style>
+        .hero-machines h1 { color: white; }
+    </style>
+    {% include 'banner.html' with titulo=titulo_mq subtitulo=sub_mq clase_extra="hero-machines" %}
+
+    <style>
+        /* --- ESTILOS DEL HANGAR DIGITAL --- */
+        .machinery-section {
+            background-color: #111;
+            min-height: 100vh;
+            padding: 80px 0;
+            color: white;
+            position: relative;
+        }
+
+        /* Fondo de rejilla técnica */
+        .tech-grid-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(rgba(255, 140, 0, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 140, 0, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+
+        /* --- FILTROS --- */
+        .filters-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid #444;
+            color: #888;
+            padding: 10px 25px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 0%; height: 100%;
+            background: #ff8c00;
+            z-index: -1;
+            transition: width 0.3s ease;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            color: white;
+            border-color: #ff8c00;
+        }
+
+        .filter-btn:hover::before, .filter-btn.active::before {
+            width: 100%;
+        }
+
+        /* --- GRID DE MÁQUINAS --- */
+        .machines-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .machine-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.4s, box-shadow 0.4s;
+            opacity: 0;
+            transform: translateY(30px); /* Para la animación de entrada */
+        }
+
+        .machine-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .machine-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            border-color: #ff8c00;
+        }
+
+        /* Imagen */
+        .card-image-wrapper {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+
+        .machine-card:hover .card-image-wrapper img {
+            transform: scale(1.1);
+        }
+
+        .overlay-specs {
+            position: absolute;
+            bottom: 0; left: 0; width: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            border-top: 2px solid #ff8c00;
+        }
+
+        .machine-card:hover .overlay-specs {
+            transform: translateY(0);
+        }
+
+        .spec-tag {
+            color: #ff8c00;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        /* Contenido */
+        .card-body {
+            padding: 25px;
+        }
+
+        .card-category {
+            font-size: 0.75rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            color: white;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #aaa;
+            line-height: 1.6;
+        }
+
+        /* Mensaje vacío */
+        .no-machines {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 50px;
+            color: #555;
+            font-size: 1.2rem;
+            display: none;
+        }
+
+    </style>
+    <section class="machinery-section">
+        <div class="tech-grid-bg"></div>
+        
+        <div class="container">
+            
+            <div class="filters-container reveal-on-load">
+                <button class="filter-btn active" data-filter="all">{% trans "Todas" %}</button>
+                <button class="filter-btn" data-filter="CORTE">{% trans "Corte" %}</button>
+                <button class="filter-btn" data-filter="SOLDADURA">{% trans "Soldadura" %}</button>
+                <button class="filter-btn" data-filter="MECANIZADO">{% trans "Mecanizado" %}</button>
+                <button class="filter-btn" data-filter="OTROS">{% trans "Auxiliares" %}</button>
+            </div>
+
+            <div class="machines-grid" id="machinesGrid">
+                
+                {% for maquina in maquinas %}
+                    <div class="machine-card reveal-on-load" data-category="{{ maquina.categoria }}">
+                        <div class="card-image-wrapper">
+                            {% if maquina.imagen %}
+                                <img src="{{ maquina.imagen.url }}" alt="{{ maquina.nombre }}">
+                            {% else %}
+                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Maquinaria Iurrelan">
+                            {% endif %}
+                            
+                            {% if maquina.specs %}
+                                <div class="overlay-specs">
+                                    <span class="spec-tag"><i class="fas fa-bolt"></i> {{ maquina.specs }}</span>
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div class="card-body">
+                            <span class="card-category">{{ maquina.get_categoria_display }}</span>
+                            <h3 class="card-title">{{ maquina.nombre }}</h3>
+                            <p class="card-desc">{{ maquina.descripcion|truncatewords:20 }}</p>
+                        </div>
+                    </div>
+                {% empty %}
+                    <div style="grid-column: 1/-1; text-align: center; color: #666;">
+                        <h3>{% trans "No hay maquinaria registrada aún." %}</h3>
+                        <p>{% trans "Accede al panel de administración para añadir máquinas." %}</p>
+                    </div>
+                {% endfor %}
+
+                <div class="no-machines" id="noMachinesMsg">
+                    {% trans "No hay máquinas en esta categoría." %}
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. ANIMACIÓN DE ENTRADA (Staggered)
+            const cards = document.querySelectorAll('.reveal-on-load');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, index * 100); // 100ms de retraso entre cada una
+            });
+
+            // 2. LÓGICA DE FILTRADO
+            const buttons = document.querySelectorAll('.filter-btn');
+            const items = document.querySelectorAll('.machine-card');
+            const noMsg = document.getElementById('noMachinesMsg');
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Activar botón
+                    buttons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+                    let visibleCount = 0;
+
+                    items.forEach(item => {
+                        const itemCat = item.getAttribute('data-category');
+                        
+                        // Si es 'all' o coincide la categoría
+                        if (filter === 'all' || itemCat === filter) {
+                            item.style.display = 'block';
+                            // Pequeña animación de reaparición
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 50);
+                            visibleCount++;
+                        } else {
+                            // Ocultar
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300); // Esperar a que acabe la transición css
+                        }
+                    });
+
+                    // Mensaje "No hay resultados"
+                    if (visibleCount === 0) {
+                        setTimeout(() => noMsg.style.display = 'block', 300);
+                    } else {
+                        noMsg.style.display = 'none';
+                    }
+                });
+            });
+
+        });
+    </script>
+{% endblock %}

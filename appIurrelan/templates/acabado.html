@@ -1,0 +1,285 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+    {% trans "Acabado de Piezas mediante <br>Ensayos No Destructivos" as titulo_b %}
+    {% trans "Garantizamos la integridad estructural y superficial de sus componentes mediante procesos certificados." as sub_b %}
+    {% include 'banner.html' with titulo=titulo_b subtitulo=sub_b clase_extra="hero-acabado" %}
+
+    <style>
+        /* Fondo y ambiente general */
+        .process-section, .tech-specs {
+            background-color: #1a1a1a; 
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tech-specs {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 120px;
+        }
+
+        /* --- ESTILOS DE LA LÍNEA DE PROCESO (LÁSER REUTILIZADO) --- */
+        .laser-container {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #333;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .laser-beam {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0%; 
+            background: linear-gradient(to bottom, #ff8c00, #ff8c00); /* Color azul/técnico para acabado */
+            box-shadow: 0 0 15px #ff8c00;
+            transition: height 0.1s linear;
+        }
+
+        .step-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 150px;
+            position: relative;
+            z-index: 2;
+            opacity: 0;
+            transition: all 0.8s ease-out;
+        }
+
+        .step-row:nth-child(odd) { transform: translateX(-50px); }
+        .step-row:nth-child(even) { transform: translateX(50px); flex-direction: row-reverse; }
+        
+        .step-row.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .step-content {
+            width: 40%;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .step-image {
+            width: 40%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid #ff8c00;
+        }
+
+        .step-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.1);
+            position: absolute;
+            top: -40px;
+            right: 20px;
+        }
+
+        .step-title {
+            color: #ff8c00;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .step-dot {
+            width: 20px;
+            height: 20px;
+            background: #333;
+            border: 2px solid #ff8c00;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            transition: background 0.3s;
+        }
+        
+        .step-dot.active {
+            background: #ff8c00;
+            box-shadow: 0 0 15px #ff8c00;
+        }
+
+        .section-title {
+            position: relative;
+            z-index: 10;
+            color: white !important; 
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .spec-item {
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.03); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .spec-item:hover { 
+            transform: translateY(-10px); 
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #ff8c00; 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+
+        .spec-icon { 
+            font-size: 2.5rem; 
+            color: #ff8c00; 
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        
+        @media (max-width: 768px) {
+            .step-row { flex-direction: column !important; margin-bottom: 80px; text-align: center; }
+            .step-content, .step-image { width: 90%; margin: 10px 0; }
+            .laser-container { left: 20px; }
+            .step-dot { left: 20px; }
+            .step-row:nth-child(odd), .step-row:nth-child(even) { transform: translateY(30px); }
+        }
+    </style>
+
+    <section class="process-section" id="process-wrapper">
+        <div class="laser-container">
+            <div class="laser-beam" id="laserBeam"></div>
+        </div>
+
+        <div class="container">
+            <h2 class="section-title center-title white" style="margin-bottom: 80px;">
+                {% trans "Nuestros Procesos de" %} <span class="highlight">{% trans "Acabado" %}</span>
+            </h2>
+
+            <div class="step-row reveal-step">
+                <img src="{% static 'img/decapadoacido.jpg' %}" class="step-image" alt="Decapado en Ácido">
+                <div class="step-dot"></div>
+                <div class="step-content">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">{% trans "Decapado en Ácido" %}</h3>
+                    <p>{% trans "Eliminamos impurezas, óxidos y calamina de la superficie de las piezas mediante baños químicos controlados, preparando el material para inspecciones posteriores o recubrimientos finales." %}</p>
+                </div>
+            </div>
+
+            <div class="step-row reveal-step">
+                <div class="step-content">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">{% trans "Inspección con Líquidos Penetrantes" %}</h3>
+                    <p>{% trans "Detección de discontinuidades superficiales mediante capilaridad. Aplicamos tintes de alta sensibilidad que revelan cualquier fisura o poro no visible a simple vista." %}</p>
+                </div>
+                <div class="step-dot"></div>
+                <img src="{% static 'img/inspeccionnm.png' %}" class="step-image" alt="Líquidos Penetrantes">
+            </div>
+
+            <div class="step-row reveal-step">
+                <img src="{% static 'img/inspeccionm.png' %}" class="step-image" alt="Partículas Magnéticas">
+                <div class="step-dot"></div>
+                <div class="step-content">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">{% trans "Inspección con Partículas Magnéticas" %}</h3>
+                    <p>{% trans "Ensayo para materiales ferromagnéticos que permite detectar defectos tanto superficiales como subsuperficiales mediante la distorsión de campos magnéticos." %}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tech-specs">
+        <div class="container">
+            <h2 class="section-title center-title">{% trans "Capacidades de" %} <span class="highlight">{% trans "Control" %}</span></h2>
+            
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <i class="fas fa-microscope spec-icon"></i>
+                    <h4>{% trans "Precisión END" %}</h4>
+                    <p>Certificación según normativa internacional para ensayos no destructivos.</p>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-flask spec-icon"></i>
+                    <h4>{% trans "Química" %}</h4>
+                    <p>Baños de decapado con control de PH y temperatura constante.</p>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-search spec-icon"></i>
+                    <h4>{% trans "Inspección" %}</h4>
+                    <p>Equipos de magnetización de última generación y reveladores de alta resolución.</p>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-certificate spec-icon"></i>
+                    <h4>{% trans "Calidad" %}</h4>
+                    <p>Garantía de piezas libres de defectos estructurales críticos.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 80px; text-align: center;">
+                <a href="{% url 'contacto' %}" class="btn-submit-industrial">
+                    {% trans "Solicitar Informe de Inspección" %} <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const steps = document.querySelectorAll('.reveal-step');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.3 });
+            steps.forEach(step => observer.observe(step));
+
+            const processSection = document.getElementById('process-wrapper');
+            const laserBeam = document.getElementById('laserBeam');
+            const dots = document.querySelectorAll('.step-dot');
+
+            window.addEventListener('scroll', () => {
+                const rect = processSection.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                
+                let percentage = 0;
+                if (rect.top < windowHeight / 2) {
+                    const scrolled = (windowHeight / 2) - rect.top;
+                    const totalHeight = rect.height;
+                    percentage = (scrolled / totalHeight) * 100;
+                }
+
+                percentage = Math.max(0, Math.min(100, percentage));
+                laserBeam.style.height = percentage + '%';
+
+                dots.forEach(dot => {
+                    const dotPos = dot.getBoundingClientRect().top - rect.top;
+                    const beamPos = (percentage / 100) * rect.height;
+                    if (beamPos > dotPos) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}

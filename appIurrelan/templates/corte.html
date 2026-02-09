@@ -1,0 +1,300 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+    {% trans "Corte <br>Térmico" as titulo_c %}
+    {% trans "Precisión extrema y potencia controlada. Tecnología de separación de materiales mediante Arco Aire y Oxicorte." as sub_c %}
+    {% include 'banner.html' with titulo=titulo_c subtitulo=sub_c clase_extra="hero-cut" %}
+
+    <style>
+        :root {
+            --cut-bg: #050505;
+            --cut-accent: #ff8c00;
+            --cut-text: #e0e0e0;
+            --cut-glass: rgba(255, 140, 0, 0.05);
+        }
+
+        body {
+            background-color: var(--cut-bg);
+            color: var(--cut-text);
+            overflow-x: hidden;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL CON LÍNEA LÁSER --- */
+        .cutting-zone {
+            position: relative;
+            padding: 150px 0;
+            overflow: hidden;
+        }
+
+        /* El Riel del Láser */
+        .laser-track {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        /* El Haz de Luz (Llenado dinámico) */
+        .laser-beam {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0%; /* Se llena con JS */
+            background: var(--cut-accent);
+            box-shadow: 0 0 20px var(--cut-accent), 0 0 40px var(--cut-accent);
+            transition: height 0.1s linear;
+        }
+
+        /* La Cabeza del Láser (Chispa) */
+        .laser-head {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 40px;
+            background: #fff;
+            box-shadow: 0 0 30px #fff, 0 0 60px var(--cut-accent);
+        }
+
+        .laser-head::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(255,140,0,0.8) 0%, transparent 70%);
+            opacity: 0.5;
+            animation: pulse-fire 0.1s infinite alternate;
+        }
+
+        @keyframes pulse-fire {
+            0% { transform: translateX(-50%) scale(1); opacity: 0.5; }
+            100% { transform: translateX(-50%) scale(1.2); opacity: 0.8; }
+        }
+
+        /* --- SECCIONES DE SERVICIO --- */
+        .cut-service-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 200px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Lógica para alternar lados */
+        .cut-service-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        /* TEXTO */
+        .cut-info {
+            width: 45%;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, transparent 100%);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-left: 3px solid var(--cut-accent);
+            backdrop-filter: blur(5px);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .cut-info h2 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(0,0,0,0.8);
+        }
+
+        .cut-subtitle {
+            display: block;
+            font-family: 'Courier New', monospace;
+            color: var(--cut-accent);
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .cut-info p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #aaa;
+        }
+
+        /* IMAGEN */
+        .cut-visual {
+            width: 45%;
+            height: 400px;
+            position: relative;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .cut-img-wrapper {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            /* Recorte angular futurista */
+            clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+            position: relative;
+        }
+
+        .cut-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+            filter: grayscale(80%) contrast(1.2);
+        }
+
+        .cut-visual:hover img {
+            transform: scale(1.1);
+            filter: grayscale(0%) contrast(1);
+        }
+
+        /* HUD OVERLAYS (Decoración técnica) */
+        .hud-corner {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--cut-accent);
+            z-index: 5;
+            transition: all 0.3s;
+        }
+        .hud-tl { top: 0; left: 0; border-right: none; border-bottom: none; }
+        .hud-br { bottom: 0; right: 0; border-left: none; border-top: none; }
+
+        .cut-visual:hover .hud-tl { top: -10px; left: -10px; }
+        .cut-visual:hover .hud-br { bottom: -10px; right: -10px; }
+
+        /* --- CLASE ACTIVA (REVEAL) --- */
+        .active .cut-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .active .cut-visual {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .cut-service-row, .cut-service-row.reverse {
+                flex-direction: column;
+                margin-bottom: 100px;
+            }
+            .cut-info, .cut-visual {
+                width: 90%;
+                margin: 20px auto;
+            }
+            .cut-visual { height: 300px; }
+            .laser-track { left: 10px; } /* Mover láser a la izquierda en móvil */
+            .cut-info { border-left: 1px solid rgba(255,255,255,0.1); border-top: 3px solid var(--cut-accent); }
+        }
+    </style>
+
+    <div class="cutting-zone" id="cutZone">
+        <div class="laser-track">
+            <div class="laser-beam" id="laserBeam">
+                <div class="laser-head"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            
+            <div class="cut-service-row reveal-cut">
+                <div class="cut-info">
+                    <h2>CORTE CON <br>ARCO AIRE</h2>
+                    <p>{% trans "Proceso de ranurado y corte de alta eficiencia que utiliza un electrodo de carbono y un chorro de aire comprimido. Ideal para eliminar soldaduras defectuosas, sanear grietas y preparar biseles en piezas de gran espesor sin dañar el metal base térmicamente." %}</p>
+                    
+                    <ul style="margin-top: 20px; color: #888; list-style: none; padding: 0;">
+                        <li><i class="fas fa-bolt" style="color:var(--cut-accent); margin-right:10px;"></i> {% trans "Eliminación rápida de material" %}</li>
+                        <li><i class="fas fa-temperature-low" style="color:var(--cut-accent); margin-right:10px;"></i> {% trans "Menor zona afectada por calor" %}</li>
+                    </ul>
+                </div>
+
+                <div class="cut-visual">
+                    <div class="hud-corner hud-tl"></div>
+                    <div class="hud-corner hud-br"></div>
+                    <div class="cut-img-wrapper">
+                        <img src="{% static 'img/cortearcoaire.jpg' %}" alt="Corte Arco Aire">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cut-service-row reverse reveal-cut">
+                <div class="cut-info">
+                        <h2>CORTE CON <br>SOPLETE</h2>
+                    <p>{% trans "Tecnología de oxicorte para seccionado de aceros al carbono de alto calibre. Mediante la reacción química exotérmica del oxígeno puro con el metal precalentado, logramos cortes limpios y verticales en espesores que otras tecnologías no pueden alcanzar." %}</p>
+                    
+                    <ul style="margin-top: 20px; color: #888; list-style: none; padding: 0;">
+                        <li><i class="fas fa-fire" style="color:var(--cut-accent); margin-right:10px;"></i> {% trans "Capacidad de corte > 100mm" %}</li>
+                        <li><i class="fas fa-ruler-combined" style="color:var(--cut-accent); margin-right:10px;"></i> {% trans "Versatilidad en obra y taller" %}</li>
+                    </ul>
+                </div>
+
+                <div class="cut-visual">
+                    <div class="hud-corner hud-tl"></div>
+                    <div class="hud-corner hud-br"></div>
+                    <div class="cut-img-wrapper">
+                        <img src="{% static 'img/cortesoplete.png' %}" alt="Corte con Soplete">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cutZone = document.getElementById('cutZone');
+            const laserBeam = document.getElementById('laserBeam');
+            const sections = document.querySelectorAll('.reveal-cut');
+
+            // 1. CONTROL DEL LÁSER AL HACER SCROLL
+            window.addEventListener('scroll', () => {
+                const rect = cutZone.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                
+                // Calcular cuánto de la zona de corte ha pasado por la pantalla
+                // Empezamos cuando el top de la zona entra en la mitad de la pantalla
+                let startOffset = windowHeight / 2;
+                let scrollY = -rect.top + startOffset;
+                let totalHeight = rect.height;
+
+                let percentage = (scrollY / totalHeight) * 100;
+                
+                // Limitar entre 0% y 100%
+                percentage = Math.max(0, Math.min(100, percentage));
+
+                laserBeam.style.height = percentage + '%';
+            });
+
+            // 2. APARICIÓN DE SECCIONES (Observer)
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Efecto de sonido opcional o vibración podría ir aquí
+                    }
+                });
+            }, { threshold: 0.3 }); // Se activa cuando el 30% es visible
+
+            sections.forEach(sec => observer.observe(sec));
+        });
+    </script>
+{% endblock %}

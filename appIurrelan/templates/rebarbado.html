@@ -1,0 +1,253 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+    {% trans "Rebarbado" as titulo_r %}
+    {% trans "Sistemas de eliminación de material excedente. Precisión manual y potencia industrial." as sub_r %}
+    {% include 'banner.html' with titulo=titulo_r subtitulo=sub_r clase_extra="hero-dark" %}
+
+    <style>
+        :root {
+            --cyb-bg: #000000;
+            --cyb-accent: #ff8c00;
+            --cyb-dim: #333;
+            --cyb-text: #fff;
+        }
+
+        body {
+            background-color: var(--cyb-bg);
+            color: var(--cyb-text);
+            overflow-x: hidden;
+        }
+
+        /* --- CONTENEDOR SPLIT-SCREEN --- */
+        .split-interface {
+            display: flex;
+            width: 100%;
+            height: 85vh;
+            min-height: 600px;
+            overflow: hidden;
+            position: relative;
+            background: #000;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+        }
+
+        /* --- PANELES INDIVIDUALES --- */
+        .panel {
+            position: relative;
+            height: 100%;
+            flex: 1; /* 50% inicial */
+            transition: flex 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+            overflow: hidden;
+            cursor: crosshair;
+            border-right: 1px solid rgba(255, 140, 0, 0.2);
+        }
+
+        .panel:last-child {
+            border-right: none;
+        }
+
+        /* IMAGEN DE FONDO */
+        .panel-bg {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+            filter: grayscale(100%) contrast(1.2);
+            transition: all 0.8s ease;
+            transform: scale(1.05);
+        }
+
+        /* CAPA DE DATOS (TEXTO) */
+        .data-layer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 60px 40px;
+            background: linear-gradient(to top, rgba(0,0,0,0.95), transparent);
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+            z-index: 10;
+        }
+
+        /* TÍTULOS Y TEXTOS */
+        .panel h2 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(0,0,0,0.8);
+            position: relative;
+            display: inline-block;
+        }
+
+        .panel p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #ccc;
+            max-width: 600px;
+            opacity: 0; /* Oculto por defecto */
+            transform: translateY(20px);
+            transition: all 0.5s ease 0.1s;
+            height: 0;
+            overflow: hidden;
+        }
+
+        /* --- ELEMENTOS DECORATIVOS --- */
+        .crosshair {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px; height: 100px;
+            border: 1px dashed rgba(255,255,255,0.3);
+            border-radius: 50%;
+            opacity: 1;
+            transition: all 0.5s;
+            pointer-events: none;
+        }
+
+        /* --- ESTADOS ACTIVOS (HOVER) --- */
+        .panel:hover {
+            flex: 3; /* Se expande */
+        }
+
+        .panel:hover .panel-bg {
+            opacity: 0.8; /* Más visible */
+            filter: grayscale(0%) contrast(1.1); /* Color real */
+            transform: scale(1);
+        }
+
+        .panel:hover .data-layer {
+            transform: translateY(0);
+        }
+
+        .panel:hover h2 {
+            color: var(--cyb-accent);
+        }
+
+        .panel:hover p {
+            opacity: 1;
+            transform: translateY(0);
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .panel:hover .crosshair {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(2);
+        }
+
+        /* --- LISTA TÉCNICA --- */
+        .tech-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 0.5s ease 0.3s;
+        }
+        
+        .panel:hover .tech-list {
+            opacity: 1;
+        }
+
+        .tech-list li {
+            display: inline-block;
+            margin-right: 20px;
+            font-family: monospace;
+            border: 1px solid #333;
+            padding: 5px 10px;
+            background: rgba(0,0,0,0.5);
+            font-size: 0.8rem;
+            color: var(--cyb-accent);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .split-interface { flex-direction: column; height: auto; }
+            .panel { height: 400px; flex: none; width: 100%; }
+            .panel:hover { flex: none; }
+            .panel p, .tech-list { opacity: 1; height: auto; transform: none; }
+            .panel h2 { color: var(--cyb-accent); font-size: 1.8rem; }
+            .crosshair { display: none; }
+        }
+
+    </style>
+
+    <div class="split-interface">
+        
+        <div class="panel">
+            <img src="{% static 'img/rebarbaamoldadora.png' %}" class="panel-bg" alt="Rebabado Manual">
+            <div class="crosshair"></div>
+            
+            <div class="data-layer">
+                <h2>REBARBADO <br> MEDIANTE<br>AMOLADORAS</h2>
+                <p>{% trans "Intervención directa mediante herramientas portátiles para zonas complejas. Nuestros técnicos aplican discos de desbaste y láminas abrasivas para eliminar cordones de soldadura, suavizar aristas y corregir defectos superficiales con precisión geométrica." %}</p>
+                
+                <ul class="tech-list">
+                    <li>[+] ACABADO FINO</li>
+                    <li>[+] FLEXIBILIDAD</li>
+                    <li>[+] ACCESO DIFÍCIL</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel">
+            <img src="{% static 'img/rebarbasuspendida.jpg' %}" class="panel-bg" alt="Rebabado Suspendido">
+            <div class="crosshair"></div>
+
+            <div class="data-layer">
+                <h2>REBARBADO <br> MEDIANTE<br> MÁQUINAS <br>SUSPENDIDAS</h2>
+                <p>{% trans "Sistemas pendulares de alta potencia para el procesamiento de grandes superficies. La suspensión ingrávida permite al operario aplicar presiones de trabajo elevadas y constantes, logrando tasas de remoción de material superiores en piezas de gran tonelaje." %}</p>
+                
+                <ul class="tech-list">
+                    <li>[+] ALTA POTENCIA</li>
+                    <li>[+] RENDIMIENTO</li>
+                    <li>[+] ERGONOMÍA</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div style="background: #000; padding: 60px 20px; text-align: center; border-top: 1px solid #222;">
+        <div class="container">
+            <h3 style="color: #fff; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; font-size: 1.2rem;">
+                {% trans "¿Necesita un  específico?" %}
+            </h3>
+            <a href="{% url 'contacto' %}" class="btn-submit-industrial" style="border: 1px solid var(--cyb-accent); background: transparent; color: var(--cyb-accent);">
+                {% trans "Contactar Ingeniería" %} <i class="fas fa-chevron-right" style="font-size: 0.8rem; margin-left: 10px;"></i>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Efecto Glitch en títulos al pasar el ratón
+            const titles = document.querySelectorAll('.panel h2');
+            
+            titles.forEach(title => {
+                title.dataset.original = title.innerText;
+                
+                title.parentElement.parentElement.addEventListener('mouseenter', () => {
+                    let iterations = 0;
+                    const interval = setInterval(() => {
+                        title.innerText = title.innerText.split('')
+                            .map((letter, index) => {
+                                if(index < iterations) return title.dataset.original[index];
+                                return String.fromCharCode(65 + Math.floor(Math.random() * 26));
+                            })
+                            .join('');
+                        
+                        if(iterations >= title.dataset.original.length) clearInterval(interval);
+                        iterations += 1 / 2; 
+                    }, 30);
+                });
+            });
+        });
+    </script>
+{% endblock %}
