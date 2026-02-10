@@ -20,7 +20,14 @@
         <a href="{% url 'home' %}" class="logo">
     <img src="{% static 'img/logoIurrelan.png' %}" alt="Iurrelan Logo" class="logo-img">
 </a>
-
+<div class="language-selector">
+            <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                <input name="next" type="hidden" value="{{ redirect_to }}">
+                <a href="/es/" class="lang-link">ES</a>
+                 <span class="separator">|</span>
+                 <a href="/en/" class="lang-link">EN</a>
+            </form>
+        </div>
 <div class="menu-toggle" id="mobile-menu">
     <span class="bar"></span>
     <span class="bar"></span>

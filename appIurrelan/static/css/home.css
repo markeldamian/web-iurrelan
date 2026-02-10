@@ -1425,109 +1425,112 @@ h1.main-title { font-size: 3rem; }
     }
 }   
 
+/* =========================================
+   DISEÑO MÓVIL: FILA ÚNICA PERFECTA
+   ========================================= */
+
+/* =========================================
+   DISEÑO MÓVIL: FILA ÚNICA (LOGO - IDIOMA - MENÚ)
+   ========================================= */
+
 @media (max-width: 768px) {
 
-    /* 1. BARRA DE NAVEGACIÓN (Normal y Scrolled) */
-    /* Usamos !important para forzar que en móvil SIEMPRE tenga poco relleno
-       y los elementos se separen a los extremos, incluso al bajar el scroll */
-    .navbar, 
-    .navbar.scrolled {
-        padding: 15px 20px !important; /* 20px es suficiente en móvil */
-        justify-content: space-between !important; /* Logo izquierda / Menú derecha */
-        height: auto;
-        background-color: rgba(0, 0, 0, 0.95); /* Fondo oscuro para leer bien */
+    /* 1. EL CONTENEDOR (#navbar) */
+    #navbar, .navbar {
+        display: flex !important;
+        flex-direction: row !important; /* Asegura fila horizontal */
+        align-items: center !important; /* Centrado vertical */
+        justify-content: flex-start !important; /* Alineamos todo al inicio... */
+        
+        height: 80px !important;
+        padding: 0 20px !important;
+        background-color: rgba(10, 10, 10, 0.95);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1005;
+        box-sizing: border-box;
     }
 
-    /* 2. BOTÓN HAMBURGUESA */
+    /* 2. EL LOGO (LA CLAVE ESTÁ AQUÍ) */
+    .logo {
+        flex-shrink: 0;
+        z-index: 1006;
+        
+        /* MAGIA FLEXBOX: Este margen "empuja" a los demás elementos 
+           (idioma y menú) hacia el extremo derecho */
+        margin-right: auto !important; 
+    }
+    
+    .logo-img {
+        max-height: 45px; /* Ajusta según tu logo */
+        width: auto;
+    }
+
+    /* 3. SELECTOR DE IDIOMA (A LA DERECHA) */
+    .language-selector {
+        display: flex;
+        align-items: center;
+        z-index: 1006;
+        margin-right: 20px !important; /* Espacio entre Idioma y Menú */
+        margin-left: 0 !important;
+    }
+
+    /* Estilo del texto del idioma */
+    .language-selector a {
+        color: white;
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    /* 4. MENÚ HAMBURGUESA (AL FINAL) */
     .menu-toggle {
-        display: block; /* Hacemos visible el botón */
+        display: block !important;
         cursor: pointer;
-        z-index: 1002;
+        z-index: 1006;
+        width: 30px;
+        /* No necesitamos float ni márgenes extraños, 
+           simplemente está al final del flujo flex */
     }
     
     .menu-toggle .bar {
-        width: 25px;
+        width: 100%;
         height: 3px;
-        margin: 5px auto;
+        margin: 5px 0;
         background-color: white;
-        transition: all 0.3s ease;
         display: block;
+        transition: 0.3s;
     }
 
-    /* Animación del icono a X */
-    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
-    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-
-    /* 3. MENÚ LATERAL (EL "RELLENO" CON ENLACES) */
+    /* 5. LOS ENLACES (SACADOS DEL FLUJO) */
+    /* Importante: Como están 'fixed', no molestan en la fila del logo */
     .nav-links {
-        position: fixed; /* Lo sacamos del flujo para que no estorbe arriba */
+        position: fixed !important;
         top: 0;
-        right: -100%; /* Oculto a la derecha */
-        width: 75%;   /* Ancho del menú desplegado */
+        right: -100%;
+        width: 50% !important;
         height: 100vh;
         background-color: #1a1a1a;
-        
+        padding-top: 80px;
         display: flex;
-        flex-direction: column; /* Enlaces en columna vertical */
-        align-items: center;    /* Texto centrado */
-        justify-content: flex-start;
-        padding-top: 100px;     /* Espacio para no chocar con el botón cerrar */
-        
-        transition: right 0.4s ease-in-out;
-        z-index: 1001;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
-        overflow-y: auto;
+        flex-direction: column;
+        transition: right 0.4s ease;
+        z-index: 1004;
     }
 
-    /* Cuando añadimos la clase .active con JS, el menú aparece */
-    .nav-links.active {
-        right: 0; 
-    }
+    .nav-links.active { right: 0; }
 
-    /* Estilo de cada enlace dentro del menú móvil */
-    .nav-links .nav-link {
-        font-size: 1.2rem;
-        margin: 15px 0;
-        display: block;
+    /* Estilos extra para los enlaces */
+    .nav-links > * {
+        flex: 1;
         width: 100%;
-        text-align: center;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
-        padding-bottom: 10px;
-    }
-
-    /* 4. SUBMENÚ SERVICIOS */
-    /* Mostramos los servicios directamente para facilitar la navegación táctil */
-    .dropdown-menu {
-        display: block;
-        position: static;
-        background-color: rgba(0,0,0,0.2);
-        box-shadow: none;
-        width: 100%;
-        text-align: center;
-        padding: 0;
-        margin-top: 10px;
-    }
-
-    .dropdown-item {
+        display: flex;
+        align-items: center;
         justify-content: center;
-        color: #bbb;
-        padding: 12px;
-        border-bottom: none;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
     }
-
-    /* Selector de idioma */
-    .language-selector {
-        margin-top: 30px;
-        margin-left: 0;
-    }
-    
-    /* 5. EVITAR QUE LA BARRA TAPE EL CONTENIDO (Padding Top) */
-    .company-page-container, 
-    .contact-page-container,
-    .why-us-section,
-    .sectors-section,
-    main {
-        padding-top: 90px !important;
-    }
+    .nav-links a { color: white; font-size: 1.1rem; text-decoration: none; }
+    .dropdown-menu { display: none !important; }
 }
