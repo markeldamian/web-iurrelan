@@ -33,18 +33,18 @@ scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en enlaces */
 }
 
 /* --- BARRA DE NAVEGACIÓN (STICKY HEADER) --- */
+/* En home.css, al principio */
 .navbar {
-position: fixed;
-top: 0;
-width: 100%;
-padding: 25px 50px; /* Padding inicial grande */
-display: flex;
-justify-content: space-between;
-align-items: center;
-z-index: 1000;
-transition: var(--nav-transition); /* La transición dinámica */
-box-sizing: border-box;
-background-color: transparent; /* Transparente al principio */
+    display: flex;
+    justify-content: space-between; /* ESTO es lo importante: separa logo a izq y menú a der */
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 /* Clase que se añade con JS al bajar el scroll */
@@ -1325,3 +1325,209 @@ h1.main-title { font-size: 3rem; }
     margin-bottom: 20px;
     /* filter: brightness(0) invert(1);  <-- También puedes poner el filtro aquí en vez de en el HTML */
 }   
+/* --- ESTILOS MENÚ HAMBURGUESA --- */
+
+/* Por defecto (escritorio) el botón está oculto */
+.menu-toggle {
+    display: none;
+}
+
+/* --- MEDIA QUERY PARA MÓVILES (Max 768px) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Mostrar el botón hamburguesa */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        z-index: 1001; /* Por encima de todo */
+    }
+
+    .menu-toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background-color: white;
+        display: block;
+    }
+
+    /* Animación del botón a una "X" cuando está activo */
+    .menu-toggle.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu-toggle.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* 2. Transformar la barra de navegación */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Oculto a la derecha fuera de pantalla */
+        width: 70%;   /* Ancho del menú lateral */
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.95); /* Fondo oscuro casi opaco */
+        flex-direction: column; /* Elementos en vertical */
+        align-items: center;
+        justify-content: center;
+        transition: right 0.4s ease-in-out;
+        padding-top: 60px;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+        z-index: 1000;
+    }
+
+    /* Clase que añade JS para mostrar el menú */
+    .nav-links.active {
+        right: 0; /* Entra en la pantalla */
+    }
+
+    /* Ajuste de enlaces en móvil */
+    .nav-links a {
+        font-size: 1.2rem;
+        margin: 15px 0;
+        display: block;
+    }
+
+    /* 3. Ajustar el Dropdown (Servicios) para móvil */
+    .dropdown-menu {
+        position: static; /* Ya no flota, se integra en la lista */
+        background-color: transparent;
+        box-shadow: none;
+        text-align: center;
+        display: none; /* Oculto hasta que se haga click/hover */
+        padding: 0;
+        min-width: auto;
+    }
+
+    /* En móvil, mostramos el submenú siempre visible o al hover */
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        animation: none; /* Quitamos animación compleja en móvil */
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+        margin-top: 10px;
+    }
+
+    .dropdown-item {
+        justify-content: center; /* Centrar texto submenú */
+        padding: 10px;
+        font-size: 1rem;
+        color: #bbb;
+    }
+
+    /* Selector de idioma en móvil */
+    .language-selector {
+        margin-top: 20px;
+        margin-left: 0; /* Quitar margen izquierdo de escritorio */
+    }
+}   
+
+@media (max-width: 768px) {
+
+    /* 1. BARRA DE NAVEGACIÓN (Normal y Scrolled) */
+    /* Usamos !important para forzar que en móvil SIEMPRE tenga poco relleno
+       y los elementos se separen a los extremos, incluso al bajar el scroll */
+    .navbar, 
+    .navbar.scrolled {
+        padding: 15px 20px !important; /* 20px es suficiente en móvil */
+        justify-content: space-between !important; /* Logo izquierda / Menú derecha */
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.95); /* Fondo oscuro para leer bien */
+    }
+
+    /* 2. BOTÓN HAMBURGUESA */
+    .menu-toggle {
+        display: block; /* Hacemos visible el botón */
+        cursor: pointer;
+        z-index: 1002;
+    }
+    
+    .menu-toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: white;
+        transition: all 0.3s ease;
+        display: block;
+    }
+
+    /* Animación del icono a X */
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* 3. MENÚ LATERAL (EL "RELLENO" CON ENLACES) */
+    .nav-links {
+        position: fixed; /* Lo sacamos del flujo para que no estorbe arriba */
+        top: 0;
+        right: -100%; /* Oculto a la derecha */
+        width: 75%;   /* Ancho del menú desplegado */
+        height: 100vh;
+        background-color: #1a1a1a;
+        
+        display: flex;
+        flex-direction: column; /* Enlaces en columna vertical */
+        align-items: center;    /* Texto centrado */
+        justify-content: flex-start;
+        padding-top: 100px;     /* Espacio para no chocar con el botón cerrar */
+        
+        transition: right 0.4s ease-in-out;
+        z-index: 1001;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+        overflow-y: auto;
+    }
+
+    /* Cuando añadimos la clase .active con JS, el menú aparece */
+    .nav-links.active {
+        right: 0; 
+    }
+
+    /* Estilo de cada enlace dentro del menú móvil */
+    .nav-links .nav-link {
+        font-size: 1.2rem;
+        margin: 15px 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+        padding-bottom: 10px;
+    }
+
+    /* 4. SUBMENÚ SERVICIOS */
+    /* Mostramos los servicios directamente para facilitar la navegación táctil */
+    .dropdown-menu {
+        display: block;
+        position: static;
+        background-color: rgba(0,0,0,0.2);
+        box-shadow: none;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    .dropdown-item {
+        justify-content: center;
+        color: #bbb;
+        padding: 12px;
+        border-bottom: none;
+    }
+
+    /* Selector de idioma */
+    .language-selector {
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    
+    /* 5. EVITAR QUE LA BARRA TAPE EL CONTENIDO (Padding Top) */
+    .company-page-container, 
+    .contact-page-container,
+    .why-us-section,
+    .sectors-section,
+    main {
+        padding-top: 90px !important;
+    }
+}

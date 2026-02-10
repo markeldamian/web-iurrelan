@@ -18,10 +18,17 @@
 </head>
 <body class="{% block body_class %}{% endblock %}"> <nav class="navbar" id="navbar">
         <a href="{% url 'home' %}" class="logo">
-            <img src="{% static 'img/logoIurrelan.png' %}" alt="Iurrelan Logo" class="logo-img">
-        </a>
+    <img src="{% static 'img/logoIurrelan.png' %}" alt="Iurrelan Logo" class="logo-img">
+</a>
 
-        <div class="nav-links">
+<div class="menu-toggle" id="mobile-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</div>
+
+<div class="nav-links">
+        
             
             <a href="{% url 'home' %}" class="nav-link {% is_active 'home' %}">
                 {% trans "Inicio" %}
@@ -90,7 +97,25 @@
                 navbar.classList.remove('scrolled');
             }
         });
-    </script>
 
+    // Efecto Navbar Sticky (YA LO TIENES)
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // AÑADIR ESTO: Funcionalidad Menú Hamburguesa
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', function() {
+        menuToggle.classList.toggle('is-active');
+        navLinks.classList.toggle('active');
+    });
+</script>
 </body>
 </html>
