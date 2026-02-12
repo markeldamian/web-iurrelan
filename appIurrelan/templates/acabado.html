@@ -3,9 +3,9 @@
 {% load i18n %}
 
 {% block content %}
-    {% trans "Acabado de Piezas mediante <br>Ensayos No Destructivos" as titulo_b %}
+    {% trans "Acabado de Piezas" as titulo_b %}
     {% trans "Garantizamos la integridad estructural y superficial de sus componentes mediante procesos certificados." as sub_b %}
-    {% include 'banner.html' with titulo=titulo_b subtitulo=sub_b clase_extra="hero-acabado" %}
+{% include 'banner.html' with titulo=titulo_b subtitulo=sub_b clase_extra="hero-machines hero-small" %}
 
     <style>
         /* Fondo y ambiente general */

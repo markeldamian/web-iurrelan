@@ -5,7 +5,9 @@
 {% block content %}
     {% trans "Corte <br>Térmico" as titulo_c %}
     {% trans "Precisión extrema y potencia controlada. Tecnología de separación de materiales mediante Arco Aire y Oxicorte." as sub_c %}
-    {% include 'banner.html' with titulo=titulo_c subtitulo=sub_c clase_extra="hero-cut" %}
+    
+{% include 'banner.html' with titulo=titulo_c subtitulo=sub_c clase_extra="hero-machines hero-small" %}
+
 
     <style>
         :root {
