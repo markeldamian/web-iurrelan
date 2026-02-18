@@ -911,3 +911,105 @@ p.subtitle {
         overflow-y: auto;
     }
 }
+
+/* =========================================
+   MENÚ INFERIOR MÓVIL
+   ========================================= */
+
+/* 1. Ocultar por defecto en ordenadores de escritorio */
+.bottom-nav-mobile {
+    display: none;
+}
+
+/* 2. Mostrar solo cuando la pantalla es pequeña (móviles) */
+@media (max-width: 768px) {
+    /* ... (Mantén tus estilos existentes para la navbar, logo y menu-toggle) ... */
+
+    /* Ocultamos los enlaces de escritorio */
+    .nav-links {
+        display: none !important;
+    }
+
+    /* ESTILOS DEL NUEVO MENÚ DESPLEGABLE TIPO ACORDEÓN */
+    .mobile-dropdown-menu {
+        position: fixed;
+        top: 80px; /* Ajusta esto a la altura real de tu navbar */
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: #f7f7f7; /* Fondo gris claro como en la foto */
+        z-index: 1005;
+        overflow-y: auto;
+        
+        /* Oculto por defecto, se mueve hacia abajo o aparece con opacidad */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+
+    .mobile-dropdown-menu.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .mobile-menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .mobile-menu-item {
+        border-bottom: 1px solid #e0e0e0; /* Línea divisoria suave */
+    }
+
+    .mobile-menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 20px;
+        background-color: transparent;
+        transition: background-color 0.2s;
+    }
+
+    .mobile-menu-header a {
+        text-decoration: none;
+        color: #333; /* Texto oscuro */
+        font-family: 'Montserrat', sans-serif; /* Intenta usar una fuente limpia */
+        font-size: 1.1rem;
+        font-weight: 300; /* Letra fina como en tu imagen */
+        letter-spacing: 0.5px;
+        width: 100%; /* Para que el área clicable sea mayor */
+    }
+
+    .accordion-icon {
+        color: #888;
+        font-size: 0.9rem;
+        cursor: pointer;
+        padding: 10px; /* Área clicable más grande para el icono */
+        transition: transform 0.3s ease;
+    }
+
+    /* Estilos para el submenú (por si decides poner opciones dentro de Soluciones, etc.) */
+    .mobile-submenu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: #ececec; /* Un poco más oscuro para diferenciar */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .mobile-submenu li a {
+        display: block;
+        padding: 15px 40px;
+        color: #555;
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 400;
+        border-bottom: 1px solid #e0e0e0;
+    }
+}

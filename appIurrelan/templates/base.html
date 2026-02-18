@@ -28,11 +28,9 @@
         <a href="{% url 'home' %}" class="nav-link {% is_active 'home' %}">
             {% trans "Inicio" %}
         </a>
-
         <a href="{% url 'empresa' %}" class="nav-link {% is_active 'empresa' %}">
             {% trans "Empresa" %}
         </a>
-
         <div class="dropdown">
             <a href="{% url 'servicios' %}#servicios" 
                class="nav-link dropdown-toggle {% is_active 'corte soldadura mecanizado' %}">
@@ -46,11 +44,9 @@
                 <li><a href="{% url 'acabado' %}" class="dropdown-item">{% trans "Acabado" %}</a></li>
             </ul>
         </div>
-
         <a href="{% url 'maquinaria' %}" class="nav-link {% is_active 'maquinaria' %}">
             {% trans "Maquinaria" %}
         </a>
-        
         <a href="{% url 'contacto' %}" class="nav-link {% is_active 'contacto' %}">
             {% trans "Contacto" %}
         </a>
@@ -80,6 +76,65 @@
         </div>
     </div>
 
+    <div class="mobile-dropdown-menu" id="mobile-dropdown">
+        <ul class="mobile-menu-list">
+            <li class="mobile-menu-item">
+                <div class="mobile-menu-header">
+                    <a href="{% url 'empresa' %}">CONÓCENOS</a>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+            </li>
+            
+            <li class="mobile-menu-item">
+                <div class="mobile-menu-header">
+                    <a href="{% url 'servicios' %}">SERVICIOS</a>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <ul class="mobile-submenu">
+                    <li><a href="{% url 'corte' %}">Corte</a></li>
+                    <li><a href="{% url 'soldadura' %}">Soldadura</a></li>
+                </ul>
+            </li>
+
+            <li class="mobile-menu-item">
+                <div class="mobile-menu-header">
+                    <a href="#">ACCIONISTAS E INVERSORES</a>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+            </li>
+
+            <li class="mobile-menu-item">
+                <div class="mobile-menu-header">
+                    <a href="#">ACTUALIDAD</a>
+                </div>
+            </li>
+
+            <li class="mobile-menu-item">
+                <div class="mobile-menu-header">
+                    <a href="#">TALENTO</a>
+                </div>
+            </li>
+
+            <li class="mobile-menu-item">
+                <div class="mobile-menu-header">
+                    <a href="#">WORLDWIDE</a>
+                </div>
+            </li>
+
+            <li class="mobile-menu-item">
+                <div class="mobile-menu-header">
+                    <a href="{% url 'contacto' %}">CONTACTO</a>
+                </div>
+            </li>
+            
+            <li class="mobile-menu-item">
+                <div class="mobile-menu-header">
+                    <a href="#">PERFIL</a>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
 </nav>
 
 <main>
@@ -90,8 +145,7 @@
 {% include 'footer.html' %}
 
 <script>
-    // Efecto Navbar Sticky
-    window.addEventListener('scroll', function() {
+   window.addEventListener('scroll', function() {
         const navbar = document.getElementById('navbar');
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -100,13 +154,48 @@
         }
     });
 
-    // Menú Hamburguesa
+    // Menú Hamburguesa y Desplegable Principal
     const menuToggle = document.getElementById('mobile-menu');
-    const navLinks = document.querySelector('.nav-links');
+    const mobileDropdown = document.getElementById('mobile-dropdown');
 
     menuToggle.addEventListener('click', function() {
-        menuToggle.classList.toggle('is-active');
-        navLinks.classList.toggle('active');
+        this.classList.toggle('is-active');
+        mobileDropdown.classList.toggle('active');
+        
+        // Opcional: Bloquear el scroll del body cuando el menú está abierto
+        if(mobileDropdown.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Lógica para el Acordeón de los submenús (los iconos de flecha)
+    const mobileHeaders = document.querySelectorAll('.mobile-menu-header');
+
+    mobileHeaders.forEach(header => {
+        header.addEventListener('click', function(e) {
+            // Si hacemos clic en el icono de la flecha
+            if (e.target.classList.contains('accordion-icon')) {
+                e.preventDefault(); // Evita que siga el enlace principal
+                
+                const menuItem = this.parentElement;
+                const submenu = menuItem.querySelector('.mobile-submenu');
+                
+                // Si tiene submenú, lo abrimos/cerramos
+                if (submenu) {
+                    menuItem.classList.toggle('open');
+                    
+                    if (menuItem.classList.contains('open')) {
+                        submenu.style.maxHeight = submenu.scrollHeight + "px";
+                        this.querySelector('.accordion-icon').style.transform = 'rotate(180deg)';
+                    } else {
+                        submenu.style.maxHeight = null;
+                        this.querySelector('.accordion-icon').style.transform = 'rotate(0deg)';
+                    }
+                }
+            }
+        });
     });
 </script>
 </body>
