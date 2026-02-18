@@ -80,8 +80,12 @@
         <ul class="mobile-menu-list">
             <li class="mobile-menu-item">
                 <div class="mobile-menu-header">
+                    <a href="{% url 'home' %}">INICIO</a>
+                </div>
+            </li>
+            <li class="mobile-menu-item">
+                <div class="mobile-menu-header">
                     <a href="{% url 'empresa' %}">CONÓCENOS</a>
-                    <i class="fas fa-chevron-down accordion-icon"></i>
                 </div>
             </li>
             
@@ -91,48 +95,32 @@
                     <i class="fas fa-chevron-down accordion-icon"></i>
                 </div>
                 <ul class="mobile-submenu">
+                    <li><a href="{% url 'acabado' %}">Acabado</a></li>
                     <li><a href="{% url 'corte' %}">Corte</a></li>
+                    <li><a href="{% url 'granallado' %}">Granallado</a></li>
+                    <li><a href="{% url 'rebarbado' %}">Rebarbado</a></li>
                     <li><a href="{% url 'soldadura' %}">Soldadura</a></li>
+                    
+                    
                 </ul>
             </li>
 
             <li class="mobile-menu-item">
                 <div class="mobile-menu-header">
-                    <a href="#">ACCIONISTAS E INVERSORES</a>
-                    <i class="fas fa-chevron-down accordion-icon"></i>
+                    <a href="{% url 'maquinaria' %}">MAQUINARIA</a>
+                    
                 </div>
             </li>
 
             <li class="mobile-menu-item">
                 <div class="mobile-menu-header">
-                    <a href="#">ACTUALIDAD</a>
+                    <a href="{% url 'contacto' %}" style="color: tomato;">CONTACTO</a>
                 </div>
             </li>
 
-            <li class="mobile-menu-item">
-                <div class="mobile-menu-header">
-                    <a href="#">TALENTO</a>
-                </div>
-            </li>
-
-            <li class="mobile-menu-item">
-                <div class="mobile-menu-header">
-                    <a href="#">WORLDWIDE</a>
-                </div>
-            </li>
-
-            <li class="mobile-menu-item">
-                <div class="mobile-menu-header">
-                    <a href="{% url 'contacto' %}">CONTACTO</a>
-                </div>
-            </li>
             
-            <li class="mobile-menu-item">
-                <div class="mobile-menu-header">
-                    <a href="#">PERFIL</a>
-                    <i class="fas fa-chevron-down accordion-icon"></i>
-                </div>
-            </li>
+            
+            
         </ul>
     </div>
 </nav>

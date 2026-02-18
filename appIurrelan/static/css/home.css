@@ -920,6 +920,9 @@ p.subtitle {
 .bottom-nav-mobile {
     display: none;
 }
+.mobile-dropdown-menu {
+    display: none; /* Oculto por defecto, se muestra solo en móvil */
+}
 
 /* 2. Mostrar solo cuando la pantalla es pequeña (móviles) */
 @media (max-width: 768px) {
@@ -932,6 +935,7 @@ p.subtitle {
 
     /* ESTILOS DEL NUEVO MENÚ DESPLEGABLE TIPO ACORDEÓN */
     .mobile-dropdown-menu {
+        display: block;
         position: fixed;
         top: 80px; /* Ajusta esto a la altura real de tu navbar */
         left: 0;
@@ -943,11 +947,12 @@ p.subtitle {
         
         /* Oculto por defecto, se mueve hacia abajo o aparece con opacidad */
         opacity: 0;
-        visibility: hidden;
         transform: translateY(-10px);
         transition: all 0.3s ease;
     }
-
+    .split-interface{
+        padding: 15px 20px;
+    }
     .mobile-dropdown-menu.active {
         opacity: 1;
         visibility: visible;
