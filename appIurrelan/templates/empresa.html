@@ -4,7 +4,7 @@
 
 {% block content %}
     {% trans "Nuestra<br>Identidad" as titulo_banner %}
-    {% trans "Ingeniería, compromiso y precisión desde hace más de 20 años" as subtitulo_banner %}
+    {% trans "Ingeniería, compromiso y precisión desde hace más de 35 años" as subtitulo_banner %}
 
     {% include 'banner.html' with titulo=titulo_banner subtitulo=subtitulo_banner clase_extra="hero-small" %}
     
@@ -27,7 +27,7 @@
                 <div class="intro-image">
                     <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Instalaciones Iurrelan">
                     <div class="exp-badge">
-                        <span class="years">+20</span>
+                        <span class="years">+35</span>
                         <span class="text">{% trans "Años de" %}<br>{% trans "Trayectoria" %}</span>
                     </div>
                 </div>
@@ -94,13 +94,18 @@
                 
                 <div class="stats-grid">
                     <div class="stat-item">
+                        <i class="fas fa-warehouse"></i>
+                        <span class="number" data-target="2">0</span>
+                        <span class="label">{% trans "Plantas operativas" %}</span>
+                    </div>
+                    <div class="stat-item">
                         <i class="fas fa-ruler-combined"></i>
-                        <span class="number" data-target="2000">0</span>
-                        <span class="label">m² {% trans "Superficie" %}</span>
+                        <span class="number" data-target="3500">0</span>
+                        <span class="label">m² {% trans "de superficie por planta" %}</span>
                     </div>
                     <div class="stat-item">
                         <i class="fas fa-weight-hanging"></i>
-                        <span class="number" data-target="20">0</span>
+                        <span class="number" data-target="10">0</span>
                         <span class="label">Ton. {% trans "Elevación" %}</span>
                     </div>
                     <div class="stat-item">

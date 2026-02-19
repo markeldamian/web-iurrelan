@@ -89,7 +89,7 @@ body, html {
     font-weight: 500;
     text-transform: uppercase;
     font-size: 0.9rem;
-    padding-top: 30px;
+    padding-top: 25px;
     position: relative;
     transition: color 0.3s;
 }
@@ -97,10 +97,104 @@ body, html {
 .nav-link:hover, 
 .nav-link.active { 
     color: var(--primary-color) ; 
+    
 }
 
 .navbar.scrolled .nav-link { 
-    color: black ; 
+    color: rgb(38, 32, 32) ; 
+    font-weight: bold;
+
+}
+.navbar.scrolled .lang-select {
+    color: rgb(38, 32, 32);
+    border-color: rgba(0,0,0,0.3);
+}
+/* --- SECCIÓN EXCLUSIVA DE MATERIALES --- */
+.materials-container {
+    margin: 100px auto;
+    padding: 0 20px;
+    max-width: 1000px;
+}
+
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.material-card {
+    background: linear-gradient(145deg, #1f1f1f, #141414);
+    border: 1px solid rgba(255, 140, 0, 0.15);
+    border-radius: 8px;
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    /* Transición suave para el hover */
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Estado inicial para la animación de scroll */
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* Clase que añade el Javascript al hacer scroll */
+.material-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Línea decorativa animada en la parte superior */
+.material-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: #ff8c00;
+    transition: all 0.5s ease;
+}
+
+/* Animaciones al pasar el ratón (Hover) */
+.material-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 140, 0, 0.1);
+    border-color: rgba(255, 140, 0, 0.5);
+    background: linear-gradient(145deg, #252525, #1a1a1a);
+}
+
+.material-card:hover::before {
+    left: 0; /* Desliza la línea naranja */
+}
+
+.material-icon {
+    font-size: 3.5rem;
+    color: #ff8c00;
+    margin-bottom: 25px;
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+
+.material-card:hover .material-icon {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.material-card h4 {
+    color: #fff;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.material-card p {
+    color: #ccc;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    font-family: 'Courier New', Courier, monospace; /* Fuente técnica para los tipos de acero */
+    font-weight: bold;
 }
 /* Línea animada bajo enlaces */
 .nav-link::after {
@@ -187,6 +281,7 @@ body, html {
     transition: all 0.3s;
     text-transform: uppercase;
     font-size: 0.9rem;
+    margin-top: 20px;
 }
 
 .lang-select:hover {
@@ -767,17 +862,11 @@ p.subtitle {
     .logo-img { max-height: 65px; width: auto; }
 
     /* --- 3. CONTENEDOR DE CONTROLES (IDIOMA + MENU) --- */
-    /* Este estilo depende del cambio HTML previo de .nav-controls */
-    .nav-controls {
-        display: flex;
-        align-items: center;
-        gap: 15px; /* Espacio entre el selector de idioma y la hamburguesa */
-        z-index: 1006;
-    }
+    
 
     /* Aseguramos que el selector se vea en móvil */
     .language-selector {
-        display: block !important;
+        display: block ;
     }
 
     /* --- 4. BOTÓN HAMBURGUESA --- */

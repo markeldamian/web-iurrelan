@@ -156,7 +156,7 @@
                 </div>
                 <div class="weld-text">
                     <h3>{% trans "Soldadura TIG" %}</h3>
-                    <p>{% trans "La elección definitiva para acabados estéticos y materiales exigentes como acero inoxidable o aluminio. Este proceso nos permite un control absoluto sobre el arco, logrando cordones limpios, sin proyecciones y de altísima calidad visual y estructural, perfectos para piezas visibles o de precisión." %}</p>
+                    <p>{% trans "La elección definitiva para acabados estéticos y materiales exigentes como acero inoxidable. Este proceso nos permite un control absoluto sobre el arco, logrando cordones limpios, sin proyecciones y de altísima calidad visual y estructural, perfectos para piezas visibles o de precisión." %}</p>
                 </div>
             </div>
 
@@ -169,8 +169,27 @@
                     <p>{% trans "Prolongamos la vida útil de sus componentes industriales. Realizamos saneado de grietas, recuperación de geometrías desgastadas y recargues duros anti-desgaste. Un servicio esencial para mantenimiento correctivo que devuelve a la pieza sus propiedades originales o mejoradas." %}</p>
                 </div>
             </div>
+            
         </div>
+        <div class="materials-container">
+            <h3 class="section-title center-title white" style="font-size: 2rem;">
+                {% trans "Materiales que" %} <span class="highlight">{% trans "Trabajamos" %}</span>
+            </h3>
+            
+            <div class="materials-grid">
+                <div class="material-card scroll-trigger">
+                    <i class="fas fa-cubes material-icon"></i>
+                    <h4>{% trans "Aceros al carbono" %}</h4>
+                    <p>{% trans "(LCC, WC6…)" %}</p>
+                </div>
 
+                <div class="material-card scroll-trigger" style="transition-delay: 0.2s;">
+                    <i class="fas fa-shield-alt material-icon"></i>
+                    <h4>{% trans "Aceros Inoxidables" %}</h4>
+                    <p>{% trans "(CA6NM, CF3M, CF8M, DUPLEX (4A), SUPERDUPLEX (5A), CK3M, INCONEL 625…)" %}</p>
+                </div>
+            </div>
+        </div>
         <div class="container reveal-on-scroll">
             <h3 class="section-title center-title white" style="font-size: 1.8rem; margin-bottom: 40px;">{% trans "Garantía de" %} <span class="highlight">{% trans "Ejecución" %}</span></h3>
             <div class="cert-table-section">
@@ -178,7 +197,7 @@
                     <div class="tech-card">
                         <i class="fas fa-check-double"></i>
                         <h4>{% trans "Versatilidad" %}</h4>
-                        <span>{% trans "Aceros, Inox y Aluminio" %}</span>
+                        <span>{% trans "Aceros al Carbono y Aceros Inoxidables" %}</span>
                     </div>
                     <div class="tech-card">
                         <i class="fas fa-user-shield"></i>
