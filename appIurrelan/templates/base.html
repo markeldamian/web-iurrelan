@@ -185,6 +185,21 @@
             }
         });
     });
+    
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll('.reveal-on-scroll');
+        hiddenElements.forEach((el) => observer.observe(el));
+    });
+
 </script>
 </body>
 </html>

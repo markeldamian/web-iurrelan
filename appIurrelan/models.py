@@ -5,8 +5,7 @@ class CategoriaMaquina(models.TextChoices):
     # 2. Envolver el segundo texto de cada línea con _( ... )
     CORTE = 'CORTE', _('Corte Láser')
     SOLDADURA = 'SOLDADURA', _('Soldadura')
-    MECANIZADO = 'MECANIZADO', _('Mecanizado')
-    OTROS = 'OTROS', _('Auxiliares') # He puesto 'Auxiliares' para coincidir con tu traducción
+    GRANALLADO = 'GRANALLADO', _('Granallado')
 
 class Maquina(models.Model):
     # Opcional: También puedes traducir los nombres de los campos para el panel de administración
