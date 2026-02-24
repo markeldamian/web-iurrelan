@@ -97,17 +97,21 @@ body, html {
 .nav-link:hover, 
 .nav-link.active { 
     color: var(--primary-color) ; 
-    
+    font-weight: bold;
 }
 
 .navbar.scrolled .nav-link { 
-    color: rgb(38, 32, 32) ; 
+    color: rgb(255, 255, 255) ; 
+
+}
+.navbar.scrolled .nav-link:hover{ 
+    color: black ; 
     font-weight: bold;
 
 }
 .navbar.scrolled .lang-select {
-    color: rgb(38, 32, 32);
-    border-color: rgba(0,0,0,0.3);
+    color: rgb(255, 255, 255);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 /* --- SECCIÓN EXCLUSIVA DE MATERIALES --- */
 .materials-container {
