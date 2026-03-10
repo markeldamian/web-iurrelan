@@ -24,7 +24,6 @@
             }
         </style>
         <script>
-            // Hacer que la notificación desaparezca sola a los 5 segundos
             setTimeout(() => {
                 const toasts = document.querySelectorAll('.toast-message');
                 toasts.forEach(toast => {
@@ -72,10 +71,6 @@
                 </div>
             </div>
 
-            <section class="contact-page-container">
-        
-        <div class="container reveal-on-scroll" style="margin-top: 60px; margin-bottom: 80px;">
-            
             <div class="contact-form-wrapper" style="max-width: 900px; margin: 0 auto; margin-bottom: 80px;">
                 <h2 class="section-title" style="text-align: center; display: block;">{% trans "Envíanos un" %} <span class="highlight">{% trans "Mensaje" %}</span></h2>
                 
@@ -124,7 +119,7 @@
                         {% trans "Trabaja con" %} <span class="highlight">{% trans "Nosotros" %}</span>
                     </h2>
                     <p style="color: #bbb; font-size: 1.1rem;">
-                        {% trans "Déjanos tus datos y experiencia. Te contactaremos cuando haya vacantes." %}
+                        {% trans "Déjanos tus datos y experiencia." %}
                     </p>
                 </div>
 
@@ -155,10 +150,12 @@
                     </div>
 
                     <div class="form-group" style="background: #000; padding: 20px; border: 1px dashed #ff8c00; border-radius: 4px; text-align: center; margin: 25px 0;">
-                        <label style="color: #ff8c00; font-weight: bold; display: block; margin-bottom: 10px;">
+                        <label style="color: #ff8c00; font-weight: bold; cursor: pointer; display: block; margin-bottom: 10px; font-size: 1.1rem;">
                             <i class="fas fa-file-pdf"></i> {{ form_empleo.curriculum.label }}
                         </label>
-                        {{ form_empleo.curriculum }}
+                        <div style="display: flex; justify-content: center; width: 100%;">
+                            {{ form_empleo.curriculum }}
+                        </div>
                         <p style="font-size: 0.8rem; color: #888; margin-top: 5px;">{% trans "Máx 5MB" %}</p>
                     </div>
 
@@ -179,34 +176,9 @@
         </div>
     </section>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const fileInput = document.getElementById('{{ form_empleo.curriculum.id_for_label }}');
-        const textoCV = document.getElementById('texto-cv');
-        const labelCV = document.getElementById('label-cv');
-
-        if (fileInput) {
-            fileInput.addEventListener('change', function() {
-                if (this.files && this.files.length > 0) {
-                    // Si hay archivo, lo ponemos en verde
-                    textoCV.textContent = "¡Archivo adjuntado!: " + this.files[0].name;
-                    labelCV.style.color = "#28a745"; 
-                } else {
-                    // Si se cancela, vuelve a naranja
-                    textoCV.textContent = "{% trans 'Haz clic aquí para seleccionar tu PDF' %}";
-                    labelCV.style.color = "#ff8c00";
-                }
-            });
-        }
-    });
-</script>
-            </div>
-
-        </div>
-    </section>
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Script para las animaciones de scroll
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -215,6 +187,21 @@
                 });
             }, { threshold: 0.15 });
             document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+            // Script para estilizar el input del PDF
+            const fileInput = document.getElementById('{{ form_empleo.curriculum.id_for_label }}');
+            if (fileInput) {
+                fileInput.addEventListener('change', function() {
+                    const label = this.previousElementSibling;
+                    if (this.files && this.files.length > 0) {
+                        label.style.color = "#28a745"; 
+                        label.innerHTML = '<i class="fas fa-check-circle"></i> Archivo seleccionado: ' + this.files[0].name;
+                    } else {
+                        label.style.color = "#ff8c00";
+                        label.innerHTML = '<i class="fas fa-file-pdf"></i> {{ form_empleo.curriculum.label }}';
+                    }
+                });
+            }
         });
     </script>
 {% endblock %}

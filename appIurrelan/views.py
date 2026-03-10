@@ -12,8 +12,6 @@ from .models import Maquina
 def empresa_view(request):
     return render(request, 'empresa.html')
 
-def cortedos(request):
-    return render(request, 'corte2.html')
 def acabado(request):
     return render(request, 'acabado.html')
 def soldadura(request):
@@ -82,8 +80,7 @@ def canal_etico_view(request):
         form = DenunciaForm()
 
     return render(request, 'legal/canal_etico.html', {'form': form})
-def ejemplo_view(request):
-     return render(request, 'ejemplo.html')
+
 # Create your views here.
 
 def home_view(request):
