@@ -3,7 +3,7 @@
 {% load i18n %}
 
 {% block content %}
-    {% trans "Corte <br>Térmico" as titulo_c %}
+    {% blocktrans asvar titulo_c %}Corte <br>Térmico{% endblocktrans %}
     {% trans "Precisión extrema y potencia controlada. Tecnología de separación de materiales mediante Arco Aire y Oxicorte." as sub_c %}
     
 {% include 'banner.html' with titulo=titulo_c subtitulo=sub_c clase_extra="hero-machines hero-small" %}
@@ -220,8 +220,8 @@
             
             <div class="cut-service-row reveal-cut">
                 <div class="cut-info">
-                    <h2>CORTE CON <br>ARCO AIRE</h2>
-                    <p>{% trans "Proceso de ranurado y corte de alta eficiencia que utiliza un electrodo de carbono y un chorro de aire comprimido. Ideal para eliminar soldaduras defectuosas, sanear grietas y cortar mazarotas en piezas de gran espesor sin dañar el metal base térmicamente." %}</p>
+                    <h2>{% blocktrans %}CORTE CON <br>ARCO AIRE{% endblocktrans %}</h2>
+                    <p>{% blocktrans %}Proceso de ranurado y corte de alta eficiencia que utiliza un electrodo de carbono y un chorro de aire comprimido. Ideal para eliminar soldaduras defectuosas, sanear grietas y cortar mazarotas en piezas de gran espesor sin dañar el metal base térmicamente.{% endblocktrans %}</p>
                     
                     <ul style="margin-top: 20px; color: #888; list-style: none; padding: 0;">
                         <li><i class="fas fa-bolt" style="color:var(--cut-accent); margin-right:10px;"></i> {% trans "Eliminación rápida de material" %}</li>
@@ -233,15 +233,15 @@
                     <div class="hud-corner hud-tl"></div>
                     <div class="hud-corner hud-br"></div>
                     <div class="cut-img-wrapper">
-                        <img src="{% static 'img/cortearcoaire.jpg' %}" alt="Corte Arco Aire">
+                        <img src="{% static 'img/cortearcoaire.jpg' %}" alt="{% trans 'Corte Arco Aire' %}">
                     </div>
                 </div>
             </div>
 
             <div class="cut-service-row reverse reveal-cut">
                 <div class="cut-info">
-                        <h2>CORTE CON <br>SOPLETE</h2>
-                    <p>{% trans "Tecnología de oxicorte para seccionado de aceros al carbono de alto calibre. Mediante la reacción química exotérmica del oxígeno puro con el metal precalentado, logramos cortes limpios y verticales en espesores que otras tecnologías no pueden alcanzar." %}</p>
+                        <h2>{% blocktrans %}CORTE CON <br>SOPLETE{% endblocktrans %}</h2>
+                    <p>{% blocktrans %}Tecnología de oxicorte para seccionado de aceros al carbono de alto calibre. Mediante la reacción química exotérmica del oxígeno puro con el metal precalentado, logramos cortes limpios y verticales en espesores que otras tecnologías no pueden alcanzar.{% endblocktrans %}</p>
                     
                     <ul style="margin-top: 20px; color: #888; list-style: none; padding: 0;">
                         <li><i class="fas fa-fire" style="color:var(--cut-accent); margin-right:10px;"></i> {% trans "Capacidad de corte > 100mm" %}</li>
@@ -253,7 +253,7 @@
                     <div class="hud-corner hud-tl"></div>
                     <div class="hud-corner hud-br"></div>
                     <div class="cut-img-wrapper">
-                        <img src="{% static 'img/cortesoplete.png' %}" alt="Corte con Soplete">
+                        <img src="{% static 'img/cortesoplete.png' %}" alt="{% trans 'Corte con Soplete' %}">
                     </div>
                 </div>
             </div>

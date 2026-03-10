@@ -3,7 +3,7 @@
 {% load i18n %}
 
 {% block content %}
-    {% trans "Nuestra<br>Identidad" as titulo_banner %}
+    {% blocktrans asvar titulo_banner %}Nuestra<br>Identidad{% endblocktrans %}
     {% trans "Ingeniería, compromiso y precisión desde hace más de 35 años" as subtitulo_banner %}
 
     {% include 'banner.html' with titulo=titulo_banner subtitulo=subtitulo_banner clase_extra="hero-small" %}
@@ -16,16 +16,18 @@
                     <h2 class="section-title">{% trans "La Excelencia" %} <span class="highlight">{% trans "Industrial" %}</span></h2>
                     
                     <p class="lead-text">
-                        {% trans "En <strong>Iurrelan</strong>, entendemos la metalurgia como un arte preciso. Somos una empresa líder en transformación metálica en Guipúzcoa, fusionando la tradición industrial vasca con la tecnología más vanguardista." %}
+                        {% trans "En" %} <strong>Iurrelan</strong>, {% trans "entendemos la metalurgia como un arte preciso. Somos una empresa líder en transformación metálica en Guipúzcoa, fusionando la tradición industrial vasca con la tecnología más vanguardista." %}
                     </p>
                     
                     <p>
-                        {% trans "Desde nuestros inicios, nos hemos especializado en ofrecer un servicio integral de transformación metálica para la industria. Nuestro equipo humano altamente cualificado es el motor que nos permite abordar proyectos de alta complejidad técnica con total garantía." %}
+                        {% blocktrans %}
+                        Desde nuestros inicios, nos hemos especializado en ofrecer un servicio integral de transformación metálica para la industria. Nuestro equipo humano altamente cualificado es el motor que nos permite abordar proyectos de alta complejidad técnica con total garantía.
+                        {% endblocktrans %}
                     </p>
                 </div>
                 
                 <div class="intro-image">
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Instalaciones Iurrelan">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="{% trans 'Instalaciones Iurrelan' %}">
                     <div class="exp-badge">
                         <span class="years">+35</span>
                         <span class="text">{% trans "Años de" %}<br>{% trans "Trayectoria" %}</span>
@@ -47,7 +49,7 @@
                             </div>
                             <div class="flip-card-back">
                                 <h3>{% trans "Nuestro Objetivo" %}</h3>
-                                <p>{% trans "Fabricar soluciones metálicas de alto valor añadido, superando las expectativas de calidad de nuestros clientes y asegurando procesos sostenibles y eficientes." %}</p>
+                                <p>{% blocktrans %}Fabricar soluciones metálicas de alto valor añadido, superando las expectativas de calidad de nuestros clientes y asegurando procesos sostenibles y eficientes.{% endblocktrans %}</p>
                             </div>
                         </div>
                     </div>
@@ -60,7 +62,7 @@
                             </div>
                             <div class="flip-card-back">
                                 <h3>{% trans "El Futuro" %}</h3>
-                                <p>{% trans "Consolidarnos como el socio estratégico de referencia en el sector industrial del norte de España, impulsando la innovación en cada soldadura y mecanizado." %}</p>
+                                <p>{% blocktrans %}Consolidarnos como el socio estratégico de referencia en el sector industrial del norte de España, impulsando la innovación en cada soldadura y mecanizado.{% endblocktrans %}</p>
                             </div>
                         </div>
                     </div>

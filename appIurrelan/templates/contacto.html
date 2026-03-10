@@ -3,10 +3,39 @@
 {% load static %}
 
 {% block content %}
-    {% trans "Contacta<br>con nosotros" as titulo_banner %}
+    {% blocktrans asvar titulo_banner %}Contacta<br>con nosotros{% endblocktrans %}
     {% trans "Estamos listos para hacer realidad tu proyecto" as subtitulo_banner %}
     
     {% include 'banner.html' with titulo=titulo_banner subtitulo=subtitulo_banner clase_extra="hero-small" %}
+
+    {% if messages %}
+        <div id="toast-container" style="position: fixed; top: 100px; right: 20px; z-index: 9999;">
+            {% for message in messages %}
+                <div class="toast-message" style="padding: 15px 25px; margin-bottom: 10px; background: {% if message.tags == 'success' %}#28a745{% else %}#dc3545{% endif %}; color: white; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); font-weight: bold; border-left: 5px solid {% if message.tags == 'success' %}#1e7e34{% else %}#bd2130{% endif %}; animation: slideInRight 0.5s ease forwards;">
+                    <i class="{% if message.tags == 'success' %}fas fa-check-circle{% else %}fas fa-exclamation-triangle{% endif %}" style="margin-right: 10px;"></i>
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+        <style>
+            @keyframes slideInRight {
+                from { transform: translateX(120%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+        </style>
+        <script>
+            // Hacer que la notificación desaparezca sola a los 5 segundos
+            setTimeout(() => {
+                const toasts = document.querySelectorAll('.toast-message');
+                toasts.forEach(toast => {
+                    toast.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    toast.style.opacity = '0';
+                    toast.style.transform = 'translateX(120%)';
+                    setTimeout(() => toast.remove(), 500);
+                });
+            }, 6000);
+        </script>
+    {% endif %}
 
     <section class="contact-page-container">
         
@@ -15,7 +44,7 @@
                 <div class="info-card">
                     <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
                     <h3>{% trans "Sede Central" %}</h3>
-                    <p>Lugar Barrio Elbarrena, 25<br>20247 Zaldibia, Gipuzkoa</p>
+                    <p>{% trans "Lugar Barrio Elbarrena, 25" %}<br>{% trans "20247 Zaldibia, Gipuzkoa" %}</p>
                 </div>
                 <div class="info-card">
                     <div class="icon-circle"><i class="fas fa-phone-alt"></i></div>
@@ -34,15 +63,7 @@
             
             <div class="map-wrapper" style="width: 100%; height: 450px; margin-bottom: 60px;">
                 <div class="map-frame">
-                    <iframe 
-                        width="100%" 
-                        height="100%" 
-                        frameborder="0" 
-                        scrolling="no" 
-                        marginheight="0" 
-                        marginwidth="0" 
-                        src="https://maps.google.com/maps?q=Iurrelan%2C%20Lugar%20Barrio%20Elbarrena%2C%2025%2C%2020247%20Zaldibia%2C%20Gipuzkoa&t=&z=15&ie=UTF8&iwloc=&output=embed">
-                    </iframe>
+                    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Iurrelan%2C%20Lugar%20Barrio%20Elbarrena%2C%2025%2C%2020247%20Zaldibia%2C%20Gipuzkoa&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
                 </div>
                 <div class="map-overlay-card">
                     <h4>{% trans "Horario de Carga/Descarga" %}</h4>
@@ -51,75 +72,136 @@
                 </div>
             </div>
 
-            <div class="contact-form-wrapper" style="max-width: 900px; margin: 0 auto;">
+            <section class="contact-page-container">
+        
+        <div class="container reveal-on-scroll" style="margin-top: 60px; margin-bottom: 80px;">
+            
+            <div class="contact-form-wrapper" style="max-width: 900px; margin: 0 auto; margin-bottom: 80px;">
                 <h2 class="section-title" style="text-align: center; display: block;">{% trans "Envíanos un" %} <span class="highlight">{% trans "Mensaje" %}</span></h2>
-                <p class="form-subtitle" style="text-align: center;">{% trans "Rellena el formulario y nuestro equipo técnico te responderá a la mayor brevedad." %}</p>
-
-                {% if messages %}
-                    {% for message in messages %}
-                        <div style="padding: 15px; margin-bottom: 20px; background: {% if message.tags == 'success' %}#28a745{% else %}#dc3545{% endif %}; color: white; border-radius: 4px; font-weight: 500;">
-                            {{ message }}
-                        </div>
-                    {% endfor %}
-                {% endif %}
-
-                {{ form.media }}
-
+                
                 <form method="post" class="industrial-form">
                     {% csrf_token %}
-                    
-                    {% if form.non_field_errors %}
-                        <div style="background: #dc3545; color: white; padding: 10px; border-radius: 4px; margin-bottom: 20px;">
-                            {{ form.non_field_errors }}
-                        </div>
-                    {% endif %}
-
                     <div class="form-row">
                         <div class="form-group half">
                             <label>{{ form.nombre.label }}</label>
                             {{ form.nombre }}
-                            {% if form.nombre.errors %} <div style="color: #ff4444; font-size: 0.85rem; margin-top: 5px;">{{ form.nombre.errors.0 }}</div> {% endif %}
                         </div>
                         <div class="form-group half">
                             <label>{{ form.telefono.label }}</label>
                             {{ form.telefono }}
-                            {% if form.telefono.errors %} <div style="color: #ff4444; font-size: 0.85rem; margin-top: 5px;">{{ form.telefono.errors.0 }}</div> {% endif %}
                         </div>
                     </div>
-
                     <div class="form-group">
                         <label>{{ form.email.label }}</label>
                         {{ form.email }}
-                        {% if form.email.errors %} <div style="color: #ff4444; font-size: 0.85rem; margin-top: 5px;">{{ form.email.errors.0 }}</div> {% endif %}
                     </div>
-
                     <div class="form-group">
                         <label>{{ form.mensaje.label }}</label>
                         {{ form.mensaje }}
-                        {% if form.mensaje.errors %} <div style="color: #ff4444; font-size: 0.85rem; margin-top: 5px;">{{ form.mensaje.errors.0 }}</div> {% endif %}
                     </div>
-
                     <div class="form-group" style="margin-top: 20px;">
                         <label style="margin-bottom: 10px; display:block;">{% trans "Seguridad" %}</label>
                         {{ form.captcha }}
-                        {% if form.captcha.errors %} 
-                            <div style="color: #ff4444; font-size: 0.85rem; margin-top: 5px;">{% trans "Completa la verificación de seguridad." %}</div> 
-                        {% endif %}
                     </div>
-
                     <div class="checkbox-group">
                         {{ form.privacidad }}
                         <label for="{{ form.privacidad.id_for_label }}">
                             {% trans "He leído y acepto la" %} <a href="{% url 'privacidad' %}">{% trans "Política de Privacidad" %}</a>.
                         </label>
-                        {% if form.privacidad.errors %} <div style="color: #ff4444; font-size: 0.85rem; display: block; width: 100%;">{{ form.privacidad.errors.0 }}</div> {% endif %}
                     </div>
 
-                    <button type="submit" class="btn-submit-industrial" style="width: 100%;">
+                    <button type="submit" name="btn_contacto" class="btn-submit-industrial" style="width: 100%;">
                         {% trans "Enviar Mensaje" %} <i class="fas fa-paper-plane"></i>
                     </button>
                 </form>
             </div>
+
+            <div class="contact-form-wrapper" id="trabaja-con-nosotros" style="max-width: 900px; margin: 0 auto; background-color: #1a1a1a; padding: 40px; border-radius: 8px; border-top: 4px solid #ff8c00;">
+                
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <i class="fas fa-hard-hat" style="font-size: 2.5rem; color: #ff8c00; margin-bottom: 15px;"></i>
+                    <h2 class="section-title" style="display: block; color: white;">
+                        {% trans "Trabaja con" %} <span class="highlight">{% trans "Nosotros" %}</span>
+                    </h2>
+                    <p style="color: #bbb; font-size: 1.1rem;">
+                        {% trans "Déjanos tus datos y experiencia. Te contactaremos cuando haya vacantes." %}
+                    </p>
+                </div>
+
+                <form method="post" class="industrial-form" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label style="color: #ddd;">{{ form_empleo.nombre_candidato.label }}</label>
+                            {{ form_empleo.nombre_candidato }}
+                            {% if form_empleo.nombre_candidato.errors %} <div style="color: #ff4444; font-size: 0.85rem; margin-top: 5px;">{{ form_empleo.nombre_candidato.errors.0 }}</div> {% endif %}
+                        </div>
+                        <div class="form-group half">
+                            <label style="color: #ddd;">{{ form_empleo.telefono_candidato.label }}</label>
+                            {{ form_empleo.telefono_candidato }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="color: #ddd;">{{ form_empleo.email_candidato.label }}</label>
+                        {{ form_empleo.email_candidato }}
+                    </div>
+
+                    <div class="form-group">
+                        <label style="color: #ddd;">{{ form_empleo.experiencia.label }}</label>
+                        {{ form_empleo.experiencia }}
+                        {% if form_empleo.experiencia.errors %} <div style="color: #ff4444; font-size: 0.85rem; margin-top: 5px;">{{ form_empleo.experiencia.errors.0 }}</div> {% endif %}
+                    </div>
+
+                    <div class="form-group" style="background: #000; padding: 20px; border: 1px dashed #ff8c00; border-radius: 4px; text-align: center; margin: 25px 0;">
+                        <label style="color: #ff8c00; font-weight: bold; display: block; margin-bottom: 10px;">
+                            <i class="fas fa-file-pdf"></i> {{ form_empleo.curriculum.label }}
+                        </label>
+                        {{ form_empleo.curriculum }}
+                        <p style="font-size: 0.8rem; color: #888; margin-top: 5px;">{% trans "Máx 5MB" %}</p>
+                    </div>
+
+                    <div class="checkbox-group" style="margin-top: 20px;">
+                        {{ form_empleo.privacidad_empleo }}
+                        <label for="{{ form_empleo.privacidad_empleo.id_for_label }}" style="color: #bbb;">
+                            {% trans "He leído y acepto la" %} <a href="{% url 'privacidad' %}" style="color: #ff8c00;">{% trans "Política de Privacidad" %}</a>.
+                        </label>
+                        {% if form_empleo.privacidad_empleo.errors %} <div style="color: #ff4444; font-size: 0.85rem; display: block; width: 100%;">{{ form_empleo.privacidad_empleo.errors.0 }}</div> {% endif %}
+                    </div>
+
+                    <button type="submit" name="btn_empleo" class="btn-submit-industrial" style="width: 100%; margin-top: 20px; background-color: #ff8c00; color: #000;">
+                        {% trans "Enviar Datos" %} <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const fileInput = document.getElementById('{{ form_empleo.curriculum.id_for_label }}');
+        const textoCV = document.getElementById('texto-cv');
+        const labelCV = document.getElementById('label-cv');
+
+        if (fileInput) {
+            fileInput.addEventListener('change', function() {
+                if (this.files && this.files.length > 0) {
+                    // Si hay archivo, lo ponemos en verde
+                    textoCV.textContent = "¡Archivo adjuntado!: " + this.files[0].name;
+                    labelCV.style.color = "#28a745"; 
+                } else {
+                    // Si se cancela, vuelve a naranja
+                    textoCV.textContent = "{% trans 'Haz clic aquí para seleccionar tu PDF' %}";
+                    labelCV.style.color = "#ff8c00";
+                }
+            });
+        }
+    });
+</script>
+            </div>
+
         </div>
     </section>
 

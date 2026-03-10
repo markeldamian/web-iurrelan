@@ -180,12 +180,15 @@
     <div class="container">
         <div class="intro-content-wrapper">
             <div class="intro-text">
-                <h2 class="section-title">El Valor del <span class="highlight">Rebarbado Perfecto</span></h2>
-                <p>El rebarbado no es solo un paso final; es la garantía de calidad, seguridad y funcionalidad de cada pieza metálica. En Iurrelan eliminamos cantos vivos, escoria y rebabas para asegurar un acabado impecable, preparando el material para recubrimientos o ensamblajes exigentes.</p>
-                <ul class="animated-list">
-                    <li><i class="fas fa-shield-alt"></i> Mayor seguridad en la manipulación posterior</li>
-                    <li><i class="fas fa-paint-roller"></i> Adherencia perfecta para pintura y tratamientos</li>
-                    <li><i class="fas fa-gem"></i> Estética profesional y acabados uniformes</li>
+                <h2 class="section-title">{% trans "El Valor del" %} <span class="highlight">{% trans "Rebarbado Perfecto" %}</span></h2>
+                <p>
+                {% blocktrans %}
+                El rebarbado no es solo un paso final; es la garantía de calidad, seguridad y funcionalidad de cada pieza metálica. En Iurrelan eliminamos cantos vivos...
+                {% endblocktrans %}
+                </p><ul class="animated-list">
+                    <li><i class="fas fa-shield-alt"></i> {% trans "Mayor seguridad en la manipulación posterior" %}</li>
+                    <li><i class="fas fa-paint-roller"></i> {% trans "Adherencia perfecta para pintura y tratamientos" %}</li>
+                    <li><i class="fas fa-gem"></i> {% trans "Estética profesional y acabados uniformes" %}</li>
                 </ul>
             </div>
             <div class="intro-visual">
@@ -199,33 +202,33 @@
     <div class="split-interface">
         
         <div class="panel">
-            <img src="{% static 'img/rebarbaamoldadora.png' %}" class="panel-bg" alt="Rebabado Manual">
+            <img src="{% static 'img/rebarbaamoldadora.png' %}" class="panel-bg" alt="{% trans 'Rebabado Manual' %}">
             <div class="crosshair"></div>
             
             <div class="data-layer">
-                <h2>REBARBADO <br> MEDIANTE<br>AMOLADORAS</h2>
+                <h2>{% blocktrans %}REBARBADO <br> MEDIANTE<br>AMOLADORAS{% endblocktrans %}</h2>
                 <p>{% trans "Intervención directa mediante herramientas portátiles para zonas complejas. Nuestros técnicos aplican discos de desbaste y láminas abrasivas para eliminar cordones de soldadura, suavizar aristas y corregir defectos superficiales con precisión geométrica." %}</p>
                 
                 <ul class="tech-list">
-                    <li>[+] ACABADO FINO</li>
-                    <li>[+] FLEXIBILIDAD</li>
-                    <li>[+] ACCESO DIFÍCIL</li>
+                    <li>[+] {% trans "ACABADO FINO" %}</li>
+                    <li>[+] {% trans "FLEXIBILIDAD" %}</li>
+                    <li>[+] {% trans "ACCESO DIFÍCIL" %}</li>
                 </ul>
             </div>
         </div>
 
         <div class="panel">
-            <img src="{% static 'img/rebarbasuspendida.jpg' %}" class="panel-bg" alt="Rebabado Suspendido">
+            <img src="{% static 'img/rebarbasuspendida.jpg' %}" class="panel-bg" alt="{% trans 'Rebabado Suspendido' %}">
             <div class="crosshair"></div>
 
             <div class="data-layer">
-                <h2>REBARBADO <br> MEDIANTE<br> MÁQUINAS <br>SUSPENDIDAS</h2>
+                <h2>{% blocktrans %}REBARBADO <br> MEDIANTE<br> MÁQUINAS <br>SUSPENDIDAS{% endblocktrans %}</h2>
                 <p>{% trans "Sistemas pendulares de alta potencia para el procesamiento de grandes superficies. La suspensión ingrávida permite al operario aplicar presiones de trabajo elevadas y constantes, logrando tasas de remoción de material superiores en piezas de gran tonelaje." %}</p>
                 
                 <ul class="tech-list">
-                    <li>[+] ALTA POTENCIA</li>
-                    <li>[+] RENDIMIENTO</li>
-                    <li>[+] ERGONOMÍA</li>
+                    <li>[+] {% trans "ALTA POTENCIA" %}</li>
+                    <li>[+] {% trans "RENDIMIENTO" %}</li>
+                    <li>[+] {% trans "ERGONOMÍA" %}</li>
                 </ul>
             </div>
         </div>

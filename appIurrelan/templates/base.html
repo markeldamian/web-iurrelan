@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>{% block title %}Iurrelan Metalurgia | Precisión Industrial{% endblock %}</title>
-    <meta name="description" content="{% block description %}Expertos en corte láser, soldadura y mecanizado en Guipúzcoa.{% endblock %}">
+    <title>{% block title %}{% trans "Iurrelan Metalurgia | Precisión Industrial" %}{% endblock %}</title>
+    <meta name="description" content="{% block description %}{% trans 'Expertos en corte láser, soldadura y mecanizado en Guipúzcoa.' %}{% endblock %}">
 
     <link rel="shortcut icon" type="image/png" href="{% static 'img/logoPequeIurrelan.png' %}"/>
 
@@ -21,7 +21,7 @@
 <nav class="navbar" id="navbar">
     
     <a href="{% url 'home' %}" class="logo">
-        <img src="{% static 'img/logoIurrelan.png' %}" alt="Iurrelan Logo" class="logo-img">
+        <img src="{% static 'img/logoIurrelan.png' %}" alt="{% trans 'Iurrelan Logo' %}" class="logo-img">
     </a>
 
     <div class="nav-links">
@@ -80,47 +80,40 @@
         <ul class="mobile-menu-list">
             <li class="mobile-menu-item">
                 <div class="mobile-menu-header">
-                    <a href="{% url 'home' %}">INICIO</a>
+                    <a href="{% url 'home' %}">{% trans "INICIO" %}</a>
                 </div>
             </li>
             <li class="mobile-menu-item">
                 <div class="mobile-menu-header">
-                    <a href="{% url 'empresa' %}">CONÓCENOS</a>
+                    <a href="{% url 'empresa' %}">{% trans "CONÓCENOS" %}</a>
                 </div>
             </li>
             
             <li class="mobile-menu-item">
                 <div class="mobile-menu-header">
-                    <a href="{% url 'servicios' %}">SERVICIOS</a>
+                    <a href="{% url 'servicios' %}">{% trans "SERVICIOS" %}</a>
                     <i class="fas fa-chevron-down accordion-icon"></i>
                 </div>
                 <ul class="mobile-submenu">
-                    <li><a href="{% url 'acabado' %}">Acabado</a></li>
-                    <li><a href="{% url 'corte' %}">Corte</a></li>
-                    <li><a href="{% url 'granallado' %}">Granallado</a></li>
-                    <li><a href="{% url 'rebarbado' %}">Rebarbado</a></li>
-                    <li><a href="{% url 'soldadura' %}">Soldadura</a></li>
-                    
-                    
+                    <li><a href="{% url 'acabado' %}">{% trans "Acabado" %}</a></li>
+                    <li><a href="{% url 'corte' %}">{% trans "Corte" %}</a></li>
+                    <li><a href="{% url 'granallado' %}">{% trans "Granallado" %}</a></li>
+                    <li><a href="{% url 'rebarbado' %}">{% trans "Rebarbado" %}</a></li>
+                    <li><a href="{% url 'soldadura' %}">{% trans "Soldadura" %}</a></li>
                 </ul>
             </li>
 
             <li class="mobile-menu-item">
                 <div class="mobile-menu-header">
-                    <a href="{% url 'maquinaria' %}">MAQUINARIA</a>
-                    
+                    <a href="{% url 'maquinaria' %}">{% trans "MAQUINARIA" %}</a>
                 </div>
             </li>
 
             <li class="mobile-menu-item">
                 <div class="mobile-menu-header">
-                    <a href="{% url 'contacto' %}" style="color: tomato;">CONTACTO</a>
+                    <a href="{% url 'contacto' %}" style="color: tomato;">{% trans "CONTACTO" %}</a>
                 </div>
             </li>
-
-            
-            
-            
         </ul>
     </div>
 </nav>

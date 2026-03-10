@@ -2,9 +2,8 @@
 {% load static %}
 {% load i18n %}
 
-
 {% block content %}
-    {% trans "Soldadura<br>Industrial" as titulo_w %}
+    {% blocktrans asvar titulo_w %}Soldadura<br>Industrial{% endblocktrans %}
     {% trans "Soluciones de unión y reparación. Expertos en MIG-MAG, TIG y recuperación de componentes." as sub_w %}
     {% include 'banner.html' with titulo=titulo_w subtitulo=sub_w clase_extra="hero-small" %}
 
@@ -136,37 +135,37 @@
                     {% trans "Nuestros Servicios de" %} <span class="highlight">{% trans "Soldadura" %}</span>
                 </h2>
                 <p style="max-width: 700px; margin: 20px auto; color: #aaa;">
-                    {% trans "Ofrecemos procesos de soldadura adaptados a cada necesidad, desde la alta productividad industrial hasta la precisión artesanal y la recuperación de piezas críticas." %}
+                    {% blocktrans %}Ofrecemos procesos de soldadura adaptados a cada necesidad, desde la alta productividad industrial hasta la precisión artesanal y la recuperación de piezas críticas.{% endblocktrans %}
                 </p>
             </div>
 
             <div class="weld-step-container slide-from-left scroll-trigger">
                 <div class="weld-image">
-                    <img src="{% static 'img/soldadurasemiauto.jpg' %}" alt="Soldadura MIG MAG Semiautomática">
+                    <img src="{% static 'img/soldadurasemiauto.jpg' %}" alt="{% trans 'Soldadura MIG MAG Semiautomática' %}">
                 </div>
                 <div class="weld-text">
                     <h3>{% trans "Soldadura MIG-MAG Semiautomática" %}</h3>
-                    <p>{% trans "Proceso de alta productividad ideal para aceros al carbono y aceros inoxidables. Utilizamos equipos de última generación que garantizan una deposición de material constante, penetración profunda y uniones robustas, optimizando los tiempos de fabricación sin sacrificar la resistencia mecánica." %}</p>
+                    <p>{% blocktrans %}Proceso de alta productividad ideal para aceros al carbono y aceros inoxidables. Utilizamos equipos de última generación que garantizan una deposición de material constante, penetración profunda y uniones robustas, optimizando los tiempos de fabricación sin sacrificar la resistencia mecánica.{% endblocktrans %}</p>
                 </div>
             </div>
 
             <div class="weld-step-container slide-from-right scroll-trigger" style="flex-direction: row-reverse;">
                 <div class="weld-image">
-                    <img src="{% static 'img/soldaduratig.png' %}" alt="Soldadura TIG Precisión">
+                    <img src="{% static 'img/soldaduratig.png' %}" alt="{% trans 'Soldadura TIG Precisión' %}">
                 </div>
                 <div class="weld-text">
                     <h3>{% trans "Soldadura TIG" %}</h3>
-                    <p>{% trans "La elección definitiva para acabados estéticos y materiales exigentes como acero inoxidable. Este proceso nos permite un control absoluto sobre el arco, logrando cordones limpios, sin proyecciones y de altísima calidad visual y estructural, perfectos para piezas visibles o de precisión." %}</p>
+                    <p>{% blocktrans %}La elección definitiva para acabados estéticos y materiales exigentes como acero inoxidable. Este proceso nos permite un control absoluto sobre el arco, logrando cordones limpios, sin proyecciones y de altísima calidad visual y estructural, perfectos para piezas visibles o de precisión.{% endblocktrans %}</p>
                 </div>
             </div>
 
             <div class="weld-step-container slide-from-left scroll-trigger">
                 <div class="weld-image">
-                    <img src="{% static 'img/pieza5.jpg' %}" alt="Sanear Piezas y Recargues">
+                    <img src="{% static 'img/pieza5.jpg' %}" alt="{% trans 'Sanear Piezas y Recargues' %}">
                 </div>
                 <div class="weld-text">
                     <h3>{% trans "Sanear Piezas y Recargues" %}</h3>
-                    <p>{% trans "Prolongamos la vida útil de sus componentes industriales. Realizamos saneado de grietas, recuperación de geometrías desgastadas y recargues duros anti-desgaste. Un servicio esencial para mantenimiento correctivo que devuelve a la pieza sus propiedades originales o mejoradas." %}</p>
+                    <p>{% blocktrans %}Prolongamos la vida útil de sus componentes industriales. Realizamos saneado de grietas, recuperación de geometrías desgastadas y recargues duros anti-desgaste. Un servicio esencial para mantenimiento correctivo que devuelve a la pieza sus propiedades originales o mejoradas.{% endblocktrans %}</p>
                 </div>
             </div>
             

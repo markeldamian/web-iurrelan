@@ -1,5 +1,7 @@
 {% load static %}
-{% load i18n %} <div class="hero-carousel">
+{% load i18n %} 
+
+<div class="hero-carousel">
     <div class="carousel-track">
         <div class="carousel-slide active" style="background-image: url('{% static 'img/pieza4.jpg' %}');"></div>
         <div class="carousel-slide" style="background-image: url('{% static 'img/pieza5.jpg' %}');"></div>
@@ -33,6 +35,7 @@
     const slides = document.querySelectorAll('.carousel-slide');
     const dots = document.querySelectorAll('.dot');
     const totalSlides = slides.length;
+    
     function showSlide(index) {
         slides.forEach(slide => slide.classList.remove('active'));
         dots.forEach(dot => dot.classList.remove('active'));
@@ -40,6 +43,7 @@
         slides[currentSlide].classList.add('active');
         dots[currentSlide].classList.add('active');
     }
+    
     function goToSlide(index) { showSlide(index); resetTimer(); }
     let slideInterval = setInterval(() => { showSlide(currentSlide + 1); }, 5000);
     function resetTimer() { clearInterval(slideInterval); slideInterval = setInterval(() => { showSlide(currentSlide + 1); }, 5000); }

@@ -3,7 +3,7 @@
 {% load i18n %}
 
 {% block content %}
-    {% trans "Granallado <br>Industrial" as titulo_m %}
+    {% blocktrans asvar titulo_m %}Granallado <br>Industrial{% endblocktrans %}
     {% trans "Preparación y acabado de superficies mediante proyección de abrasivos de alta calidad." as sub_m %}
 {% include 'banner.html' with titulo=titulo_m subtitulo=sub_m clase_extra="hero-machines hero-small" %}
 
@@ -185,51 +185,7 @@
             .section-title { font-size: 1.4rem; }
         }
     </style>
-    <!--<section class="piezas-gallery-section reveal-on-scroll">
-    <div class="container">
-        <div class="gallery-header text-center" style="margin-bottom: 40px;">
-            <h2 class="section-title">Nuestras Piezas <span class="highlight">Habituales</span></h2>
-            <p style="color: #bbb; max-width: 600px; margin: 0 auto;">Ejemplos representativos de los diferentes tamaños, geometrías y materiales que procesamos diariamente en nuestras cabinas de granallado.</p>
-        </div>
-        
-        <div class="gallery-grid-7">
-            <div class="gallery-item">
-                <img src="{% static 'img/piezas/piezareal1.png' %}" alt="Pieza Granallada 1" class="pieza-img">
-                <div class="pieza-overlay"><span>Pieza Tipo 1</span></div>
-            </div>
 
-            <div class="gallery-item">
-                <img src="{% static 'img/piezas/piezareal2.png' %}" alt="Pieza Granallada 2" class="pieza-img">
-                <div class="pieza-overlay"><span>Pieza Tipo 2</span></div>
-            </div>
-
-            <div class="gallery-item">
-                <img src="{% static 'img/piezas/piezareal3.png' %}" alt="Pieza Granallada 3" class="pieza-img">
-                <div class="pieza-overlay"><span>Pieza Tipo 3</span></div>
-            </div>
-
-            <div class="gallery-item">
-                <img src="{% static 'img/piezas/piezareal4.png' %}" alt="Pieza Granallada 4" class="pieza-img">
-                <div class="pieza-overlay"><span>Pieza Tipo 4</span></div>
-            </div>
-
-            <div class="gallery-item">
-                <img src="{% static 'img/piezas/piezareal5.png' %}" alt="Pieza Granallada 5" class="pieza-img">
-                <div class="pieza-overlay"><span>Pieza Tipo 5</span></div>
-            </div>
-
-            <div class="gallery-item">
-                <img src="{% static 'img/piezas/piezareal6.png' %}" alt="Pieza Granallada 6" class="pieza-img">
-                <div class="pieza-overlay"><span>Pieza Tipo 6</span></div>
-            </div>
-
-            <div class="gallery-item">
-                <img src="{% static 'img/piezas/piezareal7.png' %}" alt="Pieza Granallada 7" class="pieza-img">
-                <div class="pieza-overlay"><span>Pieza Tipo 7</span></div>
-            </div>
-        </div>
-    </div>
-</section>-->
     <section class="transformation-section">
         <div class="container portal-reveal">
             <h2 class="section-title">{% trans "Granallado de Piezas de Acero Inoxidable" %}</h2>

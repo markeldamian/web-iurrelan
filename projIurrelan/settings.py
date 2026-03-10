@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -119,19 +120,21 @@ LANGUAGES = [
     ('es', _('Español')),
     ('en', _('English')),
     ('de', _('Deutsch')),
+    ('eu', _('Euskera')),
 ]
 
 # Carpeta donde se guardarán las traducciones
-LOCALE_PATHS = [
-    BASE_DIR / 'locale',
-]
 
-TIME_ZONE = 'UTC'
 
-USE_I18N = True
-
+TIME_ZONE = 'Europe/Madrid'  # O la que corresponda
+USE_I18N = True              # ¡Asegúrate de que esto está en True!
+USE_L10N = True
 USE_TZ = True
 
+# Ruta donde se guardarán los archivos de traducción (.po y .mo)
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
@@ -140,15 +143,13 @@ STATIC_URL = 'static/'
 
 
 # --- CONFIGURACIÓN DE EMAIL (GMAIL) ---
+# Muestra los correos electrónicos en la terminal en lugar de enviarlos de verdad
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-# Tu dirección desde donde sale el correo (puede ser la misma que recibe)
-EMAIL_HOST_USER = 'pruebamprog@gmail.com' 
-# ¡OJO! Aquí no va tu contraseña normal. 
-# Debes generar una "Contraseña de Aplicación" en tu cuenta de Google (Seguridad > Verificación en 2 pasos > Contraseñas de aplicación).
-EMAIL_HOST_PASSWORD = 'nxma khuu njqr deqr'
+EMAIL_HOST_USER = 'pruebamprog@gmail.com'  # Tu correo de Gmail
+EMAIL_HOST_PASSWORD = 'kjsaxletagwwsihu'
 
 # --- CONFIGURACIÓN RECAPTCHA (Claves de Prueba) ---
 # Cuando subas la web a internet, cambia estas por las tuyas reales de Google
@@ -158,17 +159,6 @@ RECAPTCHA_PRIVATE_KEY = '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe'
 RECAPTCHA_USE_SSL = True
 SILENCED_SYSTEM_CHECKS = ['django_recaptcha.recaptcha_test_key_error']
 
-import os
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-import os
-# ...
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-import os
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
