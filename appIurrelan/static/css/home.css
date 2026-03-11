@@ -1379,3 +1379,20 @@ input[type="file"] {
     margin: 20px 0;
     transition: all 0.3s ease;
 }
+/* =========================================================
+   FIX: ELEMENTOS NO CLICABLES EN MÓVIL
+   ========================================================= */
+
+/* 1. Evitar que el menú móvil invisible bloquee los clics de la pantalla */
+.mobile-dropdown-menu {
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.mobile-dropdown-menu.active {
+    pointer-events: auto;
+    visibility: visible;
+}
+
+
+

@@ -900,19 +900,15 @@ msgstr "Identifikationsdaten"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:20
 msgid ""
-"\n"
-"                En cumplimiento con el deber de información recogido en "
+"En cumplimiento con el deber de información recogido en "
 "artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad "
 "de la Información y del Comercio Electrónico (LSSICE), a continuación se "
-"reflejan los siguientes datos:\n"
-"                "
+"reflejan los siguientes datos:"
 msgstr ""
-"\n"
-"                In Erfüllung der Informationspflicht gemäß Artikel 10 des "
+"In Erfüllung der Informationspflicht gemäß Artikel 10 des "
 "Gesetzes 34/2002 vom 11. Juli über Dienste der Informationsgesellschaft und "
 "den elektronischen Geschäftsverkehr (LSSICE) werden nachfolgend folgende "
-"Daten aufgeführt:\n"
-"                "
+"Daten aufgeführt:"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:25
 msgid "Razón Social"
@@ -965,27 +961,21 @@ msgstr "Nutzung des Portals"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:39
 msgid ""
-"\n"
-"                El sitio web proporciona el acceso a multitud de "
-"informaciones, servicios, programas o datos (en adelante, \"los "
-"contenidos\") en Internet pertenecientes a SERVICIOS METALÚRGICOS IURRELAN a "
-"los que el USUARIO pueda tener acceso. El USUARIO asume la responsabilidad "
-"del uso del portal.\n"
-"                "
+" El sitio web proporciona el acceso a multitud de informaciones, servicios, "
+"programas o datos (en adelante, \"los contenidos\") en Internet "
+"pertenecientes a SERVICIOS METALÚRGICOS IURRELAN a los que el USUARIO pueda "
+"tener acceso. El USUARIO asume la responsabilidad del uso del portal."
 msgstr ""
-"\n"
-"                Die Website bietet Zugang zu einer Vielzahl von Informationen, "
-"Dienstleistungen, Programmen oder Daten (im Folgenden „die Inhalte“) im "
-"Internet, die SERVICIOS METALÚRGICOS IURRELAN gehören und auf die der "
-"BENUTZER zugreifen kann. Der BENUTZER übernimmt die Verantwortung für die "
-"Nutzung des Portals.\n"
-"                "
+" Die Website bietet Zugang zu einer Vielzahl von Informationen, Dienstleistungen, "
+"Programmen oder Daten (im Folgenden „die Inhalte“) im Internet, "
+"die SERVICIOS METALÚRGICOS IURRELAN gehören und auf die der BENUTZER zugreifen "
+"kann. Der BENUTZER übernimmt die Verantwortung für die Nutzung des Portals."
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:44
+#: .\appIurrelan\templates\legal\aviso_legal.html:42
 msgid "Protección de Datos"
 msgstr "Datenschutz"
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:46
+#: .\appIurrelan\templates\legal\aviso_legal.html:44
 msgid ""
 "SERVICIOS METALÚRGICOS IURRELAN cumple con las directrices del Reglamento "
 "General de Protección de Datos (RGPD) y demás normativa vigente, y vela por "
@@ -993,117 +983,91 @@ msgid ""
 "usuario. Para más información, consulte nuestra"
 msgstr ""
 "SERVICIOS METALÚRGICOS IURRELAN hält sich an die Richtlinien der Allgemeinen "
-"Datenschutzverordnung (DSGVO) sowie an andere geltende Vorschriften und sorgt "
-"für eine ordnungsgemäße Nutzung und Verarbeitung der personenbezogenen Daten "
-"des Benutzers. Weitere Informationen finden Sie in unserer"
+"Datenschutzverordnung (DSGVO) sowie an andere geltende Vorschriften und "
+"sorgt für eine ordnungsgemäße Nutzung und Verarbeitung der personenbezogenen "
+"Daten des Benutzers. Weitere Informationen finden Sie in unserer"
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:50
+#: .\appIurrelan\templates\legal\aviso_legal.html:48
 msgid "Propiedad Intelectual e Industrial"
 msgstr "Geistiges und gewerbliches Eigentum"
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:52
+#: .\appIurrelan\templates\legal\aviso_legal.html:50
 msgid ""
-"\n"
-"                SERVICIOS METALÚRGICOS IURRELAN por sí o como cesionaria, es "
-"titular de todos los derechos de propiedad intelectual e industrial de su "
-"página web, así como de los elementos contenidos en la misma (a título "
-"enunciativo, imágenes, sonido, audio, vídeo, software o textos; marcas o "
-"logotipos, combinaciones de colores, estructura y diseño, etc.).\n"
-"                "
+"SERVICIOS METALÚRGICOS IURRELAN por sí o como cesionaria, es titular de "
+"todos los derechos de propiedad intelectual e industrial de su página web, "
+"así como de los elementos contenidos en la misma (a título enunciativo, "
+"imágenes, sonido, audio, vídeo, software o textos; marcas o logotipos, "
+"combinaciones de colores, estructura y diseño, etc.)."
 msgstr ""
-"\n"
-"                SERVICIOS METALÚRGICOS IURRELAN ist selbst oder als Zessionar "
-"Inhaber aller Rechte am geistigen und gewerblichen Eigentum seiner Website "
-"sowie der darin enthaltenen Elemente (beispielsweise Bilder, Ton, Audio, "
-"Video, Software oder Texte; Marken oder Logos, Farbkombinationen, Struktur "
-"und Design, usw.).\n"
-"                "
+"SERVICIOS METALÚRGICOS IURRELAN ist selbst oder als Zessionar Inhaber aller "
+"Rechte am geistigen und gewerblichen Eigentum seiner Website sowie der "
+"darin enthaltenen Elemente (beispielsweise Bilder, Ton, Audio, Video, "
+"Software oder Texte; Marken oder Logos, Farbkombinationen, Struktur und Design, usw.)."
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:57
+#: .\appIurrelan\templates\legal\aviso_legal.html:53
 msgid ""
-"\n"
-"                Quedan expresamente prohibidas la reproducción, la "
-"distribución y la comunicación pública, incluida su modalidad de puesta a "
-"disposición, de la totalidad o parte de los contenidos de esta página web, "
-"con fines comerciales, en cualquier soporte y por cualquier medio técnico, "
-"sin la autorización de SERVICIOS METALÚRGICOS IURRELAN.\n"
-"                "
+"Quedan expresamente prohibidas la reproducción, la distribución y la "
+"comunicación pública, incluida su modalidad de puesta a disposición, de la "
+"totalidad o parte de los contenidos de esta página web, con fines "
+"comerciales, en cualquier soporte y por cualquier medio técnico, sin la "
+"autorización de SERVICIOS METALÚRGICOS IURRELAN."
 msgstr ""
-"\n"
-"                Die Vervielfältigung, Verbreitung und öffentliche Wiedergabe, "
-"einschließlich der Art ihrer Bereitstellung, des gesamten oder eines Teils "
-"des Inhalts dieser Website zu kommerziellen Zwecken, auf jedem Datenträger "
-"und mit allen technischen Mitteln, ohne die Genehmigung von SERVICIOS "
-"METALÚRGICOS IURRELAN, ist ausdrücklich untersagt.\n"
-"                "
+"Die Vervielfältigung, Verbreitung und öffentliche Wiedergabe, einschließlich "
+"der Art ihrer Bereitstellung, des gesamten oder eines Teils des Inhalts dieser "
+"Website zu kommerziellen Zwecken, auf jedem Datenträger und mit allen technischen "
+"Mitteln, ohne die Genehmigung von SERVICIOS METALÚRGICOS IURRELAN, ist ausdrücklich untersagt."
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:62
+#: .\appIurrelan\templates\legal\aviso_legal.html:56
 msgid "Exclusión de Garantías y Responsabilidad"
 msgstr "Ausschluss von Garantien und Haftung"
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:64
+#: .\appIurrelan\templates\legal\aviso_legal.html:58
 msgid ""
-"\n"
-"                SERVICIOS METALÚRGICOS IURRELAN no se hace responsable, en "
-"ningún caso, de los daños y perjuicios de cualquier naturaleza que pudieran "
-"ocasionar, a título enunciativo: errores u omisiones en los contenidos, "
-"falta de disponibilidad del portal o la transmisión de virus o programas "
-"maliciosos o lesivos en los contenidos, a pesar de haber adoptado todas las "
-"medidas tecnológicas necesarias para evitarlo.\n"
-"                "
+"ERVICIOS METALÚRGICOS IURRELAN no se hace responsable, en ningún caso, de "
+"los daños y perjuicios de cualquier naturaleza que pudieran ocasionar, a "
+"título enunciativo: errores u omisiones en los contenidos, falta de "
+"disponibilidad del portal o la transmisión de virus o programas maliciosos o "
+"lesivos en los contenidos, a pesar de haber adoptado todas las medidas "
+"tecnológicas necesarias para evitarlo."
 msgstr ""
-"\n"
-"                SERVICIOS METALÚRGICOS IURRELAN haftet in keinem Fall für "
-"Schäden jeglicher Art, die beispielsweise durch Folgendes entstehen könnten: "
-"Fehler oder Auslassungen in den Inhalten, mangelnde Verfügbarkeit des "
-"Portals oder die Übertragung von Viren oder bösartigen oder schädlichen "
-"Programmen in den Inhalten, obwohl alle erforderlichen technologischen "
-"Maßnahmen ergriffen wurden, um dies zu vermeiden.\n"
-"                "
+"SERVICIOS METALÚRGICOS IURRELAN haftet in keinem Fall für Schäden jeglicher "
+"Art, die beispielsweise durch Folgendes entstehen könnten: Fehler oder "
+"Auslassungen in den Inhalten, mangelnde Verfügbarkeit des Portals oder die "
+"Übertragung von Viren oder bösartigen oder schädlichen Programmen in den "
+"Inhalten, obwohl alle erforderlichen technologischen Maßnahmen ergriffen wurden, "
+"um dies zu vermeiden."
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:69
+#: .\appIurrelan\templates\legal\aviso_legal.html:61
 msgid "Modificaciones"
 msgstr "Änderungen"
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:71
+#: .\appIurrelan\templates\legal\aviso_legal.html:63
 msgid ""
-"\n"
-"                SERVICIOS METALÚRGICOS IURRELAN se reserva el derecho de "
-"efectuar sin previo aviso las modificaciones que considere oportunas en su "
-"portal, pudiendo cambiar, suprimir o añadir tanto los contenidos y servicios "
-"que se presten a través de la misma como la forma en la que éstos aparezcan "
-"presentados.\n"
-"                "
+"SERVICIOS METALÚRGICOS IURRELAN se reserva el derecho de efectuar sin previo "
+"aviso las modificaciones que considere oportunas en su portal, pudiendo "
+"cambiar, suprimir o añadir tanto los contenidos y servicios que se presten a "
+"través de la misma como la forma en la que éstos aparezcan presentados."
 msgstr ""
-"\n"
-"                SERVICIOS METALÚRGICOS IURRELAN behält sich das Recht vor, "
-"ohne vorherige Ankündigung die Änderungen vorzunehmen, die sie in ihrem "
-"Portal für angemessen hält, und kann sowohl die Inhalte und Dienste, die "
-"darüber bereitgestellt werden, als auch die Art und Weise, wie diese "
-"präsentiert werden, ändern, löschen oder hinzufügen.\n"
-"                "
+"SERVICIOS METALÚRGICOS IURRELAN behält sich das Recht vor, ohne vorherige "
+"Ankündigung die Änderungen vorzunehmen, die sie in ihrem Portal für angemessen "
+"hält, und kann sowohl die Inhalte und Dienste, die darüber bereitgestellt werden, "
+"als auch die Art und Weise, wie diese präsentiert werden, ändern, löschen oder hinzufügen."
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:76
+#: .\appIurrelan\templates\legal\aviso_legal.html:66
 msgid "Legislación Aplicable y Jurisdicción"
 msgstr "Anwendbares Recht und Gerichtsstand"
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:78
+#: .\appIurrelan\templates\legal\aviso_legal.html:68
 msgid ""
-"\n"
-"                La relación entre SERVICIOS METALÚRGICOS IURRELAN y el "
-"USUARIO se regirá por la normativa española vigente y cualquier controversia "
-"se someterá a los Juzgados y tribunales de la ciudad correspondiente al "
-"domicilio social de la empresa, salvo que la ley aplicable disponga otra "
-"cosa.\n"
-"                "
+"La relación entre SERVICIOS METALÚRGICOS IURRELAN y el USUARIO se regirá por "
+"la normativa española vigente y cualquier controversia se someterá a los "
+"Juzgados y tribunales de la ciudad correspondiente al domicilio social de la "
+"empresa, salvo que la ley aplicable disponga otra cosa."
 msgstr ""
-"\n"
-"                Die Beziehung zwischen SERVICIOS METALÚRGICOS IURRELAN und "
-"dem BENUTZER unterliegt den geltenden spanischen Vorschriften, und alle "
-"Streitigkeiten werden den Gerichten der Stadt unterworfen, die dem "
-"eingetragenen Sitz des Unternehmens entspricht, sofern das anwendbare Recht "
-"nichts anderes vorsieht.\n"
-"                "
+"Die Beziehung zwischen SERVICIOS METALÚRGICOS IURRELAN und dem BENUTZER unterliegt "
+"den geltenden spanischen Vorschriften, und alle Streitigkeiten werden den Gerichten "
+"der Stadt unterworfen, die dem eingetragenen Sitz des Unternehmens entspricht, sofern "
+"das anwendbare Recht nichts anderes vorsieht."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:11
 msgid ""
@@ -1128,32 +1092,27 @@ msgstr ""
 
 #: .\appIurrelan\templates\legal\canal_etico.html:23
 msgid ""
-"\n"
-"                Este canal es una herramienta segura para comunicar "
-"cualquier conducta que pueda implicar la comisión de irregularidades o actos "
-"contrarios a la legalidad y a las normas internas de la empresa.\n"
-"                "
+"Este canal es una herramienta segura para comunicar cualquier conducta que "
+"pueda implicar la comisión de irregularidades o actos contrarios a la "
+"legalidad y a las normas internas de la empresa."
 msgstr ""
-"\n"
-"                Dieser Kanal ist ein sicheres Instrument zur Meldung "
-"jeglichen Verhaltens, das die Begehung von Unregelmäßigkeiten oder Handlungen "
-"beinhalten könnte, die der Gesetzmäßigkeit und den internen Regeln des "
-"Unternehmens widersprechen.\n"
-"                "
+"Dieser Kanal ist ein sicheres Instrument zur Meldung jeglichen Verhaltens, das "
+"die Begehung von Unregelmäßigkeiten oder Handlungen beinhalten könnte, die der "
+"Gesetzmäßigkeit und den internen Regeln des Unternehmens widersprechen."
 
-#: .\appIurrelan\templates\legal\canal_etico.html:28
+#: .\appIurrelan\templates\legal\canal_etico.html:26
 msgid "Gestión Externa y Confidencialidad"
 msgstr "Externe Verwaltung und Vertraulichkeit"
 
-#: .\appIurrelan\templates\legal\canal_etico.html:30
+#: .\appIurrelan\templates\legal\canal_etico.html:28
 msgid "Para garantizar la máxima"
 msgstr "Um ein Höchstmaß an"
 
-#: .\appIurrelan\templates\legal\canal_etico.html:30
+#: .\appIurrelan\templates\legal\canal_etico.html:28
 msgid "independencia, confidencialidad y objetividad"
 msgstr "Unabhängigkeit, Vertraulichkeit und Objektivität"
 
-#: .\appIurrelan\templates\legal\canal_etico.html:30
+#: .\appIurrelan\templates\legal\canal_etico.html:28
 msgid ""
 "en el tratamiento de las comunicaciones, la gestión de este Canal Ético ha "
 "sido encomendada a un experto externo:"
@@ -1161,64 +1120,54 @@ msgstr ""
 "bei der Behandlung von Meldungen zu gewährleisten, wurde die Verwaltung "
 "dieses Ethikkanals einem externen Experten anvertraut:"
 
-#: .\appIurrelan\templates\legal\canal_etico.html:33
+#: .\appIurrelan\templates\legal\canal_etico.html:31
 msgid "Entidad Gestora:"
 msgstr "Verwaltende Stelle:"
 
-#: .\appIurrelan\templates\legal\canal_etico.html:34
+#: .\appIurrelan\templates\legal\canal_etico.html:32
 msgid "Director de Compliance:"
 msgstr "Compliance-Direktor:"
 
-#: .\appIurrelan\templates\legal\canal_etico.html:37
+#: .\appIurrelan\templates\legal\canal_etico.html:35
 msgid ""
-"\n"
-"                Este sistema garantiza que las denuncias sean recibidas y "
-"analizadas por profesionales independientes, asegurando que no existan "
-"conflictos de interés y protegiendo la identidad del informante.\n"
-"                "
+"Este sistema garantiza que las denuncias sean recibidas y analizadas por "
+"profesionales independientes, asegurando que no existan conflictos de "
+"interés y protegiendo la identidad del informante."
 msgstr ""
-"\n"
-"                Dieses System garantiert, dass Meldungen von unabhängigen "
-"Fachleuten entgegengenommen und analysiert werden, wodurch sichergestellt "
-"wird, dass keine Interessenkonflikte bestehen, und die Identität des "
-"Meldenden geschützt wird.\n"
-"                "
+"Dieses System garantiert, dass Meldungen von unabhängigen Fachleuten "
+"entgegengenommen und analysiert werden, wodurch sichergestellt wird, dass keine "
+"Interessenkonflikte bestehen, und die Identität des Meldenden geschützt wird."
 
-#: .\appIurrelan\templates\legal\canal_etico.html:42
+#: .\appIurrelan\templates\legal\canal_etico.html:38
 msgid "Cómo realizar una comunicación"
 msgstr "Wie man eine Meldung einreicht"
 
-#: .\appIurrelan\templates\legal\canal_etico.html:44
+#: .\appIurrelan\templates\legal\canal_etico.html:40
 msgid ""
-"\n"
-"                Si tiene conocimiento de alguna conducta irregular, puede "
-"comunicarlo a través de la siguiente dirección de correo electrónico "
-"habilitada exclusivamente para este fin:\n"
-"                "
+"Si tiene conocimiento de alguna conducta irregular, puede comunicarlo a "
+"través de la siguiente dirección de correo electrónico habilitada "
+"exclusivamente para este fin:"
 msgstr ""
-"\n"
-"                Wenn Sie Kenntnis von einem unregelmäßigen Verhalten haben, "
-"können Sie dies über die folgende, ausschließlich für diesen Zweck "
-"eingerichtete E-Mail-Adresse melden:\n"
-"                "
+"Wenn Sie Kenntnis von einem unregelmäßigen Verhalten haben, können Sie dies über "
+"die folgende, ausschließlich für diesen Zweck eingerichtete E-Mail-Adresse melden:"
 
-#: .\appIurrelan\templates\legal\canal_etico.html:56
+#: .\appIurrelan\templates\legal\canal_etico.html:50
 msgid "Al realizar la comunicación, se garantiza:"
 msgstr "Bei der Einreichung einer Meldung wird Folgendes garantiert:"
 
-#: .\appIurrelan\templates\legal\canal_etico.html:59
+#: .\appIurrelan\templates\legal\canal_etico.html:53
 msgid "Confidencialidad:"
 msgstr "Vertraulichkeit:"
 
-#: .\appIurrelan\templates\legal\canal_etico.html:59
+#: .\appIurrelan\templates\legal\canal_etico.html:53
 msgid "La identidad del informante será preservada en todo momento."
 msgstr "Die Identität des Meldenden wird jederzeit geschützt."
 
-#: .\appIurrelan\templates\legal\canal_etico.html:60
+#: .\appIurrelan\templates\legal\canal_etico.html:54
 msgid "Anonimato:"
 msgstr "Anonymität:"
 
-#: .\appIurrelan\templates\legal\canal_etico.html:60
+#: .\appIurrelan\templates\legal\canal_etico.html:54
 msgid ""
 "Se aceptan comunicaciones anónimas si el informante prefiere no "
 "identificarse, salvo que la normativa vigente exija lo contrario en casos "
@@ -1228,53 +1177,52 @@ msgstr ""
 "nicht zu identifizieren, es sei denn, die geltenden Vorschriften verlangen "
 "in bestimmten Fällen etwas anderes."
 
-#: .\appIurrelan\templates\legal\canal_etico.html:61
+#: .\appIurrelan\templates\legal\canal_etico.html:55
 msgid "Ausencia de represalias:"
 msgstr "Keine Repressalien:"
 
-#: .\appIurrelan\templates\legal\canal_etico.html:61
+#: .\appIurrelan\templates\legal\canal_etico.html:55
 msgid ""
 "SERVICIOS METALÚRGICOS IURRELAN garantiza que no se adoptará ninguna "
 "represalia contra quien informe de buena fe sobre una posible infracción."
 msgstr ""
-"SERVICIOS METALÚRGICOS IURRELAN garantiert, dass gegen niemanden, der in "
-"gutem Glauben einen möglichen Verstoß meldet, Repressalien ergriffen werden."
+"SERVICIOS METALÚRGICOS IURRELAN garantiert, dass gegen niemanden, der "
+"in gutem Glauben einen möglichen Verstoß meldet, Repressalien ergriffen werden."
 
-#: .\appIurrelan\templates\legal\canal_etico.html:64
+#: .\appIurrelan\templates\legal\canal_etico.html:58
 msgid "Tramitación"
 msgstr "Bearbeitung"
 
-#: .\appIurrelan\templates\legal\canal_etico.html:66
+#: .\appIurrelan\templates\legal\canal_etico.html:60
 msgid "Una vez recibida la comunicación,"
 msgstr "Nach Eingang der Meldung"
 
-#: .\appIurrelan\templates\legal\canal_etico.html:66
+#: .\appIurrelan\templates\legal\canal_etico.html:60
 msgid "procederá siguiendo este orden:"
 msgstr "wird in folgender Reihenfolge vorgegangen:"
 
-#: .\appIurrelan\templates\legal\canal_etico.html:69
+#: .\appIurrelan\templates\legal\canal_etico.html:63
 msgid "Recepción y registro de la denuncia."
 msgstr "Empfang und Registrierung der Meldung."
 
-#: .\appIurrelan\templates\legal\canal_etico.html:70
+#: .\appIurrelan\templates\legal\canal_etico.html:64
 msgid "Análisis de admisibilidad de los hechos denunciados."
 msgstr "Prüfung der Zulässigkeit des gemeldeten Sachverhalts."
 
-#: .\appIurrelan\templates\legal\canal_etico.html:71
+#: .\appIurrelan\templates\legal\canal_etico.html:65
 msgid "Investigación independiente de los hechos."
 msgstr "Unabhängige Untersuchung des Sachverhalts."
 
-#: .\appIurrelan\templates\legal\canal_etico.html:72
+#: .\appIurrelan\templates\legal\canal_etico.html:66
 msgid "Emisión de un informe sobre la investigación."
 msgstr "Erstellung eines Untersuchungsberichts."
 
-#: .\appIurrelan\templates\legal\canal_etico.html:73
+#: .\appIurrelan\templates\legal\canal_etico.html:67
 msgid ""
 "Propuesta de resolución y medidas correctivas a la dirección de la empresa."
-msgstr ""
-"Vorschlag zur Lösung und zu Korrekturmaßnahmen an die Unternehmensleitung."
+msgstr "Vorschlag zur Lösung und zu Korrekturmaßnahmen an die Unternehmensleitung."
 
-#: .\appIurrelan\templates\legal\canal_etico.html:77
+#: .\appIurrelan\templates\legal\canal_etico.html:71
 msgid ""
 "Última actualización: Junio 2023 | Documento revisado conforme al Plan de "
 "Prevención Penal de Servicios Metalúrgicos Iurrelan."
@@ -1288,33 +1236,29 @@ msgstr "1. Was sind Cookies?"
 
 #: .\appIurrelan\templates\legal\cookies.html:12
 msgid ""
-"\n"
-"        Una cookie es un fichero que se descarga en su ordenador al acceder "
-"a determinadas páginas web. Las cookies permiten a una página web, entre "
-"otras cosas, almacenar y recuperar información sobre los hábitos de "
-"navegación de un usuario o de su equipo y, dependiendo de la información que "
-"contengan y de la forma en que utilice su equipo, pueden utilizarse para "
-"reconocer al usuario.\n"
-"        "
+"Una cookie es un fichero que se descarga en su ordenador al acceder a "
+"determinadas páginas web. Las cookies permiten a una página web, entre otras "
+"cosas, almacenar y recuperar información sobre los hábitos de navegación de "
+"un usuario o de su equipo y, dependiendo de la información que contengan y "
+"de la forma en que utilice su equipo, pueden utilizarse para reconocer al "
+"usuario."
 msgstr ""
-"\n"
-"                Ein Cookie ist eine Datei, die beim Zugriff auf bestimmte "
-"Websites auf Ihren Computer heruntergeladen wird. Cookies ermöglichen es "
-"einer Website unter anderem, Informationen über die Surfgewohnheiten eines "
-"Benutzers oder seines Geräts zu speichern und abzurufen. Abhängig von den "
-"darin enthaltenen Informationen und der Art und Weise, wie Sie Ihr Gerät "
-"verwenden, können sie verwendet werden, um den Benutzer zu erkennen.\n"
-"                "
+"Ein Cookie ist eine Datei, die beim Zugriff auf bestimmte Websites auf "
+"Ihren Computer heruntergeladen wird. Cookies ermöglichen es einer Website "
+"unter anderem, Informationen über die Surfgewohnheiten eines Benutzers oder "
+"seines Geräts zu speichern und abzurufen. Abhängig von den darin enthaltenen "
+"Informationen und der Art und Weise, wie Sie Ihr Gerät verwenden, können sie "
+"verwendet werden, um den Benutzer zu erkennen."
 
-#: .\appIurrelan\templates\legal\cookies.html:17
+#: .\appIurrelan\templates\legal\cookies.html:15
 msgid "2. ¿Qué tipos de cookies utiliza esta web?"
 msgstr "2. Welche Arten von Cookies verwendet diese Website?"
 
-#: .\appIurrelan\templates\legal\cookies.html:20
+#: .\appIurrelan\templates\legal\cookies.html:18
 msgid "Cookies técnicas:"
 msgstr "Technische Cookies:"
 
-#: .\appIurrelan\templates\legal\cookies.html:21
+#: .\appIurrelan\templates\legal\cookies.html:19
 msgid ""
 "Son aquellas que permiten al usuario la navegación a través de una página "
 "web, plataforma o aplicación y la utilización de las diferentes opciones o "
@@ -1324,11 +1268,11 @@ msgstr ""
 "Plattform oder Anwendung und die Nutzung der verschiedenen dort vorhandenen "
 "Optionen oder Dienste ermöglichen."
 
-#: .\appIurrelan\templates\legal\cookies.html:24
+#: .\appIurrelan\templates\legal\cookies.html:22
 msgid "Cookies de personalización:"
 msgstr "Personalisierungs-Cookies:"
 
-#: .\appIurrelan\templates\legal\cookies.html:25
+#: .\appIurrelan\templates\legal\cookies.html:23
 msgid ""
 "Son aquellas que permiten al usuario acceder al servicio con algunas "
 "características de carácter general predefinidas en función de una serie de "
@@ -1338,166 +1282,131 @@ msgstr ""
 "einigen vordefinierten allgemeinen Merkmalen zuzugreifen, die auf einer "
 "Reihe von Kriterien im Endgerät des Benutzers basieren (z. B. Sprache)."
 
-#: .\appIurrelan\templates\legal\cookies.html:29
+#: .\appIurrelan\templates\legal\cookies.html:27
 msgid "3. Desactivación y eliminación de cookies"
 msgstr "3. Deaktivierung und Löschung von Cookies"
 
-#: .\appIurrelan\templates\legal\cookies.html:31
+#: .\appIurrelan\templates\legal\cookies.html:29
 msgid ""
-"\n"
-"        Usted puede permitir, bloquear o eliminar las cookies instaladas en "
-"su equipo mediante la configuración de las opciones del navegador instalado "
-"en su ordenador:\n"
-"        "
+"Usted puede permitir, bloquear o eliminar las cookies instaladas en su "
+"equipo mediante la configuración de las opciones del navegador instalado en "
+"su ordenador:"
 msgstr ""
-"\n"
-"                Sie können die auf Ihrem Gerät installierten Cookies "
-"zulassen, blockieren oder löschen, indem Sie die Optionen des auf Ihrem "
-"Computer installierten Browsers konfigurieren:\n"
-"                "
+"Sie können die auf Ihrem Gerät installierten Cookies zulassen, blockieren "
+"oder löschen, indem Sie die Optionen des auf Ihrem Computer installierten "
+"Browsers konfigurieren:"
 
 #: .\appIurrelan\templates\legal\privacidad.html:11
 msgid ""
-"\n"
-"        En Iurrelan nos comprometemos a proteger la privacidad de nuestros "
-"usuarios. Esta Política de Privacidad describe cómo recopilamos, usamos y "
-"protegemos su información personal.\n"
-"        "
+"En Iurrelan nos comprometemos a proteger la privacidad de nuestros usuarios. "
+"Esta Política de Privacidad describe cómo recopilamos, usamos y protegemos "
+"su información personal."
 msgstr ""
-"\n"
-"                Bei Iurrelan verpflichten wir uns, die Privatsphäre unserer "
-"Benutzer zu schützen. Diese Datenschutzrichtlinie beschreibt, wie wir Ihre "
-"personenbezogenen Daten erfassen, verwenden und schützen.\n"
-"                "
+"Bei Iurrelan verpflichten wir uns, die Privatsphäre unserer Benutzer zu "
+"schützen. Diese Datenschutzrichtlinie beschreibt, wie wir Ihre personenbezogenen "
+"Daten erfassen, verwenden und schützen."
 
-#: .\appIurrelan\templates\legal\privacidad.html:16
+#: .\appIurrelan\templates\legal\privacidad.html:14
 msgid "1. Responsable del Tratamiento"
 msgstr "1. Verantwortlicher für die Verarbeitung"
 
-#: .\appIurrelan\templates\legal\privacidad.html:18
+#: .\appIurrelan\templates\legal\privacidad.html:16
 msgid "Identidad:"
 msgstr "Identität:"
 
-#: .\appIurrelan\templates\legal\privacidad.html:19
+#: .\appIurrelan\templates\legal\privacidad.html:17
 msgid "Dirección:"
 msgstr "Adresse:"
 
-#: .\appIurrelan\templates\legal\privacidad.html:20
+#: .\appIurrelan\templates\legal\privacidad.html:18
 msgid "Email:"
 msgstr "E-Mail:"
 
-#: .\appIurrelan\templates\legal\privacidad.html:23
+#: .\appIurrelan\templates\legal\privacidad.html:21
 msgid "2. Finalidad del Tratamiento"
 msgstr "2. Zweck der Verarbeitung"
 
-#: .\appIurrelan\templates\legal\privacidad.html:25
+#: .\appIurrelan\templates\legal\privacidad.html:23
 msgid ""
-"\n"
-"        En Iurrelan tratamos la información que nos facilitan las personas "
+"En Iurrelan tratamos la información que nos facilitan las personas "
 "interesadas con el fin de gestionar el envío de la información que nos "
 "soliciten a través de los formularios de contacto o facilitar a los "
-"interesados ofertas de productos y servicios de su interés.\n"
-"        "
+"interesados ofertas de productos y servicios de su interés."
 msgstr ""
-"\n"
-"                Bei Iurrelan verarbeiten wir die von interessierten Personen "
-"bereitgestellten Informationen, um den Versand der über die Kontaktformulare "
-"angeforderten Informationen zu verwalten oder den Interessenten Angebote für "
-"Produkte und Dienstleistungen bereitzustellen, die für sie von Interesse "
-"sein könnten.\n"
-"                "
+"Bei Iurrelan verarbeiten wir die von interessierten Personen bereitgestellten "
+"Informationen, um den Versand der über die Kontaktformulare angeforderten "
+"Informationen zu verwalten oder den Interessenten Angebote für Produkte und "
+"Dienstleistungen bereitzustellen, die für sie von Interesse sein könnten."
 
-#: .\appIurrelan\templates\legal\privacidad.html:30
-msgid ""
-"\n"
-"        No se tomarán decisiones automatizadas en base a dicho perfil.\n"
-"        "
-msgstr ""
-"\n"
-"                Auf Grundlage dieses Profils werden keine automatisierten "
-"Entscheidungen getroffen.\n"
-"                "
+#: .\appIurrelan\templates\legal\privacidad.html:26
+msgid "No se tomarán decisiones automatizadas en base a dicho perfil."
+msgstr "Auf Grundlage dieses Profils werden keine automatisierten Entscheidungen getroffen."
 
-#: .\appIurrelan\templates\legal\privacidad.html:35
+#: .\appIurrelan\templates\legal\privacidad.html:29
 msgid "3. Legitimación"
 msgstr "3. Legitimation"
 
-#: .\appIurrelan\templates\legal\privacidad.html:37
+#: .\appIurrelan\templates\legal\privacidad.html:31
 msgid ""
-"\n"
-"        La base legal para el tratamiento de sus datos es el consentimiento "
-"del interesado al rellenar y enviar el formulario de contacto o al "
-"suscribirse a nuestros servicios.\n"
-"        "
+"La base legal para el tratamiento de sus datos es el consentimiento del "
+"interesado al rellenar y enviar el formulario de contacto o al suscribirse a "
+"nuestros servicios."
 msgstr ""
-"\n"
-"                Die Rechtsgrundlage für die Verarbeitung Ihrer Daten ist die "
-"Einwilligung der betroffenen Person beim Ausfüllen und Absenden des "
-"Kontaktformulars oder bei der Anmeldung zu unseren Diensten.\n"
-"                "
+"Die Rechtsgrundlage für die Verarbeitung Ihrer Daten ist die Einwilligung der "
+"betroffenen Person beim Ausfüllen und Absenden des Kontaktformulars oder bei "
+"der Anmeldung zu unseren Diensten."
 
-#: .\appIurrelan\templates\legal\privacidad.html:42
+#: .\appIurrelan\templates\legal\privacidad.html:34
 msgid "4. Destinatarios"
 msgstr "4. Empfänger"
 
-#: .\appIurrelan\templates\legal\privacidad.html:44
-msgid ""
-"\n"
-"        Los datos no se cederán a terceros salvo obligación legal.\n"
-"        "
-msgstr ""
-"\n"
-"                Eine Weitergabe der Daten an Dritte erfolgt nicht, es sei "
-"denn, es besteht eine gesetzliche Verpflichtung.\n"
-"                "
+#: .\appIurrelan\templates\legal\privacidad.html:36
+msgid "Los datos no se cederán a terceros salvo obligación legal."
+msgstr "Eine Weitergabe der Daten an Dritte erfolgt nicht, es sei denn, es besteht eine gesetzliche Verpflichtung."
 
-#: .\appIurrelan\templates\legal\privacidad.html:49
+#: .\appIurrelan\templates\legal\privacidad.html:39
 msgid "5. Derechos"
 msgstr "5. Rechte"
 
-#: .\appIurrelan\templates\legal\privacidad.html:51
+#: .\appIurrelan\templates\legal\privacidad.html:41
 msgid ""
-"\n"
-"        Cualquier persona tiene derecho a obtener confirmación sobre si en "
-"Iurrelan estamos tratando datos personales que les conciernan, o no. Las "
-"personas interesadas tienen derecho a:\n"
-"        "
+"Cualquier persona tiene derecho a obtener confirmación sobre si en Iurrelan "
+"estamos tratando datos personales que les conciernan, o no. Las personas "
+"interesadas tienen derecho a:"
 msgstr ""
-"\n"
-"                Jede Person hat das Recht, eine Bestätigung darüber zu "
-"erhalten, ob wir bei Iurrelan sie betreffende personenbezogene Daten "
-"verarbeiten oder nicht. Interessierte Personen haben das Recht:\n"
-"                "
+"Jede Person hat das Recht, eine Bestätigung darüber zu erhalten, ob wir bei "
+"Iurrelan sie betreffende personenbezogene Daten verarbeiten oder nicht. "
+"Interessierte Personen haben das Recht:"
 
-#: .\appIurrelan\templates\legal\privacidad.html:56
+#: .\appIurrelan\templates\legal\privacidad.html:44
 msgid "Acceder a sus datos personales."
 msgstr "Auf ihre persönlichen Daten zuzugreifen."
 
-#: .\appIurrelan\templates\legal\privacidad.html:57
+#: .\appIurrelan\templates\legal\privacidad.html:45
 msgid "Solicitar la rectificación de los datos inexactos."
 msgstr "Die Berichtigung unrichtiger Daten zu beantragen."
 
-#: .\appIurrelan\templates\legal\privacidad.html:58
+#: .\appIurrelan\templates\legal\privacidad.html:46
 msgid ""
 "Solicitar su supresión cuando, entre otros motivos, los datos ya no sean "
 "necesarios para los fines que fueron recogidos."
 msgstr ""
-"Ihre Löschung zu beantragen, wenn die Daten unter anderem für die Zwecke, "
-"für die sie erhoben wurden, nicht mehr erforderlich sind."
+"Ihre Löschung zu beantragen, wenn die Daten unter anderem für die Zwecke, für "
+"die sie erhoben wurden, nicht mehr erforderlich sind."
 
-#: .\appIurrelan\templates\legal\privacidad.html:59
+#: .\appIurrelan\templates\legal\privacidad.html:47
 msgid "Oponerse al tratamiento."
 msgstr "Widerspruch gegen die Verarbeitung einzulegen."
 
-#: .\appIurrelan\templates\legal\privacidad.html:60
+#: .\appIurrelan\templates\legal\privacidad.html:48
 msgid "Solicitar la limitación del tratamiento."
 msgstr "Die Einschränkung der Verarbeitung zu verlangen."
 
-#: .\appIurrelan\templates\legal\privacidad.html:63
+#: .\appIurrelan\templates\legal\privacidad.html:51
 msgid "Para ejercer estos derechos, puede enviar un correo electrónico a"
 msgstr "Um diese Rechte auszuüben, können Sie eine E-Mail senden an"
 
-#: .\appIurrelan\templates\legal\privacidad.html:65
+#: .\appIurrelan\templates\legal\privacidad.html:53
 msgid "acreditando su identidad."
 msgstr "und Ihre Identität nachweisen."
 
@@ -1659,8 +1568,7 @@ msgid ""
 msgstr ""
 "Fortschrittliche Schneidtechnologie für jede Dicke. Wir kombinieren die "
 "Leistung des Lichtbogen-Druckluft-Schneidens mit der Präzision des "
-"Brennschneidens, um Teile zu liefern, die für den nächsten Prozess bereit "
-"sind."
+"Brennschneidens, um Teile zu liefern, die für den nächsten Prozess bereit sind."
 
 #: .\appIurrelan\templates\servicios.html:165
 msgid "Arco Aire"
@@ -1727,8 +1635,8 @@ msgid ""
 "pintura posterior."
 msgstr ""
 "Oberflächenvorbereitung durch Strahlen von Schleifmitteln. Tiefenreinigung "
-"zur Entfernung von Rost und Zunder, um eine maximale Haftung des "
-"nachfolgenden Lacks zu gewährleisten."
+"zur Entfernung von Rost und Zunder, um eine maximale Haftung des nachfolgenden "
+"Lacks zu gewährleisten."
 
 #: .\appIurrelan\templates\servicios.html:221
 msgid "Inoxidable (2.000kg)"
@@ -1798,9 +1706,9 @@ msgid ""
 "mecánica."
 msgstr ""
 "Hochproduktiver Prozess, ideal für Kohlenstoffstähle und Edelstähle. Wir "
-"verwenden modernste Ausrüstung, die einen konstanten Materialauftrag, "
-"tiefen Einbrand und robuste Verbindungen garantiert und so die "
-"Fertigungszeiten ohne Einbußen bei der mechanischen Festigkeit optimiert."
+"verwenden modernste Ausrüstung, die einen konstanten Materialauftrag, tiefen "
+"Einbrand und robuste Verbindungen garantiert und so die Fertigungszeiten "
+"ohne Einbußen bei der mechanischen Festigkeit optimiert."
 
 #: .\appIurrelan\templates\soldadura.html:154
 msgid "Soldadura TIG Precisión"
@@ -1817,11 +1725,10 @@ msgid ""
 "arco, logrando cordones limpios, sin proyecciones y de altísima calidad "
 "visual y estructural, perfectos para piezas visibles o de precisión."
 msgstr ""
-"Die ultimative Wahl für ästhetische Oberflächen und anspruchsvolle "
-"Materialien wie Edelstahl. Dieser Prozess ermöglicht uns eine absolute "
-"Kontrolle über den Lichtbogen, um saubere, spritzerfreie Nähte von höchster "
-"optischer und struktureller Qualität zu erzielen, perfekt für sichtbare "
-"oder Präzisionsteile."
+"Die ultimative Wahl für ästhetische Oberflächen und anspruchsvolle Materialien "
+"wie Edelstahl. Dieser Prozess ermöglicht uns eine absolute Kontrolle über den "
+"Lichtbogen, um saubere, spritzerfreie Nähte von höchster optischer und "
+"struktureller Qualität zu erzielen, perfekt für sichtbare oder Präzisionsteile."
 
 #: .\appIurrelan\templates\soldadura.html:164
 #: .\appIurrelan\templates\soldadura.html:167
@@ -1836,10 +1743,9 @@ msgid ""
 "la pieza sus propiedades originales o mejoradas."
 msgstr ""
 "Wir verlängern die Lebensdauer Ihrer Industriekomponenten. Wir führen Riss-"
-"Sanierungen, die Wiederherstellung abgenutzter Geometrien und "
-"verschleißfeste Hartauftragungen durch. Ein wesentlicher Service für die "
-"korrektive Wartung, der dem Teil seine ursprünglichen oder verbesserte "
-"Eigenschaften zurückgibt."
+"Sanierungen, die Wiederherstellung abgenutzter Geometrien und verschleißfeste "
+"Hartauftragungen durch. Ein wesentlicher Service für die korrektive Wartung, "
+"der dem Teil seine ursprünglichen oder verbesserte Eigenschaften zurückgibt."
 
 #: .\appIurrelan\templates\soldadura.html:175
 msgid "Materiales que"

@@ -91,15 +91,15 @@
             
             <li class="mobile-menu-item">
                 <div class="mobile-menu-header">
-                    <a href="{% url 'servicios' %}">{% trans "SERVICIOS" %}</a>
+                    <a href="{% url 'servicios' %}#servicios">{% trans "SERVICIOS" %}</a>
                     <i class="fas fa-chevron-down accordion-icon"></i>
                 </div>
                 <ul class="mobile-submenu">
-                    <li><a href="{% url 'acabado' %}">{% trans "Acabado" %}</a></li>
                     <li><a href="{% url 'corte' %}">{% trans "Corte" %}</a></li>
+                    <li><a href="{% url 'soldadura' %}">{% trans "Soldadura" %}</a></li>
                     <li><a href="{% url 'granallado' %}">{% trans "Granallado" %}</a></li>
                     <li><a href="{% url 'rebarbado' %}">{% trans "Rebarbado" %}</a></li>
-                    <li><a href="{% url 'soldadura' %}">{% trans "Soldadura" %}</a></li>
+                    <li><a href="{% url 'acabado' %}">{% trans "Acabado" %}</a></li>
                 </ul>
             </li>
 
