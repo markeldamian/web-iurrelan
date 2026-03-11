@@ -148,8 +148,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'pruebamprog@gmail.com'  # Tu correo de Gmail
-EMAIL_HOST_PASSWORD = 'kjsaxletagwwsihu'
+EMAIL_HOST_USER = 'iurrelanweb@gmail.com'  # Tu correo de Gmail
+EMAIL_HOST_PASSWORD = 'pamuttixjdatyjve'
 
 # --- CONFIGURACIÓN RECAPTCHA (Claves de Prueba) ---
 # Cuando subas la web a internet, cambia estas por las tuyas reales de Google

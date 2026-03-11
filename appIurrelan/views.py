@@ -68,7 +68,7 @@ def canal_etico_view(request):
                     subject=f'CANAL ÉTICO: {asunto}',
                     message=cuerpo_email,
                     from_email='pruebamprog@gmail.com', # Remitente
-                    recipient_list=['pruebamprog@gmail.com'], # Destinatario
+                    recipient_list=['canaldenuncias@aitabogados.com'], # Destinatario
                     fail_silently=False,
                 )
                 messages.success(request, 'Su denuncia ha sido enviada correctamente. Gracias por su colaboración.')
@@ -110,7 +110,7 @@ def contacto_view(request):
                         subject=f'CONTACTO WEB: Mensaje de {nombre}',
                         body=cuerpo_email,
                         from_email='pruebamprog@gmail.com', # Cambia a tu remitente
-                        to=['pruebamprog@gmail.com'],       # Cambia al correo de la empresa
+                        to=['administracion@iurrelan.com'],       # Cambia al correo de la empresa
                         reply_to=[email_cliente],
                     )
                     email.send(fail_silently=False)
@@ -148,7 +148,7 @@ Experiencia / Presentación:
                         subject=f"CV RECIBIDO: {nombre}",
                         body=cuerpo_email,
                         from_email='pruebamprog@gmail.com', # Cambia a tu remitente
-                        to=['pruebamprog@gmail.com'],       # Cambia al correo de rrhh/empresa
+                        to=['administracion@iurrelan.com'],       # Cambia al correo de rrhh/empresa
                         reply_to=[email_usr],
                     )
                     
