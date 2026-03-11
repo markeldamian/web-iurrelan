@@ -8,197 +8,204 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-10 11:30+0100\n"
+"POT-Creation-Date: 2026-03-11 10:06+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: .\appIurrelan\forms.py:6
 msgid "Datos de contacto (Opcional)"
-msgstr ""
+msgstr "Kontaktdaten (Optional)"
 
 #: .\appIurrelan\forms.py:8
 msgid "Descripción de los hechos"
-msgstr ""
+msgstr "Beschreibung des Sachverhalts"
 
 #: .\appIurrelan\forms.py:9
 msgid "Verificación de seguridad"
-msgstr ""
+msgstr "Sicherheitsüberprüfung"
 
 #: .\appIurrelan\forms.py:10
 msgid ""
 "He leído y acepto la Política de Privacidad y comprendo el funcionamiento "
 "del Canal Ético."
 msgstr ""
+"Ich habe die Datenschutzrichtlinie gelesen und akzeptiert und verstehe die "
+"Funktionsweise des Ethikkanals."
 
 #: .\appIurrelan\forms.py:13
 msgid "Nombre Completo"
-msgstr ""
+msgstr "Vollständiger Name"
 
 #: .\appIurrelan\forms.py:13
 msgid "Tu nombre"
-msgstr ""
+msgstr "Ihr Name"
 
 #: .\appIurrelan\forms.py:14 .\appIurrelan\forms.py:29
 msgid "Correo Electrónico"
-msgstr ""
+msgstr "E-Mail-Adresse"
 
 #: .\appIurrelan\forms.py:15
 msgid "Teléfono (Opcional)"
-msgstr ""
+msgstr "Telefon (Optional)"
 
 #: .\appIurrelan\forms.py:16 .\appIurrelan\templates\contacto.html:75
 msgid "Mensaje"
-msgstr ""
+msgstr "Nachricht"
 
 #: .\appIurrelan\forms.py:16
 msgid "¿En qué podemos ayudarte?"
-msgstr ""
+msgstr "Wie können wir Ihnen helfen?"
 
 #: .\appIurrelan\forms.py:17 .\appIurrelan\forms.py:48
 msgid "He leído y acepto la Política de Privacidad"
-msgstr ""
+msgstr "Ich habe die Datenschutzrichtlinie gelesen und akzeptiere sie"
 
 #: .\appIurrelan\forms.py:18 .\appIurrelan\templates\contacto.html:98
 msgid "Seguridad"
-msgstr ""
+msgstr "Sicherheit"
 
 #: .\appIurrelan\forms.py:24
 msgid "Nombre y Apellidos"
-msgstr ""
+msgstr "Vor- und Nachname"
 
 #: .\appIurrelan\forms.py:26
 msgid "Tu nombre completo"
-msgstr ""
+msgstr "Ihr vollständiger Name"
 
 #: .\appIurrelan\forms.py:33
 msgid "Teléfono"
-msgstr ""
+msgstr "Telefon"
 
 #: .\appIurrelan\forms.py:38
 msgid "Experiencia / Presentación"
-msgstr ""
+msgstr "Erfahrung / Anschreiben"
 
 #: .\appIurrelan\forms.py:40
 msgid "Háblanos de tu experiencia laboral..."
-msgstr ""
+msgstr "Erzählen Sie uns von Ihrer Berufserfahrung..."
 
 #: .\appIurrelan\forms.py:43
 msgid "Adjuntar Currículum (PDF) - Opcional"
-msgstr ""
+msgstr "Lebenslauf anhängen (PDF) - Optional"
 
 #: .\appIurrelan\forms.py:56
 msgid "El archivo debe ser un documento PDF."
-msgstr ""
+msgstr "Die Datei muss ein PDF-Dokument sein."
 
 #: .\appIurrelan\forms.py:58
 msgid "El archivo es demasiado grande (máximo 5MB)."
-msgstr ""
+msgstr "Die Datei ist zu groß (maximal 5 MB)."
 
 #: .\appIurrelan\models.py:6
 msgid "Corte Láser"
-msgstr ""
+msgstr "Laserschneiden"
 
 #: .\appIurrelan\models.py:7 .\appIurrelan\templates\base.html:41
 #: .\appIurrelan\templates\base.html:102
 #: .\appIurrelan\templates\maquinaria.html:195
-#: .\appIurrelan\templates\servicios.html:198
-#: .\appIurrelan\templates\servicios.html:201
+#: .\appIurrelan\templates\servicios.html:194
+#: .\appIurrelan\templates\servicios.html:197
 #: .\appIurrelan\templates\soldadura.html:135
 msgid "Soldadura"
-msgstr ""
+msgstr "Schweißen"
 
 #: .\appIurrelan\models.py:8 .\appIurrelan\templates\base.html:42
 #: .\appIurrelan\templates\base.html:100
 #: .\appIurrelan\templates\maquinaria.html:196
-#: .\appIurrelan\templates\servicios.html:219
-#: .\appIurrelan\templates\servicios.html:222
+#: .\appIurrelan\templates\servicios.html:213
+#: .\appIurrelan\templates\servicios.html:216
 msgid "Granallado"
-msgstr ""
+msgstr "Strahlen"
 
 #: .\appIurrelan\models.py:12
 msgid "Nombre"
-msgstr ""
+msgstr "Name"
 
 #: .\appIurrelan\models.py:13
 msgid "Descripción"
-msgstr ""
+msgstr "Beschreibung"
 
 #: .\appIurrelan\models.py:16
 msgid "Categoría"
-msgstr ""
+msgstr "Kategorie"
 
 #: .\appIurrelan\models.py:22
 msgid "Imagen"
-msgstr ""
+msgstr "Bild"
 
 #: .\appIurrelan\models.py:23
 msgid "Especificaciones"
-msgstr ""
+msgstr "Spezifikationen"
 
 #: .\appIurrelan\models.py:23
 msgid "Ej: 6000W, 5 Ejes, etc."
-msgstr ""
+msgstr "Bsp.: 6000W, 5 Achsen, etc."
 
 #: .\appIurrelan\models.py:24
 msgid "Orden"
-msgstr ""
+msgstr "Reihenfolge"
 
 #: .\appIurrelan\models.py:24
 msgid "Orden de aparición"
-msgstr ""
+msgstr "Anzeigereihenfolge"
 
 #: .\appIurrelan\models.py:28
 msgid "Máquina"
-msgstr ""
+msgstr "Maschine"
 
 #: .\appIurrelan\models.py:29 .\appIurrelan\templates\base.html:48
 #: .\appIurrelan\templates\footer.html:33
 msgid "Maquinaria"
-msgstr ""
+msgstr "Maschinenpark"
 
 #: .\appIurrelan\templates\404.html:7
 msgid "Pieza no encontrada"
-msgstr ""
+msgstr "Teil nicht gefunden"
 
 #: .\appIurrelan\templates\404.html:8
 msgid ""
 "Parece que la página que buscas ha sido recortada o no existe en nuestro "
 "inventario."
 msgstr ""
+"Es scheint, dass die gesuchte Seite ausgeschnitten wurde oder nicht in "
+"unserem Bestand existiert."
 
 #: .\appIurrelan\templates\404.html:9
 msgid "Volver al Inicio"
-msgstr ""
+msgstr "Zurück zur Startseite"
 
 #: .\appIurrelan\templates\acabado.html:6
 msgid "Acabado de Piezas"
-msgstr ""
+msgstr "Teilebearbeitung"
 
 #: .\appIurrelan\templates\acabado.html:7
 msgid ""
 "Garantizamos la integridad estructural y superficial de sus componentes "
 "mediante procesos certificados."
 msgstr ""
+"Wir garantieren die strukturelle und oberflächliche Integrität Ihrer "
+"Komponenten durch zertifizierte Prozesse."
 
 #: .\appIurrelan\templates\acabado.html:173
 msgid "Nuestros Procesos de"
-msgstr ""
+msgstr "Unsere Prozesse für"
 
 #: .\appIurrelan\templates\acabado.html:173
 #: .\appIurrelan\templates\base.html:44 .\appIurrelan\templates\base.html:98
-#: .\appIurrelan\templates\servicios.html:242
+#: .\appIurrelan\templates\servicios.html:234
 msgid "Acabado"
-msgstr ""
+msgstr "Oberflächenbehandlung"
 
 #: .\appIurrelan\templates\acabado.html:177
 #: .\appIurrelan\templates\acabado.html:181
 msgid "Decapado en Ácido"
-msgstr ""
+msgstr "Säurebeizen"
 
 #: .\appIurrelan\templates\acabado.html:182
 msgid ""
@@ -206,10 +213,13 @@ msgid ""
 "mediante baños químicos controlados, preparando el material para "
 "inspecciones posteriores o recubrimientos finales."
 msgstr ""
+"Wir entfernen Verunreinigungen, Oxide und Zunder von der Oberfläche der "
+"Teile durch kontrollierte chemische Bäder und bereiten das Material für "
+"anschließende Inspektionen oder Endbeschichtungen vor."
 
 #: .\appIurrelan\templates\acabado.html:189
 msgid "Inspección con Líquidos Penetrantes"
-msgstr ""
+msgstr "Farbeindringprüfung"
 
 #: .\appIurrelan\templates\acabado.html:190
 msgid ""
@@ -217,21 +227,24 @@ msgid ""
 "tintes de alta sensibilidad que revelan cualquier fisura o poro no visible a "
 "simple vista."
 msgstr ""
+"Erkennung von Oberflächenfehlern durch Kapillarität. Wir wenden hoch-"
+"empfindliche Farbstoffe an, die jeden für das bloße Auge unsichtbaren Riss "
+"oder Pore sichtbar machen."
 
 #: .\appIurrelan\templates\acabado.html:193
 #: .\appIurrelan\templates\acabado.html:215
-#: .\appIurrelan\templates\servicios.html:250
+#: .\appIurrelan\templates\servicios.html:240
 msgid "Líquidos Penetrantes"
-msgstr ""
+msgstr "Eindringmittel"
 
 #: .\appIurrelan\templates\acabado.html:197
-#: .\appIurrelan\templates\servicios.html:251
+#: .\appIurrelan\templates\servicios.html:241
 msgid "Partículas Magnéticas"
-msgstr ""
+msgstr "Magnetpulver"
 
 #: .\appIurrelan\templates\acabado.html:201
 msgid "Inspección con Partículas Magnéticas"
-msgstr ""
+msgstr "Magnetpulverprüfung"
 
 #: .\appIurrelan\templates\acabado.html:202
 msgid ""
@@ -239,193 +252,199 @@ msgid ""
 "superficiales como subsuperficiales mediante la distorsión de campos "
 "magnéticos."
 msgstr ""
+"Prüfung für ferromagnetische Materialien, die die Erkennung von "
+"Oberflächen- und oberflächennahen Fehlern durch die Verzerrung von "
+"Magnetfeldern ermöglicht."
 
 #: .\appIurrelan\templates\acabado.html:210
 msgid "Capacidades de"
-msgstr ""
+msgstr "Kapazitäten der"
 
 #: .\appIurrelan\templates\acabado.html:210
 msgid "Control"
-msgstr ""
+msgstr "Kontrolle"
 
 #: .\appIurrelan\templates\acabado.html:216
 msgid ""
 "Homologación según normativa internacional para ensayos no destructivos. PT "
 "Nivel II."
 msgstr ""
+"Zulassung nach internationalen Normen für zerstörungsfreie Prüfungen. "
+"PT Stufe II."
 
 #: .\appIurrelan\templates\acabado.html:220
 msgid "Química"
-msgstr ""
+msgstr "Chemie"
 
 #: .\appIurrelan\templates\acabado.html:221
 msgid "Baños de decapado con control de PH y temperatura constante."
-msgstr ""
+msgstr "Beizbäder mit pH-Kontrolle und konstanter Temperatur."
 
 #: .\appIurrelan\templates\acabado.html:225
 msgid "Inspección"
-msgstr ""
+msgstr "Inspektion"
 
 #: .\appIurrelan\templates\acabado.html:226
 msgid ""
 "Equipos de magnetización de última generación y reveladores de alta "
 "resolución."
 msgstr ""
+"Modernste Magnetisierungsgeräte und hochauflösende Entwickler."
 
 #: .\appIurrelan\templates\acabado.html:230
 #: .\appIurrelan\templates\empresa.html:122
 #: .\appIurrelan\templates\soldadura.html:213
 msgid "Calidad"
-msgstr ""
+msgstr "Qualität"
 
 #: .\appIurrelan\templates\acabado.html:231
 msgid "Garantía de piezas libres de defectos estructurales críticos."
-msgstr ""
+msgstr "Garantie für Teile ohne kritische Strukturfehler."
 
 #: .\appIurrelan\templates\acabado.html:237
-#: .\appIurrelan\templates\rebarbado.html:242
+#: .\appIurrelan\templates\rebarbado.html:240
 #: .\appIurrelan\templates\soldadura.html:221
 msgid "Solicitar Información"
-msgstr ""
+msgstr "Informationen anfordern"
 
 #: .\appIurrelan\templates\base.html:9
 msgid "Iurrelan Metalurgia | Precisión Industrial"
-msgstr ""
+msgstr "Iurrelan Metallurgie | Industrielle Präzision"
 
 #: .\appIurrelan\templates\base.html:10
 msgid "Expertos en corte láser, soldadura y mecanizado en Guipúzcoa."
-msgstr ""
+msgstr "Experten für Laserschneiden, Schweißen und Zerspanung in Gipuzkoa."
 
 #: .\appIurrelan\templates\base.html:24
 msgid "Iurrelan Logo"
-msgstr ""
+msgstr "Iurrelan Logo"
 
 #: .\appIurrelan\templates\base.html:29 .\appIurrelan\templates\footer.html:30
 msgid "Inicio"
-msgstr ""
+msgstr "Startseite"
 
 #: .\appIurrelan\templates\base.html:32
 #: .\appIurrelan\templates\carrusel.html:18
 #: .\appIurrelan\templates\footer.html:31 .\appIurrelan\templates\home.html:11
 msgid "Empresa"
-msgstr ""
+msgstr "Unternehmen"
 
 #: .\appIurrelan\templates\base.html:37
 #: .\appIurrelan\templates\carrusel.html:19
 #: .\appIurrelan\templates\footer.html:32 .\appIurrelan\templates\home.html:20
 msgid "Servicios"
-msgstr ""
+msgstr "Dienstleistungen"
 
 #: .\appIurrelan\templates\base.html:40 .\appIurrelan\templates\base.html:99
 #: .\appIurrelan\templates\maquinaria.html:194
 #: .\appIurrelan\templates\servicios.html:157
 #: .\appIurrelan\templates\servicios.html:160
 msgid "Corte"
-msgstr ""
+msgstr "Schneiden"
 
 #: .\appIurrelan\templates\base.html:43 .\appIurrelan\templates\base.html:101
 #: .\appIurrelan\templates\rebarbado.html:6
 msgid "Rebarbado"
-msgstr ""
+msgstr "Entgraten"
 
 #: .\appIurrelan\templates\base.html:51 .\appIurrelan\templates\footer.html:21
 #: .\appIurrelan\templates\footer.html:34 .\appIurrelan\templates\home.html:29
 msgid "Contacto"
-msgstr ""
+msgstr "Kontakt"
 
 #: .\appIurrelan\templates\base.html:83
 msgid "INICIO"
-msgstr ""
+msgstr "STARTSEITE"
 
 #: .\appIurrelan\templates\base.html:88
 msgid "CONÓCENOS"
-msgstr ""
+msgstr "ÜBER UNS"
 
 #: .\appIurrelan\templates\base.html:94
 msgid "SERVICIOS"
-msgstr ""
+msgstr "DIENSTLEISTUNGEN"
 
 #: .\appIurrelan\templates\base.html:108
 msgid "MAQUINARIA"
-msgstr ""
+msgstr "MASCHINENPARK"
 
 #: .\appIurrelan\templates\base.html:114
 msgid "CONTACTO"
-msgstr ""
+msgstr "KONTAKT"
 
 #: .\appIurrelan\templates\carrusel.html:14
 msgid "Innovación en"
-msgstr ""
+msgstr "Innovation in"
 
 #: .\appIurrelan\templates\carrusel.html:14
 msgid "Metal"
-msgstr ""
+msgstr "Metall"
 
 #: .\appIurrelan\templates\carrusel.html:15
 msgid "Soluciones de metalurgia integral y transformación metálica"
-msgstr ""
+msgstr "Lösungen für integrale Metallurgie und Metallverarbeitung"
 
 #: .\appIurrelan\templates\carrusel.html:17
 #: .\appIurrelan\templates\home.html:33
 msgid "Contactar"
-msgstr ""
+msgstr "Kontaktieren"
 
 #: .\appIurrelan\templates\contacto.html:6
 msgid "Contacta<br>con nosotros"
-msgstr ""
+msgstr "Kontaktieren Sie<br>uns"
 
 #: .\appIurrelan\templates\contacto.html:7
 msgid "Estamos listos para hacer realidad tu proyecto"
-msgstr ""
+msgstr "Wir sind bereit, Ihr Projekt zu verwirklichen"
 
 #: .\appIurrelan\templates\contacto.html:45
 msgid "Sede Central"
-msgstr ""
+msgstr "Hauptsitz"
 
 #: .\appIurrelan\templates\contacto.html:46
 msgid "Lugar Barrio Elbarrena, 25"
-msgstr ""
+msgstr "Lugar Barrio Elbarrena, 25"
 
 #: .\appIurrelan\templates\contacto.html:46
 msgid "20247 Zaldibia, Gipuzkoa"
-msgstr ""
+msgstr "20247 Zaldibia, Gipuzkoa"
 
 #: .\appIurrelan\templates\contacto.html:50
 msgid "Llámanos"
-msgstr ""
+msgstr "Rufen Sie uns an"
 
 #: .\appIurrelan\templates\contacto.html:51
 msgid "Atención al cliente L-V"
-msgstr ""
+msgstr "Kundenservice Mo-Fr"
 
 #: .\appIurrelan\templates\contacto.html:55
 msgid "Escríbenos"
-msgstr ""
+msgstr "Schreiben Sie uns"
 
 #: .\appIurrelan\templates\contacto.html:56
 msgid "Respuesta en 24h"
-msgstr ""
+msgstr "Antwort innerhalb von 24h"
 
 #: .\appIurrelan\templates\contacto.html:68
 msgid "Horario de Carga/Descarga"
-msgstr ""
+msgstr "Lade-/Entladezeiten"
 
 #: .\appIurrelan\templates\contacto.html:69
 msgid "Lunes - Jueves: 08:00 - 17:00"
-msgstr ""
+msgstr "Montag - Donnerstag: 08:00 - 17:00"
 
 #: .\appIurrelan\templates\contacto.html:70
 msgid "Viernes: 08:00 - 14:00"
-msgstr ""
+msgstr "Freitag: 08:00 - 14:00"
 
 #: .\appIurrelan\templates\contacto.html:75
 msgid "Envíanos un"
-msgstr ""
+msgstr "Senden Sie uns eine"
 
 #: .\appIurrelan\templates\contacto.html:104
 #: .\appIurrelan\templates\contacto.html:165
 msgid "He leído y acepto la"
-msgstr ""
+msgstr "Ich habe die Datenschutzrichtlinie gelesen und akzeptiere die"
 
 #: .\appIurrelan\templates\contacto.html:104
 #: .\appIurrelan\templates\contacto.html:165
@@ -434,45 +453,47 @@ msgstr ""
 #: .\appIurrelan\templates\legal\privacidad.html:4
 #: .\appIurrelan\templates\legal\privacidad.html:8
 msgid "Política de Privacidad"
-msgstr ""
+msgstr "Datenschutzrichtlinie"
 
 #: .\appIurrelan\templates\contacto.html:109
 msgid "Enviar Mensaje"
-msgstr ""
+msgstr "Nachricht senden"
 
 #: .\appIurrelan\templates\contacto.html:119
 msgid "Trabaja con"
-msgstr ""
+msgstr "Arbeiten Sie mit"
 
 #: .\appIurrelan\templates\contacto.html:119
 msgid "Nosotros"
-msgstr ""
+msgstr "uns"
 
 #: .\appIurrelan\templates\contacto.html:122
 msgid "Déjanos tus datos y experiencia."
-msgstr ""
+msgstr "Hinterlassen Sie uns Ihre Daten und Erfahrungen."
 
 #: .\appIurrelan\templates\contacto.html:159
 msgid "Máx 5MB"
-msgstr ""
+msgstr "Max. 5MB"
 
 #: .\appIurrelan\templates\contacto.html:171
 msgid "Enviar Datos"
-msgstr ""
+msgstr "Daten senden"
 
 #: .\appIurrelan\templates\corte.html:6
 msgid "Corte <br>Térmico"
-msgstr ""
+msgstr "Thermisches <br>Schneiden"
 
 #: .\appIurrelan\templates\corte.html:7
 msgid ""
 "Precisión extrema y potencia controlada. Tecnología de separación de "
 "materiales mediante Arco Aire y Oxicorte."
 msgstr ""
+"Extreme Präzision und kontrollierte Leistung. Materialtrenntechnik "
+"mittels Lichtbogen-Druckluft-Schneiden und Brennschneiden."
 
 #: .\appIurrelan\templates\corte.html:223
 msgid "CORTE CON <br>ARCO AIRE"
-msgstr ""
+msgstr "LICHTBOGEN-<br>DRUCKLUFT-SCHNEIDEN"
 
 #: .\appIurrelan\templates\corte.html:224
 msgid ""
@@ -481,22 +502,26 @@ msgid ""
 "defectuosas, sanear grietas y cortar mazarotas en piezas de gran espesor sin "
 "dañar el metal base térmicamente."
 msgstr ""
+"Hocheffizienter Fugenhobel- und Schneidprozess, der eine Kohleelektrode "
+"und einen Druckluftstrahl verwendet. Ideal zum Entfernen fehlerhafter "
+"Schweißnähte, zur Sanierung von Rissen und zum Abschneiden von Speisern an "
+"dicken Bauteilen ohne thermische Beschädigung des Grundmetalls."
 
 #: .\appIurrelan\templates\corte.html:227
 msgid "Eliminación rápida de material"
-msgstr ""
+msgstr "Schneller Materialabtrag"
 
 #: .\appIurrelan\templates\corte.html:228
 msgid "Menor zona afectada por calor"
-msgstr ""
+msgstr "Kleinere Wärmeeinflusszone"
 
 #: .\appIurrelan\templates\corte.html:236
 msgid "Corte Arco Aire"
-msgstr ""
+msgstr "Lichtbogen-Druckluft-Schneiden"
 
 #: .\appIurrelan\templates\corte.html:243
 msgid "CORTE CON <br>SOPLETE"
-msgstr ""
+msgstr "BRENN-<br>SCHNEIDEN"
 
 #: .\appIurrelan\templates\corte.html:244
 msgid ""
@@ -505,39 +530,43 @@ msgid ""
 "precalentado, logramos cortes limpios y verticales en espesores que otras "
 "tecnologías no pueden alcanzar."
 msgstr ""
+"Brennschneidtechnik für die Trennung von hochkalibrigen Kohlenstoffstählen. "
+"Durch die exotherme chemische Reaktion von reinem Sauerstoff mit dem "
+"vorgewärmten Metall erzielen wir saubere und vertikale Schnitte in "
+"Dicken, die andere Technologien nicht erreichen können."
 
 #: .\appIurrelan\templates\corte.html:247
 msgid "Capacidad de corte > 100mm"
-msgstr ""
+msgstr "Schneidkapazität > 100mm"
 
 #: .\appIurrelan\templates\corte.html:248
 msgid "Versatilidad en obra y taller"
-msgstr ""
+msgstr "Vielseitigkeit auf der Baustelle und in der Werkstatt"
 
 #: .\appIurrelan\templates\corte.html:256
 msgid "Corte con Soplete"
-msgstr ""
+msgstr "Brennschneiden"
 
 #: .\appIurrelan\templates\empresa.html:6
 msgid "Nuestra<br>Identidad"
-msgstr ""
+msgstr "Unsere<br>Identität"
 
 #: .\appIurrelan\templates\empresa.html:7
 msgid "Ingeniería, compromiso y precisión desde hace más de 35 años"
-msgstr ""
+msgstr "Engineering, Engagement und Präzision seit über 35 Jahren"
 
 #: .\appIurrelan\templates\empresa.html:16
 msgid "La Excelencia"
-msgstr ""
+msgstr "Industrielle"
 
 #: .\appIurrelan\templates\empresa.html:16
 msgid "Industrial"
-msgstr ""
+msgstr "Exzellenz"
 
 #: .\appIurrelan\templates\empresa.html:19
 #: .\appIurrelan\templates\legal\canal_etico.html:20
 msgid "En"
-msgstr ""
+msgstr "Bei"
 
 #: .\appIurrelan\templates\empresa.html:19
 msgid ""
@@ -545,6 +574,9 @@ msgid ""
 "transformación metálica en Guipúzcoa, fusionando la tradición industrial "
 "vasca con la tecnología más vanguardista."
 msgstr ""
+"verstehen wir Metallurgie als eine präzise Kunst. Wir sind ein führendes "
+"Unternehmen in der Metallverarbeitung in Gipuzkoa und verbinden baskische "
+"Industrietradition mit modernster Technologie."
 
 #: .\appIurrelan\templates\empresa.html:23
 msgid ""
@@ -553,34 +585,38 @@ msgid ""
 "altamente cualificado es el motor que nos permite abordar proyectos de alta "
 "complejidad técnica con total garantía."
 msgstr ""
+"Seit unseren Anfängen haben wir uns darauf spezialisiert, der Industrie "
+"einen integralen Service für die Metallverarbeitung anzubieten. Unser "
+"hochqualifiziertes Team ist der Motor, der es uns ermöglicht, technisch "
+"hochkomplexe Projekte mit absoluter Garantie anzugehen."
 
 #: .\appIurrelan\templates\empresa.html:28
 msgid "Instalaciones Iurrelan"
-msgstr ""
+msgstr "Iurrelan Einrichtungen"
 
 #: .\appIurrelan\templates\empresa.html:31
 msgid "Años de"
-msgstr ""
+msgstr "Jahre"
 
 #: .\appIurrelan\templates\empresa.html:31
 msgid "Trayectoria"
-msgstr ""
+msgstr "Erfahrung"
 
 #: .\appIurrelan\templates\empresa.html:39
 msgid "Nuestros"
-msgstr ""
+msgstr "Unsere"
 
 #: .\appIurrelan\templates\empresa.html:39
 msgid "Pilares"
-msgstr ""
+msgstr "Säulen"
 
 #: .\appIurrelan\templates\empresa.html:46
 msgid "Misión"
-msgstr ""
+msgstr "Mission"
 
 #: .\appIurrelan\templates\empresa.html:49
 msgid "Nuestro Objetivo"
-msgstr ""
+msgstr "Unser Ziel"
 
 #: .\appIurrelan\templates\empresa.html:50
 msgid ""
@@ -588,14 +624,17 @@ msgid ""
 "expectativas de calidad de nuestros clientes y asegurando procesos "
 "sostenibles y eficientes."
 msgstr ""
+"Herstellung von Metalllösungen mit hohem Mehrwert, die die Qualitäts-"
+"erwartungen unserer Kunden übertreffen und nachhaltige sowie effiziente "
+"Prozesse sicherstellen."
 
 #: .\appIurrelan\templates\empresa.html:59
 msgid "Visión"
-msgstr ""
+msgstr "Vision"
 
 #: .\appIurrelan\templates\empresa.html:62
 msgid "El Futuro"
-msgstr ""
+msgstr "Die Zukunft"
 
 #: .\appIurrelan\templates\empresa.html:63
 msgid ""
@@ -603,318 +642,348 @@ msgid ""
 "industrial del norte de España, impulsando la innovación en cada soldadura y "
 "mecanizado."
 msgstr ""
+"Uns als strategischer Referenzpartner im Industriesektor Nordspaniens zu "
+"etablieren und die Innovation bei jedem Schweißen und Fräsen voranzutreiben."
 
 #: .\appIurrelan\templates\empresa.html:72
 msgid "Valores"
-msgstr ""
+msgstr "Werte"
 
 #: .\appIurrelan\templates\empresa.html:75
 msgid "Nuestro ADN"
-msgstr ""
+msgstr "Unsere DNA"
 
 #: .\appIurrelan\templates\empresa.html:77
 msgid "Calidad Total"
-msgstr ""
+msgstr "Totale Qualität"
 
 #: .\appIurrelan\templates\empresa.html:78
 msgid "Seguridad Laboral"
-msgstr ""
+msgstr "Arbeitssicherheit"
 
 #: .\appIurrelan\templates\empresa.html:79
 msgid "Compromiso"
-msgstr ""
+msgstr "Engagement"
 
 #: .\appIurrelan\templates\empresa.html:80
 msgid "Innovación"
-msgstr ""
+msgstr "Innovation"
 
 #: .\appIurrelan\templates\empresa.html:92
 msgid "Planta"
-msgstr ""
+msgstr "Betriebs-"
 
 #: .\appIurrelan\templates\empresa.html:92
 msgid "Operativa"
-msgstr ""
+msgstr "Anlage"
 
 #: .\appIurrelan\templates\empresa.html:93
 msgid "Capacidad productiva y tecnología al servicio del cliente"
-msgstr ""
+msgstr "Produktionskapazität und Technologie im Dienste des Kunden"
 
 #: .\appIurrelan\templates\empresa.html:99
 msgid "Plantas operativas"
-msgstr ""
+msgstr "Betriebsanlagen"
 
 #: .\appIurrelan\templates\empresa.html:104
 msgid "de superficie"
-msgstr ""
+msgstr "Fläche"
 
 #: .\appIurrelan\templates\empresa.html:109
 msgid "Elevación"
-msgstr ""
+msgstr "Heben"
 
 #: .\appIurrelan\templates\empresa.html:114
 msgid "Puentes Grúa"
-msgstr ""
+msgstr "Brückenkräne"
 
 #: .\appIurrelan\templates\empresa.html:122
 msgid "Certificada"
-msgstr ""
+msgstr "Zertifiziert"
 
 #: .\appIurrelan\templates\empresa.html:127
 msgid "Gestión de la Calidad"
-msgstr ""
+msgstr "Qualitätsmanagement"
 
 #: .\appIurrelan\templates\empresa.html:132
 msgid "Soldadura Certificada"
-msgstr ""
+msgstr "Zertifiziertes Schweißen"
 
 #: .\appIurrelan\templates\empresa.html:137
 msgid "Gestión Ambiental"
-msgstr ""
+msgstr "Umweltmanagement"
 
 #: .\appIurrelan\templates\footer.html:15
 msgid ""
 "Expertos en transformación metálica y soluciones industriales en Guipúzcoa."
-msgstr ""
+msgstr "Experten für Metallverarbeitung und industrielle Lösungen in Gipuzkoa."
 
 #: .\appIurrelan\templates\footer.html:28
 msgid "Enlaces"
-msgstr ""
+msgstr "Links"
 
 #: .\appIurrelan\templates\footer.html:41
 msgid "Todos los derechos reservados."
-msgstr ""
+msgstr "Alle Rechte vorbehalten."
 
 #: .\appIurrelan\templates\footer.html:43
 #: .\appIurrelan\templates\legal\aviso_legal.html:5
 #: .\appIurrelan\templates\legal\aviso_legal.html:10
 msgid "Aviso Legal"
-msgstr ""
+msgstr "Rechtlicher Hinweis"
 
 #: .\appIurrelan\templates\footer.html:45
 #: .\appIurrelan\templates\legal\cookies.html:4
 #: .\appIurrelan\templates\legal\cookies.html:8
 msgid "Política de Cookies"
-msgstr ""
+msgstr "Cookie-Richtlinie"
 
 #: .\appIurrelan\templates\footer.html:46
 #: .\appIurrelan\templates\legal\canal_etico.html:5
 #: .\appIurrelan\templates\legal\canal_etico.html:10
 #: .\appIurrelan\templates\legal\canal_etico.html:20
 msgid "Canal Ético"
-msgstr ""
+msgstr "Ethikkanal"
 
 #: .\appIurrelan\templates\granallado.html:6
 msgid "Granallado <br>Industrial"
-msgstr ""
+msgstr "Industrielles <br>Strahlen"
 
 #: .\appIurrelan\templates\granallado.html:7
 msgid ""
 "Preparación y acabado de superficies mediante proyección de abrasivos de "
 "alta calidad."
 msgstr ""
+"Oberflächenvorbereitung und -veredelung durch das Strahlen mit hochwertigen "
+"Schleifmitteln."
 
 #: .\appIurrelan\templates\granallado.html:191
 msgid "Granallado de Piezas de Acero Inoxidable"
-msgstr ""
+msgstr "Strahlen von Edelstahlteilen"
 
 #: .\appIurrelan\templates\granallado.html:194
 msgid "Acabado de alta pureza mediante impacto controlado con microesferas."
-msgstr ""
+msgstr "Hochreines Finish durch kontrollierten Aufprall mit Mikroglaskugeln."
 
 #: .\appIurrelan\templates\granallado.html:197
 msgid "PESO MÁXIMO: 2.000 KG"
-msgstr ""
+msgstr "MAXIMALGEWICHT: 2.000 KG"
 
 #: .\appIurrelan\templates\granallado.html:210
 #: .\appIurrelan\templates\granallado.html:238
 msgid "Antes"
-msgstr ""
+msgstr "Vorher"
 
 #: .\appIurrelan\templates\granallado.html:211
 #: .\appIurrelan\templates\granallado.html:239
 msgid "Después"
-msgstr ""
+msgstr "Nachher"
 
 #: .\appIurrelan\templates\granallado.html:212
 #: .\appIurrelan\templates\granallado.html:240
 msgid "Split"
-msgstr ""
+msgstr "Teilen"
 
 #: .\appIurrelan\templates\granallado.html:221
 msgid "Granallado de Piezas de Acero al Carbono"
-msgstr ""
+msgstr "Strahlen von Kohlenstoffstahlteilen"
 
 #: .\appIurrelan\templates\granallado.html:224
 msgid ""
 "Preparación técnica superficial para la remoción de óxidos y cascarilla."
-msgstr ""
+msgstr "Technische Oberflächenvorbereitung zur Entfernung von Oxiden und Zunder."
 
 #: .\appIurrelan\templates\granallado.html:227
 msgid "PESO MÁXIMO: 1.000 KG"
-msgstr ""
+msgstr "MAXIMALGEWICHT: 1.000 KG"
 
 #: .\appIurrelan\templates\home.html:13
 msgid ""
 "Más de 35 años de experiencia en el sector metalúrgico en Guipúzcoa. Un "
 "equipo experto comprometido."
 msgstr ""
+"Über 35 Jahre Erfahrung im metallurgischen Sektor in Gipuzkoa. Ein "
+"engagiertes Expertenteam."
 
 #: .\appIurrelan\templates\home.html:15
 msgid "Saber más"
-msgstr ""
+msgstr "Mehr erfahren"
 
 #: .\appIurrelan\templates\home.html:22
 msgid ""
 "Transformación de metales, soldadura y acabados de alta precisión. Ofrecemos "
 "soluciones integrales para la industria."
 msgstr ""
+"Metallverarbeitung, Schweißen und hochpräzise Oberflächenbehandlungen. Wir "
+"bieten umfassende Lösungen für die Industrie."
 
 #: .\appIurrelan\templates\home.html:24
 msgid "Ver catálogo"
-msgstr ""
+msgstr "Katalog ansehen"
 
 #: .\appIurrelan\templates\home.html:31
 msgid ""
 "¿Tienes un proyecto en mente? Solicita presupuesto sin compromiso o "
 "visítanos en nuestras instalaciones."
 msgstr ""
+"Haben Sie ein Projekt im Sinn? Fordern Sie ein unverbindliches Angebot an "
+"oder besuchen Sie uns in unseren Einrichtungen."
 
 #: .\appIurrelan\templates\home.html:39
 msgid "¿Por qué"
-msgstr ""
+msgstr "Warum"
 
 #: .\appIurrelan\templates\home.html:45
 msgid "Cumplimiento de Plazos"
-msgstr ""
+msgstr "Termintreue"
 
 #: .\appIurrelan\templates\home.html:46
 msgid ""
 "Compromiso absoluto con las fechas de entrega. Tu producción no puede parar."
-msgstr ""
+msgstr "Absolutes Engagement für Liefertermine. Ihre Produktion darf nicht stillstehen."
 
 #: .\appIurrelan\templates\home.html:51
 msgid "Calidad Certificada"
-msgstr ""
+msgstr "Zertifizierte Qualität"
 
 #: .\appIurrelan\templates\home.html:52
 msgid "Procesos bajo normativa ISO 9001 y controles de calidad exhaustivos."
-msgstr ""
+msgstr "Prozesse nach ISO 9001 und umfassende Qualitätskontrollen."
 
 #: .\appIurrelan\templates\home.html:57
 msgid "Seguridad Total"
-msgstr ""
+msgstr "Totale Sicherheit"
 
 #: .\appIurrelan\templates\home.html:58
 msgid "Protocolos de prevención de riesgos y seguridad laboral integrados."
-msgstr ""
+msgstr "Integrierte Protokolle zur Risikoprävention und Arbeitssicherheit."
 
 #: .\appIurrelan\templates\home.html:67
 msgid "Sectores de"
-msgstr ""
+msgstr "Aktivitäts-"
 
 #: .\appIurrelan\templates\home.html:67
 msgid "Actividad"
-msgstr ""
+msgstr "Sektoren"
 
 #: .\appIurrelan\templates\home.html:68
 msgid ""
 "Nuestra versatilidad nos permite adaptarnos a las exigencias de múltiples "
 "industrias."
 msgstr ""
+"Unsere Vielseitigkeit ermöglicht es uns, uns an die Anforderungen "
+"verschiedenster Industrien anzupassen."
 
 #: .\appIurrelan\templates\home.html:73
 msgid "Ferrocarril"
-msgstr ""
+msgstr "Eisenbahn"
 
 #: .\appIurrelan\templates\home.html:76
 msgid "Construcción"
-msgstr ""
+msgstr "Bauwesen"
 
 #: .\appIurrelan\templates\home.html:79
 msgid "Energía"
-msgstr ""
+msgstr "Energie"
 
 #: .\appIurrelan\templates\home.html:82
 msgid "Mantenimiento"
-msgstr ""
+msgstr "Wartung"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:11
 msgid "Información legal y condiciones de uso del sitio web."
-msgstr ""
+msgstr "Rechtliche Informationen und Nutzungsbedingungen der Website."
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:18
 msgid "Datos Identificativos"
-msgstr ""
+msgstr "Identifikationsdaten"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:20
 msgid ""
 "\n"
-"                En cumplimiento con el deber de información recogido en "
+"                En cumplimiento con el deber de información recogido en "
 "artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad "
 "de la Información y del Comercio Electrónico (LSSICE), a continuación se "
 "reflejan los siguientes datos:\n"
-"                "
+"                "
 msgstr ""
+"\n"
+"                In Erfüllung der Informationspflicht gemäß Artikel 10 des "
+"Gesetzes 34/2002 vom 11. Juli über Dienste der Informationsgesellschaft und "
+"den elektronischen Geschäftsverkehr (LSSICE) werden nachfolgend folgende "
+"Daten aufgeführt:\n"
+"                "
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:25
 msgid "Razón Social"
-msgstr ""
+msgstr "Firmenname"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:26
 msgid "NIF/CIF"
-msgstr ""
+msgstr "USt-IdNr."
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:27
 msgid "Domicilio Social"
-msgstr ""
+msgstr "Eingetragener Sitz"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:28
 msgid "Datos Registrales"
-msgstr ""
+msgstr "Registerdaten"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:28
 msgid ""
 "Inscrita en el Registro Mercantil de Gipuzkoa en el Tomo 3046, Folio 83, "
 "Hoja SS-44715 Inscripción 1"
 msgstr ""
+"Eingetragen im Handelsregister von Gipuzkoa in Band 3046, Blatt 83, "
+"Seite SS-44715, Eintragung 1."
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:29
 msgid "Email de Contacto"
-msgstr ""
+msgstr "Kontakt-E-Mail"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:32
 msgid "Usuarios"
-msgstr ""
+msgstr "Benutzer"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:34
 msgid "El acceso y/o uso de este portal de"
-msgstr ""
+msgstr "Der Zugriff und/oder die Nutzung dieses Portals von"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:34
 msgid ""
 "atribuye la condición de USUARIO, que acepta, desde dicho acceso y/o uso, "
 "las Condiciones Generales de Uso aquí reflejadas."
 msgstr ""
+"weist die Bedingung des BENUTZERS zu, der von diesem Zugriff und/oder "
+"dieser Nutzung an die hier wiedergegebenen Allgemeinen Nutzungsbedingungen "
+"akzeptiert."
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:37
 msgid "Uso del Portal"
-msgstr ""
+msgstr "Nutzung des Portals"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:39
 msgid ""
 "\n"
-"                El sitio web proporciona el acceso a multitud de "
+"                El sitio web proporciona el acceso a multitud de "
 "informaciones, servicios, programas o datos (en adelante, \"los "
 "contenidos\") en Internet pertenecientes a SERVICIOS METALÚRGICOS IURRELAN a "
 "los que el USUARIO pueda tener acceso. El USUARIO asume la responsabilidad "
 "del uso del portal.\n"
-"                "
+"                "
 msgstr ""
+"\n"
+"                Die Website bietet Zugang zu einer Vielzahl von Informationen, "
+"Dienstleistungen, Programmen oder Daten (im Folgenden „die Inhalte“) im "
+"Internet, die SERVICIOS METALÚRGICOS IURRELAN gehören und auf die der "
+"BENUTZER zugreifen kann. Der BENUTZER übernimmt die Verantwortung für die "
+"Nutzung des Portals.\n"
+"                "
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:44
 msgid "Protección de Datos"
-msgstr ""
+msgstr "Datenschutz"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:46
 msgid ""
@@ -923,87 +992,127 @@ msgid ""
 "garantizar un correcto uso y tratamiento de los datos personales del "
 "usuario. Para más información, consulte nuestra"
 msgstr ""
+"SERVICIOS METALÚRGICOS IURRELAN hält sich an die Richtlinien der Allgemeinen "
+"Datenschutzverordnung (DSGVO) sowie an andere geltende Vorschriften und sorgt "
+"für eine ordnungsgemäße Nutzung und Verarbeitung der personenbezogenen Daten "
+"des Benutzers. Weitere Informationen finden Sie in unserer"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:50
 msgid "Propiedad Intelectual e Industrial"
-msgstr ""
+msgstr "Geistiges und gewerbliches Eigentum"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:52
 msgid ""
 "\n"
-"                SERVICIOS METALÚRGICOS IURRELAN por sí o como cesionaria, es "
+"                SERVICIOS METALÚRGICOS IURRELAN por sí o como cesionaria, es "
 "titular de todos los derechos de propiedad intelectual e industrial de su "
 "página web, así como de los elementos contenidos en la misma (a título "
 "enunciativo, imágenes, sonido, audio, vídeo, software o textos; marcas o "
 "logotipos, combinaciones de colores, estructura y diseño, etc.).\n"
-"                "
+"                "
 msgstr ""
+"\n"
+"                SERVICIOS METALÚRGICOS IURRELAN ist selbst oder als Zessionar "
+"Inhaber aller Rechte am geistigen und gewerblichen Eigentum seiner Website "
+"sowie der darin enthaltenen Elemente (beispielsweise Bilder, Ton, Audio, "
+"Video, Software oder Texte; Marken oder Logos, Farbkombinationen, Struktur "
+"und Design, usw.).\n"
+"                "
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:57
 msgid ""
 "\n"
-"                Quedan expresamente prohibidas la reproducción, la "
+"                Quedan expresamente prohibidas la reproducción, la "
 "distribución y la comunicación pública, incluida su modalidad de puesta a "
 "disposición, de la totalidad o parte de los contenidos de esta página web, "
 "con fines comerciales, en cualquier soporte y por cualquier medio técnico, "
 "sin la autorización de SERVICIOS METALÚRGICOS IURRELAN.\n"
-"                "
+"                "
 msgstr ""
+"\n"
+"                Die Vervielfältigung, Verbreitung und öffentliche Wiedergabe, "
+"einschließlich der Art ihrer Bereitstellung, des gesamten oder eines Teils "
+"des Inhalts dieser Website zu kommerziellen Zwecken, auf jedem Datenträger "
+"und mit allen technischen Mitteln, ohne die Genehmigung von SERVICIOS "
+"METALÚRGICOS IURRELAN, ist ausdrücklich untersagt.\n"
+"                "
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:62
 msgid "Exclusión de Garantías y Responsabilidad"
-msgstr ""
+msgstr "Ausschluss von Garantien und Haftung"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:64
 msgid ""
 "\n"
-"                SERVICIOS METALÚRGICOS IURRELAN no se hace responsable, en "
+"                SERVICIOS METALÚRGICOS IURRELAN no se hace responsable, en "
 "ningún caso, de los daños y perjuicios de cualquier naturaleza que pudieran "
 "ocasionar, a título enunciativo: errores u omisiones en los contenidos, "
 "falta de disponibilidad del portal o la transmisión de virus o programas "
 "maliciosos o lesivos en los contenidos, a pesar de haber adoptado todas las "
 "medidas tecnológicas necesarias para evitarlo.\n"
-"                "
+"                "
 msgstr ""
+"\n"
+"                SERVICIOS METALÚRGICOS IURRELAN haftet in keinem Fall für "
+"Schäden jeglicher Art, die beispielsweise durch Folgendes entstehen könnten: "
+"Fehler oder Auslassungen in den Inhalten, mangelnde Verfügbarkeit des "
+"Portals oder die Übertragung von Viren oder bösartigen oder schädlichen "
+"Programmen in den Inhalten, obwohl alle erforderlichen technologischen "
+"Maßnahmen ergriffen wurden, um dies zu vermeiden.\n"
+"                "
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:69
 msgid "Modificaciones"
-msgstr ""
+msgstr "Änderungen"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:71
 msgid ""
 "\n"
-"                SERVICIOS METALÚRGICOS IURRELAN se reserva el derecho de "
+"                SERVICIOS METALÚRGICOS IURRELAN se reserva el derecho de "
 "efectuar sin previo aviso las modificaciones que considere oportunas en su "
 "portal, pudiendo cambiar, suprimir o añadir tanto los contenidos y servicios "
 "que se presten a través de la misma como la forma en la que éstos aparezcan "
 "presentados.\n"
-"                "
+"                "
 msgstr ""
+"\n"
+"                SERVICIOS METALÚRGICOS IURRELAN behält sich das Recht vor, "
+"ohne vorherige Ankündigung die Änderungen vorzunehmen, die sie in ihrem "
+"Portal für angemessen hält, und kann sowohl die Inhalte und Dienste, die "
+"darüber bereitgestellt werden, als auch die Art und Weise, wie diese "
+"präsentiert werden, ändern, löschen oder hinzufügen.\n"
+"                "
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:76
 msgid "Legislación Aplicable y Jurisdicción"
-msgstr ""
+msgstr "Anwendbares Recht und Gerichtsstand"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:78
 msgid ""
 "\n"
-"                La relación entre SERVICIOS METALÚRGICOS IURRELAN y el "
+"                La relación entre SERVICIOS METALÚRGICOS IURRELAN y el "
 "USUARIO se regirá por la normativa española vigente y cualquier controversia "
 "se someterá a los Juzgados y tribunales de la ciudad correspondiente al "
 "domicilio social de la empresa, salvo que la ley aplicable disponga otra "
 "cosa.\n"
-"                "
+"                "
 msgstr ""
+"\n"
+"                Die Beziehung zwischen SERVICIOS METALÚRGICOS IURRELAN und "
+"dem BENUTZER unterliegt den geltenden spanischen Vorschriften, und alle "
+"Streitigkeiten werden den Gerichten der Stadt unterworfen, die dem "
+"eingetragenen Sitz des Unternehmens entspricht, sofern das anwendbare Recht "
+"nichts anderes vorsieht.\n"
+"                "
 
 #: .\appIurrelan\templates\legal\canal_etico.html:11
 msgid ""
 "Compromiso con la transparencia, la integridad y el cumplimiento normativo."
-msgstr ""
+msgstr "Verpflichtung zu Transparenz, Integrität und Einhaltung von Vorschriften."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:18
 msgid "Introducción"
-msgstr ""
+msgstr "Einführung"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:20
 msgid ""
@@ -1012,79 +1121,102 @@ msgid ""
 "(Compliance), ponemos a disposición de todos nuestros empleados, clientes, "
 "proveedores y colaboradores este"
 msgstr ""
+"Integrität und Ethik sind grundlegende Säulen unserer Tätigkeit. In "
+"Übereinstimmung mit den geltenden Vorschriften und unserem strafrechtlichen "
+"Präventionsplan (Compliance) stellen wir allen unseren Mitarbeitern, Kunden, "
+"Lieferanten und Partnern diesen"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:23
 msgid ""
 "\n"
-"                Este canal es una herramienta segura para comunicar "
+"                Este canal es una herramienta segura para comunicar "
 "cualquier conducta que pueda implicar la comisión de irregularidades o actos "
 "contrarios a la legalidad y a las normas internas de la empresa.\n"
-"                "
+"                "
 msgstr ""
+"\n"
+"                Dieser Kanal ist ein sicheres Instrument zur Meldung "
+"jeglichen Verhaltens, das die Begehung von Unregelmäßigkeiten oder Handlungen "
+"beinhalten könnte, die der Gesetzmäßigkeit und den internen Regeln des "
+"Unternehmens widersprechen.\n"
+"                "
 
 #: .\appIurrelan\templates\legal\canal_etico.html:28
 msgid "Gestión Externa y Confidencialidad"
-msgstr ""
+msgstr "Externe Verwaltung und Vertraulichkeit"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:30
 msgid "Para garantizar la máxima"
-msgstr ""
+msgstr "Um ein Höchstmaß an"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:30
 msgid "independencia, confidencialidad y objetividad"
-msgstr ""
+msgstr "Unabhängigkeit, Vertraulichkeit und Objektivität"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:30
 msgid ""
 "en el tratamiento de las comunicaciones, la gestión de este Canal Ético ha "
 "sido encomendada a un experto externo:"
 msgstr ""
+"bei der Behandlung von Meldungen zu gewährleisten, wurde die Verwaltung "
+"dieses Ethikkanals einem externen Experten anvertraut:"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:33
 msgid "Entidad Gestora:"
-msgstr ""
+msgstr "Verwaltende Stelle:"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:34
 msgid "Director de Compliance:"
-msgstr ""
+msgstr "Compliance-Direktor:"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:37
 msgid ""
 "\n"
-"                Este sistema garantiza que las denuncias sean recibidas y "
+"                Este sistema garantiza que las denuncias sean recibidas y "
 "analizadas por profesionales independientes, asegurando que no existan "
 "conflictos de interés y protegiendo la identidad del informante.\n"
-"                "
+"                "
 msgstr ""
+"\n"
+"                Dieses System garantiert, dass Meldungen von unabhängigen "
+"Fachleuten entgegengenommen und analysiert werden, wodurch sichergestellt "
+"wird, dass keine Interessenkonflikte bestehen, und die Identität des "
+"Meldenden geschützt wird.\n"
+"                "
 
 #: .\appIurrelan\templates\legal\canal_etico.html:42
 msgid "Cómo realizar una comunicación"
-msgstr ""
+msgstr "Wie man eine Meldung einreicht"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:44
 msgid ""
 "\n"
-"                Si tiene conocimiento de alguna conducta irregular, puede "
+"                Si tiene conocimiento de alguna conducta irregular, puede "
 "comunicarlo a través de la siguiente dirección de correo electrónico "
 "habilitada exclusivamente para este fin:\n"
-"                "
+"                "
 msgstr ""
+"\n"
+"                Wenn Sie Kenntnis von einem unregelmäßigen Verhalten haben, "
+"können Sie dies über die folgende, ausschließlich für diesen Zweck "
+"eingerichtete E-Mail-Adresse melden:\n"
+"                "
 
 #: .\appIurrelan\templates\legal\canal_etico.html:56
 msgid "Al realizar la comunicación, se garantiza:"
-msgstr ""
+msgstr "Bei der Einreichung einer Meldung wird Folgendes garantiert:"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:59
 msgid "Confidencialidad:"
-msgstr ""
+msgstr "Vertraulichkeit:"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:59
 msgid "La identidad del informante será preservada en todo momento."
-msgstr ""
+msgstr "Die Identität des Meldenden wird jederzeit geschützt."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:60
 msgid "Anonimato:"
-msgstr ""
+msgstr "Anonymität:"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:60
 msgid ""
@@ -1092,79 +1224,95 @@ msgid ""
 "identificarse, salvo que la normativa vigente exija lo contrario en casos "
 "específicos."
 msgstr ""
+"Anonyme Meldungen werden akzeptiert, wenn der Meldende es vorzieht, sich "
+"nicht zu identifizieren, es sei denn, die geltenden Vorschriften verlangen "
+"in bestimmten Fällen etwas anderes."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:61
 msgid "Ausencia de represalias:"
-msgstr ""
+msgstr "Keine Repressalien:"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:61
 msgid ""
 "SERVICIOS METALÚRGICOS IURRELAN garantiza que no se adoptará ninguna "
 "represalia contra quien informe de buena fe sobre una posible infracción."
 msgstr ""
+"SERVICIOS METALÚRGICOS IURRELAN garantiert, dass gegen niemanden, der in "
+"gutem Glauben einen möglichen Verstoß meldet, Repressalien ergriffen werden."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:64
 msgid "Tramitación"
-msgstr ""
+msgstr "Bearbeitung"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:66
 msgid "Una vez recibida la comunicación,"
-msgstr ""
+msgstr "Nach Eingang der Meldung"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:66
 msgid "procederá siguiendo este orden:"
-msgstr ""
+msgstr "wird in folgender Reihenfolge vorgegangen:"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:69
 msgid "Recepción y registro de la denuncia."
-msgstr ""
+msgstr "Empfang und Registrierung der Meldung."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:70
 msgid "Análisis de admisibilidad de los hechos denunciados."
-msgstr ""
+msgstr "Prüfung der Zulässigkeit des gemeldeten Sachverhalts."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:71
 msgid "Investigación independiente de los hechos."
-msgstr ""
+msgstr "Unabhängige Untersuchung des Sachverhalts."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:72
 msgid "Emisión de un informe sobre la investigación."
-msgstr ""
+msgstr "Erstellung eines Untersuchungsberichts."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:73
 msgid ""
 "Propuesta de resolución y medidas correctivas a la dirección de la empresa."
 msgstr ""
+"Vorschlag zur Lösung und zu Korrekturmaßnahmen an die Unternehmensleitung."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:77
 msgid ""
 "Última actualización: Junio 2023 | Documento revisado conforme al Plan de "
 "Prevención Penal de Servicios Metalúrgicos Iurrelan."
 msgstr ""
+"Letzte Aktualisierung: Juni 2023 | Dokument überprüft in Übereinstimmung "
+"mit dem strafrechtlichen Präventionsplan von Servicios Metalúrgicos Iurrelan."
 
 #: .\appIurrelan\templates\legal\cookies.html:10
 msgid "1. ¿Qué son las cookies?"
-msgstr ""
+msgstr "1. Was sind Cookies?"
 
 #: .\appIurrelan\templates\legal\cookies.html:12
 msgid ""
 "\n"
-"        Una cookie es un fichero que se descarga en su ordenador al acceder "
+"        Una cookie es un fichero que se descarga en su ordenador al acceder "
 "a determinadas páginas web. Las cookies permiten a una página web, entre "
 "otras cosas, almacenar y recuperar información sobre los hábitos de "
 "navegación de un usuario o de su equipo y, dependiendo de la información que "
 "contengan y de la forma en que utilice su equipo, pueden utilizarse para "
 "reconocer al usuario.\n"
-"        "
+"        "
 msgstr ""
+"\n"
+"                Ein Cookie ist eine Datei, die beim Zugriff auf bestimmte "
+"Websites auf Ihren Computer heruntergeladen wird. Cookies ermöglichen es "
+"einer Website unter anderem, Informationen über die Surfgewohnheiten eines "
+"Benutzers oder seines Geräts zu speichern und abzurufen. Abhängig von den "
+"darin enthaltenen Informationen und der Art und Weise, wie Sie Ihr Gerät "
+"verwenden, können sie verwendet werden, um den Benutzer zu erkennen.\n"
+"                "
 
 #: .\appIurrelan\templates\legal\cookies.html:17
 msgid "2. ¿Qué tipos de cookies utiliza esta web?"
-msgstr ""
+msgstr "2. Welche Arten von Cookies verwendet diese Website?"
 
 #: .\appIurrelan\templates\legal\cookies.html:20
 msgid "Cookies técnicas:"
-msgstr ""
+msgstr "Technische Cookies:"
 
 #: .\appIurrelan\templates\legal\cookies.html:21
 msgid ""
@@ -1172,10 +1320,13 @@ msgid ""
 "web, plataforma o aplicación y la utilización de las diferentes opciones o "
 "servicios que en ella existan."
 msgstr ""
+"Dies sind Cookies, die dem Benutzer die Navigation auf einer Webseite, "
+"Plattform oder Anwendung und die Nutzung der verschiedenen dort vorhandenen "
+"Optionen oder Dienste ermöglichen."
 
 #: .\appIurrelan\templates\legal\cookies.html:24
 msgid "Cookies de personalización:"
-msgstr ""
+msgstr "Personalisierungs-Cookies:"
 
 #: .\appIurrelan\templates\legal\cookies.html:25
 msgid ""
@@ -1183,382 +1334,442 @@ msgid ""
 "características de carácter general predefinidas en función de una serie de "
 "criterios en el terminal del usuario (ej. idioma)."
 msgstr ""
+"Dies sind Cookies, die es dem Benutzer ermöglichen, auf den Dienst mit "
+"einigen vordefinierten allgemeinen Merkmalen zuzugreifen, die auf einer "
+"Reihe von Kriterien im Endgerät des Benutzers basieren (z. B. Sprache)."
 
 #: .\appIurrelan\templates\legal\cookies.html:29
 msgid "3. Desactivación y eliminación de cookies"
-msgstr ""
+msgstr "3. Deaktivierung und Löschung von Cookies"
 
 #: .\appIurrelan\templates\legal\cookies.html:31
 msgid ""
 "\n"
-"        Usted puede permitir, bloquear o eliminar las cookies instaladas en "
+"        Usted puede permitir, bloquear o eliminar las cookies instaladas en "
 "su equipo mediante la configuración de las opciones del navegador instalado "
 "en su ordenador:\n"
-"        "
+"        "
 msgstr ""
+"\n"
+"                Sie können die auf Ihrem Gerät installierten Cookies "
+"zulassen, blockieren oder löschen, indem Sie die Optionen des auf Ihrem "
+"Computer installierten Browsers konfigurieren:\n"
+"                "
 
 #: .\appIurrelan\templates\legal\privacidad.html:11
 msgid ""
 "\n"
-"        En Iurrelan nos comprometemos a proteger la privacidad de nuestros "
+"        En Iurrelan nos comprometemos a proteger la privacidad de nuestros "
 "usuarios. Esta Política de Privacidad describe cómo recopilamos, usamos y "
 "protegemos su información personal.\n"
-"        "
+"        "
 msgstr ""
+"\n"
+"                Bei Iurrelan verpflichten wir uns, die Privatsphäre unserer "
+"Benutzer zu schützen. Diese Datenschutzrichtlinie beschreibt, wie wir Ihre "
+"personenbezogenen Daten erfassen, verwenden und schützen.\n"
+"                "
 
 #: .\appIurrelan\templates\legal\privacidad.html:16
 msgid "1. Responsable del Tratamiento"
-msgstr ""
+msgstr "1. Verantwortlicher für die Verarbeitung"
 
 #: .\appIurrelan\templates\legal\privacidad.html:18
 msgid "Identidad:"
-msgstr ""
+msgstr "Identität:"
 
 #: .\appIurrelan\templates\legal\privacidad.html:19
 msgid "Dirección:"
-msgstr ""
+msgstr "Adresse:"
 
 #: .\appIurrelan\templates\legal\privacidad.html:20
 msgid "Email:"
-msgstr ""
+msgstr "E-Mail:"
 
 #: .\appIurrelan\templates\legal\privacidad.html:23
 msgid "2. Finalidad del Tratamiento"
-msgstr ""
+msgstr "2. Zweck der Verarbeitung"
 
 #: .\appIurrelan\templates\legal\privacidad.html:25
 msgid ""
 "\n"
-"        En Iurrelan tratamos la información que nos facilitan las personas "
+"        En Iurrelan tratamos la información que nos facilitan las personas "
 "interesadas con el fin de gestionar el envío de la información que nos "
 "soliciten a través de los formularios de contacto o facilitar a los "
 "interesados ofertas de productos y servicios de su interés.\n"
-"        "
+"        "
 msgstr ""
+"\n"
+"                Bei Iurrelan verarbeiten wir die von interessierten Personen "
+"bereitgestellten Informationen, um den Versand der über die Kontaktformulare "
+"angeforderten Informationen zu verwalten oder den Interessenten Angebote für "
+"Produkte und Dienstleistungen bereitzustellen, die für sie von Interesse "
+"sein könnten.\n"
+"                "
 
 #: .\appIurrelan\templates\legal\privacidad.html:30
 msgid ""
 "\n"
-"        No se tomarán decisiones automatizadas en base a dicho perfil.\n"
-"        "
+"        No se tomarán decisiones automatizadas en base a dicho perfil.\n"
+"        "
 msgstr ""
+"\n"
+"                Auf Grundlage dieses Profils werden keine automatisierten "
+"Entscheidungen getroffen.\n"
+"                "
 
 #: .\appIurrelan\templates\legal\privacidad.html:35
 msgid "3. Legitimación"
-msgstr ""
+msgstr "3. Legitimation"
 
 #: .\appIurrelan\templates\legal\privacidad.html:37
 msgid ""
 "\n"
-"        La base legal para el tratamiento de sus datos es el consentimiento "
+"        La base legal para el tratamiento de sus datos es el consentimiento "
 "del interesado al rellenar y enviar el formulario de contacto o al "
 "suscribirse a nuestros servicios.\n"
-"        "
+"        "
 msgstr ""
+"\n"
+"                Die Rechtsgrundlage für die Verarbeitung Ihrer Daten ist die "
+"Einwilligung der betroffenen Person beim Ausfüllen und Absenden des "
+"Kontaktformulars oder bei der Anmeldung zu unseren Diensten.\n"
+"                "
 
 #: .\appIurrelan\templates\legal\privacidad.html:42
 msgid "4. Destinatarios"
-msgstr ""
+msgstr "4. Empfänger"
 
 #: .\appIurrelan\templates\legal\privacidad.html:44
 msgid ""
 "\n"
-"        Los datos no se cederán a terceros salvo obligación legal.\n"
-"        "
+"        Los datos no se cederán a terceros salvo obligación legal.\n"
+"        "
 msgstr ""
+"\n"
+"                Eine Weitergabe der Daten an Dritte erfolgt nicht, es sei "
+"denn, es besteht eine gesetzliche Verpflichtung.\n"
+"                "
 
 #: .\appIurrelan\templates\legal\privacidad.html:49
 msgid "5. Derechos"
-msgstr ""
+msgstr "5. Rechte"
 
 #: .\appIurrelan\templates\legal\privacidad.html:51
 msgid ""
 "\n"
-"        Cualquier persona tiene derecho a obtener confirmación sobre si en "
+"        Cualquier persona tiene derecho a obtener confirmación sobre si en "
 "Iurrelan estamos tratando datos personales que les conciernan, o no. Las "
 "personas interesadas tienen derecho a:\n"
-"        "
+"        "
 msgstr ""
+"\n"
+"                Jede Person hat das Recht, eine Bestätigung darüber zu "
+"erhalten, ob wir bei Iurrelan sie betreffende personenbezogene Daten "
+"verarbeiten oder nicht. Interessierte Personen haben das Recht:\n"
+"                "
 
 #: .\appIurrelan\templates\legal\privacidad.html:56
 msgid "Acceder a sus datos personales."
-msgstr ""
+msgstr "Auf ihre persönlichen Daten zuzugreifen."
 
 #: .\appIurrelan\templates\legal\privacidad.html:57
 msgid "Solicitar la rectificación de los datos inexactos."
-msgstr ""
+msgstr "Die Berichtigung unrichtiger Daten zu beantragen."
 
 #: .\appIurrelan\templates\legal\privacidad.html:58
 msgid ""
 "Solicitar su supresión cuando, entre otros motivos, los datos ya no sean "
 "necesarios para los fines que fueron recogidos."
 msgstr ""
+"Ihre Löschung zu beantragen, wenn die Daten unter anderem für die Zwecke, "
+"für die sie erhoben wurden, nicht mehr erforderlich sind."
 
 #: .\appIurrelan\templates\legal\privacidad.html:59
 msgid "Oponerse al tratamiento."
-msgstr ""
+msgstr "Widerspruch gegen die Verarbeitung einzulegen."
 
 #: .\appIurrelan\templates\legal\privacidad.html:60
 msgid "Solicitar la limitación del tratamiento."
-msgstr ""
+msgstr "Die Einschränkung der Verarbeitung zu verlangen."
 
 #: .\appIurrelan\templates\legal\privacidad.html:63
 msgid "Para ejercer estos derechos, puede enviar un correo electrónico a"
-msgstr ""
+msgstr "Um diese Rechte auszuüben, können Sie eine E-Mail senden an"
 
 #: .\appIurrelan\templates\legal\privacidad.html:65
 msgid "acreditando su identidad."
-msgstr ""
+msgstr "und Ihre Identität nachweisen."
 
 #: .\appIurrelan\templates\maquinaria.html:6
 msgid "Parque de<br>Maquinaria"
-msgstr ""
+msgstr "Maschinen-<br>park"
 
 #: .\appIurrelan\templates\maquinaria.html:7
 msgid ""
 "Tecnología de vanguardia para afrontar los retos más exigentes de la "
 "industria."
 msgstr ""
+"Modernste Technologie, um den anspruchsvollsten Herausforderungen der "
+"Industrie gerecht zu werden."
 
 #: .\appIurrelan\templates\maquinaria.html:193
 msgid "Todas"
-msgstr ""
+msgstr "Alle"
 
 #: .\appIurrelan\templates\maquinaria.html:207
 msgid "Maquinaria Iurrelan"
-msgstr ""
+msgstr "Iurrelan Maschinenpark"
 
 #: .\appIurrelan\templates\maquinaria.html:224
 msgid "No hay maquinaria registrada aún."
-msgstr ""
+msgstr "Es ist noch keine Maschine registriert."
 
 #: .\appIurrelan\templates\maquinaria.html:225
 msgid "Accede al panel de administración para añadir máquinas."
-msgstr ""
+msgstr "Greifen Sie auf das Administrations-Panel zu, um Maschinen hinzuzufügen."
 
 #: .\appIurrelan\templates\maquinaria.html:230
 msgid "No hay máquinas en esta categoría."
-msgstr ""
+msgstr "In dieser Kategorie befinden sich keine Maschinen."
 
 #: .\appIurrelan\templates\rebarbado.html:7
 msgid ""
 "Sistemas de eliminación de material excedente. Precisión manual y potencia "
 "industrial."
 msgstr ""
+"Systeme zur Entfernung von überschüssigem Material. Manuelle Präzision und "
+"industrielle Leistung."
 
 #: .\appIurrelan\templates\rebarbado.html:183
 msgid "El Valor del"
-msgstr ""
+msgstr "Der Wert perfekten"
 
 #: .\appIurrelan\templates\rebarbado.html:183
 msgid "Rebarbado Perfecto"
-msgstr ""
+msgstr "Entgratens"
 
 #: .\appIurrelan\templates\rebarbado.html:185
 msgid ""
-"\n"
-"                El rebarbado no es solo un paso final; es la garantía de "
-"calidad, seguridad y funcionalidad de cada pieza metálica. En Iurrelan "
-"eliminamos cantos vivos...\n"
-"                "
+"El rebarbado no es solo un paso final; es la garantía de calidad, seguridad "
+"y funcionalidad de cada pieza metálica. En Iurrelan eliminamos cantos "
+"vivos..."
 msgstr ""
+"Das Entgraten ist nicht nur ein letzter Schritt; es ist die Garantie für "
+"Qualität, Sicherheit und Funktionalität jedes Metallteils. Bei Iurrelan "
+"entfernen wir scharfe Kanten..."
+
+#: .\appIurrelan\templates\rebarbado.html:187
+msgid "Mayor seguridad en la manipulación posterior"
+msgstr "Höhere Sicherheit bei der späteren Handhabung"
+
+#: .\appIurrelan\templates\rebarbado.html:188
+msgid "Adherencia perfecta para pintura y tratamientos"
+msgstr "Perfekte Haftung für Farben und Behandlungen"
 
 #: .\appIurrelan\templates\rebarbado.html:189
-msgid "Mayor seguridad en la manipulación posterior"
-msgstr ""
-
-#: .\appIurrelan\templates\rebarbado.html:190
-msgid "Adherencia perfecta para pintura y tratamientos"
-msgstr ""
-
-#: .\appIurrelan\templates\rebarbado.html:191
 msgid "Estética profesional y acabados uniformes"
-msgstr ""
+msgstr "Professionelle Ästhetik und gleichmäßige Oberflächen"
 
-#: .\appIurrelan\templates\rebarbado.html:205
+#: .\appIurrelan\templates\rebarbado.html:203
 msgid "Rebabado Manual"
-msgstr ""
+msgstr "Manuelles Entgraten"
 
-#: .\appIurrelan\templates\rebarbado.html:209
+#: .\appIurrelan\templates\rebarbado.html:207
 msgid "REBARBADO <br> MEDIANTE<br>AMOLADORAS"
-msgstr ""
+msgstr "ENTGRATEN <br> MIT<br>WINKELSCHLEIFERN"
 
-#: .\appIurrelan\templates\rebarbado.html:210
+#: .\appIurrelan\templates\rebarbado.html:208
 msgid ""
 "Intervención directa mediante herramientas portátiles para zonas complejas. "
 "Nuestros técnicos aplican discos de desbaste y láminas abrasivas para "
 "eliminar cordones de soldadura, suavizar aristas y corregir defectos "
 "superficiales con precisión geométrica."
 msgstr ""
+"Direkte Bearbeitung mit tragbaren Werkzeugen für komplexe Bereiche. Unsere "
+"Techniker verwenden Schruppscheiben und Fächerschleifscheiben, um "
+"Schweißnähte zu entfernen, Kanten zu glätten und Oberflächenfehler mit "
+"geometrischer Präzision zu korrigieren."
+
+#: .\appIurrelan\templates\rebarbado.html:211
+msgid "ACABADO FINO"
+msgstr "FEINES FINISH"
+
+#: .\appIurrelan\templates\rebarbado.html:212
+msgid "FLEXIBILIDAD"
+msgstr "FLEXIBILITÄT"
 
 #: .\appIurrelan\templates\rebarbado.html:213
-msgid "ACABADO FINO"
-msgstr ""
-
-#: .\appIurrelan\templates\rebarbado.html:214
-msgid "FLEXIBILIDAD"
-msgstr ""
-
-#: .\appIurrelan\templates\rebarbado.html:215
 msgid "ACCESO DIFÍCIL"
-msgstr ""
+msgstr "SCHWER ZUGÄNGLICH"
 
-#: .\appIurrelan\templates\rebarbado.html:221
+#: .\appIurrelan\templates\rebarbado.html:219
 msgid "Rebabado Suspendido"
-msgstr ""
+msgstr "Hängendes Entgraten"
 
-#: .\appIurrelan\templates\rebarbado.html:225
+#: .\appIurrelan\templates\rebarbado.html:223
 msgid "REBARBADO <br> MEDIANTE<br> MÁQUINAS <br>SUSPENDIDAS"
-msgstr ""
+msgstr "ENTGRATEN <br> MIT<br> HÄNGE-<br>MASCHINEN"
 
-#: .\appIurrelan\templates\rebarbado.html:226
+#: .\appIurrelan\templates\rebarbado.html:224
 msgid ""
 "Sistemas pendulares de alta potencia para el procesamiento de grandes "
 "superficies. La suspensión ingrávida permite al operario aplicar presiones "
 "de trabajo elevadas y constantes, logrando tasas de remoción de material "
 "superiores en piezas de gran tonelaje."
 msgstr ""
+"Leistungsstarke Pendelsysteme für die Bearbeitung großer Oberflächen. Die "
+"schwerelose Aufhängung ermöglicht es dem Bediener, hohe und konstante "
+"Arbeitsdrücke anzuwenden, wodurch bei schweren Teilen höhere "
+"Materialabtragsraten erzielt werden."
+
+#: .\appIurrelan\templates\rebarbado.html:227
+msgid "ALTA POTENCIA"
+msgstr "HOHE LEISTUNG"
+
+#: .\appIurrelan\templates\rebarbado.html:228
+msgid "RENDIMIENTO"
+msgstr "LEISTUNGSFÄHIGKEIT"
 
 #: .\appIurrelan\templates\rebarbado.html:229
-msgid "ALTA POTENCIA"
-msgstr ""
-
-#: .\appIurrelan\templates\rebarbado.html:230
-msgid "RENDIMIENTO"
-msgstr ""
-
-#: .\appIurrelan\templates\rebarbado.html:231
 msgid "ERGONOMÍA"
-msgstr ""
+msgstr "ERGONOMIE"
 
 #: .\appIurrelan\templates\servicios.html:5
 msgid "Servicios Industriales"
-msgstr ""
+msgstr "Industrielle Dienstleistungen"
 
 #: .\appIurrelan\templates\servicios.html:9
 msgid "Catálogo de <span class='highlight'>Servicios</span>"
-msgstr ""
+msgstr "<span class='highlight'>Dienstleistungs</span>-Katalog"
 
 #: .\appIurrelan\templates\servicios.html:10
 msgid ""
 "Soluciones integrales de transformación metálica con certificación de "
 "calidad en cada etapa del proceso."
 msgstr ""
+"Umfassende Lösungen für die Metallverarbeitung mit Qualitätszertifizierung "
+"in jeder Phase des Prozesses."
 
 #: .\appIurrelan\templates\servicios.html:162
 msgid ""
-"\n"
-"                        Tecnología de corte avanzada para cualquier espesor. "
-"Combinamos la potencia del corte con arco aire con la precisión del corte "
-"con soplete para entregar piezas listas para el siguiente proceso.\n"
-"                        "
+"Tecnología de corte avanzada para cualquier espesor. Combinamos la potencia "
+"del corte con arco aire con la precisión del corte con soplete para entregar "
+"piezas listas para el siguiente proceso."
 msgstr ""
+"Fortschrittliche Schneidtechnologie für jede Dicke. Wir kombinieren die "
+"Leistung des Lichtbogen-Druckluft-Schneidens mit der Präzision des "
+"Brennschneidens, um Teile zu liefern, die für den nächsten Prozess bereit "
+"sind."
 
-#: .\appIurrelan\templates\servicios.html:167
+#: .\appIurrelan\templates\servicios.html:165
 msgid "Arco Aire"
-msgstr ""
+msgstr "Lichtbogen-Druckluft"
+
+#: .\appIurrelan\templates\servicios.html:166
+msgid "Soplete"
+msgstr "Brennschneiden"
 
 #: .\appIurrelan\templates\servicios.html:168
-msgid "Soplete"
-msgstr ""
-
-#: .\appIurrelan\templates\servicios.html:170
-#: .\appIurrelan\templates\servicios.html:212
-#: .\appIurrelan\templates\servicios.html:232
-#: .\appIurrelan\templates\servicios.html:253
+#: .\appIurrelan\templates\servicios.html:206
+#: .\appIurrelan\templates\servicios.html:224
+#: .\appIurrelan\templates\servicios.html:243
 msgid "Más detalles"
-msgstr ""
+msgstr "Weitere Details"
 
-#: .\appIurrelan\templates\servicios.html:177
-#: .\appIurrelan\templates\servicios.html:180
+#: .\appIurrelan\templates\servicios.html:175
+#: .\appIurrelan\templates\servicios.html:178
 msgid "Rebabado"
-msgstr ""
+msgstr "Entgraten"
 
-#: .\appIurrelan\templates\servicios.html:182
+#: .\appIurrelan\templates\servicios.html:180
 msgid ""
-"\n"
-"                        Eliminación manual y mecánica de aristas cortantes y "
-"excesos de material. Garantizamos la seguridad de manipulación y preparamos "
-"la pieza para un ajuste perfecto.\n"
-"                        "
+"Eliminación manual y mecánica de aristas cortantes y excesos de material. "
+"Garantizamos la seguridad de manipulación y preparamos la pieza para un "
+"ajuste perfecto."
 msgstr ""
+"Manuelle und mechanische Entfernung von scharfen Kanten und überschüssigem "
+"Material. Wir garantieren die Handhabungssicherheit und bereiten das Teil "
+"für eine perfekte Passform vor."
+
+#: .\appIurrelan\templates\servicios.html:183
+msgid "Amoladoras"
+msgstr "Winkelschleifer"
+
+#: .\appIurrelan\templates\servicios.html:184
+msgid "Máquinas Suspendidas"
+msgstr "Hängemaschinen"
+
+#: .\appIurrelan\templates\servicios.html:185
+msgid "Pulido"
+msgstr "Polieren"
 
 #: .\appIurrelan\templates\servicios.html:187
-msgid "Amoladoras"
-msgstr ""
-
-#: .\appIurrelan\templates\servicios.html:188
-msgid "Máquinas Suspendidas"
-msgstr ""
-
-#: .\appIurrelan\templates\servicios.html:189
-msgid "Pulido"
-msgstr ""
-
-#: .\appIurrelan\templates\servicios.html:191
 msgid "Más Detalles"
-msgstr ""
+msgstr "Weitere Details"
 
-#: .\appIurrelan\templates\servicios.html:203
+#: .\appIurrelan\templates\servicios.html:199
 msgid ""
-"\n"
-"                        Uniones metálicas de alta integridad realizadas por "
-"soldadores homologados. Especialistas en estructuras complejas y materiales "
-"diversos.\n"
-"                        "
+"Uniones metálicas de alta integridad realizadas por soldadores homologados. "
+"Especialistas en estructuras complejas y materiales diversos."
 msgstr ""
+"Hochintegre Metallverbindungen durch zertifizierte Schweißer. Spezialisten "
+"für komplexe Strukturen und verschiedene Materialien."
 
-#: .\appIurrelan\templates\servicios.html:210
+#: .\appIurrelan\templates\servicios.html:204
 msgid "Saneado y Recargues"
-msgstr ""
+msgstr "Sanierung und Auftragsschweißen"
 
-#: .\appIurrelan\templates\servicios.html:224
+#: .\appIurrelan\templates\servicios.html:218
 msgid ""
-"\n"
-"                        Preparación superficial mediante proyección de "
-"abrasivos. Limpieza profunda para eliminar óxido y calamina, asegurando la "
-"máxima adherencia de la pintura posterior.\n"
-"                        "
+"Preparación superficial mediante proyección de abrasivos. Limpieza profunda "
+"para eliminar óxido y calamina, asegurando la máxima adherencia de la "
+"pintura posterior."
 msgstr ""
+"Oberflächenvorbereitung durch Strahlen von Schleifmitteln. Tiefenreinigung "
+"zur Entfernung von Rost und Zunder, um eine maximale Haftung des "
+"nachfolgenden Lacks zu gewährleisten."
 
-#: .\appIurrelan\templates\servicios.html:229
+#: .\appIurrelan\templates\servicios.html:221
 msgid "Inoxidable (2.000kg)"
-msgstr ""
+msgstr "Edelstahl (2.000kg)"
 
-#: .\appIurrelan\templates\servicios.html:230
+#: .\appIurrelan\templates\servicios.html:222
 msgid "Carbono (1.000kg)"
+msgstr "Kohlenstoff (1.000kg)"
+
+#: .\appIurrelan\templates\servicios.html:231
+msgid "Acabado END"
+msgstr "ZfP-Veredelung"
+
+#: .\appIurrelan\templates\servicios.html:236
+msgid ""
+"Verificación final de calidad. Realizamos Ensayos No Destructivos y "
+"tratamientos químicos para entregar piezas con garantía total de integridad."
 msgstr ""
+"Abschließende Qualitätsprüfung. Wir führen zerstörungsfreie Prüfungen und "
+"chemische Behandlungen durch, um Teile mit einer umfassenden "
+"Integritätsgarantie zu liefern."
 
 #: .\appIurrelan\templates\servicios.html:239
-msgid "Acabado END"
-msgstr ""
-
-#: .\appIurrelan\templates\servicios.html:244
-msgid ""
-"\n"
-"                        Verificación final de calidad. Realizamos Ensayos No "
-"Destructivos y tratamientos químicos para entregar piezas con garantía total "
-"de integridad.\n"
-"                        "
-msgstr ""
-
-#: .\appIurrelan\templates\servicios.html:249
 msgid "Decapado Ácido"
-msgstr ""
+msgstr "Säurebeizen"
 
 #: .\appIurrelan\templates\soldadura.html:6
 msgid "Soldadura<br>Industrial"
-msgstr ""
+msgstr "Industrielles<br>Schweißen"
 
 #: .\appIurrelan\templates\soldadura.html:7
 msgid ""
 "Soluciones de unión y reparación. Expertos en MIG-MAG, TIG y recuperación de "
 "componentes."
 msgstr ""
+"Füge- und Reparaturlösungen. Experten für MIG-MAG, WIG und "
+"Komponentenrückgewinnung."
 
 #: .\appIurrelan\templates\soldadura.html:135
 msgid "Nuestros Servicios de"
-msgstr ""
+msgstr "Unsere Dienstleistungen im Bereich"
 
 #: .\appIurrelan\templates\soldadura.html:138
 msgid ""
@@ -1566,14 +1777,17 @@ msgid ""
 "productividad industrial hasta la precisión artesanal y la recuperación de "
 "piezas críticas."
 msgstr ""
+"Wir bieten Schweißprozesse an, die an jeden Bedarf angepasst sind, von der "
+"hohen industriellen Produktivität bis zur handwerklichen Präzision und der "
+"Rückgewinnung kritischer Teile."
 
 #: .\appIurrelan\templates\soldadura.html:144
 msgid "Soldadura MIG MAG Semiautomática"
-msgstr ""
+msgstr "Halbautomatisches MIG-MAG-Schweißen"
 
 #: .\appIurrelan\templates\soldadura.html:147
 msgid "Soldadura MIG-MAG Semiautomática"
-msgstr ""
+msgstr "Halbautomatisches MIG-MAG-Schweißen"
 
 #: .\appIurrelan\templates\soldadura.html:148
 msgid ""
@@ -1583,14 +1797,18 @@ msgid ""
 "optimizando los tiempos de fabricación sin sacrificar la resistencia "
 "mecánica."
 msgstr ""
+"Hochproduktiver Prozess, ideal für Kohlenstoffstähle und Edelstähle. Wir "
+"verwenden modernste Ausrüstung, die einen konstanten Materialauftrag, "
+"tiefen Einbrand und robuste Verbindungen garantiert und so die "
+"Fertigungszeiten ohne Einbußen bei der mechanischen Festigkeit optimiert."
 
 #: .\appIurrelan\templates\soldadura.html:154
 msgid "Soldadura TIG Precisión"
-msgstr ""
+msgstr "WIG-Präzisionsschweißen"
 
 #: .\appIurrelan\templates\soldadura.html:157
 msgid "Soldadura TIG"
-msgstr ""
+msgstr "WIG-Schweißen"
 
 #: .\appIurrelan\templates\soldadura.html:158
 msgid ""
@@ -1599,11 +1817,16 @@ msgid ""
 "arco, logrando cordones limpios, sin proyecciones y de altísima calidad "
 "visual y estructural, perfectos para piezas visibles o de precisión."
 msgstr ""
+"Die ultimative Wahl für ästhetische Oberflächen und anspruchsvolle "
+"Materialien wie Edelstahl. Dieser Prozess ermöglicht uns eine absolute "
+"Kontrolle über den Lichtbogen, um saubere, spritzerfreie Nähte von höchster "
+"optischer und struktureller Qualität zu erzielen, perfekt für sichtbare "
+"oder Präzisionsteile."
 
 #: .\appIurrelan\templates\soldadura.html:164
 #: .\appIurrelan\templates\soldadura.html:167
 msgid "Sanear Piezas y Recargues"
-msgstr ""
+msgstr "Teilesanierung und Auftragsschweißen"
 
 #: .\appIurrelan\templates\soldadura.html:168
 msgid ""
@@ -1612,79 +1835,84 @@ msgid ""
 "desgaste. Un servicio esencial para mantenimiento correctivo que devuelve a "
 "la pieza sus propiedades originales o mejoradas."
 msgstr ""
+"Wir verlängern die Lebensdauer Ihrer Industriekomponenten. Wir führen Riss-"
+"Sanierungen, die Wiederherstellung abgenutzter Geometrien und "
+"verschleißfeste Hartauftragungen durch. Ein wesentlicher Service für die "
+"korrektive Wartung, der dem Teil seine ursprünglichen oder verbesserte "
+"Eigenschaften zurückgibt."
 
 #: .\appIurrelan\templates\soldadura.html:175
 msgid "Materiales que"
-msgstr ""
+msgstr "Materialien, die"
 
 #: .\appIurrelan\templates\soldadura.html:175
 msgid "Trabajamos"
-msgstr ""
+msgstr "wir bearbeiten"
 
 #: .\appIurrelan\templates\soldadura.html:181
 msgid "Aceros al carbono"
-msgstr ""
+msgstr "Kohlenstoffstähle"
 
 #: .\appIurrelan\templates\soldadura.html:182
 msgid "(CA6NM, LCC, WC6…)"
-msgstr ""
+msgstr "(CA6NM, LCC, WC6…)"
 
 #: .\appIurrelan\templates\soldadura.html:187
 msgid "Aceros Inoxidables"
-msgstr ""
+msgstr "Edelstähle"
 
 #: .\appIurrelan\templates\soldadura.html:188
 msgid "(CF3M, CF8M, DUPLEX (4A), SUPERDUPLEX (5A), CK3M, INCONEL 625…)"
-msgstr ""
+msgstr "(CF3M, CF8M, DUPLEX (4A), SUPERDUPLEX (5A), CK3M, INCONEL 625…)"
 
 #: .\appIurrelan\templates\soldadura.html:193
 msgid "Garantía de"
-msgstr ""
+msgstr "Garantie der"
 
 #: .\appIurrelan\templates\soldadura.html:193
 msgid "Ejecución"
-msgstr ""
+msgstr "Ausführung"
 
 #: .\appIurrelan\templates\soldadura.html:198
 msgid "Versatilidad"
-msgstr ""
+msgstr "Vielseitigkeit"
 
 #: .\appIurrelan\templates\soldadura.html:199
 msgid "Aceros al Carbono y Aceros Inoxidables"
-msgstr ""
+msgstr "Kohlenstoffstähle und Edelstähle"
 
 #: .\appIurrelan\templates\soldadura.html:203
 msgid "Cualificación"
-msgstr ""
+msgstr "Qualifikation"
 
 #: .\appIurrelan\templates\soldadura.html:204
 msgid "Personal Homologado"
-msgstr ""
+msgstr "Zertifiziertes Personal"
 
 #: .\appIurrelan\templates\soldadura.html:208
 msgid "Reparación"
-msgstr ""
+msgstr "Reparatur"
 
 #: .\appIurrelan\templates\soldadura.html:209
 msgid "Recuperación de piezas"
-msgstr ""
+msgstr "Teilerückgewinnung"
 
 #: .\appIurrelan\templates\soldadura.html:214
 msgid "Inspección de acabado"
-msgstr ""
+msgstr "Endkontrolle"
 
 #: .\projIurrelan\settings.py:120
 msgid "Español"
-msgstr ""
+msgstr "Spanisch"
 
 #: .\projIurrelan\settings.py:121
 msgid "English"
-msgstr ""
+msgstr "Englisch"
 
 #: .\projIurrelan\settings.py:122
 msgid "Deutsch"
-msgstr ""
+msgstr "Deutsch"
 
 #: .\projIurrelan\settings.py:123
 msgid "Euskera"
-msgstr ""
+msgstr "Baskisch"
