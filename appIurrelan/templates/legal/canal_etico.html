@@ -71,5 +71,67 @@
                 <em>{% trans "Última actualización: Junio 2023 | Documento revisado conforme al Plan de Prevención Penal de Servicios Metalúrgicos Iurrelan." %}</em>
             </p>
         </div>
+        <div class="contact-form-wrapper" style="margin-top: 60px; max-width: 900px; margin-left: auto; margin-right: auto; background-color: #1a1a1a; padding: 40px; border-radius: 8px; border-top: 4px solid #ff4444;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <i class="fas fa-shield-alt" style="font-size: 2.5rem; color: #ff4444; margin-bottom: 15px;"></i>
+                <h3 class="section-title" style="display: block; color: white; font-size: 1.8rem; margin-bottom: 10px;">
+                    {% trans "Enviar una" %} <span style="color: #ff4444;">{% trans "Comunicación" %}</span>
+                </h3>
+                <p style="color: #bbb; font-size: 1rem;">
+                    {% trans "Puede enviar este formulario de forma totalmente anónima. Si desea recibir información sobre el estado de su comunicación, indique sus datos de contacto." %}
+                </p>
+            </div>
+
+            {% if messages %}
+                <div style="margin-bottom: 20px;">
+                    {% for message in messages %}
+                        <div style="padding: 15px; border-radius: 4px; background-color: {% if message.tags == 'success' %}#d4edda{% else %}#f8d7da{% endif %}; color: {% if message.tags == 'success' %}#155724{% else %}#721c24{% endif %}; border: 1px solid {% if message.tags == 'success' %}#c3e6cb{% else %}#f5c6cb{% endif %};">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <form method="post" class="industrial-form">
+                {% csrf_token %}
+                
+                <div class="form-group">
+                    <label style="color: #ddd;">{{ form.contacto.label }}</label>
+                    {{ form.contacto }}
+                    {% if form.contacto.errors %} <div style="color: #ff4444; font-size: 0.85rem; margin-top: 5px;">{{ form.contacto.errors.0 }}</div> {% endif %}
+                </div>
+
+                <div class="form-group" style="margin-top: 15px;">
+                    <label style="color: #ddd;">{{ form.asunto.label }} <span style="color: #ff4444;">*</span></label>
+                    {{ form.asunto }}
+                    {% if form.asunto.errors %} <div style="color: #ff4444; font-size: 0.85rem; margin-top: 5px;">{{ form.asunto.errors.0 }}</div> {% endif %}
+                </div>
+
+                <div class="form-group" style="margin-top: 15px;">
+                    <label style="color: #ddd;">{{ form.hechos.label }} <span style="color: #ff4444;">*</span></label>
+                    {{ form.hechos }}
+                    {% if form.hechos.errors %} <div style="color: #ff4444; font-size: 0.85rem; margin-top: 5px;">{{ form.hechos.errors.0 }}</div> {% endif %}
+                </div>
+
+                <div class="form-group" style="margin-top: 20px;">
+                    <label style="margin-bottom: 10px; display:block; color: #ddd;">{{ form.captcha.label }}</label>
+                    {{ form.captcha }}
+                    {% if form.captcha.errors %} <div style="color: #ff4444; font-size: 0.85rem; margin-top: 5px;">{{ form.captcha.errors.0 }}</div> {% endif %}
+                </div>
+
+                <div class="checkbox-group" style="margin-top: 20px; align-items: flex-start;">
+                    {{ form.privacidad }}
+                    <label for="{{ form.privacidad.id_for_label }}" style="color: #bbb; line-height: 1.4;">
+                        {{ form.privacidad.label }}
+                    </label>
+                    {% if form.privacidad.errors %} <div style="color: #ff4444; font-size: 0.85rem; display: block; width: 100%; margin-top: 5px;">{{ form.privacidad.errors.0 }}</div> {% endif %}
+                </div>
+
+                <button type="submit" class="btn-submit-industrial" style="width: 100%; margin-top: 30px; background-color: #ff4444; color: white;">
+                    {% trans "Enviar Comunicación Segura" %} <i class="fas fa-lock"></i>
+                </button>
+            </form>
+        </div>
+        
     </section>
 {% endblock %}

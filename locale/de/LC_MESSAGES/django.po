@@ -1822,3 +1822,24 @@ msgstr "Deutsch"
 #: .\projIurrelan\settings.py:123
 msgid "Euskera"
 msgstr "Baskisch"
+
+msgid "Enviar una"
+msgstr "Meldung"
+
+msgid "Comunicación"
+msgstr "einreichen"
+
+msgid "Puede enviar este formulario de forma totalmente anónima. Si desea recibir información sobre el estado de su comunicación, indique sus datos de contacto."
+msgstr "Sie können dieses Formular völlig anonym einreichen. Wenn Sie Informationen über den Status Ihrer Meldung erhalten möchten, geben Sie bitte Ihre Kontaktdaten an."
+
+msgid "Enviar Comunicación Segura"
+msgstr "Sichere Meldung senden"
+
+msgid "Asunto de la denuncia"
+msgstr "Gegenstand der Meldung"
+
+msgid "Resumen breve de la comunicación..."
+msgstr "Kurze Zusammenfassung der Mitteilung..."
+
+msgid "Describa de la forma más detallada posible los hechos..."
+msgstr "Beschreiben Sie den Sachverhalt so detailliert wie möglich..."

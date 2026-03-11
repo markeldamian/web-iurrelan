@@ -3,12 +3,28 @@ from django_recaptcha.fields import ReCaptchaField
 from django.utils.translation import gettext_lazy as _
 
 class DenunciaForm(forms.Form):
-    contacto = forms.CharField(required=False, label=_(u"Datos de contacto (Opcional)"), widget=forms.TextInput(attrs={'placeholder': 'Dejar en blanco para denuncia anónima', 'class': 'form-input'}))
-    asunto = forms.CharField(required=True, label="Asunto de la denuncia", widget=forms.TextInput(attrs={'placeholder': 'Ej: Incumplimiento de normativa de seguridad...', 'class': 'form-input'}))
-    mensaje = forms.CharField(required=True, label=_("Descripción de los hechos"), widget=forms.Textarea(attrs={'placeholder': 'Describa los hechos con el mayor detalle posible...', 'class': 'form-textarea', 'rows': 5}))
-    captcha = ReCaptchaField(label=_("Verificación de seguridad")) 
-    privacidad = forms.BooleanField(required=True, label=_("He leído y acepto la Política de Privacidad y comprendo el funcionamiento del Canal Ético."))
-
+    contacto = forms.CharField(
+        label=_('Datos de contacto (Opcional)'),
+        required=False,
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ej: Juan Pérez - juan@email.com o Tel: 123456789'})
+    )
+    asunto = forms.CharField(
+        label=_('Asunto de la denuncia'),
+        required=True,
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': _('Resumen breve de la comunicación...')})
+    )
+    hechos = forms.CharField(
+        label=_('Descripción de los hechos'),
+        required=True,
+        widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 6, 'placeholder': _('Describa de la forma más detallada posible los hechos...')})
+    )
+    captcha = ReCaptchaField(
+        label=_('Verificación de seguridad')
+    )
+    privacidad = forms.BooleanField(
+        label=_('He leído y acepto la Política de Privacidad y comprendo el funcionamiento del Canal Ético.'),
+        required=True
+    )
 class ContactoForm(forms.Form):
     nombre = forms.CharField(required=True, label=_("Nombre Completo"), widget=forms.TextInput(attrs={'class': 'form-input', 'placeholder': _('Tu nombre')}))
     email = forms.EmailField(required=True, label=_("Correo Electrónico"), widget=forms.EmailInput(attrs={'class': 'form-input', 'placeholder': 'ejemplo@correo.com'}))

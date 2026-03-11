@@ -41,48 +41,54 @@ def canal_etico_view(request):
     if request.method == 'POST':
         form = DenunciaForm(request.POST)
         if form.is_valid():
-            # Extraer datos
-            asunto = form.cleaned_data['asunto']
-            mensaje_usuario = form.cleaned_data['mensaje']
-            contacto = form.cleaned_data['contacto'] or "ANÓNIMO"
+            contacto = form.cleaned_data.get('contacto', 'Anónimo')
+            asunto = form.cleaned_data['asunto'] # <-- Recogemos el asunto
+            hechos = form.cleaned_data['hechos']
             
-            # Crear el cuerpo del correo
-            cuerpo_email = f"""
-            NUEVA DENUNCIA RECIBIDA DESDE LA WEB (CANAL ÉTICO)
-            ----------------------------------------------------
-            ASUNTO: {asunto}
-            
-            IDENTIDAD DEL DENUNCIANTE: {contacto}
-            
-            DESCRIPCIÓN DE LOS HECHOS:
-            {mensaje_usuario}
-            
-            ----------------------------------------------------
-            Este es un mensaje automático del sistema de cumplimiento normativo.
-            Se debe acusar recibo al denunciante en un plazo de 7 días (si facilitó contacto).
-            """
-            
-            # Enviar el correo
+            # Si el usuario lo deja en blanco, lo marcamos como Anónimo explícitamente
+            if not contacto.strip():
+                contacto = "Anónimo"
+
+            # Construimos el cuerpo del correo con los datos reales
+            cuerpo_mensaje = f"""
+NUEVA COMUNICACIÓN - CANAL ÉTICO
+--------------------------------
+
+ASUNTO: {asunto}
+
+DATOS DE CONTACTO:
+{contacto}
+
+DESCRIPCIÓN DE LOS HECHOS:
+{hechos}
+
+--------------------------------
+Este mensaje ha sido enviado desde el formulario seguro de la página web de Iurrelan.
+"""
+
             try:
-                send_mail(
-                    subject=f'CANAL ÉTICO: {asunto}',
-                    message=cuerpo_email,
-                    from_email='pruebamprog@gmail.com', # Remitente
-                    recipient_list=['canaldenuncias@aitabogados.com'], # Destinatario
-                    fail_silently=False,
+                # Enviamos el correo usando send_mail
+                email= EmailMessage(
+                    subject=f'DENUNCIA: {asunto}', # <-- Ponemos el asunto del usuario en el asunto del mail
+                    body=cuerpo_mensaje,
+                    from_email='iurrelanweb@gmail.com', # Remitente del sistema
+                    to=['canaldenuncias@aitabogados.com'], # Destinatario final
                 )
-                messages.success(request, 'Su denuncia ha sido enviada correctamente. Gracias por su colaboración.')
-                return redirect('home') # O redirigir a una página de "gracias"
-            except Exception as e:
-                messages.error(request, 'Error al enviar la denuncia. Por favor, inténtelo más tarde.')
+                email.send(fail_silently=False)
+
+                # Mensaje de éxito para el usuario
+                messages.success(request, 'Su comunicación ha sido enviada de forma segura y confidencial.')
+                return redirect('canal_etico')
                 
+            except Exception as e:
+                # Si falla el correo, mostramos el error exacto en pantalla para depurar
+                messages.error(request, f'Hubo un error del servidor al enviar la comunicación: {e}')
+        else:
+            messages.error(request, 'Por favor, corrija los errores del formulario antes de enviar.')
     else:
         form = DenunciaForm()
-
+        
     return render(request, 'legal/canal_etico.html', {'form': form})
-
-# Create your views here.
-
 def home_view(request):
     return render(request, 'home.html')
 
@@ -109,7 +115,7 @@ def contacto_view(request):
                     email = EmailMessage(
                         subject=f'CONTACTO WEB: Mensaje de {nombre}',
                         body=cuerpo_email,
-                        from_email='pruebamprog@gmail.com', # Cambia a tu remitente
+                        from_email='iurrelanweb@gmail.com', # Cambia a tu remitente
                         to=['administracion@iurrelan.com'],       # Cambia al correo de la empresa
                         reply_to=[email_cliente],
                     )
@@ -147,7 +153,7 @@ Experiencia / Presentación:
                     email = EmailMessage(
                         subject=f"CV RECIBIDO: {nombre}",
                         body=cuerpo_email,
-                        from_email='pruebamprog@gmail.com', # Cambia a tu remitente
+                        from_email='iurrelanweb@gmail.com', # Cambia a tu remitente
                         to=['administracion@iurrelan.com'],       # Cambia al correo de rrhh/empresa
                         reply_to=[email_usr],
                     )
