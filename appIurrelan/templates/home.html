@@ -10,7 +10,7 @@
             <div class="card-image" style="background-image: url('{% static 'img/logoIurrelan.png' %}'); background-size: contain; background-repeat: no-repeat;"></div>
             <h3>{% trans "Empresa" %}</h3>
             <p>
-                {% blocktrans %}Más de 35 años de experiencia en el sector metalúrgico en Guipúzcoa. Un equipo experto comprometido.{% endblocktrans %}
+                {% blocktrans %}Más de 35 años de experiencia en el sector metalúrgico en Gipuzkoa. Un equipo experto comprometido.{% endblocktrans %}
             </p>
             <a href="{% url 'empresa' %}" class="card-link">{% trans "Saber más" %}</a>
         </div>
@@ -69,17 +69,20 @@
             </div>
 
             <div class="sectors-gallery">
-                <div class="sector-card" style="background-image: url('https://images.unsplash.com/photo-1532187643603-ba119ca4109e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <div class="sector-card" style="background-image: url('{% static 'img/rail.avif' %}');">
                     <div class="sector-overlay"><i class="fas fa-train"></i><h3>{% trans "Ferrocarril" %}</h3></div>
                 </div>
-                <div class="sector-card" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <div class="sector-card" style="background-image: url('{% static 'img/construccion.jpg' %}');">
                     <div class="sector-overlay"><i class="fas fa-city"></i><h3>{% trans "Construcción" %}</h3></div>
                 </div>
-                <div class="sector-card" style="background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
-                    <div class="sector-overlay"><i class="fas fa-bolt"></i><h3>{% trans "Energía" %}</h3></div>
+                <div class="sector-card" style="background-image: url('{% static 'img/gaspetrolio.avif' %}');">
+                    <div class="sector-overlay"><i class="fas fa-bolt"></i><h3>{% trans "Gas y Petróleo" %}</h3></div>
                 </div>
-                <div class="sector-card" style="background-image: url('{% static 'img/decapadoacido.jpg' %}');">
-                    <div class="sector-overlay"><i class="fas fa-tools"></i><h3>{% trans "Mantenimiento" %}</h3></div>
+                <div class="sector-card" style="background-image: url('{% static 'img/nuclear.jpg' %}');">
+                    <div class="sector-overlay"><i class="fas fa-atom"></i><h3>{% trans "Nuclear" %}</h3></div>
+                </div>
+                <div class="sector-card" style="background-image: url('{% static 'img/desalinizador.jpg' %}');">
+                    <div class="sector-overlay"><i class="fas fa-tint"></i><h3>{% trans "Desalinizador" %}</h3></div>
                 </div>
             </div>
         </div>

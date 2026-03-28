@@ -8,7 +8,6 @@ from .forms import DenunciaForm, ContactoForm, EmpleoForm
 from .models import Maquina
 
 
-# ... tus otras vistas (home_view, etc) ...
 def empresa_view(request):
     return render(request, 'empresa.html')
 
@@ -33,7 +32,6 @@ def servicios(request):
 
 def maquinaria(request):
     maquinas = Maquina.objects.all()
-    # Obtenemos las categorías únicas para los botones de filtro
     categorias = Maquina.objects.values_list('categoria', flat=True).distinct()
     return render(request, 'maquinaria.html', {'maquinas': maquinas, 'categorias': set(categorias)})
 
@@ -42,14 +40,12 @@ def canal_etico_view(request):
         form = DenunciaForm(request.POST)
         if form.is_valid():
             contacto = form.cleaned_data.get('contacto', 'Anónimo')
-            asunto = form.cleaned_data['asunto'] # <-- Recogemos el asunto
+            asunto = form.cleaned_data['asunto'] 
             hechos = form.cleaned_data['hechos']
             
-            # Si el usuario lo deja en blanco, lo marcamos como Anónimo explícitamente
             if not contacto.strip():
                 contacto = "Anónimo"
 
-            # Construimos el cuerpo del correo con los datos reales
             cuerpo_mensaje = f"""
 NUEVA COMUNICACIÓN - CANAL ÉTICO
 --------------------------------
@@ -67,21 +63,18 @@ Este mensaje ha sido enviado desde el formulario seguro de la página web de Iur
 """
 
             try:
-                # Enviamos el correo usando send_mail
                 email= EmailMessage(
-                    subject=f'DENUNCIA: {asunto}', # <-- Ponemos el asunto del usuario en el asunto del mail
+                    subject=f'DENUNCIA: {asunto}',
                     body=cuerpo_mensaje,
-                    from_email='iurrelanweb@gmail.com', # Remitente del sistema
-                    to=['canaldenuncias@aitabogados.com'], # Destinatario final
+                    from_email='iurrelanweb@gmail.com', 
+                    to=['canaldenuncias@aitabogados.com'], 
                 )
                 email.send(fail_silently=False)
 
-                # Mensaje de éxito para el usuario
                 messages.success(request, 'Su comunicación ha sido enviada de forma segura y confidencial.')
                 return redirect('canal_etico')
                 
             except Exception as e:
-                # Si falla el correo, mostramos el error exacto en pantalla para depurar
                 messages.error(request, f'Hubo un error del servidor al enviar la comunicación: {e}')
         else:
             messages.error(request, 'Por favor, corrija los errores del formulario antes de enviar.')
@@ -98,9 +91,6 @@ def contacto_view(request):
     form_empleo = EmpleoForm()
 
     if request.method == 'POST':
-        # ====================================================
-        # 1. PROCESAR FORMULARIO DE CONTACTO GENERAL
-        # ====================================================
         if 'btn_contacto' in request.POST:
             form_contacto = ContactoForm(request.POST)
             if form_contacto.is_valid():
@@ -115,21 +105,18 @@ def contacto_view(request):
                     email = EmailMessage(
                         subject=f'CONTACTO WEB: Mensaje de {nombre}',
                         body=cuerpo_email,
-                        from_email='iurrelanweb@gmail.com', # Cambia a tu remitente
-                        to=['administracion@iurrelan.com'],       # Cambia al correo de la empresa
+                        from_email='iurrelanweb@gmail.com', 
+                        to=['administracion@iurrelan.com'],       
                         reply_to=[email_cliente],
                     )
                     email.send(fail_silently=False)
                     messages.success(request, 'Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.')
-                    return redirect('contacto') # Asegúrate de que el nombre de la url es 'contacto'
+                    return redirect('contacto') 
                 except Exception as e:
                     messages.error(request, f'Error al enviar el mensaje de contacto: {e}')
             else:
                 messages.error(request, 'Error en el formulario de contacto. Revisa los campos marcados.')
 
-        # ====================================================
-        # 2. PROCESAR FORMULARIO DE EMPLEO
-        # ====================================================
         elif 'btn_empleo' in request.POST:
             form_empleo = EmpleoForm(request.POST, request.FILES)
             if form_empleo.is_valid():
@@ -153,12 +140,11 @@ Experiencia / Presentación:
                     email = EmailMessage(
                         subject=f"CV RECIBIDO: {nombre}",
                         body=cuerpo_email,
-                        from_email='iurrelanweb@gmail.com', # Cambia a tu remitente
-                        to=['administracion@iurrelan.com'],       # Cambia al correo de rrhh/empresa
+                        from_email='iurrelanweb@gmail.com', 
+                        to=['administracion@iurrelan.com'],      
                         reply_to=[email_usr],
                     )
                     
-                    # Adjuntar archivo de forma segura usando un archivo temporal
                     if archivo_cv:
                         temp_file_path = os.path.join(settings.BASE_DIR, archivo_cv.name)
                         with open(temp_file_path, 'wb+') as destination:
@@ -172,13 +158,11 @@ Experiencia / Presentación:
                         email.send(fail_silently=False)
 
                     messages.success(request, 'Tus datos han sido enviados con éxito. ¡Gracias por tu interés en trabajar con nosotros!')
-                    # Redirige anclado a la sección de empleo
                     url = reverse('contacto') + '#trabaja-con-nosotros'
                     return redirect(url)
                     
                 except Exception as e:
                     print(f"ERROR AL ENVIAR CORREO DE EMPLEO: {e}")
-                    # Limpieza por si falla
                     if 'temp_file_path' in locals() and os.path.exists(temp_file_path):
                         os.remove(temp_file_path)
                     messages.error(request, f'Hubo un error del servidor al enviar tus datos: {e}')
