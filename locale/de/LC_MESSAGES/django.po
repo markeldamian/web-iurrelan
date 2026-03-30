@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-11 10:06+0100\n"
+"POT-Creation-Date: 2026-03-11 15:11+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -107,7 +107,7 @@ msgid "Corte Láser"
 msgstr "Laserschneiden"
 
 #: .\appIurrelan\models.py:7 .\appIurrelan\templates\base.html:41
-#: .\appIurrelan\templates\base.html:102
+#: .\appIurrelan\templates\base.html:99
 #: .\appIurrelan\templates\maquinaria.html:195
 #: .\appIurrelan\templates\servicios.html:194
 #: .\appIurrelan\templates\servicios.html:197
@@ -197,7 +197,7 @@ msgid "Nuestros Procesos de"
 msgstr "Unsere Prozesse für"
 
 #: .\appIurrelan\templates\acabado.html:173
-#: .\appIurrelan\templates\base.html:44 .\appIurrelan\templates\base.html:98
+#: .\appIurrelan\templates\base.html:44 .\appIurrelan\templates\base.html:102
 #: .\appIurrelan\templates\servicios.html:234
 msgid "Acabado"
 msgstr "Oberflächenbehandlung"
@@ -335,7 +335,7 @@ msgstr "Unternehmen"
 msgid "Servicios"
 msgstr "Dienstleistungen"
 
-#: .\appIurrelan\templates\base.html:40 .\appIurrelan\templates\base.html:99
+#: .\appIurrelan\templates\base.html:40 .\appIurrelan\templates\base.html:98
 #: .\appIurrelan\templates\maquinaria.html:194
 #: .\appIurrelan\templates\servicios.html:157
 #: .\appIurrelan\templates\servicios.html:160
@@ -449,7 +449,7 @@ msgstr "Ich habe die Datenschutzrichtlinie gelesen und akzeptiere die"
 #: .\appIurrelan\templates\contacto.html:104
 #: .\appIurrelan\templates\contacto.html:165
 #: .\appIurrelan\templates\footer.html:44
-#: .\appIurrelan\templates\legal\aviso_legal.html:47
+#: .\appIurrelan\templates\legal\aviso_legal.html:45
 #: .\appIurrelan\templates\legal\privacidad.html:4
 #: .\appIurrelan\templates\legal\privacidad.html:8
 msgid "Política de Privacidad"
@@ -900,15 +900,19 @@ msgstr "Identifikationsdaten"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:20
 msgid ""
-"En cumplimiento con el deber de información recogido en "
+"\n"
+"                En cumplimiento con el deber de información recogido en "
 "artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad "
 "de la Información y del Comercio Electrónico (LSSICE), a continuación se "
-"reflejan los siguientes datos:"
+"reflejan los siguientes datos:\n"
+"                "
 msgstr ""
-"In Erfüllung der Informationspflicht gemäß Artikel 10 des "
+"\n"
+"                In Erfüllung der Informationspflicht gemäß Artikel 10 des "
 "Gesetzes 34/2002 vom 11. Juli über Dienste der Informationsgesellschaft und "
 "den elektronischen Geschäftsverkehr (LSSICE) werden nachfolgend folgende "
-"Daten aufgeführt:"
+"Daten aufgeführt:\n"
+"                "
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:25
 msgid "Razón Social"
@@ -1215,7 +1219,7 @@ msgstr "Unabhängige Untersuchung des Sachverhalts."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:66
 msgid "Emisión de un informe sobre la investigación."
-msgstr "Erstellung eines Untersuchungsberichts."
+msgstr "Ausstellung eines Untersuchungsberichts."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:67
 msgid ""
@@ -1229,6 +1233,18 @@ msgid ""
 msgstr ""
 "Letzte Aktualisierung: Juni 2023 | Dokument überprüft in Übereinstimmung "
 "mit dem strafrechtlichen Präventionsplan von Servicios Metalúrgicos Iurrelan."
+
+#: .\appIurrelan\forms.py:12
+msgid "Asunto de la denuncia"
+msgstr "Gegenstand der Meldung"
+
+#: .\appIurrelan\forms.py:14
+msgid "Resumen breve de la comunicación..."
+msgstr "Kurze Zusammenfassung der Mitteilung..."
+
+#: .\appIurrelan\forms.py:19
+msgid "Describa de la forma más detallada posible los hechos..."
+msgstr "Beschreiben Sie den Sachverhalt so detailliert wie möglich..."
 
 #: .\appIurrelan\templates\legal\cookies.html:10
 msgid "1. ¿Qué son las cookies?"
@@ -1568,7 +1584,8 @@ msgid ""
 msgstr ""
 "Fortschrittliche Schneidtechnologie für jede Dicke. Wir kombinieren die "
 "Leistung des Lichtbogen-Druckluft-Schneidens mit der Präzision des "
-"Brennschneidens, um Teile zu liefern, die für den nächsten Prozess bereit sind."
+"Brennschneidens, um Teile zu liefern, die für den nächsten Prozess bereit "
+"sind."
 
 #: .\appIurrelan\templates\servicios.html:165
 msgid "Arco Aire"
@@ -1760,16 +1777,16 @@ msgid "Aceros al carbono"
 msgstr "Kohlenstoffstähle"
 
 #: .\appIurrelan\templates\soldadura.html:182
-msgid "(CA6NM, LCC, WC6…)"
-msgstr "(CA6NM, LCC, WC6…)"
+msgid "(LCC, WC6…)"
+msgstr "(LCC, WC6…)"
 
 #: .\appIurrelan\templates\soldadura.html:187
 msgid "Aceros Inoxidables"
 msgstr "Edelstähle"
 
 #: .\appIurrelan\templates\soldadura.html:188
-msgid "(CF3M, CF8M, DUPLEX (4A), SUPERDUPLEX (5A), CK3M, INCONEL 625…)"
-msgstr "(CF3M, CF8M, DUPLEX (4A), SUPERDUPLEX (5A), CK3M, INCONEL 625…)"
+msgid "(CF3M, CF8M, DUPLEX (4A), SUPERDUPLEX (5A), CK3M, INCONEL 625, CA6NM…)"
+msgstr "(CF3M, CF8M, DUPLEX (4A), SUPERDUPLEX (5A), CK3M, INCONEL 625, CA6NM…)"
 
 #: .\appIurrelan\templates\soldadura.html:193
 msgid "Garantía de"
@@ -1822,24 +1839,3 @@ msgstr "Deutsch"
 #: .\projIurrelan\settings.py:123
 msgid "Euskera"
 msgstr "Baskisch"
-
-msgid "Enviar una"
-msgstr "Meldung"
-
-msgid "Comunicación"
-msgstr "einreichen"
-
-msgid "Puede enviar este formulario de forma totalmente anónima. Si desea recibir información sobre el estado de su comunicación, indique sus datos de contacto."
-msgstr "Sie können dieses Formular völlig anonym einreichen. Wenn Sie Informationen über den Status Ihrer Meldung erhalten möchten, geben Sie bitte Ihre Kontaktdaten an."
-
-msgid "Enviar Comunicación Segura"
-msgstr "Sichere Meldung senden"
-
-msgid "Asunto de la denuncia"
-msgstr "Gegenstand der Meldung"
-
-msgid "Resumen breve de la comunicación..."
-msgstr "Kurze Zusammenfassung der Mitteilung..."
-
-msgid "Describa de la forma más detallada posible los hechos..."
-msgstr "Beschreiben Sie den Sachverhalt so detailliert wie möglich..."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-11 15:11+0100\n"
+"POT-Creation-Date: 2026-03-30 17:08+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,31 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\appIurrelan\forms.py:6
+#: .\appIurrelan\forms.py:7
 msgid "Datos de contacto (Opcional)"
 msgstr "Contact Details (Optional)"
 
-#: .\appIurrelan\forms.py:8
+#: .\appIurrelan\forms.py:12
+msgid "Asunto de la denuncia"
+msgstr "Subject of the report"
+
+#: .\appIurrelan\forms.py:14
+msgid "Resumen breve de la comunicación..."
+msgstr "Brief summary of the communication..."
+
+#: .\appIurrelan\forms.py:17
 msgid "Descripción de los hechos"
 msgstr "Description of the events"
 
-#: .\appIurrelan\forms.py:9
+#: .\appIurrelan\forms.py:19
+msgid "Describa de la forma más detallada posible los hechos..."
+msgstr "Describe the facts in as much detail as possible..."
+
+#: .\appIurrelan\forms.py:22
 msgid "Verificación de seguridad"
 msgstr "Security verification"
 
-#: .\appIurrelan\forms.py:10
+#: .\appIurrelan\forms.py:25
 msgid ""
 "He leído y acepto la Política de Privacidad y comprendo el funcionamiento "
 "del Canal Ético."
@@ -38,67 +50,67 @@ msgstr ""
 "I have read and accept the Privacy Policy and understand how the Ethics "
 "Channel works."
 
-#: .\appIurrelan\forms.py:13
+#: .\appIurrelan\forms.py:29
 msgid "Nombre Completo"
 msgstr "Full Name"
 
-#: .\appIurrelan\forms.py:13
+#: .\appIurrelan\forms.py:29
 msgid "Tu nombre"
 msgstr "Your name"
 
-#: .\appIurrelan\forms.py:14 .\appIurrelan\forms.py:29
+#: .\appIurrelan\forms.py:30 .\appIurrelan\forms.py:45
 msgid "Correo Electrónico"
 msgstr "Email Address"
 
-#: .\appIurrelan\forms.py:15
+#: .\appIurrelan\forms.py:31
 msgid "Teléfono (Opcional)"
 msgstr "Phone (Optional)"
 
-#: .\appIurrelan\forms.py:16 .\appIurrelan\templates\contacto.html:75
+#: .\appIurrelan\forms.py:32 .\appIurrelan\templates\contacto.html:75
 msgid "Mensaje"
 msgstr "Message"
 
-#: .\appIurrelan\forms.py:16
+#: .\appIurrelan\forms.py:32
 msgid "¿En qué podemos ayudarte?"
 msgstr "How can we help you?"
 
-#: .\appIurrelan\forms.py:17 .\appIurrelan\forms.py:48
+#: .\appIurrelan\forms.py:33 .\appIurrelan\forms.py:64
 msgid "He leído y acepto la Política de Privacidad"
 msgstr "I have read and accept the Privacy Policy"
 
-#: .\appIurrelan\forms.py:18 .\appIurrelan\templates\contacto.html:98
+#: .\appIurrelan\forms.py:34 .\appIurrelan\templates\contacto.html:98
 msgid "Seguridad"
 msgstr "Security"
 
-#: .\appIurrelan\forms.py:24
+#: .\appIurrelan\forms.py:40
 msgid "Nombre y Apellidos"
 msgstr "Full Name"
 
-#: .\appIurrelan\forms.py:26
+#: .\appIurrelan\forms.py:42
 msgid "Tu nombre completo"
 msgstr "Your full name"
 
-#: .\appIurrelan\forms.py:33
+#: .\appIurrelan\forms.py:49
 msgid "Teléfono"
 msgstr "Phone"
 
-#: .\appIurrelan\forms.py:38
+#: .\appIurrelan\forms.py:54
 msgid "Experiencia / Presentación"
 msgstr "Experience / Cover Letter"
 
-#: .\appIurrelan\forms.py:40
+#: .\appIurrelan\forms.py:56
 msgid "Háblanos de tu experiencia laboral..."
 msgstr "Tell us about your work experience..."
 
-#: .\appIurrelan\forms.py:43
+#: .\appIurrelan\forms.py:59
 msgid "Adjuntar Currículum (PDF) - Opcional"
 msgstr "Attach Resume (PDF) - Optional"
 
-#: .\appIurrelan\forms.py:56
+#: .\appIurrelan\forms.py:72
 msgid "El archivo debe ser un documento PDF."
 msgstr "The file must be a PDF document."
 
-#: .\appIurrelan\forms.py:58
+#: .\appIurrelan\forms.py:74
 msgid "El archivo es demasiado grande (máximo 5MB)."
 msgstr "The file is too large (maximum 5MB)."
 
@@ -173,8 +185,7 @@ msgid ""
 "Parece que la página que buscas ha sido recortada o no existe en nuestro "
 "inventario."
 msgstr ""
-"It seems the page you are looking for has been cut out or does not exist "
-"in our inventory."
+"It seems the page you are looking for has been cut out or does not exist in our inventory."
 
 #: .\appIurrelan\templates\404.html:9
 msgid "Volver al Inicio"
@@ -213,9 +224,9 @@ msgid ""
 "mediante baños químicos controlados, preparando el material para "
 "inspecciones posteriores o recubrimientos finales."
 msgstr ""
-"We remove impurities, oxides, and scale from the surface of the parts using "
-"controlled chemical baths, preparing the material for subsequent inspections "
-"or final coatings."
+"We remove impurities, oxides, and mill scale from the surface of the parts "
+"using controlled chemical baths, preparing the material for subsequent "
+"inspections or final coatings."
 
 #: .\appIurrelan\templates\acabado.html:189
 msgid "Inspección con Líquidos Penetrantes"
@@ -484,10 +495,10 @@ msgstr "Thermal <br>Cutting"
 #: .\appIurrelan\templates\corte.html:7
 msgid ""
 "Precisión extrema y potencia controlada. Tecnología de separación de "
-"materiales mediante Arco Aire y Oxicorte."
+"materiales mediante Arco Aire y Tecnologia de Corte con Soplete."
 msgstr ""
-"Extreme precision and controlled power. Material separation technology using "
-"Air Carbon Arc and Oxy-fuel cutting."
+"Extreme precision and controlled power. Material separation technology "
+"using Air Carbon Arc and Oxy-fuel cutting technology."
 
 #: .\appIurrelan\templates\corte.html:223
 msgid "CORTE CON <br>ARCO AIRE"
@@ -522,10 +533,10 @@ msgstr "OXY-FUEL <br>CUTTING"
 
 #: .\appIurrelan\templates\corte.html:244
 msgid ""
-"Tecnología de oxicorte para seccionado de aceros al carbono de alto calibre. "
-"Mediante la reacción química exotérmica del oxígeno puro con el metal "
-"precalentado, logramos cortes limpios y verticales en espesores que otras "
-"tecnologías no pueden alcanzar."
+"Tecnología de tecnologia de corte con soplete para seccionado de aceros al "
+"carbono de alto calibre. Mediante la reacción química exotérmica del oxígeno "
+"puro con el metal precalentado, logramos cortes limpios y verticales en "
+"espesores que otras tecnologías no pueden alcanzar."
 msgstr ""
 "Oxy-fuel cutting technology for sectioning high-caliber carbon steels. "
 "Through the exothermic chemical reaction of pure oxygen with the preheated "
@@ -712,8 +723,8 @@ msgstr "Environmental Management"
 
 #: .\appIurrelan\templates\footer.html:15
 msgid ""
-"Expertos en transformación metálica y soluciones industriales en Guipúzcoa."
-msgstr "Experts in metal transformation and industrial solutions in Guipúzcoa."
+"Expertos en transformación metálica y soluciones industriales en Gipuzkoa."
+msgstr "Experts in metal transformation and industrial solutions in Gipuzkoa."
 
 #: .\appIurrelan\templates\footer.html:28
 msgid "Enlaces"
@@ -875,16 +886,20 @@ msgid "Ferrocarril"
 msgstr "Railway"
 
 #: .\appIurrelan\templates\home.html:76
-msgid "Construcción"
-msgstr "Construction"
+msgid "Gasística"
+msgstr "Gas Industry"
 
 #: .\appIurrelan\templates\home.html:79
-msgid "Energía"
-msgstr "Energy"
+msgid "Petrolífero"
+msgstr "Oil & Gas"
 
 #: .\appIurrelan\templates\home.html:82
-msgid "Mantenimiento"
-msgstr "Maintenance"
+msgid "Nuclear"
+msgstr "Nuclear"
+
+#: .\appIurrelan\templates\home.html:85
+msgid "Desalinizador"
+msgstr "Desalination"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:11
 msgid "Información legal y condiciones de uso del sitio web."
@@ -896,14 +911,18 @@ msgstr "Identifying Data"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:20
 msgid ""
-"En cumplimiento con el deber de información recogido en "
+"\n"
+"                En cumplimiento con el deber de información recogido en "
 "artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad "
 "de la Información y del Comercio Electrónico (LSSICE), a continuación se "
-"reflejan los siguientes datos:"
+"reflejan los siguientes datos:\n"
+"                "
 msgstr ""
-"In compliance with the reporting obligations contained in "
+"\n"
+"                In compliance with the reporting obligations contained in "
 "Article 10 of Law 34/2002, of July 11, on Information Society Services and "
-"Electronic Commerce (LSSICE), the following data is provided below:"
+"Electronic Commerce (LSSICE), the following data is provided below:\n"
+"                "
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:25
 msgid "Razón Social"
@@ -1226,6 +1245,27 @@ msgid ""
 msgstr ""
 "Last updated: June 2023 | Document reviewed in accordance with the Criminal "
 "Prevention Plan of Servicios Metalúrgicos Iurrelan."
+
+#: .\appIurrelan\templates\legal\canal_etico.html:78
+msgid "Enviar una"
+msgstr "Submit a"
+
+#: .\appIurrelan\templates\legal\canal_etico.html:78
+msgid "Comunicación"
+msgstr "Report"
+
+#: .\appIurrelan\templates\legal\canal_etico.html:81
+msgid ""
+"Puede enviar este formulario de forma totalmente anónima. Si desea recibir "
+"información sobre el estado de su comunicación, indique sus datos de "
+"contacto."
+msgstr ""
+"You can submit this form completely anonymously. If you wish to receive "
+"updates on the status of your report, please provide your contact details."
+
+#: .\appIurrelan\templates\legal\canal_etico.html:131
+msgid "Enviar Comunicación Segura"
+msgstr "Submit Secure Report"
 
 #: .\appIurrelan\templates\legal\cookies.html:10
 msgid "1. ¿Qué son las cookies?"
@@ -1747,16 +1787,16 @@ msgid "Aceros al carbono"
 msgstr "Carbon Steels"
 
 #: .\appIurrelan\templates\soldadura.html:182
-msgid "(CA6NM, LCC, WC6…)"
-msgstr "(CA6NM, LCC, WC6…)"
+msgid "(LCC, WC6…)"
+msgstr "(LCC, WC6…)"
 
 #: .\appIurrelan\templates\soldadura.html:187
 msgid "Aceros Inoxidables"
 msgstr "Stainless Steels"
 
 #: .\appIurrelan\templates\soldadura.html:188
-msgid "(CF3M, CF8M, DUPLEX (4A), SUPERDUPLEX (5A), CK3M, INCONEL 625…)"
-msgstr "(CF3M, CF8M, DUPLEX (4A), SUPERDUPLEX (5A), CK3M, INCONEL 625…)"
+msgid "(CF3M, CF8M, DUPLEX (4A), SUPERDUPLEX (5A), CK3M, INCONEL 625, CA6NM…)"
+msgstr "(CF3M, CF8M, DUPLEX (4A), SUPERDUPLEX (5A), CK3M, INCONEL 625, CA6NM…)"
 
 #: .\appIurrelan\templates\soldadura.html:193
 msgid "Garantía de"
@@ -1809,24 +1849,3 @@ msgstr "German"
 #: .\projIurrelan\settings.py:123
 msgid "Euskera"
 msgstr "Basque"
-
-msgid "Enviar una"
-msgstr "Submit a"
-
-msgid "Comunicación"
-msgstr "Report"
-
-msgid "Puede enviar este formulario de forma totalmente anónima. Si desea recibir información sobre el estado de su comunicación, indique sus datos de contacto."
-msgstr "You can submit this form completely anonymously. If you wish to receive updates on the status of your report, please provide your contact details."
-
-msgid "Enviar Comunicación Segura"
-msgstr "Submit Secure Report"
-
-msgid "Asunto de la denuncia"
-msgstr "Subject of the report"
-
-msgid "Resumen breve de la comunicación..."
-msgstr "Brief summary of the communication..."
-
-msgid "Describa de la forma más detallada posible los hechos..."
-msgstr "Describe the facts in as much detail as possible..."
