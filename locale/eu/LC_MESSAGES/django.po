@@ -11,7 +11,7 @@ msgstr ""
 "POT-Creation-Date: 2026-03-30 17:08+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Basque <eu@li.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -72,7 +72,7 @@ msgstr "Mezua"
 
 #: .\appIurrelan\forms.py:32
 msgid "¿En qué podemos ayudarte?"
-msgstr "Zertan lagun zaitzakegu?"
+msgstr "Zertan lagun diezazukegu?"
 
 #: .\appIurrelan\forms.py:33 .\appIurrelan\forms.py:64
 msgid "He leído y acepto la Política de Privacidad"
@@ -88,7 +88,7 @@ msgstr "Izen-abizenak"
 
 #: .\appIurrelan\forms.py:42
 msgid "Tu nombre completo"
-msgstr "Zure izen-abizen osoa"
+msgstr "Zure izen osoa"
 
 #: .\appIurrelan\forms.py:49
 msgid "Teléfono"
@@ -116,7 +116,7 @@ msgstr "Fitxategia handiegia da (gehienez 5MB)."
 
 #: .\appIurrelan\models.py:6
 msgid "Corte Láser"
-msgstr "Laser Ebaketa"
+msgstr "Laser bidezko Ebaketa"
 
 #: .\appIurrelan\models.py:7 .\appIurrelan\templates\base.html:41
 #: .\appIurrelan\templates\base.html:99
@@ -133,7 +133,7 @@ msgstr "Soldadura"
 #: .\appIurrelan\templates\servicios.html:213
 #: .\appIurrelan\templates\servicios.html:216
 msgid "Granallado"
-msgstr "Granailatzea"
+msgstr "Granailaketa"
 
 #: .\appIurrelan\models.py:12
 msgid "Nombre"
@@ -178,30 +178,29 @@ msgstr "Makineria"
 
 #: .\appIurrelan\templates\404.html:7
 msgid "Pieza no encontrada"
-msgstr "Ez da pieza aurkitu"
+msgstr "Piesarik ez da aurkitu"
 
 #: .\appIurrelan\templates\404.html:8
 msgid ""
 "Parece que la página que buscas ha sido recortada o no existe en nuestro "
 "inventario."
 msgstr ""
-"Badirudi bilatzen ari zaren orria moztu egin dela edo ez dagoela gure "
-"inbentarioan."
+"Badirudi bilatzen ari zaren orria moztu dela edo ez dagoela gure inbentarioan."
 
 #: .\appIurrelan\templates\404.html:9
 msgid "Volver al Inicio"
-msgstr "Hasierara itzuli"
+msgstr "Itzuli Hasierara"
 
 #: .\appIurrelan\templates\acabado.html:6
 msgid "Acabado de Piezas"
-msgstr "Piezen akabera"
+msgstr "Piesen Akabera"
 
 #: .\appIurrelan\templates\acabado.html:7
 msgid ""
 "Garantizamos la integridad estructural y superficial de sus componentes "
 "mediante procesos certificados."
 msgstr ""
-"Zure osagaien egitura- eta gainazal-osotasuna bermatzen dugu prozesu "
+"Zure osagaien osotasun estrukturala eta gainazalekoa bermatzen dugu, prozesu "
 "ziurtatuen bidez."
 
 #: .\appIurrelan\templates\acabado.html:173
@@ -217,7 +216,7 @@ msgstr "Akabera"
 #: .\appIurrelan\templates\acabado.html:177
 #: .\appIurrelan\templates\acabado.html:181
 msgid "Decapado en Ácido"
-msgstr "Azido bidezko dekapajea"
+msgstr "Azido bidezko desugerketa"
 
 #: .\appIurrelan\templates\acabado.html:182
 msgid ""
@@ -225,13 +224,13 @@ msgid ""
 "mediante baños químicos controlados, preparando el material para "
 "inspecciones posteriores o recubrimientos finales."
 msgstr ""
-"Piezen gainazaletik ezpurutasunak, oxidoak eta kalamina ezabatzen ditugu "
-"bainu kimiko kontrolatuen bidez, materiala prestatuz ondorengo "
-"ikuskapenetarako edo azken estalduretarako."
+"Piesen gainazaleko ezpurutasunak, oxidoak eta kalamina ezabatzen ditugu bainu "
+"kimiko kontrolatuen bidez, materiala ondorengo ikuskapenetarako edo azken "
+"estalduretarako prestatuz."
 
 #: .\appIurrelan\templates\acabado.html:189
 msgid "Inspección con Líquidos Penetrantes"
-msgstr "Likido sarkorrekin egindako ikuskapena"
+msgstr "Likido Sarkorrekin Ikuskatzea"
 
 #: .\appIurrelan\templates\acabado.html:190
 msgid ""
@@ -239,24 +238,24 @@ msgid ""
 "tintes de alta sensibilidad que revelan cualquier fisura o poro no visible a "
 "simple vista."
 msgstr ""
-"Gainazaleko etenak detektatzea kapilaritate bidez. Begi hutsez ikusten ez "
-"diren pitzadura edo poroak erakusten dituzten sentsibilitate handiko "
-"koloratzaileak aplikatzen ditugu."
+"Kapilaritate bidezko gainazaleko etenuneen detekzioa. Begi hutsez ikusten "
+"ez den edozein fisura edo poro erakusten duten sentsibilitate handiko tinduak "
+"aplikatzen ditugu."
 
 #: .\appIurrelan\templates\acabado.html:193
 #: .\appIurrelan\templates\acabado.html:215
 #: .\appIurrelan\templates\servicios.html:240
 msgid "Líquidos Penetrantes"
-msgstr "Likido sarkorrak"
+msgstr "Likido Sarkorrak"
 
 #: .\appIurrelan\templates\acabado.html:197
 #: .\appIurrelan\templates\servicios.html:241
 msgid "Partículas Magnéticas"
-msgstr "Partikula magnetikoak"
+msgstr "Partikula Magnetikoak"
 
 #: .\appIurrelan\templates\acabado.html:201
 msgid "Inspección con Partículas Magnéticas"
-msgstr "Partikula magnetikoekin egindako ikuskapena"
+msgstr "Partikula Magnetikoekin Ikuskatzea"
 
 #: .\appIurrelan\templates\acabado.html:202
 msgid ""
@@ -264,7 +263,7 @@ msgid ""
 "superficiales como subsuperficiales mediante la distorsión de campos "
 "magnéticos."
 msgstr ""
-"Material ferromagnetikoetarako saiakuntza, eremu magnetikoen distortsioaren "
+"Material ferromagnetikoetarako entsegua, eremu magnetikoen distortsioaren "
 "bidez gainazaleko zein gainazalpeko akatsak detektatzea ahalbidetzen duena."
 
 #: .\appIurrelan\templates\acabado.html:210
@@ -280,8 +279,8 @@ msgid ""
 "Homologación según normativa internacional para ensayos no destructivos. PT "
 "Nivel II."
 msgstr ""
-"Nazioarteko araudiaren araberako homologazioa saiakuntza ez-suntsitzaileetarako. "
-"PT II. maila."
+"Nazioarteko araudiaren araberako homologazioa entsegu ez-suntsitzaileetarako. "
+"PT II. Maila."
 
 #: .\appIurrelan\templates\acabado.html:220
 msgid "Química"
@@ -289,7 +288,7 @@ msgstr "Kimika"
 
 #: .\appIurrelan\templates\acabado.html:221
 msgid "Baños de decapado con control de PH y temperatura constante."
-msgstr "Dekapaje-bainuak, PH kontrolarekin eta tenperatura konstantearekin."
+msgstr "PH kontrola eta tenperatura konstantea duten desugerketa-bainuak."
 
 #: .\appIurrelan\templates\acabado.html:225
 msgid "Inspección"
@@ -310,20 +309,20 @@ msgstr "Kalitatea"
 
 #: .\appIurrelan\templates\acabado.html:231
 msgid "Garantía de piezas libres de defectos estructurales críticos."
-msgstr "Egitura-akats kritikorik gabeko piezen bermea."
+msgstr "Akats estruktural kritikorik gabeko piesen bermea."
 
 #: .\appIurrelan\templates\acabado.html:237
 #: .\appIurrelan\templates\rebarbado.html:240
 #: .\appIurrelan\templates\soldadura.html:221
 msgid "Solicitar Información"
-msgstr "Informazioa eskatu"
+msgstr "Informazioa Eskatu"
 
 #: .\appIurrelan\templates\base.html:9
 msgid "Iurrelan Metalurgia | Precisión Industrial"
 msgstr "Iurrelan Metalurgia | Zehaztasun Industriala"
 
 #: .\appIurrelan\templates\base.html:10
-msgid "Expertos en corte láser, soldadura y mecanizado en Gipuzkoa."
+msgid "Expertos en corte láser, soldadura y mecanizado en Guipúzcoa."
 msgstr "Laser ebaketan, soldaduran eta mekanizatuan adituak Gipuzkoan."
 
 #: .\appIurrelan\templates\base.html:24
@@ -393,7 +392,7 @@ msgstr "Metalean"
 
 #: .\appIurrelan\templates\carrusel.html:15
 msgid "Soluciones de metalurgia integral y transformación metálica"
-msgstr "Metalurgia integraleko eta eraldaketa metalikoko irtenbideak"
+msgstr "Metalurgia integraleko eta eraldaketa metalikoko soluzioak"
 
 #: .\appIurrelan\templates\carrusel.html:17
 #: .\appIurrelan\templates\home.html:33
@@ -402,19 +401,19 @@ msgstr "Harremanetan jarri"
 
 #: .\appIurrelan\templates\contacto.html:6
 msgid "Contacta<br>con nosotros"
-msgstr "Jarri<br>gurekin harremanetan"
+msgstr "Jarri gurekin<br>harremanetan"
 
 #: .\appIurrelan\templates\contacto.html:7
 msgid "Estamos listos para hacer realidad tu proyecto"
-msgstr "Zure proiektua errealitate bihurtzeko prest gaude"
+msgstr "Zure proiektua egi bihurtzeko prest gaude"
 
 #: .\appIurrelan\templates\contacto.html:45
 msgid "Sede Central"
-msgstr "Egoitza nagusia"
+msgstr "Egoitza Nagusia"
 
 #: .\appIurrelan\templates\contacto.html:46
 msgid "Lugar Barrio Elbarrena, 25"
-msgstr "Elbarrena auzoa, 25"
+msgstr "Elbarrena Auzoa, 25"
 
 #: .\appIurrelan\templates\contacto.html:46
 msgid "20247 Zaldibia, Gipuzkoa"
@@ -422,7 +421,7 @@ msgstr "20247 Zaldibia, Gipuzkoa"
 
 #: .\appIurrelan\templates\contacto.html:50
 msgid "Llámanos"
-msgstr "Deitu"
+msgstr "Deitu iezaguzu"
 
 #: .\appIurrelan\templates\contacto.html:51
 msgid "Atención al cliente L-V"
@@ -430,7 +429,7 @@ msgstr "Bezeroarentzako arreta A-O"
 
 #: .\appIurrelan\templates\contacto.html:55
 msgid "Escríbenos"
-msgstr "Idatzi"
+msgstr "Idatzi iezaguzu"
 
 #: .\appIurrelan\templates\contacto.html:56
 msgid "Respuesta en 24h"
@@ -438,7 +437,7 @@ msgstr "Erantzuna 24 orduan"
 
 #: .\appIurrelan\templates\contacto.html:68
 msgid "Horario de Carga/Descarga"
-msgstr "Karga/deskarga ordutegia"
+msgstr "Karga eta Deskarga Ordutegia"
 
 #: .\appIurrelan\templates\contacto.html:69
 msgid "Lunes - Jueves: 08:00 - 17:00"
@@ -450,7 +449,7 @@ msgstr "Ostirala: 08:00 - 14:00"
 
 #: .\appIurrelan\templates\contacto.html:75
 msgid "Envíanos un"
-msgstr "Bidaliguzu"
+msgstr "Bidal iezaguzu"
 
 #: .\appIurrelan\templates\contacto.html:104
 #: .\appIurrelan\templates\contacto.html:165
@@ -460,7 +459,7 @@ msgstr "Irakurri eta onartzen dut"
 #: .\appIurrelan\templates\contacto.html:104
 #: .\appIurrelan\templates\contacto.html:165
 #: .\appIurrelan\templates\footer.html:44
-#: .\appIurrelan\templates\legal\aviso_legal.html:43
+#: .\appIurrelan\templates\legal\aviso_legal.html:45
 #: .\appIurrelan\templates\legal\privacidad.html:4
 #: .\appIurrelan\templates\legal\privacidad.html:8
 msgid "Política de Privacidad"
@@ -468,11 +467,11 @@ msgstr "Pribatutasun-politika"
 
 #: .\appIurrelan\templates\contacto.html:109
 msgid "Enviar Mensaje"
-msgstr "Mezua bidali"
+msgstr "Mezua Bidali"
 
 #: .\appIurrelan\templates\contacto.html:119
 msgid "Trabaja con"
-msgstr "Lan egin"
+msgstr "Egin lan"
 
 #: .\appIurrelan\templates\contacto.html:119
 msgid "Nosotros"
@@ -488,7 +487,7 @@ msgstr "Geh. 5MB"
 
 #: .\appIurrelan\templates\contacto.html:171
 msgid "Enviar Datos"
-msgstr "Datuak bidali"
+msgstr "Datuak Bidali"
 
 #: .\appIurrelan\templates\corte.html:6
 msgid "Corte <br>Térmico"
@@ -499,12 +498,12 @@ msgid ""
 "Precisión extrema y potencia controlada. Tecnología de separación de "
 "materiales mediante Arco Aire y Tecnologia de Corte con Soplete."
 msgstr ""
-"Zehaztasun handia eta potentzia kontrolatua. Materialak bereizteko teknologia "
-"Arku Aire eta Soplete bidezko Ebaketa Teknologia erabiliz."
+"Muturreko zehaztasuna eta potentzia kontrolatua. Materialak bereizteko teknologia, "
+"Arku-Aire eta Soplete bidezko ebaketa-teknologiaren bidez."
 
 #: .\appIurrelan\templates\corte.html:223
 msgid "CORTE CON <br>ARCO AIRE"
-msgstr "ARKU AIRE BIDEZKO<br>EBAKETA"
+msgstr "ARKU-AIRE <br>BIDEZKO EBAKETA"
 
 #: .\appIurrelan\templates\corte.html:224
 msgid ""
@@ -513,14 +512,14 @@ msgid ""
 "defectuosas, sanear grietas y cortar mazarotas en piezas de gran espesor sin "
 "dañar el metal base térmicamente."
 msgstr ""
-"Eraginkortasun handiko artekatze- eta ebaketa-prozesua, karbonozko elektrodo "
-"bat eta aire konprimituko zorrotada bat erabiltzen dituena. Aproposa da "
-"soldadura akastunak kentzeko, pitzadurak saneatzeko eta lodiera handiko piezetan "
-"mazarotak mozteko, oinarrizko metala termikoki kaltetu gabe."
+"Eraginkortasun handiko artekatze- eta ebaketa-prozesua, karbonozko elektrodo bat "
+"eta aire konprimituzko txorrota erabiltzen dituena. Ezin hobea soldadura akastunak "
+"ezabatzeko, arrakalak saneatzeko eta lodiera handiko piesetan mazarotak mozteko, "
+"oinarrizko metala termikoki kaltetu gabe."
 
 #: .\appIurrelan\templates\corte.html:227
 msgid "Eliminación rápida de material"
-msgstr "Materiala azkar kentzea"
+msgstr "Materiala azkar ezabatzea"
 
 #: .\appIurrelan\templates\corte.html:228
 msgid "Menor zona afectada por calor"
@@ -528,11 +527,11 @@ msgstr "Beroak eragindako eremu txikiagoa"
 
 #: .\appIurrelan\templates\corte.html:236
 msgid "Corte Arco Aire"
-msgstr "Arku Aire Ebaketa"
+msgstr "Arku-Aire Ebaketa"
 
 #: .\appIurrelan\templates\corte.html:243
 msgid "CORTE CON <br>SOPLETE"
-msgstr "SOPLETE BIDEZKO<br>EBAKETA"
+msgstr "SOPLETE BIDEZKO <br>EBAKETA"
 
 #: .\appIurrelan\templates\corte.html:244
 msgid ""
@@ -542,9 +541,9 @@ msgid ""
 "espesores que otras tecnologías no pueden alcanzar."
 msgstr ""
 "Kalibre handiko karbono-altzairuak ebakitzeko soplete bidezko ebaketa-teknologia. "
-"Oxigeno puruak aldez aurretik berotutako metalarekin duen erreakzio kimiko "
-"exotermikoaren bidez, ebaketa garbiak eta bertikalak lortzen ditugu beste "
-"teknologia batzuek lortu ezin dituzten lodieretan."
+"Oxigeno puruaren eta aurrez berotutako metalaren arteko erreakzio kimiko exotermikoaren "
+"bidez, ebaketa garbiak eta bertikalak lortzen ditugu beste teknologia batzuek "
+"lortu ezin dituzten lodieretan."
 
 #: .\appIurrelan\templates\corte.html:247
 msgid "Capacidad de corte > 100mm"
@@ -552,11 +551,11 @@ msgstr "Ebaketa-ahalmena > 100mm"
 
 #: .\appIurrelan\templates\corte.html:248
 msgid "Versatilidad en obra y taller"
-msgstr "Aldakortasuna obran eta tailerrean"
+msgstr "Moldakortasuna obran eta tailerrean"
 
 #: .\appIurrelan\templates\corte.html:256
 msgid "Corte con Soplete"
-msgstr "Soplete bidezko ebaketa"
+msgstr "Soplete Bidezko Ebaketa"
 
 #: .\appIurrelan\templates\empresa.html:6
 msgid "Nuestra<br>Identidad"
@@ -582,12 +581,12 @@ msgstr "Gurean,"
 #: .\appIurrelan\templates\empresa.html:19
 msgid ""
 "entendemos la metalurgia como un arte preciso. Somos una empresa líder en "
-"transformación metálica en Gipuzkoa, fusionando la tradición industrial "
+"transformación metálica en Guipúzcoa, fusionando la tradición industrial "
 "vasca con la tecnología más vanguardista."
 msgstr ""
 "metalurgia arte zehatz gisa ulertzen dugu. Gipuzkoan eraldaketa metalikoan "
-"enpresa liderra gara, euskal industria-tradizioa eta teknologia abangoardistena "
-"uztartuz."
+"aitzindaria den enpresa gara, euskal industria-tradizioa eta teknologiarik "
+"abangoardistena uztartuz."
 
 #: .\appIurrelan\templates\empresa.html:23
 msgid ""
@@ -596,13 +595,13 @@ msgid ""
 "altamente cualificado es el motor que nos permite abordar proyectos de alta "
 "complejidad técnica con total garantía."
 msgstr ""
-"Hastapenetatik, industriarako eraldaketa metalikoko zerbitzu integrala eskaintzen "
+"Hasieratik, industriarako eraldaketa metalikoko zerbitzu integrala eskaintzen "
 "espezializatu gara. Gure giza talde oso kualifikatua da konplexutasun tekniko "
 "handiko proiektuei erabateko bermearekin ekiteko aukera ematen digun motorra."
 
 #: .\appIurrelan\templates\empresa.html:28
 msgid "Instalaciones Iurrelan"
-msgstr "Iurrelan instalazioak"
+msgstr "Iurrelan Instalazioak"
 
 #: .\appIurrelan\templates\empresa.html:31
 msgid "Años de"
@@ -618,7 +617,7 @@ msgstr "Gure"
 
 #: .\appIurrelan\templates\empresa.html:39
 msgid "Pilares"
-msgstr "Oinarriak"
+msgstr "Zutabeak"
 
 #: .\appIurrelan\templates\empresa.html:46
 msgid "Misión"
@@ -634,8 +633,8 @@ msgid ""
 "expectativas de calidad de nuestros clientes y asegurando procesos "
 "sostenibles y eficientes."
 msgstr ""
-"Balio erantsi handiko soluzio metalikoak fabrikatzea, gure bezeroen kalitate-itxaropenak "
-"gaindituz eta prozesu jasangarri eta eraginkorrak ziurtatuz."
+"Balio erantsi handiko soluzio metalikoak fabrikatzea, gure bezeroen "
+"kalitate-itxaropenak gaindituz eta prozesu jasangarri eta eraginkorrak ziurtatuz."
 
 #: .\appIurrelan\templates\empresa.html:59
 msgid "Visión"
@@ -651,9 +650,8 @@ msgid ""
 "industrial del norte de España, impulsando la innovación en cada soldadura y "
 "mecanizado."
 msgstr ""
-"Espainiako iparraldeko industria-sektorean erreferentziazko bazkide "
-"estrategiko gisa sendotzea, soldadura eta mekanizatu bakoitzean berrikuntza "
-"bultzatuz."
+"Espainia iparraldeko industria-sektorean erreferentziazko bazkide estrategiko "
+"gisa finkatzea, soldadura eta mekanizatu bakoitzean berrikuntza bultzatuz."
 
 #: .\appIurrelan\templates\empresa.html:72
 msgid "Valores"
@@ -661,7 +659,7 @@ msgstr "Balioak"
 
 #: .\appIurrelan\templates\empresa.html:75
 msgid "Nuestro ADN"
-msgstr "Gure ADN-a"
+msgstr "Gure DNA"
 
 #: .\appIurrelan\templates\empresa.html:77
 msgid "Calidad Total"
@@ -681,7 +679,7 @@ msgstr "Berrikuntza"
 
 #: .\appIurrelan\templates\empresa.html:92
 msgid "Planta"
-msgstr "Lantegia"
+msgstr "Planta"
 
 #: .\appIurrelan\templates\empresa.html:92
 msgid "Operativa"
@@ -689,11 +687,11 @@ msgstr "Operatiboa"
 
 #: .\appIurrelan\templates\empresa.html:93
 msgid "Capacidad productiva y tecnología al servicio del cliente"
-msgstr "Ekoizpen-gaitasuna eta teknologia bezeroaren zerbitzura"
+msgstr "Ekoizpen-ahalmena eta teknologia bezeroaren zerbitzura"
 
 #: .\appIurrelan\templates\empresa.html:99
 msgid "Plantas operativas"
-msgstr "Lantegi operatiboak"
+msgstr "Planta operatiboak"
 
 #: .\appIurrelan\templates\empresa.html:104
 msgid "de superficie"
@@ -701,7 +699,7 @@ msgstr "azalera"
 
 #: .\appIurrelan\templates\empresa.html:109
 msgid "Elevación"
-msgstr "Jasotzea"
+msgstr "Igotzea"
 
 #: .\appIurrelan\templates\empresa.html:114
 msgid "Puentes Grúa"
@@ -716,8 +714,8 @@ msgid "Gestión de la Calidad"
 msgstr "Kalitatearen Kudeaketa"
 
 #: .\appIurrelan\templates\empresa.html:132
-msgid "Soldadura Certificada"
-msgstr "Soldadura Ziurtatua"
+msgid "Prevención de riesgos laborales"
+msgstr "Lan-arriskuen prebentzioa"
 
 #: .\appIurrelan\templates\empresa.html:137
 msgid "Gestión Ambiental"
@@ -740,13 +738,13 @@ msgstr "Eskubide guztiak erreserbatuta."
 #: .\appIurrelan\templates\legal\aviso_legal.html:5
 #: .\appIurrelan\templates\legal\aviso_legal.html:10
 msgid "Aviso Legal"
-msgstr "Lege-oharra"
+msgstr "Lege Oharra"
 
 #: .\appIurrelan\templates\footer.html:45
 #: .\appIurrelan\templates\legal\cookies.html:4
 #: .\appIurrelan\templates\legal\cookies.html:8
 msgid "Política de Cookies"
-msgstr "Cookien politika"
+msgstr "Cookieen Politika"
 
 #: .\appIurrelan\templates\footer.html:46
 #: .\appIurrelan\templates\legal\canal_etico.html:5
@@ -757,19 +755,18 @@ msgstr "Kanal Etikoa"
 
 #: .\appIurrelan\templates\granallado.html:6
 msgid "Granallado <br>Industrial"
-msgstr "Industria <br>Granailatzea"
+msgstr "Granailaketa <br>Industriala"
 
 #: .\appIurrelan\templates\granallado.html:7
 msgid ""
 "Preparación y acabado de superficies mediante proyección de abrasivos de "
 "alta calidad."
 msgstr ""
-"Gainazalak prestatzea eta akabera ematea, kalitate handiko urratzaileen "
-"proiekzioaren bidez."
+"Gainazalen prestaketa eta akabera kalitate handiko urratzaileen proiekzio bidez."
 
 #: .\appIurrelan\templates\granallado.html:191
 msgid "Granallado de Piezas de Acero Inoxidable"
-msgstr "Altzairu Herdoilgaitzezko Piezen Granailatzea"
+msgstr "Altzairu Herdoilgaitzezko Piesen Granailaketa"
 
 #: .\appIurrelan\templates\granallado.html:194
 msgid "Acabado de alta pureza mediante impacto controlado con microesferas."
@@ -792,16 +789,16 @@ msgstr "Ondoren"
 #: .\appIurrelan\templates\granallado.html:212
 #: .\appIurrelan\templates\granallado.html:240
 msgid "Split"
-msgstr "Banatu"
+msgstr "Zatiketa"
 
 #: .\appIurrelan\templates\granallado.html:221
 msgid "Granallado de Piezas de Acero al Carbono"
-msgstr "Karbono-altzairuzko Piezen Granailatzea"
+msgstr "Karbono-altzairuzko Piesen Granailaketa"
 
 #: .\appIurrelan\templates\granallado.html:224
 msgid ""
 "Preparación técnica superficial para la remoción de óxidos y cascarilla."
-msgstr "Gainazaleko prestaketa teknikoa oxidoak eta kaskarabila kentzeko."
+msgstr "Oxidoak eta zepak kentzeko gainazaleko prestaketa teknikoa."
 
 #: .\appIurrelan\templates\granallado.html:227
 msgid "PESO MÁXIMO: 1.000 KG"
@@ -809,35 +806,35 @@ msgstr "GEHIENEKO PISUA: 1.000 KG"
 
 #: .\appIurrelan\templates\home.html:13
 msgid ""
-"Más de 35 años de experiencia en el sector metalúrgico en Gipuzkoa. Un "
+"Más de 35 años de experiencia en el sector metalúrgico en Guipúzcoa. Un "
 "equipo experto comprometido."
 msgstr ""
-"35 urte baino gehiagoko esperientzia Gipuzkoako sektore metalurgikoan. Talde "
+"35 urte baino gehiagoko esperientzia Gipuzkoako sektore metalurgikoan. Lantalde "
 "aditu eta konprometitua."
 
 #: .\appIurrelan\templates\home.html:15
 msgid "Saber más"
-msgstr "Gehiago jakin"
+msgstr "Gehiago Jakin"
 
 #: .\appIurrelan\templates\home.html:22
 msgid ""
 "Transformación de metales, soldadura y acabados de alta precisión. Ofrecemos "
 "soluciones integrales para la industria."
 msgstr ""
-"Metalen eraldaketa, soldadura eta zehaztasun handiko akaberak. Industriarako "
-"irtenbide integralak eskaintzen ditugu."
+"Metalen eraldaketa, soldadura eta doitasun handiko akaberak. Industriarako "
+"soluzio integralak eskaintzen ditugu."
 
 #: .\appIurrelan\templates\home.html:24
 msgid "Ver catálogo"
-msgstr "Katalogoa ikusi"
+msgstr "Katalogoa Ikusi"
 
 #: .\appIurrelan\templates\home.html:31
 msgid ""
 "¿Tienes un proyecto en mente? Solicita presupuesto sin compromiso o "
 "visítanos en nuestras instalaciones."
 msgstr ""
-"Proiekturen bat daukazu buruan? Eskatu aurrekontua konpromisorik gabe edo "
-"bisitatu gure instalazioak."
+"Proiekturen bat duzu buruan? Eskatu aurrekontua konpromisorik gabe edo bisita "
+"gaitzazu gure instalazioetan."
 
 #: .\appIurrelan\templates\home.html:39
 msgid "¿Por qué"
@@ -845,7 +842,7 @@ msgstr "Zergatik"
 
 #: .\appIurrelan\templates\home.html:45
 msgid "Cumplimiento de Plazos"
-msgstr "Epeak Betetzea"
+msgstr "Epeen Betetzea"
 
 #: .\appIurrelan\templates\home.html:46
 msgid ""
@@ -858,7 +855,7 @@ msgstr "Kalitate Ziurtatua"
 
 #: .\appIurrelan\templates\home.html:52
 msgid "Procesos bajo normativa ISO 9001 y controles de calidad exhaustivos."
-msgstr "ISO 9001 araudiaren araberako prozesuak eta kalitate-kontrol zorrotzak."
+msgstr "ISO 9001 araudiaren araberako prozesuak eta kalitate-kontrol zehatzak."
 
 #: .\appIurrelan\templates\home.html:57
 msgid "Seguridad Total"
@@ -881,7 +878,7 @@ msgid ""
 "Nuestra versatilidad nos permite adaptarnos a las exigencias de múltiples "
 "industrias."
 msgstr ""
-"Gure aldakortasunak industria askoren eskakizunetara egokitzeko aukera ematen digu."
+"Gure moldakortasunari esker, industria ugariren eskakizunetara egokitu gaitezke."
 
 #: .\appIurrelan\templates\home.html:73
 msgid "Ferrocarril"
@@ -893,7 +890,7 @@ msgstr "Gasgintza"
 
 #: .\appIurrelan\templates\home.html:79
 msgid "Petrolífero"
-msgstr "Petrolio-industria"
+msgstr "Petrolioa"
 
 #: .\appIurrelan\templates\home.html:82
 msgid "Nuclear"
@@ -901,108 +898,112 @@ msgstr "Nuklearra"
 
 #: .\appIurrelan\templates\home.html:85
 msgid "Desalinizador"
-msgstr "Gesalgabetzea"
+msgstr "Gatzgabetzailea"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:11
 msgid "Información legal y condiciones de uso del sitio web."
-msgstr "Legezko informazioa eta webgunearen erabilera-baldintzak."
+msgstr "Webgunearen legezko informazioa eta erabilera-baldintzak."
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:18
 msgid "Datos Identificativos"
-msgstr "Identifikazio Datuak"
+msgstr "Identifikazio-datuak"
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:20
 msgid ""
-"En cumplimiento con el deber de información recogido en artículo 10 de la "
-"Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y "
-"del Comercio Electrónico (LSSICE), a continuación se reflejan los siguientes "
-"datos:"
+"\n"
+"                En cumplimiento con el deber de información recogido en "
+"artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad "
+"de la Información y del Comercio Electrónico (LSSICE), a continuación se "
+"reflejan los siguientes datos:\n"
+"                "
 msgstr ""
-"Informazioaren Gizartearen eta Merkataritza Elektronikoaren "
-"Zerbitzuei buruzko uztailaren 11ko 34/2002 Legearen 10. artikuluan jasotako "
-"informazio-betebeharra betez, jarraian datu hauek islatzen dira:"
+"\n"
+"                Informazioaren Gizartearen Zerbitzuei eta Merkataritza "
+"Elektronikoari buruzko uztailaren 11ko 34/2002 Legearen (LSSICE) 10. artikuluan "
+"jasotako informazio-betebeharra betez, honako datu hauek islatzen dira jarraian:\n"
+"                "
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:23
+#: .\appIurrelan\templates\legal\aviso_legal.html:25
 msgid "Razón Social"
 msgstr "Izen Soziala"
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:24
+#: .\appIurrelan\templates\legal\aviso_legal.html:26
 msgid "NIF/CIF"
 msgstr "IFZ/IFK"
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:25
+#: .\appIurrelan\templates\legal\aviso_legal.html:27
 msgid "Domicilio Social"
-msgstr "Helbide Soziala"
+msgstr "Egoitza Soziala"
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:26
+#: .\appIurrelan\templates\legal\aviso_legal.html:28
 msgid "Datos Registrales"
-msgstr "Erregistro Datuak"
+msgstr "Erregistro-datuak"
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:26
+#: .\appIurrelan\templates\legal\aviso_legal.html:28
 msgid ""
 "Inscrita en el Registro Mercantil de Gipuzkoa en el Tomo 3046, Folio 83, "
 "Hoja SS-44715 Inscripción 1"
 msgstr ""
-"Gipuzkoako Merkataritza Erregistroan inskribatua, 3046. liburukian, 83. "
-"folioan, SS-44715 orrian, 1. inskripzioan."
+"Gipuzkoako Merkataritza Erregistroan inskribatua, 3046. liburukian, 83. folioan, "
+"SS-44715 orrian, 1. inskripzioan."
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:27
+#: .\appIurrelan\templates\legal\aviso_legal.html:29
 msgid "Email de Contacto"
-msgstr "Harremanetarako Helbide Elektronikoa"
+msgstr "Harremanetarako Posta Elektronikoa"
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:30
+#: .\appIurrelan\templates\legal\aviso_legal.html:32
 msgid "Usuarios"
 msgstr "Erabiltzaileak"
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:32
+#: .\appIurrelan\templates\legal\aviso_legal.html:34
 msgid "El acceso y/o uso de este portal de"
-msgstr "Atari honetara sartzeak eta/edo erabiltzeak"
+msgstr "Atari honetara sartzeak edo atari hau erabiltzeak"
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:32
+#: .\appIurrelan\templates\legal\aviso_legal.html:34
 msgid ""
 "atribuye la condición de USUARIO, que acepta, desde dicho acceso y/o uso, "
 "las Condiciones Generales de Uso aquí reflejadas."
 msgstr ""
-"ERABILTZAILE izaera ematen du, eta sarbide eta/edo erabilera horretatik "
-"hemen islatutako Erabilera Baldintza Orokorrak onartzen ditu."
+"ERABILTZAILE izaera ematen du, eta sarbide edo erabilera horretatik bertatik "
+"onartzen ditu hemen islatutako Erabilera Baldintza Orokorrak."
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:35
+#: .\appIurrelan\templates\legal\aviso_legal.html:37
 msgid "Uso del Portal"
 msgstr "Atariaren Erabilera"
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:37
+#: .\appIurrelan\templates\legal\aviso_legal.html:39
 msgid ""
 " El sitio web proporciona el acceso a multitud de informaciones, servicios, "
 "programas o datos (en adelante, \"los contenidos\") en Internet "
 "pertenecientes a SERVICIOS METALÚRGICOS IURRELAN a los que el USUARIO pueda "
 "tener acceso. El USUARIO asume la responsabilidad del uso del portal."
 msgstr ""
-" Webguneak SERVICIOS METALÚRGICOS IURRELAN enpresarenak diren "
-"Interneteko informazio, zerbitzu, programa edo datu ugarietarako sarbidea "
-"ematen du (aurrerantzean, \"edukiak\"), eta ERABILTZAILEAK horietara sartzeko "
-"aukera du. ERABILTZAILEAK bere gain hartzen du ataria erabiltzeko erantzukizuna."
+" Webguneak SERVICIOS METALÚRGICOS IURRELAN enpresarenak diren eta ERABILTZAILEAK "
+"sarbidea izan dezakeen Interneteko informazio, zerbitzu, programa edo datu ugaritara "
+"(aurrerantzean, \"edukiak\") sartzeko aukera ematen du. ERABILTZAILEAK bere gain "
+"hartzen du ataria erabiltzeko erantzukizuna."
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:40
+#: .\appIurrelan\templates\legal\aviso_legal.html:42
 msgid "Protección de Datos"
 msgstr "Datuen Babesa"
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:42
+#: .\appIurrelan\templates\legal\aviso_legal.html:44
 msgid ""
 "SERVICIOS METALÚRGICOS IURRELAN cumple con las directrices del Reglamento "
 "General de Protección de Datos (RGPD) y demás normativa vigente, y vela por "
 "garantizar un correcto uso y tratamiento de los datos personales del "
 "usuario. Para más información, consulte nuestra"
 msgstr ""
-"SERVICIOS METALÚRGICOS IURRELAN enpresak Datuak Babesteko Erregelamendu Orokorraren "
-"(DBEO) eta indarrean dagoen gainerako araudiaren gidalerroak betetzen ditu, eta "
-"erabiltzailearen datu pertsonalen erabilera eta tratamendu egokia bermatzeaz "
-"arduratzen da. Informazio gehiago lortzeko, kontsultatu gure"
+"SERVICIOS METALÚRGICOS IURRELANek Datuak Babesteko Erregelamendu Orokorraren "
+"(DBEO) eta indarrean dagoen gainerako araudiaren jarraibideak betetzen ditu, "
+"eta erabiltzailearen datu pertsonalen erabilera eta tratamendu egokia bermatzen "
+"du. Informazio gehiago nahi izanez gero, kontsultatu gure"
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:46
+#: .\appIurrelan\templates\legal\aviso_legal.html:48
 msgid "Propiedad Intelectual e Industrial"
 msgstr "Jabetza Intelektuala eta Industriala"
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:48
+#: .\appIurrelan\templates\legal\aviso_legal.html:50
 msgid ""
 "SERVICIOS METALÚRGICOS IURRELAN por sí o como cesionaria, es titular de "
 "todos los derechos de propiedad intelectual e industrial de su página web, "
@@ -1010,13 +1011,13 @@ msgid ""
 "imágenes, sonido, audio, vídeo, software o textos; marcas o logotipos, "
 "combinaciones de colores, estructura y diseño, etc.)."
 msgstr ""
-"SERVICIOS METALÚRGICOS IURRELAN, berez edo lagapen-hartzaile "
-"gisa, bere webgunearen jabetza intelektual eta industrialaren eskubide guztien "
-"titularra da, bai eta bertan dauden elementuena ere (adibidez, irudiak, soinua, "
-"audioa, bideoa, softwarea edo testuak; markak edo logotipoak, kolore-konbinazioak, "
+"SERVICIOS METALÚRGICOS IURRELAN, bere kabuz edo lagapen-hartzaile gisa, bere "
+"webgunearen jabetza intelektual eta industrialaren eskubide guztien jabea da, "
+"bai eta bertan dauden elementuena ere (besteak beste, irudiak, soinua, audioa, "
+"bideoa, softwarea edo testuak; markak edo logotipoak, kolore-konbinazioak, "
 "egitura eta diseinua, etab.)."
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:51
+#: .\appIurrelan\templates\legal\aviso_legal.html:53
 msgid ""
 "Quedan expresamente prohibidas la reproducción, la distribución y la "
 "comunicación pública, incluida su modalidad de puesta a disposición, de la "
@@ -1024,17 +1025,16 @@ msgid ""
 "comerciales, en cualquier soporte y por cualquier medio técnico, sin la "
 "autorización de SERVICIOS METALÚRGICOS IURRELAN."
 msgstr ""
-"Berariaz debekatuta daude webgune honetako eduki guztiak edo "
-"batzuk helburu komertzialekin erreproduzitzea, banatzea eta jendaurrean "
-"jakinaraztea, eskuragarri jartzeko modalitatea barne, edozein euskarritan eta "
-"edozein baliabide teknikoren bidez, SERVICIOS METALÚRGICOS IURRELAN enpresaren "
-"baimenik gabe."
+"Berdin espresuki debekatuta daude webgune honetako eduki guztiak edo batzuk "
+"helburu komertzialekin erreproduzitzea, banatzea eta jendaurrean jakinaraztea, "
+"edozein euskarritan eta edozein bitarteko teknikoren bidez, SERVICIOS "
+"METALÚRGICOS IURRELAN enpresaren baimenik gabe."
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:54
+#: .\appIurrelan\templates\legal\aviso_legal.html:56
 msgid "Exclusión de Garantías y Responsabilidad"
 msgstr "Bermeak eta Erantzukizuna Baztertzea"
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:56
+#: .\appIurrelan\templates\legal\aviso_legal.html:58
 msgid ""
 "ERVICIOS METALÚRGICOS IURRELAN no se hace responsable, en ningún caso, de "
 "los daños y perjuicios de cualquier naturaleza que pudieran ocasionar, a "
@@ -1043,48 +1043,47 @@ msgid ""
 "lesivos en los contenidos, a pesar de haber adoptado todas las medidas "
 "tecnológicas necesarias para evitarlo."
 msgstr ""
-"SERVICIOS METALÚRGICOS IURRELAN ez da inolaz ere arduratuko "
-"sor daitezkeen edozein motatako kalte eta galerez, hala nola: edukietan akatsak "
-"edo hutsuneak egotea, ataria erabilgarri ez egotea edo edukietan birusak edo "
-"programa gaiztoak edo kaltegarriak transmititzea, hori saihesteko beharrezko neurri "
-"teknologiko guztiak hartu baditu ere."
+"SERVICIOS METALÚRGICOS IURRELANek ez du inolaz ere bere gain hartuko sor litezkeen "
+"edozein izaeratako kalte-galeren erantzukizuna, besteak beste: edukietako akatsak edo "
+"ez-egiteak, atariaren erabilgarritasun eza edo edukietan birusak edo programa gaizto edo "
+"kaltegarriak transmititzea, hori saihesteko beharrezko neurri teknologiko guztiak hartu "
+"baditu ere."
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:59
+#: .\appIurrelan\templates\legal\aviso_legal.html:61
 msgid "Modificaciones"
 msgstr "Aldaketak"
 
-#: .\appIurrelan\templates\legal\aviso_legal.html:61
+#: .\appIurrelan\templates\legal\aviso_legal.html:63
 msgid ""
 "SERVICIOS METALÚRGICOS IURRELAN se reserva el derecho de efectuar sin previo "
 "aviso las modificaciones que considere oportunas en su portal, pudiendo "
 "cambiar, suprimir o añadir tanto los contenidos y servicios que se presten a "
 "través de la misma como la forma en la que éstos aparezcan presentados."
 msgstr ""
-"SERVICIOS METALÚRGICOS IURRELAN enpresak bere atarian egokitzat "
-"jotzen dituen aldaketak aldez aurretik jakinarazi gabe egiteko eskubidea "
-"gordetzen du, eta atariaren bidez ematen diren edukiak eta zerbitzuak nahiz "
-"horiek aurkezten diren modua aldatu, ezabatu edo gehitu ahal izango ditu."
-
-#: .\appIurrelan\templates\legal\aviso_legal.html:64
-msgid "Legislación Aplicable y Jurisdicción"
-msgstr "Legeria Aplikagarria eta Jurisdikzioa"
+"SERVICIOS METALÚRGICOS IURRELANek eskubidea du bere atarian egoki iruditzen zaizkion "
+"aldaketak aldez aurretik jakinarazi gabe egiteko, eta bertan ematen diren edukiak eta "
+"zerbitzuak nahiz horiek aurkezten diren forma aldatu, ezabatu edo gehitu ahal izango ditu."
 
 #: .\appIurrelan\templates\legal\aviso_legal.html:66
+msgid "Legislación Aplicable y Jurisdicción"
+msgstr "Aplikatu beharreko Legedia eta Jurisdikzioa"
+
+#: .\appIurrelan\templates\legal\aviso_legal.html:68
 msgid ""
 "La relación entre SERVICIOS METALÚRGICOS IURRELAN y el USUARIO se regirá por "
 "la normativa española vigente y cualquier controversia se someterá a los "
 "Juzgados y tribunales de la ciudad correspondiente al domicilio social de la "
 "empresa, salvo que la ley aplicable disponga otra cosa."
 msgstr ""
-"SERVICIOS METALÚRGICOS IURRELAN enpresaren eta ERABILTZAILEAREN "
-"arteko harremana indarrean dagoen Espainiako araudiaren arabera arautuko da, "
-"eta edozein eztabaida enpresaren egoitza sozialari dagokion hiriko epaitegi "
-"eta auzitegien mende jarriko da, lege aplikagarriak beste zerbait xedatzen ez badu."
+"SERVICIOS METALÚRGICOS IURRELANen eta ERABILTZAILEAREN arteko harremana indarrean dagoen "
+"Espainiako araudiaren arabera arautuko da, eta edozein eztabaida enpresaren egoitza "
+"sozialari dagokion hiriko Epaitegi eta Auzitegien esku utziko da, aplikatu beharreko "
+"legeak besterik xedatzen ez badu."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:11
 msgid ""
 "Compromiso con la transparencia, la integridad y el cumplimiento normativo."
-msgstr "Gardentasunarekin, osotasunarekin eta araudia betetzearekin konpromisoa."
+msgstr "Gardentasunarekiko, osotasunarekiko eta araudia betetzearekiko konpromisoa."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:18
 msgid "Introducción"
@@ -1097,9 +1096,9 @@ msgid ""
 "(Compliance), ponemos a disposición de todos nuestros empleados, clientes, "
 "proveedores y colaboradores este"
 msgstr ""
-"osotasuna eta etika gure jardueraren oinarrizko zutabeak dira. Indarrean "
-"dagoen araudia eta gure Zigor Prebentziorako Plana (Compliance) betez, gure "
-"langile, bezero, hornitzaile eta kolaboratzaile guztien eskura jartzen dugu honako hau:"
+"osotasuna eta etika gure jardueraren oinarrizko zutabeak dira. Indarrean dagoen "
+"araudia eta gure Zigor Prebentziorako Plana (Compliance) betez, gure langile, "
+"bezero, hornitzaile eta kolaboratzaile guztien eskura jartzen dugu hau"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:23
 msgid ""
@@ -1107,32 +1106,32 @@ msgid ""
 "pueda implicar la comisión de irregularidades o actos contrarios a la "
 "legalidad y a las normas internas de la empresa."
 msgstr ""
-"Kanal hau tresna segurua da legearen eta enpresaren "
-"barne-arauen aurkako irregulartasunak edo egintzak egitea ekar dezakeen "
-"edozein jokabideren berri emateko."
+"Kanal hau tresna segurua da legediaren eta enpresaren barne-arauen aurkako "
+"irregulartasunak edo egintzak dakartzan edozein jokabideren berri emateko."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:26
 msgid "Gestión Externa y Confidencialidad"
-msgstr "Kanpo Kudeaketa eta Konfidentzialtasuna"
+msgstr "Kanpoko Kudeaketa eta Konfidentzialtasuna"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:28
 msgid "Para garantizar la máxima"
-msgstr "Berme handiena emateko"
+msgstr "Gehieneko"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:28
 msgid "independencia, confidencialidad y objetividad"
-msgstr "independentzia, konfidentzialtasun eta objektibotasun"
+msgstr "independentzia, konfidentzialtasuna eta objektibotasuna"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:28
 msgid ""
 "en el tratamiento de las comunicaciones, la gestión de este Canal Ético ha "
 "sido encomendada a un experto externo:"
 msgstr ""
-"komunikazioen tratamenduan, Kanal Etiko honen kudeaketa kanpoko aditu baten esku utzi da:"
+"bermatzeko komunikazioen tratamenduan, Kanal Etiko honen kudeaketa kanpoko "
+"aditu baten esku utzi da:"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:31
 msgid "Entidad Gestora:"
-msgstr "Erakunde kudeatzailea:"
+msgstr "Erakunde Kudeatzailea:"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:32
 msgid "Director de Compliance:"
@@ -1144,9 +1143,9 @@ msgid ""
 "profesionales independientes, asegurando que no existan conflictos de "
 "interés y protegiendo la identidad del informante."
 msgstr ""
-"Sistema honek bermatzen du salaketak profesional independenteek "
-"jasoko eta aztertuko dituztela, interes-gatazkarik ez dagoela ziurtatuz eta "
-"salatzailearen identitatea babestuz."
+"Sistema honek bermatzen du salaketak profesional independenteek jaso eta "
+"aztertzen dituztela, interes-gatazkarik ez dagoela ziurtatuz eta salatzailearen "
+"identitatea babestuz."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:38
 msgid "Cómo realizar una comunicación"
@@ -1158,8 +1157,8 @@ msgid ""
 "través de la siguiente dirección de correo electrónico habilitada "
 "exclusivamente para este fin:"
 msgstr ""
-"Jokabide irregularren baten berri baduzu, helburu horretarako "
-"soilik gaitutako helbide elektroniko honen bidez jakinaraz dezakezu:"
+"Jokabide irregularren baten berri baduzu, xede horretarako soilik gaitutako "
+"helbide elektroniko honen bidez jakinaraz dezakezu:"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:50
 msgid "Al realizar la comunicación, se garantiza:"
@@ -1171,7 +1170,7 @@ msgstr "Konfidentzialtasuna:"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:53
 msgid "La identidad del informante será preservada en todo momento."
-msgstr "Salatzailearen identitatea une oro babestuko da."
+msgstr "Informatzailearen nortasuna une oro gordeko da."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:54
 msgid "Anonimato:"
@@ -1183,8 +1182,8 @@ msgid ""
 "identificarse, salvo que la normativa vigente exija lo contrario en casos "
 "específicos."
 msgstr ""
-"Komunikazio anonimoak onartzen dira informazio-emaileak identifikatu nahi ez badu, "
-"indarrean dagoen araudiak kasu zehatzetan kontrakoa eskatzen ez badu."
+"Komunikazio anonimoak onartzen dira informatzaileak bere burua ez identifikatzea "
+"nahiago badu, indarrean dagoen araudiak kasu zehatzetan kontrakoa eskatzen ez badu."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:55
 msgid "Ausencia de represalias:"
@@ -1195,9 +1194,8 @@ msgid ""
 "SERVICIOS METALÚRGICOS IURRELAN garantiza que no se adoptará ninguna "
 "represalia contra quien informe de buena fe sobre una posible infracción."
 msgstr ""
-"SERVICIOS METALÚRGICOS IURRELAN enpresak bermatzen du ez dela inolako "
-"errepresaliarik hartuko balizko arau-hauste baten berri fede onez ematen "
-"duenaren aurka."
+"SERVICIOS METALÚRGICOS IURRELANek bermatzen du ez dela inolako errepresaliarik "
+"hartuko balizko arau-hauste bati buruz fede onez informatzen duenaren aurka."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:58
 msgid "Tramitación"
@@ -1213,11 +1211,11 @@ msgstr "ordena honi jarraituz ekingo dio:"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:63
 msgid "Recepción y registro de la denuncia."
-msgstr "Salaketaren harrera eta erregistroa."
+msgstr "Salaketa jasotzea eta erregistratzea."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:64
 msgid "Análisis de admisibilidad de los hechos denunciados."
-msgstr "Salaturiko gertakarien onargarritasunaren analisia."
+msgstr "Salatutako gertakarien onargarritasuna aztertzea."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:65
 msgid "Investigación independiente de los hechos."
@@ -1225,12 +1223,12 @@ msgstr "Gertakarien ikerketa independentea."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:66
 msgid "Emisión de un informe sobre la investigación."
-msgstr "Ikerketari buruzko txostena ematea."
+msgstr "Ikerketari buruzko txosten bat igortzea."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:67
 msgid ""
 "Propuesta de resolución y medidas correctivas a la dirección de la empresa."
-msgstr "Ebazpen-proposamena eta neurri zuzentzaileak enpresaren zuzendaritzari."
+msgstr "Ebazpen-proposamena eta neurri zuzentzaileak enpresako zuzendaritzari."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:71
 msgid ""
@@ -1242,11 +1240,11 @@ msgstr ""
 
 #: .\appIurrelan\templates\legal\canal_etico.html:78
 msgid "Enviar una"
-msgstr "Komunikazio bat"
+msgstr "Bidali"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:78
 msgid "Comunicación"
-msgstr "bidali"
+msgstr "Komunikazioa"
 
 #: .\appIurrelan\templates\legal\canal_etico.html:81
 msgid ""
@@ -1254,7 +1252,8 @@ msgid ""
 "información sobre el estado de su comunicación, indique sus datos de "
 "contacto."
 msgstr ""
-"Inprimaki hau modu erabat anonimoan bidal dezakezu. Zure komunikazioaren egoerari buruzko informazioa jaso nahi baduzu, adierazi zure harremanetarako datuak."
+"Inprimaki hau modu guztiz anonimoan bidal dezakezu. Zure komunikazioaren egoerari "
+"buruzko informazioa jaso nahi baduzu, adierazi zure harremanetarako datuak."
 
 #: .\appIurrelan\templates\legal\canal_etico.html:131
 msgid "Enviar Comunicación Segura"
@@ -1273,15 +1272,15 @@ msgid ""
 "de la forma en que utilice su equipo, pueden utilizarse para reconocer al "
 "usuario."
 msgstr ""
-"Cookie bat zenbait webgunetara sartzean zure ordenagailura deskargatzen "
-"den fitxategi bat da. Cookie-ek webgune bati ahalbidetzen diote, besteak beste, "
-"erabiltzaile baten edo bere ekipoaren nabigazio-ohiturei buruzko informazioa gorde "
-"eta berreskuratzea, eta, daukaten informazioaren eta ekipoa erabiltzeko "
+"Cookie bat fitxategi bat da, webgune jakin batzuetara sartzean zure ordenagailuan "
+"deskargatzen dena. Cookieek aukera ematen diote webgune bati, besteak beste, "
+"erabiltzaile baten edo bere ekipoaren nabigazio-ohiturei buruzko informazioa "
+"gorde eta berreskuratzeko; eta, duten informazioaren eta ekipoa erabiltzeko "
 "moduaren arabera, erabiltzailea ezagutzeko erabil daitezke."
 
 #: .\appIurrelan\templates\legal\cookies.html:15
 msgid "2. ¿Qué tipos de cookies utiliza esta web?"
-msgstr "2. Zer motatako cookieak erabiltzen ditu webgune honek?"
+msgstr "2. Zer cookie mota erabiltzen ditu webgune honek?"
 
 #: .\appIurrelan\templates\legal\cookies.html:18
 msgid "Cookies técnicas:"
@@ -1293,8 +1292,8 @@ msgid ""
 "web, plataforma o aplicación y la utilización de las diferentes opciones o "
 "servicios que en ella existan."
 msgstr ""
-"Erabiltzaileari webgune, plataforma edo aplikazio baten bidez nabigatzeko eta "
-"bertan dauden aukera edo zerbitzuak erabiltzeko aukera ematen diotenak dira."
+"Erabiltzaileari webgune, plataforma edo aplikazio baten bidez nabigatzea eta "
+"bertan dauden aukera edo zerbitzuak erabiltzea ahalbidetzen diotenak dira."
 
 #: .\appIurrelan\templates\legal\cookies.html:22
 msgid "Cookies de personalización:"
@@ -1307,8 +1306,8 @@ msgid ""
 "criterios en el terminal del usuario (ej. idioma)."
 msgstr ""
 "Erabiltzaileari zerbitzura sartzeko aukera ematen diotenak dira, erabiltzailearen "
-"terminaleko zenbait irizpideren arabera aldez aurretik definitutako izaera "
-"orokorreko ezaugarri batzuekin (adibidez, hizkuntza)."
+"terminalean aurrez zehaztutako irizpide batzuen araberako ezaugarri orokor batzuekin "
+"(adibidez, hizkuntza)."
 
 #: .\appIurrelan\templates\legal\cookies.html:27
 msgid "3. Desactivación y eliminación de cookies"
@@ -1320,9 +1319,8 @@ msgid ""
 "equipo mediante la configuración de las opciones del navegador instalado en "
 "su ordenador:"
 msgstr ""
-"Zure ordenagailuan instalatutako cookieak baimendu, blokeatu edo "
-"ezabatu ditzakezu ordenagailuan instalatutako nabigatzailearen aukerak "
-"konfiguratuz:"
+"Zure ekipoan instalatutako cookieak baimendu, blokeatu edo ezabatu ditzakezu, "
+"zure ordenagailuan instalatutako nabigatzailearen aukerak konfiguratuz:"
 
 #: .\appIurrelan\templates\legal\privacidad.html:11
 msgid ""
@@ -1330,9 +1328,9 @@ msgid ""
 "Esta Política de Privacidad describe cómo recopilamos, usamos y protegemos "
 "su información personal."
 msgstr ""
-"Iurrelan-en, gure erabiltzaileen pribatutasuna babesteko konpromisoa "
-"hartzen dugu. Pribatutasun-politika honek zure informazio pertsonala nola "
-"biltzen, erabiltzen eta babesten dugun deskribatzen du."
+"Iurrelan-en gure erabiltzaileen pribatutasuna babesteko konpromisoa hartzen dugu. "
+"Pribatutasun-politika honek zure informazio pertsonala nola biltzen, erabiltzen "
+"eta babesten dugun deskribatzen du."
 
 #: .\appIurrelan\templates\legal\privacidad.html:14
 msgid "1. Responsable del Tratamiento"
@@ -1340,7 +1338,7 @@ msgstr "1. Tratamenduaren Arduraduna"
 
 #: .\appIurrelan\templates\legal\privacidad.html:16
 msgid "Identidad:"
-msgstr "Nortasuna:"
+msgstr "Identitatea:"
 
 #: .\appIurrelan\templates\legal\privacidad.html:17
 msgid "Dirección:"
@@ -1348,7 +1346,7 @@ msgstr "Helbidea:"
 
 #: .\appIurrelan\templates\legal\privacidad.html:18
 msgid "Email:"
-msgstr "Posta elektronikoa:"
+msgstr "Helbide elektronikoa:"
 
 #: .\appIurrelan\templates\legal\privacidad.html:21
 msgid "2. Finalidad del Tratamiento"
@@ -1361,14 +1359,13 @@ msgid ""
 "soliciten a través de los formularios de contacto o facilitar a los "
 "interesados ofertas de productos y servicios de su interés."
 msgstr ""
-"Iurrelan-en, interesdunek ematen diguten informazioa tratatzen dugu, "
+"Iurrelan-en interesa duten pertsonek ematen diguten informazioa tratatzen dugu, "
 "harremanetarako inprimakien bidez eskatzen diguten informazioaren bidalketa "
-"kudeatzeko edo interesdunei euren intereseko produktu eta zerbitzuen eskaintzak "
-"helarazteko."
+"kudeatzeko edo interesdunei euren intereseko produktu eta zerbitzuen eskaintzak emateko."
 
 #: .\appIurrelan\templates\legal\privacidad.html:26
 msgid "No se tomarán decisiones automatizadas en base a dicho perfil."
-msgstr "Profil horretan oinarrituta ez da erabaki automatizaturik hartuko."
+msgstr "Ez da erabaki automatizaturik hartuko profil horretan oinarrituta."
 
 #: .\appIurrelan\templates\legal\privacidad.html:29
 msgid "3. Legitimación"
@@ -1380,8 +1377,8 @@ msgid ""
 "interesado al rellenar y enviar el formulario de contacto o al suscribirse a "
 "nuestros servicios."
 msgstr ""
-"Zure datuak tratatzeko legezko oinarria interesdunaren baimena da, "
-"harremanetarako inprimakia bete eta bidaltzean edo gure zerbitzuetara harpidetzean."
+"Zure datuak tratatzeko oinarri legala interesdunaren baimena da, harremanetarako "
+"inprimakia bete eta bidaltzean edo gure zerbitzuetara harpidetzean emandakoa."
 
 #: .\appIurrelan\templates\legal\privacidad.html:34
 msgid "4. Destinatarios"
@@ -1401,37 +1398,36 @@ msgid ""
 "estamos tratando datos personales que les conciernan, o no. Las personas "
 "interesadas tienen derecho a:"
 msgstr ""
-"Edozein pertsonak du eskubidea Iurrelan-en beraiei dagozkien datu "
-"pertsonalak tratatzen ari garen ala ez egiaztatzeko. Interesdunek honako "
-"eskubide hauek dituzte:"
+"Edozein pertsonak du eskubidea Iurrelan-en beraiei dagozkien datu pertsonalak "
+"tratatzen ari garen ala ez baieztatzeko. Interesdunek eskubide hauek dituzte:"
 
 #: .\appIurrelan\templates\legal\privacidad.html:44
 msgid "Acceder a sus datos personales."
-msgstr "Euren datu pertsonaletara sartzea."
+msgstr "Bere datu pertsonaletara sartzea."
 
 #: .\appIurrelan\templates\legal\privacidad.html:45
 msgid "Solicitar la rectificación de los datos inexactos."
-msgstr "Datu zehazgabeak zuzentzeko eskatzea."
+msgstr "Datu okerrak zuzentzeko eskatzea."
 
 #: .\appIurrelan\templates\legal\privacidad.html:46
 msgid ""
 "Solicitar su supresión cuando, entre otros motivos, los datos ya no sean "
 "necesarios para los fines que fueron recogidos."
 msgstr ""
-"Datuak ezabatzea eskatzea, besteak beste, datuak jaso ziren helburuetarako "
-"jada beharrezkoak ez direnean."
+"Datuak ezabatzeko eskatzea, besteak beste, datuak jadanik beharrezkoak ez "
+"direnean bildu ziren helburuetarako."
 
 #: .\appIurrelan\templates\legal\privacidad.html:47
 msgid "Oponerse al tratamiento."
-msgstr "Tratamenduaren aurka egitea."
+msgstr "Tratamenduari aurka egitea."
 
 #: .\appIurrelan\templates\legal\privacidad.html:48
 msgid "Solicitar la limitación del tratamiento."
-msgstr "Tratamenduaren mugaketa eskatzea."
+msgstr "Tratamenduaren muga eskatzea."
 
 #: .\appIurrelan\templates\legal\privacidad.html:51
 msgid "Para ejercer estos derechos, puede enviar un correo electrónico a"
-msgstr "Eskubide horiek erabiltzeko, mezu elektroniko bat bidal dezakezu helbide honetara:"
+msgstr "Eskubide horiek gauzatzeko, mezu elektroniko bat bidal dezakezu helbide honetara:"
 
 #: .\appIurrelan\templates\legal\privacidad.html:53
 msgid "acreditando su identidad."
@@ -1445,7 +1441,8 @@ msgstr "Makineria<br>Parkea"
 msgid ""
 "Tecnología de vanguardia para afrontar los retos más exigentes de la "
 "industria."
-msgstr "Abangoardiako teknologia industriaren erronka zorrotzenenei aurre egiteko."
+msgstr ""
+"Abangoardiako teknologia industriaren erronka zorrotzeniei aurre egiteko."
 
 #: .\appIurrelan\templates\maquinaria.html:193
 msgid "Todas"
@@ -1481,17 +1478,17 @@ msgstr "Balioa:"
 
 #: .\appIurrelan\templates\rebarbado.html:183
 msgid "Rebarbado Perfecto"
-msgstr "Rebarbatu Ezin Hobea"
+msgstr "Rebarbatu Perfektua"
 
 #: .\appIurrelan\templates\rebarbado.html:185
 msgid ""
 "El rebarbado no es solo un paso final; es la garantía de calidad, seguridad "
-"y funcionalidad de cada pieza metálica. En Iurrelan eliminamos cantos vivos, "
-"colas de rata y calcinados."
+"y funcionalidad de cada pieza metálica. En Iurrelan eliminamos cantos "
+"vivos..."
 msgstr ""
-"Bizarrak kentzea ez da azken urrats bat soilik; pieza metaliko bakoitzaren "
-"kalitatearen, segurtasunaren eta funtzionaltasunaren bermea da. Iurrelan-en "
-"ertz biziak, arratoi-buztanak eta kiskaliak kentzen ditugu."
+"Rebarbadoa ez da azken urrats bat soilik; pieza metaliko bakoitzaren kalitatearen, "
+"segurtasunaren eta funtzionaltasunaren bermea da. Iurrelan-en ertz biziak ezabatzen "
+"ditugu..."
 
 #: .\appIurrelan\templates\rebarbado.html:187
 msgid "Mayor seguridad en la manipulación posterior"
@@ -1499,7 +1496,7 @@ msgstr "Segurtasun handiagoa ondorengo manipulazioan"
 
 #: .\appIurrelan\templates\rebarbado.html:188
 msgid "Adherencia perfecta para pintura y tratamientos"
-msgstr "Adherentzia ezin hobea pintura eta tratamenduetarako"
+msgstr "Atxikimendu ezin hobea pintura eta tratamenduetarako"
 
 #: .\appIurrelan\templates\rebarbado.html:189
 msgid "Estética profesional y acabados uniformes"
@@ -1507,11 +1504,11 @@ msgstr "Estetika profesionala eta akabera uniformeak"
 
 #: .\appIurrelan\templates\rebarbado.html:203
 msgid "Rebabado Manual"
-msgstr "Eskuzko Rebarbatua"
+msgstr "Eskuzko Rebarbado"
 
 #: .\appIurrelan\templates\rebarbado.html:207
 msgid "REBARBADO <br> MEDIANTE<br>AMOLADORAS"
-msgstr "REBARBATUA <br> AMOLAGAILU<br>BIDEZ"
+msgstr "AMOLAGAILU <br> BIDEZKO<br>Rebarbadoa"
 
 #: .\appIurrelan\templates\rebarbado.html:208
 msgid ""
@@ -1520,10 +1517,9 @@ msgid ""
 "eliminar cordones de soldadura, suavizar aristas y corregir defectos "
 "superficiales con precisión geométrica."
 msgstr ""
-"Zuzeneko esku-hartzea tresna eramangarrien bidez gune konplexuetarako. Gure "
-"teknikariek arbastatzeko diskoak eta xafla urratzaileak aplikatzen dituzte "
-"soldadura-kordoiak kentzeko, ertzak leuntzeko eta gainazaleko akatsak "
-"doitasun geometrikoarekin zuzentzeko."
+"Esku-erreminten bidezko esku-hartze zuzena eremu konplexuetarako. Gure teknikariek "
+"arbastatzeko diskoak eta xafla urratzaileak aplikatzen dituzte soldadura-kordoiak "
+"kentzeko, ertzak leuntzeko eta gainazaleko akatsak zehaztasun geometrikoarekin zuzentzeko."
 
 #: .\appIurrelan\templates\rebarbado.html:211
 msgid "ACABADO FINO"
@@ -1539,11 +1535,11 @@ msgstr "SARBIDE ZAILA"
 
 #: .\appIurrelan\templates\rebarbado.html:219
 msgid "Rebabado Suspendido"
-msgstr "Rebarbatu Esekia"
+msgstr "Esekitako Rebarbadoa"
 
 #: .\appIurrelan\templates\rebarbado.html:223
 msgid "REBARBADO <br> MEDIANTE<br> MÁQUINAS <br>SUSPENDIDAS"
-msgstr "REBARBATUA <br> MAKINA <br> ESEKIEN <br> BIDEZ"
+msgstr "ESEKITAKO <br> MAKINEN<br> BIDEZKO <br>Rebarbadoa"
 
 #: .\appIurrelan\templates\rebarbado.html:224
 msgid ""
@@ -1552,10 +1548,9 @@ msgid ""
 "de trabajo elevadas y constantes, logrando tasas de remoción de material "
 "superiores en piezas de gran tonelaje."
 msgstr ""
-"Potentzia handiko sistema pendularrak gainazal handiak prozesatzeko. "
-"Grabitaterik gabeko esekidurari esker, operadoreak lan-presio handiak eta "
-"konstanteak aplika ditzake, tonaje handiko piezetan materiala kentzeko tasa "
-"handiagoak lortuz."
+"Potentzia handiko sistema pendularrak gainazal handiak prozesatzeko. Grabitaterik "
+"gabeko esekidurari esker, langileak lan-presio handiak eta konstanteak aplika "
+"ditzake, eta tona askoko piesetan materiala kentzeko tasa handiagoak lortzen ditu."
 
 #: .\appIurrelan\templates\rebarbado.html:227
 msgid "ALTA POTENCIA"
@@ -1582,8 +1577,8 @@ msgid ""
 "Soluciones integrales de transformación metálica con certificación de "
 "calidad en cada etapa del proceso."
 msgstr ""
-"Eraldaketa metalikoko irtenbide integralak, kalitate-ziurtagiriarekin "
-"prozesuaren etapa bakoitzean."
+"Eraldaketa metalikoko soluzio integralak, prozesuaren etapa bakoitzean "
+"kalitate-ziurtagiriarekin."
 
 #: .\appIurrelan\templates\servicios.html:162
 msgid ""
@@ -1591,13 +1586,13 @@ msgid ""
 "del corte con arco aire con la precisión del corte con soplete para entregar "
 "piezas listas para el siguiente proceso."
 msgstr ""
-"Ebaketa-teknologia aurreratua edozein lodieratarako. Arku-aire bidezko "
-"ebaketaren potentzia eta soplete bidezko ebaketaren zehaztasuna konbinatzen "
-"ditugu hurrengo prozesurako prest dauden piezak entregatzeko."
+"Ebaketa-teknologia aurreratua edozein lodieratarako. Arku-aire bidezko ebaketaren "
+"potentzia eta soplete bidezko ebaketaren zehaztasuna konbinatzen ditugu, piesak "
+"hurrengo prozesurako prest emateko."
 
 #: .\appIurrelan\templates\servicios.html:165
 msgid "Arco Aire"
-msgstr "Arku-airea"
+msgstr "Arku-Aire"
 
 #: .\appIurrelan\templates\servicios.html:166
 msgid "Soplete"
@@ -1613,7 +1608,7 @@ msgstr "Xehetasun gehiago"
 #: .\appIurrelan\templates\servicios.html:175
 #: .\appIurrelan\templates\servicios.html:178
 msgid "Rebabado"
-msgstr "Rebarbatua"
+msgstr "Rebarbadoa"
 
 #: .\appIurrelan\templates\servicios.html:180
 msgid ""
@@ -1621,9 +1616,9 @@ msgid ""
 "Garantizamos la seguridad de manipulación y preparamos la pieza para un "
 "ajuste perfecto."
 msgstr ""
-"Ertz ebakitzaileak eta material soberakinak eskuz eta mekanikoki kentzea. "
-"Manipulatzeko segurtasuna bermatzen dugu eta pieza doitze ezin hobe "
-"baterako prestatzen dugu."
+"Ertz ebakitzaileen eta material-soberakinen eskuzko ezabapena eta ezabapen "
+"mekanikoa. Manipulatzeko segurtasuna bermatzen dugu eta pieza doitze ezin "
+"hoberako prestatzen dugu."
 
 #: .\appIurrelan\templates\servicios.html:183
 msgid "Amoladoras"
@@ -1631,7 +1626,7 @@ msgstr "Amolagailuak"
 
 #: .\appIurrelan\templates\servicios.html:184
 msgid "Máquinas Suspendidas"
-msgstr "Makina Esekiak"
+msgstr "Esekitako Makinak"
 
 #: .\appIurrelan\templates\servicios.html:185
 msgid "Pulido"
@@ -1639,19 +1634,19 @@ msgstr "Leunketa"
 
 #: .\appIurrelan\templates\servicios.html:187
 msgid "Más Detalles"
-msgstr "Xehetasun gehiago"
+msgstr "Xehetasun Gehiago"
 
 #: .\appIurrelan\templates\servicios.html:199
 msgid ""
 "Uniones metálicas de alta integridad realizadas por soldadores homologados. "
 "Especialistas en estructuras complejas y materiales diversos."
 msgstr ""
-"Osotasun handiko lotura metalikoak homologatutako soldatzaileek eginda. "
+"Osotasun handiko lotura metalikoak, soldatzaile homologatuek eginak. "
 "Egitura konplexuetan eta askotariko materialetan adituak."
 
 #: .\appIurrelan\templates\servicios.html:204
 msgid "Saneado y Recargues"
-msgstr "Saneamendua eta Birgargatzeak"
+msgstr "Saneamendua eta Gainkargak"
 
 #: .\appIurrelan\templates\servicios.html:218
 msgid ""
@@ -1659,9 +1654,8 @@ msgid ""
 "para eliminar óxido y calamina, asegurando la máxima adherencia de la "
 "pintura posterior."
 msgstr ""
-"Gainazalak prestatzea urratzaileen proiekzioaren bidez. Garbiketa sakona "
-"oxidoa eta kalamina kentzeko, ondorengo pinturaren ahalik eta atxikimendu "
-"handiena ziurtatuz."
+"Gainazaleko prestaketa, urratzaileen proiekzio bidez. Garbiketa sakona oxidoa "
+"eta kalamina kentzeko, ondorengo pinturaren atxikimendu maximoa ziurtatuz."
 
 #: .\appIurrelan\templates\servicios.html:221
 msgid "Inoxidable (2.000kg)"
@@ -1680,24 +1674,23 @@ msgid ""
 "Verificación final de calidad. Realizamos Ensayos No Destructivos y "
 "tratamientos químicos para entregar piezas con garantía total de integridad."
 msgstr ""
-"Kalitatearen azken egiaztapena. Saiakuntza Ez-suntsitzaileak eta tratamendu "
-"kimikoak egiten ditugu osotasun-berme osoko piezak entregatzeko."
+"Azken kalitate-egiaztapena. Entsegu Ez-Suntsitzaileak eta tratamendu kimikoak "
+"egiten ditugu osotasun-berme osoa duten piesak entregatzeko."
 
 #: .\appIurrelan\templates\servicios.html:239
 msgid "Decapado Ácido"
-msgstr "Azido Dekapajea"
+msgstr "Azido bidezko desugerketa"
 
 #: .\appIurrelan\templates\soldadura.html:6
 msgid "Soldadura<br>Industrial"
-msgstr "Industria<br>Soldadura"
+msgstr "Soldadura<br>Industriala"
 
 #: .\appIurrelan\templates\soldadura.html:7
 msgid ""
 "Soluciones de unión y reparación. Expertos en MIG-MAG, TIG y recuperación de "
 "componentes."
 msgstr ""
-"Lotura- eta konponketa-irtenbideak. MIG-MAG, TIG eta osagaien berreskurapenean "
-"adituak."
+"Lotzeko eta konpontzeko soluzioak. MIG-MAG, TIG eta osagaien berreskurapenean adituak."
 
 #: .\appIurrelan\templates\soldadura.html:135
 msgid "Nuestros Servicios de"
@@ -1709,12 +1702,13 @@ msgid ""
 "productividad industrial hasta la precisión artesanal y la recuperación de "
 "piezas críticas."
 msgstr ""
-"Premia bakoitzera egokitutako soldadura-prozesuak eskaintzen ditugu, industria-produktibitate "
-"handitik hasi eta artisau-zehaztasunera eta pieza kritikoen berreskurapenera arte."
+"Behar bakoitzera egokitutako soldadura-prozesuak eskaintzen ditugu, "
+"industria-produktibitate handitik hasi eta artisau-doitasunera eta pieza kritikoen "
+"berreskurapenera arte."
 
 #: .\appIurrelan\templates\soldadura.html:144
 msgid "Soldadura MIG MAG Semiautomática"
-msgstr "MIG MAG Soldadura Erdiautomatikoa"
+msgstr "MIG-MAG Soldadura Erdiautomatikoa"
 
 #: .\appIurrelan\templates\soldadura.html:147
 msgid "Soldadura MIG-MAG Semiautomática"
@@ -1728,14 +1722,14 @@ msgid ""
 "optimizando los tiempos de fabricación sin sacrificar la resistencia "
 "mecánica."
 msgstr ""
-"Karbono-altzairuetarako eta altzairu herdoilgaitzetarako ezin hobea den "
-"produktibitate handiko prozesua. Azken belaunaldiko ekipoak erabiltzen ditugu, "
-"materialaren jalkitze konstantea, sartze sakona eta lotura sendoak bermatzen "
-"dituztenak, fabrikazio-denborak optimizatuz erresistentzia mekanikoa kaltetu gabe."
+"Produktibitate handiko prozesua, ezin hobea karbono-altzairuetarako eta altzairu "
+"herdoilgaitzetarako. Azken belaunaldiko ekipoak erabiltzen ditugu, material-jalkitze "
+"konstantea, sarrera sakona eta lotura sendoak bermatzen dituztenak, fabrikazio-denborak "
+"optimizatuz erresistentzia mekanikoa sakrifikatu gabe."
 
 #: .\appIurrelan\templates\soldadura.html:154
 msgid "Soldadura TIG Precisión"
-msgstr "Zehaztasun handiko TIG Soldadura"
+msgstr "Doitasunezko TIG Soldadura"
 
 #: .\appIurrelan\templates\soldadura.html:157
 msgid "Soldadura TIG"
@@ -1748,15 +1742,15 @@ msgid ""
 "arco, logrando cordones limpios, sin proyecciones y de altísima calidad "
 "visual y estructural, perfectos para piezas visibles o de precisión."
 msgstr ""
-"Azken aukera akabera estetikoetarako eta altzairu herdoilgaitza bezalako material "
-"zorrotzetarako. Prozesu honek arkuaren gaineko erabateko kontrola ahalbidetzen "
-"digu, kordoi garbiak, proiekziorik gabekoak eta ikusmen- zein egitura-kalitate "
-"oso handikoak lortuz, ageriko piezetarako edo doitasun-piezetarako ezin hobeak."
+"Akabera estetikoetarako eta altzairu herdoilgaitza bezalako material zorrotzetarako "
+"behin betiko aukera. Prozesu honek arkuaren gaineko erabateko kontrola ahalbidetzen "
+"digu, ikusmen- eta egitura-kalitate handiko kordoi garbiak lortuz, proiekziorik "
+"gabeak, ezin hobeak pieza ikusgarri edo doitasunezkoetarako."
 
 #: .\appIurrelan\templates\soldadura.html:164
 #: .\appIurrelan\templates\soldadura.html:167
 msgid "Sanear Piezas y Recargues"
-msgstr "Piezak Saneatzea eta Birgargatzeak"
+msgstr "Piesak Saneatzea eta Gainkargak"
 
 #: .\appIurrelan\templates\soldadura.html:168
 msgid ""
@@ -1765,10 +1759,10 @@ msgid ""
 "desgaste. Un servicio esencial para mantenimiento correctivo que devuelve a "
 "la pieza sus propiedades originales o mejoradas."
 msgstr ""
-"Zure osagai industrialen bizitza erabilgarria luzatzen dugu. Pitzaduren "
-"saneamendua, higatutako geometrien berreskurapena eta higaduraren aurkako "
-"birkargatze gogorrak egiten ditugu. Mantentze-lan zuzentzaileetarako ezinbesteko "
-"zerbitzua da, piezari bere jatorrizko propietateak edo hobetuak itzultzen dizkiona."
+"Zure osagai industrialen bizitza erabilgarria luzatzen dugu. Arrakalen saneamendua, "
+"higatutako geometrien berreskurapena eta higaduraren aurkako karga gogorrak egiten "
+"ditugu. Mantentze-lan zuzentzaileetarako funtsezko zerbitzua da, piesari bere "
+"jatorrizko propietateak edo hobetuak itzultzen dizkiona."
 
 #: .\appIurrelan\templates\soldadura.html:175
 msgid "Materiales que"
@@ -1796,7 +1790,7 @@ msgstr "(CF3M, CF8M, DUPLEX (4A), SUPERDUPLEX (5A), CK3M, INCONEL 625, CA6NM…)
 
 #: .\appIurrelan\templates\soldadura.html:193
 msgid "Garantía de"
-msgstr "Betearazpen-"
+msgstr "Gauzatzeko"
 
 #: .\appIurrelan\templates\soldadura.html:193
 msgid "Ejecución"
@@ -1804,11 +1798,11 @@ msgstr "Bermea"
 
 #: .\appIurrelan\templates\soldadura.html:198
 msgid "Versatilidad"
-msgstr "Aldakortasuna"
+msgstr "Moldakortasuna"
 
 #: .\appIurrelan\templates\soldadura.html:199
 msgid "Aceros al Carbono y Aceros Inoxidables"
-msgstr "Karbono-altzairuak eta altzairu herdoilgaitzak"
+msgstr "Karbono-altzairuak eta Altzairu Herdoilgaitzak"
 
 #: .\appIurrelan\templates\soldadura.html:203
 msgid "Cualificación"
@@ -1824,11 +1818,11 @@ msgstr "Konponketa"
 
 #: .\appIurrelan\templates\soldadura.html:209
 msgid "Recuperación de piezas"
-msgstr "Piezen berreskurapena"
+msgstr "Piesen Berreskurapena"
 
 #: .\appIurrelan\templates\soldadura.html:214
 msgid "Inspección de acabado"
-msgstr "Akaberaren ikuskapena"
+msgstr "Akaberaren Ikuskapena"
 
 #: .\projIurrelan\settings.py:120
 msgid "Español"
@@ -1843,5 +1837,5 @@ msgid "Deutsch"
 msgstr "Alemana"
 
 #: .\projIurrelan\settings.py:123
-msgid "Euskera"
+msgid "Euskara"
 msgstr "Euskara"

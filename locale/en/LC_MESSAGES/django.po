@@ -714,8 +714,8 @@ msgid "Gestión de la Calidad"
 msgstr "Quality Management"
 
 #: .\appIurrelan\templates\empresa.html:132
-msgid "Soldadura Certificada"
-msgstr "Certified Welding"
+msgid "Prevención de riesgos laborales"
+msgstr "Prevention of occupational risks"
 
 #: .\appIurrelan\templates\empresa.html:137
 msgid "Gestión Ambiental"
@@ -1847,5 +1847,5 @@ msgid "Deutsch"
 msgstr "German"
 
 #: .\projIurrelan\settings.py:123
-msgid "Euskera"
+msgid "Euskara"
 msgstr "Basque"
