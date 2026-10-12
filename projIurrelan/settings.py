@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'appIurrelan',
     'django_recaptcha',
 ]
-
+###0904Abril###
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -143,14 +144,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
-# --- CONFIGURACIÓN DE EMAIL (GMAIL) ---
-# Muestra los correos electrónicos en la terminal en lugar de enviarlos de verdad
+# --- CONFIGURACIÓN DE EMAIL (GOISYSTEM) ---
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'iurrelanweb@gmail.com'  # Tu correo de Gmail
-EMAIL_HOST_PASSWORD = 'pamuttixjdatyjve'
+EMAIL_HOST = 'servicios.goisystem.eu'
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
+EMAIL_USE_TLS = False
+EMAIL_HOST_USER = 'administracion@iurrelan.com'
+EMAIL_HOST_PASSWORD = 'TU_CONTRASEÑA_AQUI'  # <-- Pon aquí la contraseña de administracion@iurrelan.com
+DEFAULT_FROM_EMAIL = 'administracion@iurrelan.com'
 
 # --- CONFIGURACIÓN RECAPTCHA (Claves de Prueba) ---
 # Cuando subas la web a internet, cambia estas por las tuyas reales de Google

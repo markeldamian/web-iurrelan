@@ -66,7 +66,7 @@ Este mensaje ha sido enviado desde el formulario seguro de la página web de Iur
                 email= EmailMessage(
                     subject=f'DENUNCIA: {asunto}',
                     body=cuerpo_mensaje,
-                    from_email='iurrelanweb@gmail.com', 
+                    from_email=settings.DEFAULT_FROM_EMAIL, 
                     to=['canaldenuncias@aitabogados.com'], 
                 )
                 email.send(fail_silently=False)
@@ -105,7 +105,7 @@ def contacto_view(request):
                     email = EmailMessage(
                         subject=f'CONTACTO WEB: Mensaje de {nombre}',
                         body=cuerpo_email,
-                        from_email='iurrelanweb@gmail.com', 
+                        from_email=settings.DEFAULT_FROM_EMAIL, 
                         to=['administracion@iurrelan.com'],       
                         reply_to=[email_cliente],
                     )
@@ -140,7 +140,7 @@ Experiencia / Presentación:
                     email = EmailMessage(
                         subject=f"CV RECIBIDO: {nombre}",
                         body=cuerpo_email,
-                        from_email='iurrelanweb@gmail.com', 
+                        from_email=settings.DEFAULT_FROM_EMAIL, 
                         to=['administracion@iurrelan.com'],      
                         reply_to=[email_usr],
                     )
