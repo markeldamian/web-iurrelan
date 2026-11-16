@@ -151,7 +151,7 @@ EMAIL_PORT = 465
 EMAIL_USE_SSL = True
 EMAIL_USE_TLS = False
 EMAIL_HOST_USER = 'administracion@iurrelan.com'
-EMAIL_HOST_PASSWORD = 'admin.23'  # <-- Pon aquí la contraseña de administracion@iurrelan.com
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
 DEFAULT_FROM_EMAIL = 'administracion@iurrelan.com'
 
 # --- CONFIGURACIÓN RECAPTCHA (Claves de Prueba) ---
